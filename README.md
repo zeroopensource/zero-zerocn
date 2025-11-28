@@ -27,6 +27,54 @@ npx shadcn@latest add zero/<item>
 
 ---
 
+## 🧱 Registry Item Types
+
+Zero Registry provides multiple item types to organize reusable code for frontend, backend, and full-stack environments.
+
+| Type                   | Description                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------- |
+| **registry:block**     | Complex components with multiple files (e.g., dashboards, auth flows, editors). |
+| **registry:component** | Simple components, usually single-responsibility UI elements.                   |
+| **registry:ui**        | UI primitives and single-file shadcn-style components.                          |
+| **registry:hook**      | Reusable React hooks.                                                           |
+| **registry:lib**       | Utilities, helpers, logic modules, backend-friendly libs.                       |
+| **registry:page**      | Pages or file-based routes (Next.js, Remix, etc.).                              |
+| **registry:file**      | Miscellaneous single files (config, server code, types).                        |
+| **registry:style**     | Style packs and design presets (e.g., `new-york`).                              |
+| **registry:theme**     | Entire theme definitions for your UI.                                           |
+| **registry:item**      | Universal registry item (fallback for any category).                            |
+
+---
+
+## 📁 Example Registry Structure
+
+```
+/registry
+  /ui
+    button.json
+    input.json
+  /component
+    navbar.json
+    footer.json
+  /block
+    auth/
+      login/
+      register/
+  /lib
+    date.ts
+    normalize.ts
+  /hook
+    use-media-query.ts
+    use-server-action.ts
+  /page
+    dashboard/
+      index.tsx
+  /theme
+    zero-studio/
+```
+
+---
+
 ## Official Links
 
 - [GitHub Repository](https://github.com/zeroopensource)
