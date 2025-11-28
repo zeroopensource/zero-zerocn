@@ -5,8 +5,6 @@ This registry provides a curated collection of reusable components, utilities, p
 
 ZeroCN is designed for teams who want to install code, not packages — enabling full ownership, version control, and customizability across both frontend and backend layers.
 
----
-
 ## 🚀 Features
 
 - **Installable source code** — no `node_modules` dependency clutter.
@@ -16,16 +14,12 @@ ZeroCN is designed for teams who want to install code, not packages — enabling
 - **Extensible registry** with clearly defined item types.
 - **Perfect for monorepos** and codebases wanting in-source installs like shadcn.
 
----
-
 ## 📦 Installation
 
 ```bash
 pnpx shadcn@latest add zero/<item>
 npx shadcn@latest add zero/<item>
 ```
-
----
 
 ## 🧱 Registry Item Types
 
@@ -43,8 +37,6 @@ Zero Registry provides multiple item types to organize reusable code for fronten
 | **registry:style**     | Style packs and design presets (e.g., `new-york`).                              |
 | **registry:theme**     | Entire theme definitions for your UI.                                           |
 | **registry:item**      | Universal registry item (fallback for any category).                            |
-
----
 
 ## 📁 Example Registry Structure
 
@@ -72,8 +64,6 @@ Zero Registry provides multiple item types to organize reusable code for fronten
   /theme
     zero-studio/
 ```
-
----
 
 ## Official Links
 
