@@ -1,0 +1,24 @@
+{
+  "name": "zero-zerocn",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "check": "biome check --write .",
+    "dev": "turbo dev",
+    "start": "turbo start",
+    "build": "turbo build",
+    "build:force": "turbo build --force",
+    "check-types": "turbo check-types"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "turbo": "^2.5.4",
+    "@biomejs/biome": "2.2.2",
+    "ultracite": "5.3.3"
+  },
+  "packageManager": "pnpm@10.23.0"
+}
