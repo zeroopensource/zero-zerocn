@@ -1,0 +1,86 @@
+# ZeroCN
+
+A community-driven, batteries-included shadcn registry made by Zero.
+This registry provides a curated collection of reusable components, utilities, primitives, hooks, layouts, themes, and backend-ready modules — all installable directly into your project, just like shadcn/ui.
+
+ZeroCN is designed for teams who want to install code, not packages — enabling full ownership, version control, and customizability across both frontend and backend layers.
+
+---
+
+## 🚀 Features
+
+- **Installable source code** — no `node_modules` dependency clutter.
+- **Supports both UI and non-UI components** (backend modules, hooks, utils, and more).
+- **Typed, framework-friendly, and framework-agnostic** where possible.
+- **Supports multi-file complex components** and single-file primitives.
+- **Extensible registry** with clearly defined item types.
+- **Perfect for monorepos** and codebases wanting in-source installs like shadcn.
+
+---
+
+## 📦 Installation
+
+```bash
+pnpx shadcn@latest add zero/<item>
+npx shadcn@latest add zero/<item>
+```
+
+---
+
+## 🧱 Registry Item Types
+
+Zero Registry provides multiple item types to organize reusable code for frontend, backend, and full-stack environments.
+
+| Type                   | Description                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------- |
+| **registry:block**     | Complex components with multiple files (e.g., dashboards, auth flows, editors). |
+| **registry:component** | Simple components, usually single-responsibility UI elements.                   |
+| **registry:ui**        | UI primitives and single-file shadcn-style components.                          |
+| **registry:hook**      | Reusable React hooks.                                                           |
+| **registry:lib**       | Utilities, helpers, logic modules, backend-friendly libs.                       |
+| **registry:page**      | Pages or file-based routes (Next.js, Remix, etc.).                              |
+| **registry:file**      | Miscellaneous single files (config, server code, types).                        |
+| **registry:style**     | Style packs and design presets (e.g., `new-york`).                              |
+| **registry:theme**     | Entire theme definitions for your UI.                                           |
+| **registry:item**      | Universal registry item (fallback for any category).                            |
+
+---
+
+## 📁 Example Registry Structure
+
+```
+/registry
+  /ui
+    button.json
+    input.json
+  /component
+    navbar.json
+    footer.json
+  /block
+    auth/
+      login/
+      register/
+  /lib
+    date.ts
+    normalize.ts
+  /hook
+    use-media-query.ts
+    use-server-action.ts
+  /page
+    dashboard/
+      index.tsx
+  /theme
+    zero-studio/
+```
+
+---
+
+## Official Links
+
+- [GitHub Repository](https://github.com/zeroopensource)
+- [Website](https://zeroopensource.org)
+- [Official Links Repository](https://github.com/zeroopensource/zero-official)
+
+## License
+
+MIT © 2025 Zero Open Source™ (aka ZeroOpenSource™; Zero)
