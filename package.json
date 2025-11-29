@@ -20,5 +20,5 @@
     "@biomejs/biome": "2.2.2",
     "ultracite": "5.3.3"
   },
-  "packageManager": "pnpm@10.23.0"
+  "packageManager": "pnpm@10.24.0"
 }
