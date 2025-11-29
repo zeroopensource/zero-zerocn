@@ -1,0 +1,76 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "WDS Shadcn Registry",
+  "homepage": "https://wds-shadcn-registry.netlify.app",
+  "items": [
+    {
+      "name": "loading-swap",
+      "description": "Swaps content with a loading spinner without layout shift.",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/registry/new-york/items/loading-swap/components/loading-swap.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "action-button",
+      "description": "A button that performs an action when clicked and optionally asks for user confirmation.",
+      "type": "registry:component",
+      "registryDependencies": [
+        "alert-dialog",
+        "button",
+        "sonner",
+        "https://wds-shadcn-registry.netlify.app/r/loading-swap.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/items/action-button/components/action-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "number-input",
+      "description": "An input that returns a number value and automatically handles invalid inputs.",
+      "type": "registry:component",
+      "registryDependencies": ["input"],
+      "files": [
+        {
+          "path": "src/registry/new-york/items/number-input/components/number-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "multi-select",
+      "description": "A multi-select input that emulates the Shadcn Select component as closely as possible.",
+      "type": "registry:component",
+      "registryDependencies": ["popover", "command", "badge", "button"],
+      "files": [
+        {
+          "path": "src/registry/new-york/items/multi-select/components/multi-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "password-input",
+      "description": "An input that can toggle visibility of the password text and check the strength of the password.",
+      "type": "registry:component",
+      "registryDependencies": ["input", "button", "tooltip", "input-group"],
+      "dependencies": [
+        "@zxcvbn-ts/core",
+        "@zxcvbn-ts/language-common",
+        "@zxcvbn-ts/language-en"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/items/password-input/components/password-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}
