@@ -1,78 +1,74 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://acme.com",
+  "name": "Zero Shadcn Registry",
+  "homepage": "https://zerocn.zeroopensource.org",
   "items": [
     {
-      "name": "hello-world",
+      "name": "loading-swap",
+      "description": "Swaps content with a loading spinner without layout shift.",
       "type": "registry:component",
-      "title": "Hello World",
-      "description": "A simple hello world component",
-      "registryDependencies": ["button"],
       "files": [
         {
-          "path": "registry/new-york/blocks/hello-world/hello-world.tsx",
-          "type": "registry:component"
+          "path": "src/registry/new-york/items/loading-swap/components/loading-swap.tsx",
+          "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "example-form",
+      "name": "action-button",
+      "description": "A button that performs an action when clicked and optionally asks for user confirmation.",
       "type": "registry:component",
-      "title": "Example Form",
-      "description": "A contact form with Zod validation.",
-      "dependencies": ["zod"],
-      "registryDependencies": ["button", "input", "label", "textarea", "card"],
+      "registryDependencies": [
+        "alert-dialog",
+        "button",
+        "sonner",
+        "https://zerocn.zeroopensource.org/r/loading-swap.json"
+      ],
       "files": [
         {
-          "path": "registry/new-york/blocks/example-form/example-form.tsx",
-          "type": "registry:component"
+          "path": "src/registry/new-york/items/action-button/components/action-button.tsx",
+          "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "complex-component",
+      "name": "number-input",
+      "description": "An input that returns a number value and automatically handles invalid inputs.",
       "type": "registry:component",
-      "title": "Complex Component",
-      "description": "A complex component showing hooks, libs and components.",
-      "registryDependencies": ["card"],
+      "registryDependencies": ["input"],
       "files": [
         {
-          "path": "registry/new-york/blocks/complex-component/page.tsx",
-          "type": "registry:page",
-          "target": "app/pokemon/page.tsx"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/components/pokemon-card.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/components/pokemon-image.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/lib/pokemon.ts",
-          "type": "registry:lib"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/hooks/use-pokemon.ts",
-          "type": "registry:hook"
+          "path": "src/registry/new-york/items/number-input/components/number-input.tsx",
+          "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "example-with-css",
+      "name": "multi-select",
+      "description": "A multi-select input that emulates the Shadcn Select component as closely as possible.",
       "type": "registry:component",
-      "title": "Example with CSS",
-      "description": "A login form with a CSS file.",
+      "registryDependencies": ["popover", "command", "badge", "button"],
       "files": [
         {
-          "path": "registry/new-york/blocks/example-with-css/example-card.tsx",
-          "type": "registry:component"
-        },
+          "path": "src/registry/new-york/items/multi-select/components/multi-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "password-input",
+      "description": "An input that can toggle visibility of the password text and check the strength of the password.",
+      "type": "registry:component",
+      "registryDependencies": ["input", "button", "tooltip", "input-group"],
+      "dependencies": [
+        "@zxcvbn-ts/core",
+        "@zxcvbn-ts/language-common",
+        "@zxcvbn-ts/language-en"
+      ],
+      "files": [
         {
-          "path": "registry/new-york/blocks/example-with-css/example-card.css",
-          "type": "registry:component"
+          "path": "src/registry/new-york/items/password-input/components/password-input.tsx",
+          "type": "registry:ui"
         }
       ]
     }

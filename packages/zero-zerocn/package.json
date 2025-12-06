@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "registry:build": "shadcn build",
+    "build:registry": "shadcn build",
     "shadcn": "shadcn"
   },
   "dependencies": {
