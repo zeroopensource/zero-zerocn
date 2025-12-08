@@ -36,7 +36,6 @@ const findFiles = (dir: string): string[] => {
 };
 
 const nextDirs = findNextDirs();
-
 for (const nextDir of nextDirs) {
   const basePath = path.basename(nextDir);
   const dirName = path.dirname(nextDir);
