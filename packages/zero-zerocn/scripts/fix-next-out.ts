@@ -17,13 +17,6 @@ const findNextDirs = () => {
       }
       const full = path.join(dir, entry.name);
       if (entry.name.startsWith("__next.")) {
-        // ignore if it's directly under OUT_DIR (i.e. no path separator after relative)
-        // e.g. rel === "__next.123"  -> ignore
-        // e.g. rel === "1/__next.1"   -> accept
-        // const rel = path.relative(OUT_DIR, full);
-        // if (rel.includes(path.sep)) {
-        //   results.add(full);
-        // }
         results.add(full);
       }
       walk(full);
@@ -51,13 +44,6 @@ const findFiles = (dir: string): string[] => {
 };
 
 const nextDirs = findNextDirs();
-// const nextFiles = nextDirs.flatMap((d) =>
-//   fs.existsSync(d) ? findFiles(d) : []
-// );
-// console.log("Found __next.* files:");
-// for (const f of nextFiles) {
-//   console.log(" -", f);
-// }
 
 for (const nextDir of nextDirs) {
   const basePath = path.basename(nextDir);
