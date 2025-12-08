@@ -24,10 +24,6 @@ const findNextDirs = () => {
   }
   walk(OUT_DIR);
   const found = Array.from(results).sort();
-  console.log("Found __next.* directories:");
-  for (const p of found) {
-    console.log(" -", p);
-  }
   return found;
 };
 
@@ -49,7 +45,7 @@ for (const nextDir of nextDirs) {
     const relative = path.relative(nextDir, nextFile);
     const fileName = `${basePath}\\${relative}`.replaceAll("\\", ".");
     const filePath = `${dirName}\\${fileName}`;
-    console.log("Copying File:", nextFile, filePath);
+    console.log("Copying File:", "\n", nextFile, "\n", filePath);
     fs.copyFileSync(nextFile, filePath);
   }
 }
