@@ -28,10 +28,6 @@ const findNextDirs = () => {
   for (const p of found) {
     console.log(" -", p);
   }
-  // optionally write to a JSON file in out/ for later steps
-  // const outFile = path.join(OUT_DIR, "__next_dirs.json");
-  // fs.writeFileSync(outFile, JSON.stringify(found, null, 2), "utf8");
-  // console.log(`\nWrote ${found.length} paths to ${outFile}`);
   return found;
 };
 
