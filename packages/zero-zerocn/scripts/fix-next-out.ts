@@ -31,7 +31,7 @@ const findNextDirs = () => {
   }
   walk(OUT_DIR);
   const found = Array.from(results).sort();
-  console.log("Found __next.* directories (excluding root-level):");
+  console.log("Found __next.* directories:");
   for (const p of found) {
     console.log(" -", p);
   }
@@ -51,12 +51,26 @@ const findFiles = (dir: string): string[] => {
 };
 
 const nextDirs = findNextDirs();
-const nextFiles = nextDirs.flatMap((d) =>
-  fs.existsSync(d) ? findFiles(d) : []
-);
-console.log("Found __next.* files (excluding root-level):");
-for (const f of nextFiles) {
-  console.log(" -", f);
-}
+// const nextFiles = nextDirs.flatMap((d) =>
+//   fs.existsSync(d) ? findFiles(d) : []
+// );
+// console.log("Found __next.* files:");
+// for (const f of nextFiles) {
+//   console.log(" -", f);
+// }
 
-console.log(nextFiles);
+for (const nextDir of nextDirs) {
+  const basePath = path.basename(nextDir);
+  const dirName = path.dirname(nextDir);
+
+  console.log("\nProcessing Directory: ", nextDir);
+  const nextFiles = findFiles(nextDir);
+  for (const nextFile of nextFiles) {
+    console.log("Processing File: ", nextFile);
+    const relative = path.relative(nextDir, nextFile);
+    const fileName = `${basePath}\\${relative}`.replaceAll("\\", ".");
+    const filePath = `${dirName}\\${fileName}`;
+    console.log("Creating File:", filePath);
+    fs.copyFileSync(nextFile, filePath);
+  }
+}
