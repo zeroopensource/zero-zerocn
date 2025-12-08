@@ -44,15 +44,12 @@ const nextDirs = findNextDirs();
 for (const nextDir of nextDirs) {
   const basePath = path.basename(nextDir);
   const dirName = path.dirname(nextDir);
-
-  console.log("\nProcessing Directory: ", nextDir);
   const nextFiles = findFiles(nextDir);
   for (const nextFile of nextFiles) {
-    console.log("Processing File: ", nextFile);
     const relative = path.relative(nextDir, nextFile);
     const fileName = `${basePath}\\${relative}`.replaceAll("\\", ".");
     const filePath = `${dirName}\\${fileName}`;
-    console.log("Creating File:", filePath);
+    console.log("Copying File:", nextFile, filePath);
     fs.copyFileSync(nextFile, filePath);
   }
 }
