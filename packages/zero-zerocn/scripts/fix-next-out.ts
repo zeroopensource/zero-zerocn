@@ -17,13 +17,14 @@ const findNextDirs = () => {
       }
       const full = path.join(dir, entry.name);
       if (entry.name.startsWith("__next.")) {
-        const rel = path.relative(OUT_DIR, full);
         // ignore if it's directly under OUT_DIR (i.e. no path separator after relative)
         // e.g. rel === "__next.123"  -> ignore
         // e.g. rel === "1/__next.1"   -> accept
-        if (rel.includes(path.sep)) {
-          results.add(full);
-        }
+        // const rel = path.relative(OUT_DIR, full);
+        // if (rel.includes(path.sep)) {
+        //   results.add(full);
+        // }
+        results.add(full);
       }
       walk(full);
     }
