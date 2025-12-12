@@ -44,7 +44,8 @@ for (const nextDir of nextDirs) {
     const relative = path.relative(nextDir, nextFile);
     const fileName = `${basePath}\\${relative}`.replaceAll("\\", ".");
     const filePath = `${dirName}\\${fileName}`;
-    console.log("Copying File:", "\n", nextFile, "\n", filePath);
-    fs.copyFileSync(nextFile, filePath);
+    const normalizedFilePath = path.normalize(filePath);
+    console.log("Copying File:", "\n", nextFile, "\n", normalizedFilePath);
+    fs.copyFileSync(nextFile, normalizedFilePath);
   }
 }
