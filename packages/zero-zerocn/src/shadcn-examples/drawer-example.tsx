@@ -1,6 +1,10 @@
-"use client";
+"use client"
 
-import { Button } from "@/registry/bases/radix/ui/button";
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   Drawer,
   DrawerClose,
@@ -10,8 +14,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/bases/radix/ui/drawer";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/drawer"
 
 export default function DrawerExample() {
   return (
@@ -19,10 +22,10 @@ export default function DrawerExample() {
       <DrawerScrollableContent />
       <DrawerWithSides />
     </ExampleWrapper>
-  );
+  )
 }
 
-const DRAWER_SIDES = ["top", "right", "bottom", "left"] as const;
+const DRAWER_SIDES = ["top", "right", "bottom", "left"] as const
 
 function DrawerWithSides() {
   return (
@@ -30,13 +33,13 @@ function DrawerWithSides() {
       <div className="flex flex-wrap gap-2">
         {DRAWER_SIDES.map((side) => (
           <Drawer
+            key={side}
             direction={
               side === "bottom" ? undefined : (side as "top" | "right" | "left")
             }
-            key={side}
           >
             <DrawerTrigger asChild>
-              <Button className="capitalize" variant="outline">
+              <Button variant="outline" className="capitalize">
                 {side}
               </Button>
             </DrawerTrigger>
@@ -50,8 +53,8 @@ function DrawerWithSides() {
               <div className="no-scrollbar overflow-y-auto px-4">
                 {Array.from({ length: 10 }).map((_, index) => (
                   <p
-                    className="mb-4 style-lyra:mb-2 leading-normal style-lyra:leading-relaxed"
                     key={index}
+                    className="style-lyra:mb-2 style-lyra:leading-relaxed mb-4 leading-normal"
                   >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -75,7 +78,7 @@ function DrawerWithSides() {
         ))}
       </div>
     </Example>
-  );
+  )
 }
 
 function DrawerScrollableContent() {
@@ -93,8 +96,8 @@ function DrawerScrollableContent() {
           <div className="no-scrollbar overflow-y-auto px-4">
             {Array.from({ length: 10 }).map((_, index) => (
               <p
-                className="mb-4 style-lyra:mb-2 leading-normal style-lyra:leading-relaxed"
                 key={index}
+                className="style-lyra:mb-2 style-lyra:leading-relaxed mb-4 leading-normal"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -115,5 +118,5 @@ function DrawerScrollableContent() {
         </DrawerContent>
       </Drawer>
     </Example>
-  );
+  )
 }

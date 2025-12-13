@@ -1,20 +1,22 @@
-import { ArrowUpRightIcon } from "lucide-react";
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+} from "@/registry/bases/radix/ui/accordion"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
-// import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
+} from "@/registry/bases/radix/ui/card"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function AccordionExample() {
   return (
@@ -25,7 +27,7 @@ export default function AccordionExample() {
       <AccordionInCard />
       <AccordionWithDisabled />
     </ExampleWrapper>
-  );
+  )
 }
 
 function AccordionBasic() {
@@ -47,11 +49,11 @@ function AccordionBasic() {
       content:
         "Yes. It's animated by default, but you can disable it if you prefer.",
     },
-  ];
+  ]
 
   return (
     <Example title="Basic">
-      <Accordion className="mx-auto max-w-lg" collapsible type="single">
+      <Accordion type="single" collapsible className="mx-auto max-w-lg">
         {items.map((item) => (
           <AccordionItem key={item.value} value={item.value}>
             <AccordionTrigger>{item.trigger}</AccordionTrigger>
@@ -60,7 +62,7 @@ function AccordionBasic() {
         ))}
       </Accordion>
     </Example>
-  );
+  )
 }
 
 function AccordionMultiple() {
@@ -79,11 +81,11 @@ function AccordionMultiple() {
       content:
         "Modern distributed systems employ various strategies to maintain data consistency across regions. This often involves using techniques like CRDT (Conflict-Free Replicated Data Types), vector clocks, and gossip protocols. Systems might implement event sourcing patterns, utilize message queues for asynchronous updates, and employ sophisticated conflict resolution strategies. Popular solutions like Amazon's DynamoDB and Google's Spanner demonstrate different approaches to solving these challenges, balancing between consistency, availability, and partition tolerance as described in the CAP theorem.",
     },
-  ];
+  ]
 
   return (
     <Example title="Multiple">
-      <Accordion className="mx-auto max-w-lg" type="multiple">
+      <Accordion type="multiple" className="mx-auto max-w-lg">
         {items.map((item) => (
           <AccordionItem key={item.value} value={item.value}>
             <AccordionTrigger>{item.trigger}</AccordionTrigger>
@@ -92,7 +94,7 @@ function AccordionMultiple() {
         ))}
       </Accordion>
     </Example>
-  );
+  )
 }
 
 function AccordionWithBorders() {
@@ -126,32 +128,32 @@ function AccordionWithBorders() {
         </>
       ),
     },
-  ];
+  ]
 
   return (
     <Example title="With Borders">
       <Accordion
-        className="mx-auto max-w-lg style-lyra:gap-2 style-nova:gap-2 style-vega:gap-2"
-        collapsible
         type="single"
+        collapsible
+        className="style-lyra:gap-2 style-vega:gap-2 style-nova:gap-2 mx-auto max-w-lg"
       >
         {items.map((item) => (
           <AccordionItem
-            className="style-nova:rounded-lg style-vega:rounded-lg style-lyra:border style-nova:border style-vega:border"
             key={item.value}
             value={item.value}
+            className="style-vega:border style-nova:border style-lyra:border style-vega:rounded-lg style-nova:rounded-lg"
           >
-            <AccordionTrigger className="style-lyra:px-2 style-nova:px-2.5 style-vega:px-4 font-medium style-lyra:text-xs style-maia:text-sm style-mira:text-xs style-nova:text-sm style-vega:text-sm">
+            <AccordionTrigger className="style-nova:px-2.5 style-nova:text-sm style-vega:text-sm style-maia:text-sm style-mira:text-xs style-lyra:px-2 style-lyra:text-xs style-vega:px-4 font-medium">
               {item.trigger}
             </AccordionTrigger>
-            <AccordionContent className="style-lyra:px-2 style-maia:px-0 style-mira:px-0 style-nova:px-2.5 style-vega:px-4 style-lyra:text-xs style-nova:text-sm text-muted-foreground">
+            <AccordionContent className="text-muted-foreground style-nova:px-2.5 style-nova:text-sm style-lyra:px-2 style-lyra:text-xs style-vega:px-4 style-maia:px-0 style-mira:px-0">
               {item.content}
             </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
     </Example>
-  );
+  )
 }
 
 function AccordionInCard() {
@@ -173,12 +175,11 @@ function AccordionInCard() {
           </p>
           <Button size="sm">
             View plans
-            <ArrowUpRightIcon />
-            {/* <IconPlaceholder
-              hugeicons="ArrowUpRight01Icon"
+            <IconPlaceholder
               lucide="ArrowUpRightIcon"
               tabler="IconArrowUpRight"
-            /> */}
+              hugeicons="ArrowUpRight01Icon"
+            />
           </Button>
         </>
       ),
@@ -258,7 +259,7 @@ function AccordionInCard() {
         </>
       ),
     },
-  ];
+  ]
 
   return (
     <Example title="In Card">
@@ -271,10 +272,10 @@ function AccordionInCard() {
         </CardHeader>
         <CardContent>
           <Accordion
-            className="style-maia:rounded-md style-mira:rounded-md"
+            type="single"
             collapsible
             defaultValue="plans"
-            type="single"
+            className="style-maia:rounded-md style-mira:rounded-md"
           >
             {items.map((item) => (
               <AccordionItem key={item.value} value={item.value}>
@@ -286,7 +287,7 @@ function AccordionInCard() {
         </CardContent>
       </Card>
     </Example>
-  );
+  )
 }
 
 function AccordionWithDisabled() {
@@ -312,31 +313,31 @@ function AccordionWithDisabled() {
         "You can update your email address in your account settings. You'll receive a verification email at your new address to confirm the change.",
       disabled: false,
     },
-  ];
+  ]
 
   return (
     <Example title="With Disabled">
       <Accordion
-        className="mx-auto max-w-lg overflow-hidden style-lyra:rounded-none style-maia:rounded-lg style-mira:rounded-lg style-nova:rounded-lg style-vega:rounded-lg border"
-        collapsible
         type="single"
+        collapsible
+        className="style-lyra:rounded-none style-vega:rounded-lg style-nova:rounded-lg style-maia:rounded-lg style-mira:rounded-lg mx-auto max-w-lg overflow-hidden border"
       >
         {items.map((item) => (
           <AccordionItem
-            className="p-1 data-open:bg-muted/50"
-            disabled={item.disabled}
             key={item.value}
             value={item.value}
+            disabled={item.disabled}
+            className="data-open:bg-muted/50 p-1"
           >
-            <AccordionTrigger className="style-lyra:px-2 style-nova:px-2.5 style-vega:px-4">
+            <AccordionTrigger className="style-nova:px-2.5 style-lyra:px-2 style-vega:px-4">
               {item.trigger}
             </AccordionTrigger>
-            <AccordionContent className="style-lyra:px-2 style-nova:px-2.5 style-vega:px-4">
+            <AccordionContent className="style-nova:px-2.5 style-lyra:px-2 style-vega:px-4">
               {item.content}
             </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
     </Example>
-  );
+  )
 }

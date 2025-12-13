@@ -1,4 +1,8 @@
-import { Button } from "@/registry/bases/radix/ui/button";
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -6,9 +10,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/radix/ui/dialog";
-import { Field, FieldGroup, FieldLabel } from "@/registry/bases/radix/ui/field";
-import { Input } from "@/registry/bases/radix/ui/input";
+} from "@/registry/bases/radix/ui/dialog"
+import { Field, FieldGroup, FieldLabel } from "@/registry/bases/radix/ui/field"
+import { Input } from "@/registry/bases/radix/ui/input"
 import {
   Popover,
   PopoverContent,
@@ -16,8 +20,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/registry/bases/radix/ui/popover";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/popover"
 
 export default function PopoverExample() {
   return (
@@ -27,7 +30,7 @@ export default function PopoverExample() {
       <PopoverAlignments />
       <PopoverInDialog />
     </ExampleWrapper>
-  );
+  )
 }
 
 function PopoverBasic() {
@@ -47,7 +50,7 @@ function PopoverBasic() {
         </PopoverContent>
       </Popover>
     </Example>
-  );
+  )
 }
 
 function PopoverWithForm() {
@@ -57,7 +60,7 @@ function PopoverWithForm() {
         <PopoverTrigger asChild>
           <Button variant="outline">Open Popover</Button>
         </PopoverTrigger>
-        <PopoverContent align="start" className="w-64">
+        <PopoverContent className="w-64" align="start">
           <PopoverHeader>
             <PopoverTitle>Dimensions</PopoverTitle>
             <PopoverDescription>
@@ -66,22 +69,22 @@ function PopoverWithForm() {
           </PopoverHeader>
           <FieldGroup className="gap-4">
             <Field orientation="horizontal">
-              <FieldLabel className="w-1/2" htmlFor="width">
+              <FieldLabel htmlFor="width" className="w-1/2">
                 Width
               </FieldLabel>
-              <Input defaultValue="100%" id="width" />
+              <Input id="width" defaultValue="100%" />
             </Field>
             <Field orientation="horizontal">
-              <FieldLabel className="w-1/2" htmlFor="height">
+              <FieldLabel htmlFor="height" className="w-1/2">
                 Height
               </FieldLabel>
-              <Input defaultValue="25px" id="height" />
+              <Input id="height" defaultValue="25px" />
             </Field>
           </FieldGroup>
         </PopoverContent>
       </Popover>
     </Example>
-  );
+  )
 }
 
 function PopoverAlignments() {
@@ -90,7 +93,7 @@ function PopoverAlignments() {
       <div className="flex gap-6">
         <Popover>
           <PopoverTrigger asChild>
-            <Button size="sm" variant="outline">
+            <Button variant="outline" size="sm">
               Start
             </Button>
           </PopoverTrigger>
@@ -100,7 +103,7 @@ function PopoverAlignments() {
         </Popover>
         <Popover>
           <PopoverTrigger asChild>
-            <Button size="sm" variant="outline">
+            <Button variant="outline" size="sm">
               Center
             </Button>
           </PopoverTrigger>
@@ -110,7 +113,7 @@ function PopoverAlignments() {
         </Popover>
         <Popover>
           <PopoverTrigger asChild>
-            <Button size="sm" variant="outline">
+            <Button variant="outline" size="sm">
               End
             </Button>
           </PopoverTrigger>
@@ -120,7 +123,7 @@ function PopoverAlignments() {
         </Popover>
       </div>
     </Example>
-  );
+  )
 }
 
 function PopoverInDialog() {
@@ -139,7 +142,7 @@ function PopoverInDialog() {
           </DialogHeader>
           <Popover>
             <PopoverTrigger asChild>
-              <Button className="w-fit" variant="outline">
+              <Button variant="outline" className="w-fit">
                 Open Popover
               </Button>
             </PopoverTrigger>
@@ -156,5 +159,5 @@ function PopoverInDialog() {
         </DialogContent>
       </Dialog>
     </Example>
-  );
+  )
 }

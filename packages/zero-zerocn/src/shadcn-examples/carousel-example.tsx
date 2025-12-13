@@ -1,12 +1,15 @@
-import { Card, CardContent } from "@/registry/bases/radix/ui/card";
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Card, CardContent } from "@/registry/bases/radix/ui/card"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/bases/radix/ui/carousel";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/carousel"
 
 export default function CarouselExample() {
   return (
@@ -15,7 +18,7 @@ export default function CarouselExample() {
       <CarouselMultiple />
       <CarouselWithGap />
     </ExampleWrapper>
-  );
+  )
 }
 
 function CarouselBasic() {
@@ -28,7 +31,7 @@ function CarouselBasic() {
               <div className="p-1">
                 <Card>
                   <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <span className="font-semibold text-4xl">{index + 1}</span>
+                    <span className="text-4xl font-semibold">{index + 1}</span>
                   </CardContent>
                 </Card>
               </div>
@@ -39,7 +42,7 @@ function CarouselBasic() {
         <CarouselNext className="hidden sm:inline-flex" />
       </Carousel>
     </Example>
-  );
+  )
 }
 
 function CarouselMultiple() {
@@ -53,11 +56,11 @@ function CarouselMultiple() {
       >
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem className="sm:basis-1/2 lg:basis-1/3" key={index}>
+            <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
               <div className="p-1">
                 <Card>
                   <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <span className="font-semibold text-3xl">{index + 1}</span>
+                    <span className="text-3xl font-semibold">{index + 1}</span>
                   </CardContent>
                 </Card>
               </div>
@@ -68,7 +71,7 @@ function CarouselMultiple() {
         <CarouselNext className="hidden sm:inline-flex" />
       </Carousel>
     </Example>
-  );
+  )
 }
 
 function CarouselWithGap() {
@@ -77,11 +80,11 @@ function CarouselWithGap() {
       <Carousel className="mx-auto max-w-xs sm:max-w-sm">
         <CarouselContent className="-ml-1">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem className="pl-1 md:basis-1/2" key={index}>
+            <CarouselItem key={index} className="pl-1 md:basis-1/2">
               <div className="p-1">
                 <Card>
                   <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <span className="font-semibold text-2xl">{index + 1}</span>
+                    <span className="text-2xl font-semibold">{index + 1}</span>
                   </CardContent>
                 </Card>
               </div>
@@ -92,5 +95,5 @@ function CarouselWithGap() {
         <CarouselNext className="hidden sm:inline-flex" />
       </Carousel>
     </Example>
-  );
+  )
 }

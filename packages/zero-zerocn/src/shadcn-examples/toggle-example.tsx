@@ -1,7 +1,10 @@
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/radix/ui/button";
-import { Toggle } from "@/registry/bases/radix/ui/toggle";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Button } from "@/registry/bases/radix/ui/button"
+import { Toggle } from "@/registry/bases/radix/ui/toggle"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function ToggleExample() {
   return (
@@ -15,7 +18,7 @@ export default function ToggleExample() {
       <ToggleDisabled />
       <ToggleWithIcon />
     </ExampleWrapper>
-  );
+  )
 }
 
 function ToggleBasic() {
@@ -24,71 +27,71 @@ function ToggleBasic() {
       <div className="flex flex-wrap items-center gap-2">
         <Toggle aria-label="Toggle bold" defaultPressed>
           <IconPlaceholder
-            hugeicons="TextBoldIcon"
             lucide="BoldIcon"
             tabler="IconBold"
+            hugeicons="TextBoldIcon"
           />
         </Toggle>
         <Toggle aria-label="Toggle italic">
           <IconPlaceholder
-            hugeicons="TextItalicIcon"
             lucide="ItalicIcon"
             tabler="IconItalic"
+            hugeicons="TextItalicIcon"
           />
         </Toggle>
         <Toggle aria-label="Toggle underline">
           <IconPlaceholder
-            hugeicons="TextUnderlineIcon"
             lucide="UnderlineIcon"
             tabler="IconUnderline"
+            hugeicons="TextUnderlineIcon"
           />
         </Toggle>
       </div>
     </Example>
-  );
+  )
 }
 
 function ToggleOutline() {
   return (
     <Example title="Outline">
       <div className="flex flex-wrap items-center gap-2">
-        <Toggle aria-label="Toggle italic" variant="outline">
+        <Toggle variant="outline" aria-label="Toggle italic">
           <IconPlaceholder
-            hugeicons="TextItalicIcon"
             lucide="ItalicIcon"
             tabler="IconItalic"
+            hugeicons="TextItalicIcon"
           />
           Italic
         </Toggle>
-        <Toggle aria-label="Toggle bold" variant="outline">
+        <Toggle variant="outline" aria-label="Toggle bold">
           <IconPlaceholder
-            hugeicons="TextBoldIcon"
             lucide="BoldIcon"
             tabler="IconBold"
+            hugeicons="TextBoldIcon"
           />
           Bold
         </Toggle>
       </div>
     </Example>
-  );
+  )
 }
 
 function ToggleSizes() {
   return (
     <Example title="Sizes">
       <div className="flex flex-wrap items-center gap-2">
-        <Toggle aria-label="Toggle small" size="sm" variant="outline">
+        <Toggle variant="outline" aria-label="Toggle small" size="sm">
           Small
         </Toggle>
-        <Toggle aria-label="Toggle default" size="default" variant="outline">
+        <Toggle variant="outline" aria-label="Toggle default" size="default">
           Default
         </Toggle>
-        <Toggle aria-label="Toggle large" size="lg" variant="outline">
+        <Toggle variant="outline" aria-label="Toggle large" size="lg">
           Large
         </Toggle>
       </div>
     </Example>
-  );
+  )
 }
 
 function ToggleWithButtonText() {
@@ -99,7 +102,7 @@ function ToggleWithButtonText() {
           <Button size="sm" variant="outline">
             Button
           </Button>
-          <Toggle aria-label="Toggle sm" size="sm" variant="outline">
+          <Toggle variant="outline" aria-label="Toggle sm" size="sm">
             Toggle
           </Toggle>
         </div>
@@ -107,7 +110,7 @@ function ToggleWithButtonText() {
           <Button size="default" variant="outline">
             Button
           </Button>
-          <Toggle aria-label="Toggle default" size="default" variant="outline">
+          <Toggle variant="outline" aria-label="Toggle default" size="default">
             Toggle
           </Toggle>
         </div>
@@ -115,13 +118,13 @@ function ToggleWithButtonText() {
           <Button size="lg" variant="outline">
             Button
           </Button>
-          <Toggle aria-label="Toggle lg" size="lg" variant="outline">
+          <Toggle variant="outline" aria-label="Toggle lg" size="lg">
             Toggle
           </Toggle>
         </div>
       </div>
     </Example>
-  );
+  )
 }
 
 function ToggleWithButtonIcon() {
@@ -129,60 +132,60 @@ function ToggleWithButtonIcon() {
     <Example title="With Button Icon">
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-2">
-          <Button size="icon-sm" variant="outline">
+          <Button variant="outline" size="icon-sm">
             <IconPlaceholder
-              hugeicons="TextBoldIcon"
               lucide="BoldIcon"
               tabler="IconBold"
+              hugeicons="TextBoldIcon"
             />
           </Button>
-          <Toggle aria-label="Toggle sm icon" size="sm" variant="outline">
+          <Toggle variant="outline" aria-label="Toggle sm icon" size="sm">
             <IconPlaceholder
-              hugeicons="TextBoldIcon"
               lucide="BoldIcon"
               tabler="IconBold"
+              hugeicons="TextBoldIcon"
             />
           </Toggle>
         </div>
         <div className="flex items-center gap-2">
-          <Button size="icon" variant="outline">
+          <Button variant="outline" size="icon">
             <IconPlaceholder
-              hugeicons="TextItalicIcon"
               lucide="ItalicIcon"
               tabler="IconItalic"
+              hugeicons="TextItalicIcon"
             />
           </Button>
           <Toggle
+            variant="outline"
             aria-label="Toggle default icon"
             size="default"
-            variant="outline"
           >
             <IconPlaceholder
-              hugeicons="TextItalicIcon"
               lucide="ItalicIcon"
               tabler="IconItalic"
+              hugeicons="TextItalicIcon"
             />
           </Toggle>
         </div>
         <div className="flex items-center gap-2">
-          <Button size="icon-lg" variant="outline">
+          <Button variant="outline" size="icon-lg">
             <IconPlaceholder
-              hugeicons="TextUnderlineIcon"
               lucide="UnderlineIcon"
               tabler="IconUnderline"
+              hugeicons="TextUnderlineIcon"
             />
           </Button>
-          <Toggle aria-label="Toggle lg icon" size="lg" variant="outline">
+          <Toggle variant="outline" aria-label="Toggle lg icon" size="lg">
             <IconPlaceholder
-              hugeicons="TextUnderlineIcon"
               lucide="UnderlineIcon"
               tabler="IconUnderline"
+              hugeicons="TextUnderlineIcon"
             />
           </Toggle>
         </div>
       </div>
     </Example>
-  );
+  )
 }
 
 function ToggleWithButtonIconText() {
@@ -192,18 +195,18 @@ function ToggleWithButtonIconText() {
         <div className="flex items-center gap-2">
           <Button size="sm" variant="outline">
             <IconPlaceholder
-              data-icon="inline-start"
-              hugeicons="TextBoldIcon"
               lucide="BoldIcon"
               tabler="IconBold"
+              hugeicons="TextBoldIcon"
+              data-icon="inline-start"
             />
             Button
           </Button>
-          <Toggle aria-label="Toggle sm icon text" size="sm" variant="outline">
+          <Toggle variant="outline" aria-label="Toggle sm icon text" size="sm">
             <IconPlaceholder
-              hugeicons="TextBoldIcon"
               lucide="BoldIcon"
               tabler="IconBold"
+              hugeicons="TextBoldIcon"
             />
             Toggle
           </Toggle>
@@ -211,22 +214,22 @@ function ToggleWithButtonIconText() {
         <div className="flex items-center gap-2">
           <Button size="default" variant="outline">
             <IconPlaceholder
-              data-icon="inline-start"
-              hugeicons="TextItalicIcon"
               lucide="ItalicIcon"
               tabler="IconItalic"
+              hugeicons="TextItalicIcon"
+              data-icon="inline-start"
             />
             Button
           </Button>
           <Toggle
+            variant="outline"
             aria-label="Toggle default icon text"
             size="default"
-            variant="outline"
           >
             <IconPlaceholder
-              hugeicons="TextItalicIcon"
               lucide="ItalicIcon"
               tabler="IconItalic"
+              hugeicons="TextItalicIcon"
             />
             Toggle
           </Toggle>
@@ -234,25 +237,25 @@ function ToggleWithButtonIconText() {
         <div className="flex items-center gap-2">
           <Button size="lg" variant="outline">
             <IconPlaceholder
-              data-icon="inline-start"
-              hugeicons="TextUnderlineIcon"
               lucide="UnderlineIcon"
               tabler="IconUnderline"
+              hugeicons="TextUnderlineIcon"
+              data-icon="inline-start"
             />
             Button
           </Button>
-          <Toggle aria-label="Toggle lg icon text" size="lg" variant="outline">
+          <Toggle variant="outline" aria-label="Toggle lg icon text" size="lg">
             <IconPlaceholder
-              hugeicons="TextUnderlineIcon"
               lucide="UnderlineIcon"
               tabler="IconUnderline"
+              hugeicons="TextUnderlineIcon"
             />
             Toggle
           </Toggle>
         </div>
       </div>
     </Example>
-  );
+  )
 }
 
 function ToggleDisabled() {
@@ -262,12 +265,12 @@ function ToggleDisabled() {
         <Toggle aria-label="Toggle disabled" disabled>
           Disabled
         </Toggle>
-        <Toggle aria-label="Toggle disabled outline" disabled variant="outline">
+        <Toggle variant="outline" aria-label="Toggle disabled outline" disabled>
           Disabled
         </Toggle>
       </div>
     </Example>
-  );
+  )
 }
 
 function ToggleWithIcon() {
@@ -276,22 +279,22 @@ function ToggleWithIcon() {
       <div className="flex flex-wrap items-center gap-2">
         <Toggle aria-label="Toggle bookmark" defaultPressed>
           <IconPlaceholder
-            className="group-data-[state=on]/toggle:fill-accent-foreground"
-            hugeicons="BookmarkIcon"
             lucide="BookmarkIcon"
             tabler="IconBookmark"
+            hugeicons="BookmarkIcon"
+            className="group-data-[state=on]/toggle:fill-accent-foreground"
           />
         </Toggle>
-        <Toggle aria-label="Toggle bookmark outline" variant="outline">
+        <Toggle variant="outline" aria-label="Toggle bookmark outline">
           <IconPlaceholder
-            className="group-data-[state=on]/toggle:fill-accent-foreground"
-            hugeicons="BookmarkIcon"
             lucide="BookmarkIcon"
             tabler="IconBookmark"
+            hugeicons="BookmarkIcon"
+            className="group-data-[state=on]/toggle:fill-accent-foreground"
           />
           Bookmark
         </Toggle>
       </div>
     </Example>
-  );
+  )
 }

@@ -1,7 +1,12 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { Checkbox } from "@/registry/bases/radix/ui/checkbox";
+import * as React from "react"
+
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Checkbox } from "@/registry/bases/radix/ui/checkbox"
 import {
   Field,
   FieldContent,
@@ -9,7 +14,7 @@ import {
   FieldGroup,
   FieldLabel,
   FieldTitle,
-} from "@/registry/bases/radix/ui/field";
+} from "@/registry/bases/radix/ui/field"
 import {
   Table,
   TableBody,
@@ -17,8 +22,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/bases/radix/ui/table";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/table"
 
 export default function CheckboxExample() {
   return (
@@ -31,7 +35,7 @@ export default function CheckboxExample() {
       <CheckboxInTable />
       <CheckboxGroup />
     </ExampleWrapper>
-  );
+  )
 }
 
 function CheckboxBasic() {
@@ -42,14 +46,14 @@ function CheckboxBasic() {
         <FieldLabel htmlFor="terms">Accept terms and conditions</FieldLabel>
       </Field>
     </Example>
-  );
+  )
 }
 
 function CheckboxWithDescription() {
   return (
     <Example title="With Description">
       <Field orientation="horizontal">
-        <Checkbox defaultChecked id="terms-2" />
+        <Checkbox id="terms-2" defaultChecked />
         <FieldContent>
           <FieldLabel htmlFor="terms-2">Accept terms and conditions</FieldLabel>
           <FieldDescription>
@@ -58,29 +62,29 @@ function CheckboxWithDescription() {
         </FieldContent>
       </Field>
     </Example>
-  );
+  )
 }
 
 function CheckboxInvalid() {
   return (
     <Example title="Invalid">
-      <Field data-invalid orientation="horizontal">
-        <Checkbox aria-invalid id="terms-3" />
+      <Field orientation="horizontal" data-invalid>
+        <Checkbox id="terms-3" aria-invalid />
         <FieldLabel htmlFor="terms-3">Accept terms and conditions</FieldLabel>
       </Field>
     </Example>
-  );
+  )
 }
 
 function CheckboxDisabled() {
   return (
     <Example title="Disabled">
       <Field orientation="horizontal">
-        <Checkbox disabled id="toggle" />
+        <Checkbox id="toggle" disabled />
         <FieldLabel htmlFor="toggle">Enable notifications</FieldLabel>
       </Field>
     </Example>
-  );
+  )
 }
 
 function CheckboxWithTitle() {
@@ -89,7 +93,7 @@ function CheckboxWithTitle() {
       <FieldGroup>
         <FieldLabel htmlFor="toggle-2">
           <Field orientation="horizontal">
-            <Checkbox defaultChecked id="toggle-2" />
+            <Checkbox id="toggle-2" defaultChecked />
             <FieldContent>
               <FieldTitle>Enable notifications</FieldTitle>
               <FieldDescription>
@@ -99,8 +103,8 @@ function CheckboxWithTitle() {
           </Field>
         </FieldLabel>
         <FieldLabel htmlFor="toggle-4">
-          <Field data-disabled orientation="horizontal">
-            <Checkbox disabled id="toggle-4" />
+          <Field orientation="horizontal" data-disabled>
+            <Checkbox id="toggle-4" disabled />
             <FieldContent>
               <FieldTitle>Enable notifications</FieldTitle>
               <FieldDescription>
@@ -111,7 +115,7 @@ function CheckboxWithTitle() {
         </FieldLabel>
       </FieldGroup>
     </Example>
-  );
+  )
 }
 
 const tableData = [
@@ -139,32 +143,32 @@ const tableData = [
     email: "david.kim@example.com",
     role: "Editor",
   },
-];
+]
 
 function CheckboxInTable() {
   const [selectedRows, setSelectedRows] = React.useState<Set<string>>(
     new Set(["1"])
-  );
+  )
 
-  const selectAll = selectedRows.size === tableData.length;
+  const selectAll = selectedRows.size === tableData.length
 
   const handleSelectAll = (checked: boolean) => {
     if (checked) {
-      setSelectedRows(new Set(tableData.map((row) => row.id)));
+      setSelectedRows(new Set(tableData.map((row) => row.id)))
     } else {
-      setSelectedRows(new Set());
+      setSelectedRows(new Set())
     }
-  };
+  }
 
   const handleSelectRow = (id: string, checked: boolean) => {
-    const newSelected = new Set(selectedRows);
+    const newSelected = new Set(selectedRows)
     if (checked) {
-      newSelected.add(id);
+      newSelected.add(id)
     } else {
-      newSelected.delete(id);
+      newSelected.delete(id)
     }
-    setSelectedRows(newSelected);
-  };
+    setSelectedRows(newSelected)
+  }
 
   return (
     <Example title="In Table">
@@ -173,8 +177,8 @@ function CheckboxInTable() {
           <TableRow>
             <TableHead className="w-8">
               <Checkbox
-                checked={selectAll}
                 id="select-all"
+                checked={selectAll}
                 onCheckedChange={handleSelectAll}
               />
             </TableHead>
@@ -186,13 +190,13 @@ function CheckboxInTable() {
         <TableBody>
           {tableData.map((row) => (
             <TableRow
-              data-state={selectedRows.has(row.id) ? "selected" : undefined}
               key={row.id}
+              data-state={selectedRows.has(row.id) ? "selected" : undefined}
             >
               <TableCell>
                 <Checkbox
-                  checked={selectedRows.has(row.id)}
                   id={`row-${row.id}`}
+                  checked={selectedRows.has(row.id)}
                   onCheckedChange={(checked) =>
                     handleSelectRow(row.id, checked === true)
                   }
@@ -206,7 +210,7 @@ function CheckboxInTable() {
         </TableBody>
       </Table>
     </Example>
-  );
+  )
 }
 
 function CheckboxGroup() {
@@ -217,8 +221,8 @@ function CheckboxGroup() {
         <Field orientation="horizontal">
           <Checkbox id="finder-pref-9k2-hard-disks-ljj" />
           <FieldLabel
-            className="font-normal"
             htmlFor="finder-pref-9k2-hard-disks-ljj"
+            className="font-normal"
           >
             Hard disks
           </FieldLabel>
@@ -226,8 +230,8 @@ function CheckboxGroup() {
         <Field orientation="horizontal">
           <Checkbox id="finder-pref-9k2-external-disks-1yg" />
           <FieldLabel
-            className="font-normal"
             htmlFor="finder-pref-9k2-external-disks-1yg"
+            className="font-normal"
           >
             External disks
           </FieldLabel>
@@ -235,8 +239,8 @@ function CheckboxGroup() {
         <Field orientation="horizontal">
           <Checkbox id="finder-pref-9k2-cds-dvds-fzt" />
           <FieldLabel
-            className="font-normal"
             htmlFor="finder-pref-9k2-cds-dvds-fzt"
+            className="font-normal"
           >
             CDs, DVDs, and iPods
           </FieldLabel>
@@ -244,13 +248,13 @@ function CheckboxGroup() {
         <Field orientation="horizontal">
           <Checkbox id="finder-pref-9k2-connected-servers-6l2" />
           <FieldLabel
-            className="font-normal"
             htmlFor="finder-pref-9k2-connected-servers-6l2"
+            className="font-normal"
           >
             Connected servers
           </FieldLabel>
         </Field>
       </Field>
     </Example>
-  );
+  )
 }

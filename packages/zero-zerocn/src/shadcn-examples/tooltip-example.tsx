@@ -1,14 +1,17 @@
-"use client";
+"use client"
 
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/radix/ui/button";
-import { Kbd } from "@/registry/bases/radix/ui/kbd";
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Button } from "@/registry/bases/radix/ui/button"
+import { Kbd } from "@/registry/bases/radix/ui/kbd"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/bases/radix/ui/tooltip";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/tooltip"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function TooltipExample() {
   return (
@@ -22,7 +25,7 @@ export default function TooltipExample() {
       <TooltipOnLink />
       <TooltipFormatted />
     </ExampleWrapper>
-  );
+  )
 }
 
 function TooltipBasic() {
@@ -30,7 +33,7 @@ function TooltipBasic() {
     <Example title="Basic">
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button className="w-fit" variant="outline">
+          <Button variant="outline" className="w-fit">
             Show Tooltip
           </Button>
         </TooltipTrigger>
@@ -39,7 +42,7 @@ function TooltipBasic() {
         </TooltipContent>
       </Tooltip>
     </Example>
-  );
+  )
 }
 
 function TooltipSides() {
@@ -49,7 +52,7 @@ function TooltipSides() {
         {(["top", "right", "bottom", "left"] as const).map((side) => (
           <Tooltip key={side}>
             <TooltipTrigger asChild>
-              <Button className="w-fit capitalize" variant="outline">
+              <Button variant="outline" className="w-fit capitalize">
                 {side}
               </Button>
             </TooltipTrigger>
@@ -60,7 +63,7 @@ function TooltipSides() {
         ))}
       </div>
     </Example>
-  );
+  )
 }
 
 function TooltipWithIcon() {
@@ -68,11 +71,11 @@ function TooltipWithIcon() {
     <Example title="With Icon">
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button size="icon" variant="ghost">
+          <Button variant="ghost" size="icon">
             <IconPlaceholder
-              hugeicons="AlertCircleIcon"
               lucide="InfoIcon"
               tabler="IconInfoCircle"
+              hugeicons="AlertCircleIcon"
             />
             <span className="sr-only">Info</span>
           </Button>
@@ -82,7 +85,7 @@ function TooltipWithIcon() {
         </TooltipContent>
       </Tooltip>
     </Example>
-  );
+  )
 }
 
 function TooltipLongContent() {
@@ -90,7 +93,7 @@ function TooltipLongContent() {
     <Example title="Long Content">
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button className="w-fit" variant="outline">
+          <Button variant="outline" className="w-fit">
             Show Tooltip
           </Button>
         </TooltipTrigger>
@@ -100,7 +103,7 @@ function TooltipLongContent() {
         </TooltipContent>
       </Tooltip>
     </Example>
-  );
+  )
 }
 
 function TooltipDisabled() {
@@ -109,7 +112,7 @@ function TooltipDisabled() {
       <Tooltip>
         <TooltipTrigger asChild>
           <span className="inline-block w-fit">
-            <Button disabled variant="outline">
+            <Button variant="outline" disabled>
               Disabled
             </Button>
           </span>
@@ -119,7 +122,7 @@ function TooltipDisabled() {
         </TooltipContent>
       </Tooltip>
     </Example>
-  );
+  )
 }
 
 function TooltipWithKeyboard() {
@@ -127,11 +130,11 @@ function TooltipWithKeyboard() {
     <Example title="With Keyboard Shortcut">
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button size="icon-sm" variant="outline">
+          <Button variant="outline" size="icon-sm">
             <IconPlaceholder
-              hugeicons="FloppyDiskIcon"
               lucide="SaveIcon"
               tabler="IconDeviceFloppy"
+              hugeicons="FloppyDiskIcon"
             />
           </Button>
         </TooltipTrigger>
@@ -142,7 +145,7 @@ function TooltipWithKeyboard() {
         </TooltipContent>
       </Tooltip>
     </Example>
-  );
+  )
 }
 
 function TooltipOnLink() {
@@ -151,8 +154,8 @@ function TooltipOnLink() {
       <Tooltip>
         <TooltipTrigger asChild>
           <a
-            className="w-fit text-primary text-sm underline-offset-4 hover:underline"
             href="#"
+            className="text-primary w-fit text-sm underline-offset-4 hover:underline"
             onClick={(e) => e.preventDefault()}
           >
             Learn more
@@ -163,7 +166,7 @@ function TooltipOnLink() {
         </TooltipContent>
       </Tooltip>
     </Example>
-  );
+  )
 }
 
 function TooltipFormatted() {
@@ -171,7 +174,7 @@ function TooltipFormatted() {
     <Example title="Formatted Content">
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button className="w-fit" variant="outline">
+          <Button variant="outline" className="w-fit">
             Status
           </Button>
         </TooltipTrigger>
@@ -183,5 +186,5 @@ function TooltipFormatted() {
         </TooltipContent>
       </Tooltip>
     </Example>
-  );
+  )
 }

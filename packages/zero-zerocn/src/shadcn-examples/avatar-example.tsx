@@ -1,4 +1,7 @@
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
 import {
   Avatar,
   AvatarBadge,
@@ -6,8 +9,8 @@ import {
   AvatarGroup,
   AvatarGroupCount,
   AvatarImage,
-} from "@/registry/bases/radix/ui/avatar";
-import { Button } from "@/registry/bases/radix/ui/button";
+} from "@/registry/bases/radix/ui/avatar"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   Empty,
   EmptyContent,
@@ -15,8 +18,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/bases/radix/ui/empty";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/empty"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function AvatarExample() {
   return (
@@ -29,7 +32,7 @@ export default function AvatarExample() {
       <AvatarGroupWithIconCount />
       <AvatarInEmpty />
     </ExampleWrapper>
-  );
+  )
 }
 
 function AvatarSizes() {
@@ -37,15 +40,15 @@ function AvatarSizes() {
     <Example title="Sizes">
       <div className="flex flex-wrap items-center gap-2">
         <Avatar size="sm">
-          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar>
-          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar size="lg">
-          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </div>
@@ -61,7 +64,7 @@ function AvatarSizes() {
         </Avatar>
       </div>
     </Example>
-  );
+  )
 }
 
 function AvatarWithBadge() {
@@ -70,24 +73,24 @@ function AvatarWithBadge() {
       <div className="flex flex-wrap items-center gap-2">
         <Avatar size="sm">
           <AvatarImage
-            alt="@jorgezreik"
             src="https://github.com/jorgezreik.png"
+            alt="@jorgezreik"
           />
           <AvatarFallback>JZ</AvatarFallback>
           <AvatarBadge />
         </Avatar>
         <Avatar>
           <AvatarImage
-            alt="@jorgezreik"
             src="https://github.com/jorgezreik.png"
+            alt="@jorgezreik"
           />
           <AvatarFallback>JZ</AvatarFallback>
           <AvatarBadge />
         </Avatar>
         <Avatar size="lg">
           <AvatarImage
-            alt="@jorgezreik"
             src="https://github.com/jorgezreik.png"
+            alt="@jorgezreik"
           />
           <AvatarFallback>JZ</AvatarFallback>
           <AvatarBadge />
@@ -108,7 +111,7 @@ function AvatarWithBadge() {
         </Avatar>
       </div>
     </Example>
-  );
+  )
 }
 
 function AvatarWithBadgeIcon() {
@@ -117,43 +120,43 @@ function AvatarWithBadgeIcon() {
       <div className="flex flex-wrap items-center gap-2">
         <Avatar size="sm">
           <AvatarImage
-            alt="@pranathip"
             src="https://github.com/pranathip.png"
+            alt="@pranathip"
           />
           <AvatarFallback>PP</AvatarFallback>
           <AvatarBadge>
             <IconPlaceholder
-              hugeicons="PlusSignIcon"
               lucide="PlusIcon"
               tabler="IconPlus"
+              hugeicons="PlusSignIcon"
             />
           </AvatarBadge>
         </Avatar>
         <Avatar>
           <AvatarImage
-            alt="@pranathip"
             src="https://github.com/pranathip.png"
+            alt="@pranathip"
           />
           <AvatarFallback>PP</AvatarFallback>
           <AvatarBadge>
             <IconPlaceholder
-              hugeicons="PlusSignIcon"
               lucide="PlusIcon"
               tabler="IconPlus"
+              hugeicons="PlusSignIcon"
             />
           </AvatarBadge>
         </Avatar>
         <Avatar size="lg">
           <AvatarImage
-            alt="@pranathip"
             src="https://github.com/pranathip.png"
+            alt="@pranathip"
           />
           <AvatarFallback>PP</AvatarFallback>
           <AvatarBadge>
             <IconPlaceholder
-              hugeicons="PlusSignIcon"
               lucide="PlusIcon"
               tabler="IconPlus"
+              hugeicons="PlusSignIcon"
             />
           </AvatarBadge>
         </Avatar>
@@ -163,9 +166,9 @@ function AvatarWithBadgeIcon() {
           <AvatarFallback>PP</AvatarFallback>
           <AvatarBadge>
             <IconPlaceholder
-              hugeicons="Tick02Icon"
               lucide="CheckIcon"
               tabler="IconCheck"
+              hugeicons="Tick02Icon"
             />
           </AvatarBadge>
         </Avatar>
@@ -173,9 +176,9 @@ function AvatarWithBadgeIcon() {
           <AvatarFallback>PP</AvatarFallback>
           <AvatarBadge>
             <IconPlaceholder
-              hugeicons="Tick02Icon"
               lucide="CheckIcon"
               tabler="IconCheck"
+              hugeicons="Tick02Icon"
             />
           </AvatarBadge>
         </Avatar>
@@ -183,15 +186,15 @@ function AvatarWithBadgeIcon() {
           <AvatarFallback>PP</AvatarFallback>
           <AvatarBadge>
             <IconPlaceholder
-              hugeicons="Tick02Icon"
               lucide="CheckIcon"
               tabler="IconCheck"
+              hugeicons="Tick02Icon"
             />
           </AvatarBadge>
         </Avatar>
       </div>
     </Example>
-  );
+  )
 }
 
 function AvatarGroupExample() {
@@ -199,66 +202,66 @@ function AvatarGroupExample() {
     <Example title="Group">
       <AvatarGroup>
         <Avatar size="sm">
-          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar size="sm">
           <AvatarImage
-            alt="@maxleiter"
             src="https://github.com/maxleiter.png"
+            alt="@maxleiter"
           />
           <AvatarFallback>LR</AvatarFallback>
         </Avatar>
         <Avatar size="sm">
           <AvatarImage
-            alt="@evilrabbit"
             src="https://github.com/evilrabbit.png"
+            alt="@evilrabbit"
           />
           <AvatarFallback>ER</AvatarFallback>
         </Avatar>
       </AvatarGroup>
       <AvatarGroup>
         <Avatar>
-          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar>
           <AvatarImage
-            alt="@maxleiter"
             src="https://github.com/maxleiter.png"
+            alt="@maxleiter"
           />
           <AvatarFallback>LR</AvatarFallback>
         </Avatar>
         <Avatar>
           <AvatarImage
-            alt="@evilrabbit"
             src="https://github.com/evilrabbit.png"
+            alt="@evilrabbit"
           />
           <AvatarFallback>ER</AvatarFallback>
         </Avatar>
       </AvatarGroup>
       <AvatarGroup>
         <Avatar size="lg">
-          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar size="lg">
           <AvatarImage
-            alt="@maxleiter"
             src="https://github.com/maxleiter.png"
+            alt="@maxleiter"
           />
           <AvatarFallback>LR</AvatarFallback>
         </Avatar>
         <Avatar size="lg">
           <AvatarImage
-            alt="@evilrabbit"
             src="https://github.com/evilrabbit.png"
+            alt="@evilrabbit"
           />
           <AvatarFallback>ER</AvatarFallback>
         </Avatar>
       </AvatarGroup>
     </Example>
-  );
+  )
 }
 
 function AvatarGroupWithCount() {
@@ -266,20 +269,20 @@ function AvatarGroupWithCount() {
     <Example title="Group with Count">
       <AvatarGroup>
         <Avatar size="sm">
-          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar size="sm">
           <AvatarImage
-            alt="@maxleiter"
             src="https://github.com/maxleiter.png"
+            alt="@maxleiter"
           />
           <AvatarFallback>LR</AvatarFallback>
         </Avatar>
         <Avatar size="sm">
           <AvatarImage
-            alt="@evilrabbit"
             src="https://github.com/evilrabbit.png"
+            alt="@evilrabbit"
           />
           <AvatarFallback>ER</AvatarFallback>
         </Avatar>
@@ -287,20 +290,20 @@ function AvatarGroupWithCount() {
       </AvatarGroup>
       <AvatarGroup>
         <Avatar>
-          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar>
           <AvatarImage
-            alt="@maxleiter"
             src="https://github.com/maxleiter.png"
+            alt="@maxleiter"
           />
           <AvatarFallback>LR</AvatarFallback>
         </Avatar>
         <Avatar>
           <AvatarImage
-            alt="@evilrabbit"
             src="https://github.com/evilrabbit.png"
+            alt="@evilrabbit"
           />
           <AvatarFallback>ER</AvatarFallback>
         </Avatar>
@@ -308,27 +311,27 @@ function AvatarGroupWithCount() {
       </AvatarGroup>
       <AvatarGroup>
         <Avatar size="lg">
-          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar size="lg">
           <AvatarImage
-            alt="@maxleiter"
             src="https://github.com/maxleiter.png"
+            alt="@maxleiter"
           />
           <AvatarFallback>LR</AvatarFallback>
         </Avatar>
         <Avatar size="lg">
           <AvatarImage
-            alt="@evilrabbit"
             src="https://github.com/evilrabbit.png"
+            alt="@evilrabbit"
           />
           <AvatarFallback>ER</AvatarFallback>
         </Avatar>
         <AvatarGroupCount>+3</AvatarGroupCount>
       </AvatarGroup>
     </Example>
-  );
+  )
 }
 
 function AvatarGroupWithIconCount() {
@@ -336,93 +339,93 @@ function AvatarGroupWithIconCount() {
     <Example title="Group with Icon Count">
       <AvatarGroup>
         <Avatar size="sm">
-          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar size="sm">
           <AvatarImage
-            alt="@maxleiter"
             src="https://github.com/maxleiter.png"
+            alt="@maxleiter"
           />
           <AvatarFallback>LR</AvatarFallback>
         </Avatar>
         <Avatar size="sm">
           <AvatarImage
-            alt="@evilrabbit"
             src="https://github.com/evilrabbit.png"
+            alt="@evilrabbit"
           />
           <AvatarFallback>ER</AvatarFallback>
         </Avatar>
         <AvatarGroupCount>
           <IconPlaceholder
-            hugeicons="PlusSignIcon"
             lucide="PlusIcon"
             tabler="IconPlus"
+            hugeicons="PlusSignIcon"
           />
         </AvatarGroupCount>
       </AvatarGroup>
       <AvatarGroup>
         <Avatar>
-          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar>
           <AvatarImage
-            alt="@maxleiter"
             src="https://github.com/maxleiter.png"
+            alt="@maxleiter"
           />
           <AvatarFallback>LR</AvatarFallback>
         </Avatar>
         <Avatar>
           <AvatarImage
-            alt="@evilrabbit"
             src="https://github.com/evilrabbit.png"
+            alt="@evilrabbit"
           />
           <AvatarFallback>ER</AvatarFallback>
         </Avatar>
         <AvatarGroupCount>
           <IconPlaceholder
-            hugeicons="PlusSignIcon"
             lucide="PlusIcon"
             tabler="IconPlus"
+            hugeicons="PlusSignIcon"
           />
         </AvatarGroupCount>
       </AvatarGroup>
       <AvatarGroup>
         <Avatar size="lg">
           <AvatarImage
+            src="https://github.com/shadcn.png"
             alt="@shadcn"
             className="grayscale"
-            src="https://github.com/shadcn.png"
           />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Avatar size="lg">
           <AvatarImage
+            src="https://github.com/maxleiter.png"
             alt="@maxleiter"
             className="grayscale"
-            src="https://github.com/maxleiter.png"
           />
           <AvatarFallback>LR</AvatarFallback>
         </Avatar>
         <Avatar size="lg">
           <AvatarImage
+            src="https://github.com/evilrabbit.png"
             alt="@evilrabbit"
             className="grayscale"
-            src="https://github.com/evilrabbit.png"
           />
           <AvatarFallback>ER</AvatarFallback>
         </Avatar>
         <AvatarGroupCount>
           <IconPlaceholder
-            hugeicons="PlusSignIcon"
             lucide="PlusIcon"
             tabler="IconPlus"
+            hugeicons="PlusSignIcon"
           />
         </AvatarGroupCount>
       </AvatarGroup>
     </Example>
-  );
+  )
 }
 
 function AvatarInEmpty() {
@@ -434,33 +437,33 @@ function AvatarInEmpty() {
             <AvatarGroup>
               <Avatar size="lg">
                 <AvatarImage
+                  src="https://github.com/shadcn.png"
                   alt="@shadcn"
                   className="grayscale"
-                  src="https://github.com/shadcn.png"
                 />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
               <Avatar size="lg">
                 <AvatarImage
+                  src="https://github.com/maxleiter.png"
                   alt="@maxleiter"
                   className="grayscale"
-                  src="https://github.com/maxleiter.png"
                 />
                 <AvatarFallback>LR</AvatarFallback>
               </Avatar>
               <Avatar size="lg">
                 <AvatarImage
+                  src="https://github.com/evilrabbit.png"
                   alt="@evilrabbit"
                   className="grayscale"
-                  src="https://github.com/evilrabbit.png"
                 />
                 <AvatarFallback>ER</AvatarFallback>
               </Avatar>
               <AvatarGroupCount>
                 <IconPlaceholder
-                  hugeicons="PlusSignIcon"
                   lucide="PlusIcon"
                   tabler="IconPlus"
+                  hugeicons="PlusSignIcon"
                 />
               </AvatarGroupCount>
             </AvatarGroup>
@@ -473,14 +476,14 @@ function AvatarInEmpty() {
         <EmptyContent>
           <Button>
             <IconPlaceholder
-              hugeicons="PlusSignIcon"
               lucide="PlusIcon"
               tabler="IconPlus"
+              hugeicons="PlusSignIcon"
             />
             Invite Members
           </Button>
         </EmptyContent>
       </Empty>
     </Example>
-  );
+  )
 }

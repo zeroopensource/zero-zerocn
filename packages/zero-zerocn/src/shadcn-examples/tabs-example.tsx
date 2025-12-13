@@ -1,20 +1,23 @@
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/radix/ui/button";
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/radix/ui/dropdown-menu";
-import { Input } from "@/registry/bases/radix/ui/input";
+} from "@/registry/bases/radix/ui/dropdown-menu"
+import { Input } from "@/registry/bases/radix/ui/input"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/bases/radix/ui/tabs";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/tabs"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function TabsExample() {
   return (
@@ -33,7 +36,7 @@ export default function TabsExample() {
       <TabsVertical />
       <TabsWithInputAndButton />
     </ExampleWrapper>
-  );
+  )
 }
 
 function TabsBasic() {
@@ -46,7 +49,7 @@ function TabsBasic() {
         </TabsList>
       </Tabs>
     </Example>
-  );
+  )
 }
 
 function TabsLine() {
@@ -60,7 +63,7 @@ function TabsLine() {
         </TabsList>
       </Tabs>
     </Example>
-  );
+  )
 }
 
 function TabsVariantsComparison() {
@@ -81,7 +84,7 @@ function TabsVariantsComparison() {
         </Tabs>
       </div>
     </Example>
-  );
+  )
 }
 
 function TabsDisabled() {
@@ -90,13 +93,13 @@ function TabsDisabled() {
       <Tabs defaultValue="home">
         <TabsList>
           <TabsTrigger value="home">Home</TabsTrigger>
-          <TabsTrigger disabled value="settings">
+          <TabsTrigger value="settings" disabled>
             Disabled
           </TabsTrigger>
         </TabsList>
       </Tabs>
     </Example>
-  );
+  )
 }
 
 function TabsWithIcons() {
@@ -106,24 +109,24 @@ function TabsWithIcons() {
         <TabsList>
           <TabsTrigger value="preview">
             <IconPlaceholder
-              hugeicons="CursorInWindowIcon"
               lucide="AppWindowIcon"
               tabler="IconAppWindow"
+              hugeicons="CursorInWindowIcon"
             />
             Preview
           </TabsTrigger>
           <TabsTrigger value="code">
             <IconPlaceholder
-              hugeicons="CodeIcon"
               lucide="CodeIcon"
               tabler="IconCode"
+              hugeicons="CodeIcon"
             />
             Code
           </TabsTrigger>
         </TabsList>
       </Tabs>
     </Example>
-  );
+  )
 }
 
 function TabsIconOnly() {
@@ -133,29 +136,29 @@ function TabsIconOnly() {
         <TabsList>
           <TabsTrigger value="home">
             <IconPlaceholder
-              hugeicons="HomeIcon"
               lucide="HomeIcon"
               tabler="IconHome"
+              hugeicons="HomeIcon"
             />
           </TabsTrigger>
           <TabsTrigger value="search">
             <IconPlaceholder
-              hugeicons="SearchIcon"
               lucide="SearchIcon"
               tabler="IconSearch"
+              hugeicons="SearchIcon"
             />
           </TabsTrigger>
           <TabsTrigger value="settings">
             <IconPlaceholder
-              hugeicons="SettingsIcon"
               lucide="SettingsIcon"
               tabler="IconSettings"
+              hugeicons="SettingsIcon"
             />
           </TabsTrigger>
         </TabsList>
       </Tabs>
     </Example>
-  );
+  )
 }
 
 function TabsMultiple() {
@@ -170,7 +173,7 @@ function TabsMultiple() {
         </TabsList>
       </Tabs>
     </Example>
-  );
+  )
 }
 
 function TabsWithContent() {
@@ -182,7 +185,7 @@ function TabsWithContent() {
           <TabsTrigger value="password">Password</TabsTrigger>
           <TabsTrigger value="notifications">Notifications</TabsTrigger>
         </TabsList>
-        <div className="style-lyra:rounded-none style-maia:rounded-xl style-mira:rounded-md style-nova:rounded-lg style-vega:rounded-lg border style-lyra:p-4 style-maia:p-6 style-mira:p-4 style-nova:p-4 style-vega:p-6">
+        <div className="style-nova:p-4 style-vega:p-6 style-maia:p-6 style-mira:p-4 style-lyra:p-4 style-nova:rounded-lg style-vega:rounded-lg style-maia:rounded-xl style-mira:rounded-md style-lyra:rounded-none border">
           <TabsContent value="account">
             Manage your account preferences and profile information.
           </TabsContent>
@@ -195,7 +198,7 @@ function TabsWithContent() {
         </div>
       </Tabs>
     </Example>
-  );
+  )
 }
 
 function TabsLineWithContent() {
@@ -207,7 +210,7 @@ function TabsLineWithContent() {
           <TabsTrigger value="password">Password</TabsTrigger>
           <TabsTrigger value="notifications">Notifications</TabsTrigger>
         </TabsList>
-        <div className="style-lyra:rounded-none style-maia:rounded-xl style-mira:rounded-md style-nova:rounded-lg style-vega:rounded-lg border style-lyra:p-4 style-maia:p-6 style-mira:p-4 style-nova:p-4 style-vega:p-6">
+        <div className="style-nova:p-4 style-vega:p-6 style-maia:p-6 style-mira:p-4 style-lyra:p-4 style-nova:rounded-lg style-vega:rounded-lg style-maia:rounded-xl style-mira:rounded-md style-lyra:rounded-none border">
           <TabsContent value="account">
             Manage your account preferences and profile information.
           </TabsContent>
@@ -220,7 +223,7 @@ function TabsLineWithContent() {
         </div>
       </Tabs>
     </Example>
-  );
+  )
 }
 
 function TabsLineDisabled() {
@@ -230,13 +233,13 @@ function TabsLineDisabled() {
         <TabsList variant="line">
           <TabsTrigger value="overview">Overview</TabsTrigger>
           <TabsTrigger value="analytics">Analytics</TabsTrigger>
-          <TabsTrigger disabled value="reports">
+          <TabsTrigger value="reports" disabled>
             Reports
           </TabsTrigger>
         </TabsList>
       </Tabs>
     </Example>
-  );
+  )
 }
 
 function TabsWithDropdown() {
@@ -251,11 +254,11 @@ function TabsWithDropdown() {
           </TabsList>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button className="size-8" size="icon" variant="ghost">
+              <Button variant="ghost" size="icon" className="size-8">
                 <IconPlaceholder
-                  hugeicons="MoreHorizontalCircle01Icon"
                   lucide="MoreHorizontalIcon"
                   tabler="IconDots"
+                  hugeicons="MoreHorizontalCircle01Icon"
                 />
                 <span className="sr-only">More options</span>
               </Button>
@@ -269,7 +272,7 @@ function TabsWithDropdown() {
           </DropdownMenu>
         </div>
 
-        <div className="style-lyra:rounded-none style-maia:rounded-xl style-mira:rounded-md style-nova:rounded-lg style-vega:rounded-lg border style-lyra:p-4 style-maia:p-6 style-mira:p-4 style-nova:p-4 style-vega:p-6">
+        <div className="style-nova:p-4 style-vega:p-6 style-maia:p-6 style-mira:p-4 style-lyra:p-4 style-nova:rounded-lg style-vega:rounded-lg style-maia:rounded-xl style-mira:rounded-md style-lyra:rounded-none border">
           <TabsContent value="overview">
             View your dashboard metrics and key performance indicators.
           </TabsContent>
@@ -282,7 +285,7 @@ function TabsWithDropdown() {
         </div>
       </Tabs>
     </Example>
-  );
+  )
 }
 
 function TabsVertical() {
@@ -294,7 +297,7 @@ function TabsVertical() {
           <TabsTrigger value="password">Password</TabsTrigger>
           <TabsTrigger value="notifications">Notifications</TabsTrigger>
         </TabsList>
-        <div className="style-lyra:rounded-none style-maia:rounded-xl style-mira:rounded-md style-nova:rounded-lg style-vega:rounded-lg border style-lyra:p-4 style-maia:p-6 style-mira:p-4 style-nova:p-4 style-vega:p-6">
+        <div className="style-nova:p-4 style-vega:p-6 style-maia:p-6 style-mira:p-4 style-lyra:p-4 style-nova:rounded-lg style-vega:rounded-lg style-maia:rounded-xl style-mira:rounded-md style-lyra:rounded-none border">
           <TabsContent value="account">
             Manage your account preferences and profile information.
           </TabsContent>
@@ -310,24 +313,24 @@ function TabsVertical() {
         </div>
       </Tabs>
     </Example>
-  );
+  )
 }
 
 function TabsWithInputAndButton() {
   return (
-    <Example containerClassName="col-span-full" title="With Input and Button">
-      <Tabs className="mx-auto w-full max-w-lg" defaultValue="overview">
+    <Example title="With Input and Button" containerClassName="col-span-full">
+      <Tabs defaultValue="overview" className="mx-auto w-full max-w-lg">
         <div className="flex items-center gap-4">
           <TabsList>
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
           <div className="ml-auto flex items-center gap-2">
-            <Input className="w-44" placeholder="Search..." />
+            <Input placeholder="Search..." className="w-44" />
             <Button>Action</Button>
           </div>
         </div>
-        <div className="style-lyra:rounded-none style-maia:rounded-xl style-mira:rounded-md style-nova:rounded-lg style-vega:rounded-lg border style-lyra:p-4 style-maia:p-6 style-mira:p-4 style-nova:p-4 style-vega:p-6">
+        <div className="style-nova:p-4 style-vega:p-6 style-maia:p-6 style-mira:p-4 style-lyra:p-4 style-nova:rounded-lg style-vega:rounded-lg style-maia:rounded-xl style-mira:rounded-md style-lyra:rounded-none border">
           <TabsContent value="overview">
             View your dashboard metrics and key performance indicators.
           </TabsContent>
@@ -340,5 +343,5 @@ function TabsWithInputAndButton() {
         </div>
       </Tabs>
     </Example>
-  );
+  )
 }

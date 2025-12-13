@@ -1,12 +1,16 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/radix/ui/button";
+import { useState } from "react"
+
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   ButtonGroup,
   ButtonGroupText,
-} from "@/registry/bases/radix/ui/button-group";
+} from "@/registry/bases/radix/ui/button-group"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,28 +18,28 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/radix/ui/dropdown-menu";
-import { Field, FieldGroup } from "@/registry/bases/radix/ui/field";
-import { Input } from "@/registry/bases/radix/ui/input";
+} from "@/registry/bases/radix/ui/dropdown-menu"
+import { Field, FieldGroup } from "@/registry/bases/radix/ui/field"
+import { Input } from "@/registry/bases/radix/ui/input"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/bases/radix/ui/input-group";
-import { Label } from "@/registry/bases/radix/ui/label";
+} from "@/registry/bases/radix/ui/input-group"
+import { Label } from "@/registry/bases/radix/ui/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/radix/ui/select";
+} from "@/registry/bases/radix/ui/select"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/bases/radix/ui/tooltip";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/tooltip"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function ButtonGroupExample() {
   return (
@@ -58,7 +62,7 @@ export default function ButtonGroupExample() {
       <ButtonGroupVertical />
       <ButtonGroupVerticalNested />
     </ExampleWrapper>
-  );
+  )
 }
 
 function ButtonGroupBasic() {
@@ -71,7 +75,7 @@ function ButtonGroupBasic() {
         </ButtonGroup>
       </div>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupWithInput() {
@@ -88,7 +92,7 @@ function ButtonGroupWithInput() {
         </ButtonGroup>
       </div>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupWithText() {
@@ -107,7 +111,7 @@ function ButtonGroupWithText() {
         </ButtonGroup>
       </div>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupWithDropdown() {
@@ -118,11 +122,11 @@ function ButtonGroupWithDropdown() {
           <Button variant="outline">Update</Button>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button size="icon" variant="outline">
+              <Button variant="outline" size="icon">
                 <IconPlaceholder
-                  hugeicons="ArrowDown01Icon"
                   lucide="ChevronDownIcon"
                   tabler="IconChevronDown"
+                  hugeicons="ArrowDown01Icon"
                 />
               </Button>
             </DropdownMenuTrigger>
@@ -138,11 +142,11 @@ function ButtonGroupWithDropdown() {
           <Button variant="outline">Follow</Button>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button size="icon" variant="outline">
+              <Button variant="outline" size="icon">
                 <IconPlaceholder
-                  hugeicons="ArrowDown01Icon"
                   lucide="ChevronDownIcon"
                   tabler="IconChevronDown"
+                  hugeicons="ArrowDown01Icon"
                 />
               </Button>
             </DropdownMenuTrigger>
@@ -150,49 +154,49 @@ function ButtonGroupWithDropdown() {
               <DropdownMenuGroup>
                 <DropdownMenuItem>
                   <IconPlaceholder
-                    hugeicons="VolumeOffIcon"
                     lucide="VolumeOffIcon"
                     tabler="IconVolume"
+                    hugeicons="VolumeOffIcon"
                   />
                   Mute Conversation
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <IconPlaceholder
-                    hugeicons="Tick02Icon"
                     lucide="CheckIcon"
                     tabler="IconCheck"
+                    hugeicons="Tick02Icon"
                   />
                   Mark as Read
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <IconPlaceholder
-                    hugeicons="AlertCircleIcon"
                     lucide="AlertTriangleIcon"
                     tabler="IconAlertTriangle"
+                    hugeicons="AlertCircleIcon"
                   />
                   Report Conversation
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <IconPlaceholder
-                    hugeicons="UserRemove01Icon"
                     lucide="UserRoundXIcon"
                     tabler="IconUserX"
+                    hugeicons="UserRemove01Icon"
                   />
                   Block User
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <IconPlaceholder
-                    hugeicons="Share03Icon"
                     lucide="ShareIcon"
                     tabler="IconShare"
+                    hugeicons="Share03Icon"
                   />
                   Share Conversation
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <IconPlaceholder
-                    hugeicons="Copy01Icon"
                     lucide="CopyIcon"
                     tabler="IconCopy"
+                    hugeicons="Copy01Icon"
                   />
                   Copy Conversation
                 </DropdownMenuItem>
@@ -201,9 +205,9 @@ function ButtonGroupWithDropdown() {
               <DropdownMenuGroup>
                 <DropdownMenuItem variant="destructive">
                   <IconPlaceholder
-                    hugeicons="Delete02Icon"
                     lucide="TrashIcon"
                     tabler="IconTrash"
+                    hugeicons="Delete02Icon"
                   />
                   Delete Conversation
                 </DropdownMenuItem>
@@ -213,18 +217,18 @@ function ButtonGroupWithDropdown() {
         </ButtonGroup>
       </div>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupWithSelect() {
-  const [currency, setCurrency] = useState("$");
+  const [currency, setCurrency] = useState("$")
 
   return (
     <Example title="With Select">
       <Field>
         <Label htmlFor="amount">Amount</Label>
         <ButtonGroup>
-          <Select onValueChange={setCurrency} value={currency}>
+          <Select value={currency} onValueChange={setCurrency}>
             <SelectTrigger>
               <SelectValue />
             </SelectTrigger>
@@ -237,15 +241,15 @@ function ButtonGroupWithSelect() {
           <Input placeholder="Enter amount to send" />
           <Button variant="outline">
             <IconPlaceholder
-              hugeicons="ArrowRight01Icon"
               lucide="ArrowRightIcon"
               tabler="IconArrowRight"
+              hugeicons="ArrowRight01Icon"
             />
           </Button>
         </ButtonGroup>
       </Field>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupWithIcons() {
@@ -255,29 +259,29 @@ function ButtonGroupWithIcons() {
         <ButtonGroup>
           <Button variant="outline">
             <IconPlaceholder
-              hugeicons="FlipHorizontalIcon"
               lucide="FlipHorizontalIcon"
               tabler="IconFlipHorizontal"
+              hugeicons="FlipHorizontalIcon"
             />
           </Button>
           <Button variant="outline">
             <IconPlaceholder
-              hugeicons="FlipVerticalIcon"
               lucide="FlipVerticalIcon"
               tabler="IconFlipVertical"
+              hugeicons="FlipVerticalIcon"
             />
           </Button>
           <Button variant="outline">
             <IconPlaceholder
-              hugeicons="Rotate01Icon"
               lucide="RotateCwIcon"
               tabler="IconRotateClockwise2"
+              hugeicons="Rotate01Icon"
             />
           </Button>
         </ButtonGroup>
       </div>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupWithInputGroup() {
@@ -291,15 +295,15 @@ function ButtonGroupWithInputGroup() {
             className="text-muted-foreground"
           >
             <IconPlaceholder
-              hugeicons="Search01Icon"
               lucide="SearchIcon"
               tabler="IconSearch"
+              hugeicons="Search01Icon"
             />
           </InputGroupAddon>
         </InputGroup>
       </div>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupWithFields() {
@@ -321,25 +325,25 @@ function ButtonGroupWithFields() {
                 px
               </InputGroupAddon>
             </InputGroup>
-            <Button size="icon" variant="outline">
+            <Button variant="outline" size="icon">
               <IconPlaceholder
-                hugeicons="MinusSignIcon"
                 lucide="MinusIcon"
                 tabler="IconMinus"
+                hugeicons="MinusSignIcon"
               />
             </Button>
-            <Button size="icon" variant="outline">
+            <Button variant="outline" size="icon">
               <IconPlaceholder
-                hugeicons="PlusSignIcon"
                 lucide="PlusIcon"
                 tabler="IconPlus"
+                hugeicons="PlusSignIcon"
               />
             </Button>
           </ButtonGroup>
         </Field>
       </FieldGroup>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupWithLike() {
@@ -348,19 +352,19 @@ function ButtonGroupWithLike() {
       <ButtonGroup>
         <Button variant="outline">
           <IconPlaceholder
-            data-icon="inline-start"
-            hugeicons="Notification02Icon"
             lucide="HeartIcon"
             tabler="IconBell"
+            hugeicons="Notification02Icon"
+            data-icon="inline-start"
           />{" "}
           Like
         </Button>
-        <Button asChild className="w-12" size="icon" variant="outline">
+        <Button variant="outline" asChild size="icon" className="w-12">
           <span>1.2K</span>
         </Button>
       </ButtonGroup>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupWithSelectAndInput() {
@@ -380,7 +384,7 @@ function ButtonGroupWithSelectAndInput() {
         <Input />
       </ButtonGroup>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupNested() {
@@ -388,11 +392,11 @@ function ButtonGroupNested() {
     <Example title="Nested">
       <ButtonGroup>
         <ButtonGroup>
-          <Button size="icon" variant="outline">
+          <Button variant="outline" size="icon">
             <IconPlaceholder
-              hugeicons="PlusSignIcon"
               lucide="PlusIcon"
               tabler="IconPlus"
+              hugeicons="PlusSignIcon"
             />
           </Button>
         </ButtonGroup>
@@ -403,9 +407,9 @@ function ButtonGroupNested() {
               <TooltipTrigger asChild>
                 <InputGroupAddon align="inline-end">
                   <IconPlaceholder
-                    hugeicons="AudioWave01Icon"
                     lucide="AudioLinesIcon"
                     tabler="IconHeadphones"
+                    hugeicons="AudioWave01Icon"
                   />
                 </InputGroupAddon>
               </TooltipTrigger>
@@ -415,49 +419,49 @@ function ButtonGroupNested() {
         </ButtonGroup>
       </ButtonGroup>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupPagination() {
   return (
     <Example title="Pagination">
       <ButtonGroup>
-        <Button size="sm" variant="outline">
+        <Button variant="outline" size="sm">
           <IconPlaceholder
-            data-icon="inline-start"
-            hugeicons="ArrowLeft01Icon"
             lucide="ArrowLeftIcon"
             tabler="IconArrowLeft"
+            hugeicons="ArrowLeft01Icon"
+            data-icon="inline-start"
           />
           Previous
         </Button>
-        <Button size="sm" variant="outline">
+        <Button variant="outline" size="sm">
           1
         </Button>
-        <Button size="sm" variant="outline">
+        <Button variant="outline" size="sm">
           2
         </Button>
-        <Button size="sm" variant="outline">
+        <Button variant="outline" size="sm">
           3
         </Button>
-        <Button size="sm" variant="outline">
+        <Button variant="outline" size="sm">
           4
         </Button>
-        <Button size="sm" variant="outline">
+        <Button variant="outline" size="sm">
           5
         </Button>
-        <Button size="sm" variant="outline">
+        <Button variant="outline" size="sm">
           Next
           <IconPlaceholder
-            data-icon="inline-end"
-            hugeicons="ArrowRight01Icon"
             lucide="ArrowRightIcon"
             tabler="IconArrowRight"
+            hugeicons="ArrowRight01Icon"
+            data-icon="inline-end"
           />
         </Button>
       </ButtonGroup>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupPaginationSplit() {
@@ -465,41 +469,41 @@ function ButtonGroupPaginationSplit() {
     <Example title="Pagination Split">
       <ButtonGroup>
         <ButtonGroup>
-          <Button size="sm" variant="outline">
+          <Button variant="outline" size="sm">
             1
           </Button>
-          <Button size="sm" variant="outline">
+          <Button variant="outline" size="sm">
             2
           </Button>
-          <Button size="sm" variant="outline">
+          <Button variant="outline" size="sm">
             3
           </Button>
-          <Button size="sm" variant="outline">
+          <Button variant="outline" size="sm">
             4
           </Button>
-          <Button size="sm" variant="outline">
+          <Button variant="outline" size="sm">
             5
           </Button>
         </ButtonGroup>
         <ButtonGroup>
-          <Button size="icon-xs" variant="outline">
+          <Button variant="outline" size="icon-xs">
             <IconPlaceholder
-              hugeicons="ArrowLeft01Icon"
               lucide="ArrowLeftIcon"
               tabler="IconArrowLeft"
+              hugeicons="ArrowLeft01Icon"
             />
           </Button>
-          <Button size="icon-xs" variant="outline">
+          <Button variant="outline" size="icon-xs">
             <IconPlaceholder
-              hugeicons="ArrowRight01Icon"
               lucide="ArrowRightIcon"
               tabler="IconArrowRight"
+              hugeicons="ArrowRight01Icon"
             />
           </Button>
         </ButtonGroup>
       </ButtonGroup>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupNavigation() {
@@ -509,31 +513,31 @@ function ButtonGroupNavigation() {
         <ButtonGroup>
           <Button variant="outline">
             <IconPlaceholder
-              hugeicons="ArrowLeft01Icon"
               lucide="ArrowLeftIcon"
               tabler="IconArrowLeft"
+              hugeicons="ArrowLeft01Icon"
             />
           </Button>
           <Button variant="outline">
             <IconPlaceholder
-              hugeicons="ArrowRight01Icon"
               lucide="ArrowRightIcon"
               tabler="IconArrowRight"
+              hugeicons="ArrowRight01Icon"
             />
           </Button>
         </ButtonGroup>
         <ButtonGroup aria-label="Single navigation button">
-          <Button size="icon" variant="outline">
+          <Button variant="outline" size="icon">
             <IconPlaceholder
-              hugeicons="ArrowLeft01Icon"
               lucide="ArrowLeftIcon"
               tabler="IconArrowLeft"
+              hugeicons="ArrowLeft01Icon"
             />
           </Button>
         </ButtonGroup>
       </ButtonGroup>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupTextAlignment() {
@@ -542,22 +546,22 @@ function ButtonGroupTextAlignment() {
       <Field>
         <Label id="alignment-label">Text Alignment</Label>
         <ButtonGroup aria-labelledby="alignment-label">
-          <Button size="sm" variant="outline">
+          <Button variant="outline" size="sm">
             Left
           </Button>
-          <Button size="sm" variant="outline">
+          <Button variant="outline" size="sm">
             Center
           </Button>
-          <Button size="sm" variant="outline">
+          <Button variant="outline" size="sm">
             Right
           </Button>
-          <Button size="sm" variant="outline">
+          <Button variant="outline" size="sm">
             Justify
           </Button>
         </ButtonGroup>
       </Field>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupVertical() {
@@ -565,90 +569,90 @@ function ButtonGroupVertical() {
     <Example title="Vertical">
       <div className="flex gap-6">
         <ButtonGroup
+          orientation="vertical"
           aria-label="Media controls"
           className="h-fit"
-          orientation="vertical"
         >
-          <Button size="icon" variant="outline">
+          <Button variant="outline" size="icon">
             <IconPlaceholder
-              hugeicons="PlusSignIcon"
               lucide="PlusIcon"
               tabler="IconPlus"
+              hugeicons="PlusSignIcon"
             />
           </Button>
-          <Button size="icon" variant="outline">
+          <Button variant="outline" size="icon">
             <IconPlaceholder
-              hugeicons="MinusSignIcon"
               lucide="MinusIcon"
               tabler="IconMinus"
+              hugeicons="MinusSignIcon"
             />
           </Button>
         </ButtonGroup>
       </div>
     </Example>
-  );
+  )
 }
 
 function ButtonGroupVerticalNested() {
   return (
     <Example title="Vertical Nested">
-      <ButtonGroup aria-label="Design tools palette" orientation="vertical">
+      <ButtonGroup orientation="vertical" aria-label="Design tools palette">
         <ButtonGroup orientation="vertical">
-          <Button size="icon" variant="outline">
+          <Button variant="outline" size="icon">
             <IconPlaceholder
-              hugeicons="Search01Icon"
               lucide="SearchIcon"
               tabler="IconSearch"
+              hugeicons="Search01Icon"
             />
           </Button>
-          <Button size="icon" variant="outline">
+          <Button variant="outline" size="icon">
             <IconPlaceholder
-              hugeicons="Copy01Icon"
               lucide="CopyIcon"
               tabler="IconCopy"
+              hugeicons="Copy01Icon"
             />
           </Button>
-          <Button size="icon" variant="outline">
+          <Button variant="outline" size="icon">
             <IconPlaceholder
-              hugeicons="Share03Icon"
               lucide="ShareIcon"
               tabler="IconShare"
+              hugeicons="Share03Icon"
             />
           </Button>
         </ButtonGroup>
         <ButtonGroup orientation="vertical">
-          <Button size="icon" variant="outline">
+          <Button variant="outline" size="icon">
             <IconPlaceholder
-              hugeicons="FlipHorizontalIcon"
               lucide="FlipHorizontalIcon"
               tabler="IconFlipHorizontal"
+              hugeicons="FlipHorizontalIcon"
             />
           </Button>
-          <Button size="icon" variant="outline">
+          <Button variant="outline" size="icon">
             <IconPlaceholder
-              hugeicons="FlipVerticalIcon"
               lucide="FlipVerticalIcon"
               tabler="IconFlipVertical"
+              hugeicons="FlipVerticalIcon"
             />
           </Button>
-          <Button size="icon" variant="outline">
+          <Button variant="outline" size="icon">
             <IconPlaceholder
-              hugeicons="Rotate01Icon"
               lucide="RotateCwIcon"
               tabler="IconRotateClockwise2"
+              hugeicons="Rotate01Icon"
             />
           </Button>
         </ButtonGroup>
         <ButtonGroup>
-          <Button size="icon" variant="outline">
+          <Button variant="outline" size="icon">
             <IconPlaceholder
-              hugeicons="Delete02Icon"
               lucide="TrashIcon"
               tabler="IconTrash"
+              hugeicons="Delete02Icon"
             />
           </Button>
         </ButtonGroup>
       </ButtonGroup>
     </Example>
-  );
+  )
 }

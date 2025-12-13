@@ -1,13 +1,17 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { toast } from "sonner";
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/radix/ui/button";
+import { useState } from "react"
+import { toast } from "sonner"
+
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   ButtonGroup,
   ButtonGroupText,
-} from "@/registry/bases/radix/ui/button-group";
+} from "@/registry/bases/radix/ui/button-group"
 import {
   Card,
   CardContent,
@@ -15,20 +19,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/radix/ui/card";
+} from "@/registry/bases/radix/ui/card"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/bases/radix/ui/dropdown-menu";
+} from "@/registry/bases/radix/ui/dropdown-menu"
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/radix/ui/field";
-import { Input } from "@/registry/bases/radix/ui/input";
+} from "@/registry/bases/radix/ui/field"
+import { Input } from "@/registry/bases/radix/ui/input"
 import {
   InputGroup,
   InputGroupAddon,
@@ -36,8 +40,8 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@/registry/bases/radix/ui/input-group";
-import { Kbd, KbdGroup } from "@/registry/bases/radix/ui/kbd";
+} from "@/registry/bases/radix/ui/input-group"
+import { Kbd, KbdGroup } from "@/registry/bases/radix/ui/kbd"
 import {
   Popover,
   PopoverContent,
@@ -45,18 +49,18 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/registry/bases/radix/ui/popover";
-import { Spinner } from "@/registry/bases/radix/ui/spinner";
-import { Textarea } from "@/registry/bases/radix/ui/textarea";
+} from "@/registry/bases/radix/ui/popover"
+import { Spinner } from "@/registry/bases/radix/ui/spinner"
+import { Textarea } from "@/registry/bases/radix/ui/textarea"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/bases/radix/ui/tooltip";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/tooltip"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function InputGroupExample() {
-  const [country, setCountry] = useState("+1");
+  const [country, setCountry] = useState("+1")
 
   return (
     <ExampleWrapper className="min-w-0">
@@ -68,7 +72,7 @@ export default function InputGroupExample() {
       <InputGroupInCard />
       <InputGroupTextareaExamples />
     </ExampleWrapper>
-  );
+  )
 }
 
 function InputGroupBasic() {
@@ -79,7 +83,7 @@ function InputGroupBasic() {
           <FieldLabel htmlFor="input-default-01">
             Default (No Input Group)
           </FieldLabel>
-          <Input id="input-default-01" placeholder="Placeholder" />
+          <Input placeholder="Placeholder" id="input-default-01" />
         </Field>
         <Field>
           <FieldLabel htmlFor="input-group-02">Input Group</FieldLabel>
@@ -91,9 +95,9 @@ function InputGroupBasic() {
           <FieldLabel htmlFor="input-disabled-03">Disabled</FieldLabel>
           <InputGroup>
             <InputGroupInput
-              disabled
               id="input-disabled-03"
               placeholder="This field is disabled"
+              disabled
             />
           </InputGroup>
         </Field>
@@ -101,15 +105,15 @@ function InputGroupBasic() {
           <FieldLabel htmlFor="input-invalid-04">Invalid</FieldLabel>
           <InputGroup>
             <InputGroupInput
-              aria-invalid="true"
               id="input-invalid-04"
               placeholder="This field is invalid"
+              aria-invalid="true"
             />
           </InputGroup>
         </Field>
       </FieldGroup>
     </Example>
-  );
+  )
 }
 
 function InputGroupWithAddons() {
@@ -124,10 +128,10 @@ function InputGroupWithAddons() {
             <InputGroupInput id="input-icon-left-05" />
             <InputGroupAddon>
               <IconPlaceholder
-                className="text-muted-foreground"
-                hugeicons="SearchIcon"
                 lucide="SearchIcon"
                 tabler="IconSearch"
+                hugeicons="SearchIcon"
+                className="text-muted-foreground"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -140,9 +144,9 @@ function InputGroupWithAddons() {
             <InputGroupInput id="input-icon-right-07" />
             <InputGroupAddon align="inline-end">
               <IconPlaceholder
-                hugeicons="ViewOffIcon"
                 lucide="EyeOffIcon"
                 tabler="IconEyeClosed"
+                hugeicons="ViewOffIcon"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -155,18 +159,18 @@ function InputGroupWithAddons() {
             <InputGroupInput id="input-icon-both-09" />
             <InputGroupAddon>
               <IconPlaceholder
-                className="text-muted-foreground"
-                hugeicons="VoiceIcon"
                 lucide="MicIcon"
                 tabler="IconMicrophone"
+                hugeicons="VoiceIcon"
+                className="text-muted-foreground"
               />
             </InputGroupAddon>
             <InputGroupAddon align="inline-end">
               <IconPlaceholder
-                className="animate-pulse text-red-500"
-                hugeicons="RecordIcon"
                 lucide="RadioIcon"
                 tabler="IconPlayerRecordFilled"
+                hugeicons="RecordIcon"
+                className="animate-pulse text-red-500"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -178,10 +182,10 @@ function InputGroupWithAddons() {
             <InputGroupAddon align="block-start">
               <InputGroupText>First Name</InputGroupText>
               <IconPlaceholder
-                className="ml-auto text-muted-foreground"
-                hugeicons="AlertCircleIcon"
                 lucide="InfoIcon"
                 tabler="IconInfoCircle"
+                hugeicons="AlertCircleIcon"
+                className="text-muted-foreground ml-auto"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -193,10 +197,10 @@ function InputGroupWithAddons() {
             <InputGroupAddon align="block-end">
               <InputGroupText>20/240 characters</InputGroupText>
               <IconPlaceholder
-                className="ml-auto text-muted-foreground"
-                hugeicons="AlertCircleIcon"
                 lucide="InfoIcon"
                 tabler="IconInfoCircle"
+                hugeicons="AlertCircleIcon"
+                className="text-muted-foreground ml-auto"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -207,27 +211,27 @@ function InputGroupWithAddons() {
             <InputGroupInput id="input-icon-both-10" />
             <InputGroupAddon align="inline-end">
               <IconPlaceholder
-                hugeicons="StarIcon"
                 lucide="StarIcon"
                 tabler="IconStar"
+                hugeicons="StarIcon"
               />
               <InputGroupButton
-                onClick={() => toast("Copied to clipboard")}
                 size="icon-xs"
+                onClick={() => toast("Copied to clipboard")}
               >
                 <IconPlaceholder
-                  hugeicons="CopyIcon"
                   lucide="CopyIcon"
                   tabler="IconCopy"
+                  hugeicons="CopyIcon"
                 />
               </InputGroupButton>
             </InputGroupAddon>
             <InputGroupAddon>
               <IconPlaceholder
-                className="animate-pulse text-red-500"
-                hugeicons="RecordIcon"
                 lucide="RadioIcon"
                 tabler="IconPlayerRecordFilled"
+                hugeicons="RecordIcon"
+                className="animate-pulse text-red-500"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -238,9 +242,9 @@ function InputGroupWithAddons() {
             <InputGroupInput id="input-description-10" />
             <InputGroupAddon align="inline-end">
               <IconPlaceholder
-                hugeicons="AlertCircleIcon"
                 lucide="InfoIcon"
                 tabler="IconInfoCircle"
+                hugeicons="AlertCircleIcon"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -257,7 +261,7 @@ function InputGroupWithAddons() {
             <InputGroupInput id="input-label-10" />
           </InputGroup>
           <InputGroup>
-            <InputGroupInput aria-label="Optional" id="input-optional-12" />
+            <InputGroupInput id="input-optional-12" aria-label="Optional" />
             <InputGroupAddon align="inline-end">
               <InputGroupText>(optional)</InputGroupText>
             </InputGroupAddon>
@@ -265,7 +269,7 @@ function InputGroupWithAddons() {
         </Field>
       </FieldGroup>
     </Example>
-  );
+  )
 }
 
 function InputGroupWithButtons() {
@@ -303,9 +307,9 @@ function InputGroupWithButtons() {
             <InputGroupAddon align="inline-end">
               <InputGroupButton size="icon-xs">
                 <IconPlaceholder
-                  hugeicons="CopyIcon"
                   lucide="CopyIcon"
                   tabler="IconCopy"
+                  hugeicons="CopyIcon"
                 />
               </InputGroupButton>
             </InputGroupAddon>
@@ -313,11 +317,11 @@ function InputGroupWithButtons() {
           <InputGroup>
             <InputGroupInput id="input-button-18" />
             <InputGroupAddon align="inline-end">
-              <InputGroupButton size="icon-xs" variant="secondary">
+              <InputGroupButton variant="secondary" size="icon-xs">
                 <IconPlaceholder
-                  hugeicons="DeleteIcon"
                   lucide="TrashIcon"
                   tabler="IconTrash"
+                  hugeicons="DeleteIcon"
                 />
               </InputGroupButton>
             </InputGroupAddon>
@@ -325,15 +329,15 @@ function InputGroupWithButtons() {
         </Field>
       </FieldGroup>
     </Example>
-  );
+  )
 }
 
 function InputGroupWithTooltip({
   country,
   setCountry,
 }: {
-  country: string;
-  setCountry: (value: string) => void;
+  country: string
+  setCountry: (value: string) => void
 }) {
   return (
     <Example title="With Tooltip, Dropdown, Popover">
@@ -347,9 +351,9 @@ function InputGroupWithTooltip({
                 <TooltipTrigger asChild>
                   <InputGroupButton className="rounded-full" size="icon-xs">
                     <IconPlaceholder
-                      hugeicons="AlertCircleIcon"
                       lucide="InfoIcon"
                       tabler="IconInfoCircle"
+                      hugeicons="AlertCircleIcon"
                     />
                   </InputGroupButton>
                 </TooltipTrigger>
@@ -371,17 +375,17 @@ function InputGroupWithTooltip({
                   <InputGroupButton className="text-muted-foreground tabular-nums">
                     {country}{" "}
                     <IconPlaceholder
-                      hugeicons="ArrowDownIcon"
                       lucide="ChevronDownIcon"
                       tabler="IconChevronDown"
+                      hugeicons="ArrowDownIcon"
                     />
                   </InputGroupButton>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
                   align="start"
-                  alignOffset={-8}
                   className="min-w-16"
                   sideOffset={10}
+                  alignOffset={-8}
                 >
                   <DropdownMenuItem onClick={() => setCountry("+1")}>
                     +1
@@ -406,11 +410,11 @@ function InputGroupWithTooltip({
             <Popover>
               <PopoverTrigger asChild>
                 <InputGroupAddon>
-                  <InputGroupButton size="icon-xs" variant="secondary">
+                  <InputGroupButton variant="secondary" size="icon-xs">
                     <IconPlaceholder
-                      hugeicons="AlertCircleIcon"
                       lucide="InfoIcon"
                       tabler="IconInfoCircle"
+                      hugeicons="AlertCircleIcon"
                     />
                   </InputGroupButton>
                 </InputGroupAddon>
@@ -424,19 +428,19 @@ function InputGroupWithTooltip({
                 </PopoverHeader>
               </PopoverContent>
             </Popover>
-            <InputGroupAddon className="pl-1 text-muted-foreground">
+            <InputGroupAddon className="text-muted-foreground pl-1">
               https://
             </InputGroupAddon>
             <InputGroupInput id="input-secure-19" />
             <InputGroupAddon align="inline-end">
               <InputGroupButton
-                onClick={() => toast("Added to favorites")}
                 size="icon-xs"
+                onClick={() => toast("Added to favorites")}
               >
                 <IconPlaceholder
-                  hugeicons="StarIcon"
                   lucide="StarIcon"
                   tabler="IconStar"
+                  hugeicons="StarIcon"
                 />
               </InputGroupButton>
             </InputGroupAddon>
@@ -453,9 +457,9 @@ function InputGroupWithTooltip({
               <InputGroupInput id="url" />
               <InputGroupAddon align="inline-end">
                 <IconPlaceholder
-                  hugeicons="AlertCircleIcon"
                   lucide="InfoIcon"
                   tabler="IconInfoCircle"
+                  hugeicons="AlertCircleIcon"
                 />
               </InputGroupAddon>
             </InputGroup>
@@ -467,7 +471,7 @@ function InputGroupWithTooltip({
         </Field>
       </FieldGroup>
     </Example>
-  );
+  )
 }
 
 function InputGroupWithKbd() {
@@ -505,9 +509,9 @@ function InputGroupWithKbd() {
             />
             <InputGroupAddon align="inline-start">
               <IconPlaceholder
-                hugeicons="SparklesIcon"
                 lucide="SparklesIcon"
                 tabler="IconServerSpark"
+                hugeicons="SparklesIcon"
               />
             </InputGroupAddon>
             <InputGroupAddon align="inline-end">
@@ -521,14 +525,14 @@ function InputGroupWithKbd() {
         <Field>
           <FieldLabel htmlFor="input-username-26">Username</FieldLabel>
           <InputGroup>
-            <InputGroupInput defaultValue="shadcn" id="input-username-26" />
+            <InputGroupInput id="input-username-26" defaultValue="shadcn" />
             <InputGroupAddon align="inline-end">
               <div className="flex size-4 items-center justify-center rounded-full bg-green-500 dark:bg-green-800">
                 <IconPlaceholder
-                  className="size-3 text-white"
-                  hugeicons="Tick02Icon"
                   lucide="CheckIcon"
                   tabler="IconCheck"
+                  hugeicons="Tick02Icon"
+                  className="size-3 text-white"
                 />
               </div>
             </InputGroupAddon>
@@ -544,24 +548,24 @@ function InputGroupWithKbd() {
           />
           <InputGroupAddon>
             <IconPlaceholder
-              hugeicons="SearchIcon"
               lucide="SearchIcon"
               tabler="IconSearch"
+              hugeicons="SearchIcon"
             />
           </InputGroupAddon>
           <InputGroupAddon align="inline-end">12 results</InputGroupAddon>
         </InputGroup>
         <InputGroup data-disabled="true">
           <InputGroupInput
-            disabled
             id="input-search-disabled-28"
             placeholder="Search documentation..."
+            disabled
           />
           <InputGroupAddon>
             <IconPlaceholder
-              hugeicons="SearchIcon"
               lucide="SearchIcon"
               tabler="IconSearch"
+              hugeicons="SearchIcon"
             />
           </InputGroupAddon>
           <InputGroupAddon align="inline-end">Disabled</InputGroupAddon>
@@ -573,9 +577,9 @@ function InputGroupWithKbd() {
               <InputGroupInput id="input-group-11" placeholder="First Name" />
               <InputGroupAddon align="inline-end">
                 <IconPlaceholder
-                  hugeicons="AlertCircleIcon"
                   lucide="InfoIcon"
                   tabler="IconInfoCircle"
+                  hugeicons="AlertCircleIcon"
                 />
               </InputGroupAddon>
             </InputGroup>
@@ -586,9 +590,9 @@ function InputGroupWithKbd() {
               <InputGroupInput id="input-group-12" placeholder="Last Name" />
               <InputGroupAddon align="inline-end">
                 <IconPlaceholder
-                  hugeicons="AlertCircleIcon"
                   lucide="InfoIcon"
                   tabler="IconInfoCircle"
+                  hugeicons="AlertCircleIcon"
                 />
               </InputGroupAddon>
             </InputGroup>
@@ -600,9 +604,9 @@ function InputGroupWithKbd() {
           </FieldLabel>
           <InputGroup>
             <InputGroupInput
-              defaultValue="shadcn"
-              disabled
               id="input-group-29"
+              disabled
+              defaultValue="shadcn"
             />
             <InputGroupAddon align="inline-end">
               <Spinner />
@@ -614,7 +618,7 @@ function InputGroupWithKbd() {
         </Field>
       </FieldGroup>
     </Example>
-  );
+  )
 }
 
 function InputGroupInCard() {
@@ -632,14 +636,14 @@ function InputGroupInCard() {
               <InputGroup>
                 <InputGroupInput
                   id="email-input"
-                  placeholder="you@example.com"
                   type="email"
+                  placeholder="you@example.com"
                 />
                 <InputGroupAddon align="inline-end">
                   <IconPlaceholder
-                    hugeicons="MailIcon"
                     lucide="MailIcon"
                     tabler="IconMail"
+                    hugeicons="MailIcon"
                   />
                 </InputGroupAddon>
               </InputGroup>
@@ -653,9 +657,9 @@ function InputGroupInCard() {
                 <InputGroupInput id="website-input" placeholder="example.com" />
                 <InputGroupAddon align="inline-end">
                   <IconPlaceholder
-                    hugeicons="LinkSquare02Icon"
                     lucide="ExternalLinkIcon"
                     tabler="IconExternalLink"
+                    hugeicons="LinkSquare02Icon"
                   />
                 </InputGroupAddon>
               </InputGroup>
@@ -666,9 +670,9 @@ function InputGroupInCard() {
               </FieldLabel>
               <InputGroup>
                 <InputGroupTextarea
-                  className="min-h-[100px]"
                   id="feedback-textarea"
                   placeholder="Share your thoughts..."
+                  className="min-h-[100px]"
                 />
                 <InputGroupAddon align="block-end">
                   <InputGroupText>0/500 characters</InputGroupText>
@@ -683,7 +687,7 @@ function InputGroupInCard() {
         </CardFooter>
       </Card>
     </Example>
-  );
+  )
 }
 
 function InputGroupTextareaExamples() {
@@ -717,9 +721,9 @@ function InputGroupTextareaExamples() {
           <FieldLabel htmlFor="textarea-header-footer-14">Invalid</FieldLabel>
           <InputGroup>
             <InputGroupTextarea
-              aria-invalid="true"
               id="textarea-header-footer-14"
               placeholder="Enter your text here..."
+              aria-invalid="true"
             />
           </InputGroup>
           <FieldDescription>
@@ -730,9 +734,9 @@ function InputGroupTextareaExamples() {
           <FieldLabel htmlFor="textarea-header-footer-15">Disabled</FieldLabel>
           <InputGroup>
             <InputGroupTextarea
-              disabled
               id="textarea-header-footer-15"
               placeholder="Enter your text here..."
+              disabled
             />
           </InputGroup>
           <FieldDescription>
@@ -746,10 +750,10 @@ function InputGroupTextareaExamples() {
             <InputGroupAddon align="block-start">
               <InputGroupText>Ask, Search or Chat...</InputGroupText>
               <IconPlaceholder
-                className="ml-auto text-muted-foreground"
-                hugeicons="AlertCircleIcon"
                 lucide="InfoIcon"
                 tabler="IconInfoCircle"
+                hugeicons="AlertCircleIcon"
+                className="text-muted-foreground ml-auto"
               />
             </InputGroupAddon>
           </InputGroup>
@@ -769,14 +773,14 @@ function InputGroupTextareaExamples() {
             <InputGroupAddon align="block-end">
               <InputGroupText>0/280 characters</InputGroupText>
               <InputGroupButton
-                className="ml-auto rounded-full"
-                size="icon-xs"
                 variant="default"
+                size="icon-xs"
+                className="ml-auto rounded-full"
               >
                 <IconPlaceholder
-                  hugeicons="ArrowUpIcon"
                   lucide="ArrowUpIcon"
                   tabler="IconArrowUp"
+                  hugeicons="ArrowUpIcon"
                 />
                 <span className="sr-only">Send</span>
               </InputGroupButton>
@@ -787,15 +791,15 @@ function InputGroupTextareaExamples() {
           <FieldLabel htmlFor="textarea-comment-31">Addon (Buttons)</FieldLabel>
           <InputGroup>
             <InputGroupTextarea
-              className="min-h-[120px]"
               id="textarea-comment-31"
               placeholder="Share your thoughts..."
+              className="min-h-[120px]"
             />
             <InputGroupAddon align="block-end">
-              <InputGroupButton className="ml-auto" size="sm" variant="ghost">
+              <InputGroupButton variant="ghost" className="ml-auto" size="sm">
                 Cancel
               </InputGroupButton>
-              <InputGroupButton size="sm" variant="default">
+              <InputGroupButton variant="default" size="sm">
                 Post Comment
               </InputGroupButton>
             </InputGroupAddon>
@@ -805,31 +809,31 @@ function InputGroupTextareaExamples() {
           <FieldLabel htmlFor="textarea-code-32">Code Editor</FieldLabel>
           <InputGroup>
             <InputGroupTextarea
-              className="min-h-[300px] py-3"
               id="textarea-code-32"
               placeholder="console.log('Hello, world!');"
+              className="min-h-[300px] py-3"
             />
             <InputGroupAddon align="block-start" className="border-b">
-              <InputGroupText className="font-medium font-mono">
+              <InputGroupText className="font-mono font-medium">
                 <IconPlaceholder
-                  hugeicons="CodeIcon"
                   lucide="CodeIcon"
                   tabler="IconBrandJavascript"
+                  hugeicons="CodeIcon"
                 />
                 script.js
               </InputGroupText>
-              <InputGroupButton className="ml-auto" size="icon-xs">
+              <InputGroupButton size="icon-xs" className="ml-auto">
                 <IconPlaceholder
-                  hugeicons="RefreshIcon"
                   lucide="RefreshCwIcon"
                   tabler="IconRefresh"
+                  hugeicons="RefreshIcon"
                 />
               </InputGroupButton>
               <InputGroupButton size="icon-xs" variant="ghost">
                 <IconPlaceholder
-                  hugeicons="CopyIcon"
                   lucide="CopyIcon"
                   tabler="IconCopy"
+                  hugeicons="CopyIcon"
                 />
               </InputGroupButton>
             </InputGroupAddon>
@@ -841,5 +845,5 @@ function InputGroupTextareaExamples() {
         </Field>
       </FieldGroup>
     </Example>
-  );
+  )
 }

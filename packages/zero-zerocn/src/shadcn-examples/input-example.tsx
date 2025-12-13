@@ -1,23 +1,26 @@
-import { Button } from "@/registry/bases/radix/ui/button";
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/registry/bases/radix/ui/field";
-import { Input } from "@/registry/bases/radix/ui/input";
+} from "@/registry/bases/radix/ui/field"
+import { Input } from "@/registry/bases/radix/ui/input"
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@/registry/bases/radix/ui/native-select";
+} from "@/registry/bases/radix/ui/native-select"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/radix/ui/select";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/select"
 
 export default function InputExample() {
   return (
@@ -33,23 +36,23 @@ export default function InputExample() {
       <InputWithNativeSelect />
       <InputForm />
     </ExampleWrapper>
-  );
+  )
 }
 
 function InputBasic() {
   return (
     <Example title="Basic">
-      <Input placeholder="Email" type="email" />
+      <Input type="email" placeholder="Email" />
     </Example>
-  );
+  )
 }
 
 function InputInvalid() {
   return (
     <Example title="Invalid">
-      <Input aria-invalid="true" placeholder="Error" type="text" />
+      <Input type="text" placeholder="Error" aria-invalid="true" />
     </Example>
-  );
+  )
 }
 
 function InputWithLabel() {
@@ -59,12 +62,12 @@ function InputWithLabel() {
         <FieldLabel htmlFor="input-demo-email">Email</FieldLabel>
         <Input
           id="input-demo-email"
-          placeholder="name@example.com"
           type="email"
+          placeholder="name@example.com"
         />
       </Field>
     </Example>
-  );
+  )
 }
 
 function InputWithDescription() {
@@ -74,15 +77,15 @@ function InputWithDescription() {
         <FieldLabel htmlFor="input-demo-username">Username</FieldLabel>
         <Input
           id="input-demo-username"
-          placeholder="Enter your username"
           type="text"
+          placeholder="Enter your username"
         />
         <FieldDescription>
           Choose a unique username for your account.
         </FieldDescription>
       </Field>
     </Example>
-  );
+  )
 }
 
 function InputDisabled() {
@@ -91,14 +94,14 @@ function InputDisabled() {
       <Field>
         <FieldLabel htmlFor="input-demo-disabled">Email</FieldLabel>
         <Input
-          disabled
           id="input-demo-disabled"
-          placeholder="Email"
           type="email"
+          placeholder="Email"
+          disabled
         />
       </Field>
     </Example>
-  );
+  )
 }
 
 function InputTypes() {
@@ -109,33 +112,33 @@ function InputTypes() {
           <FieldLabel htmlFor="input-demo-password">Password</FieldLabel>
           <Input
             id="input-demo-password"
-            placeholder="Password"
             type="password"
+            placeholder="Password"
           />
         </Field>
         <Field>
           <FieldLabel htmlFor="input-demo-tel">Phone</FieldLabel>
           <Input
             id="input-demo-tel"
-            placeholder="+1 (555) 123-4567"
             type="tel"
+            placeholder="+1 (555) 123-4567"
           />
         </Field>
         <Field>
           <FieldLabel htmlFor="input-demo-url">URL</FieldLabel>
           <Input
             id="input-demo-url"
-            placeholder="https://example.com"
             type="url"
+            placeholder="https://example.com"
           />
         </Field>
         <Field>
           <FieldLabel htmlFor="input-demo-search">Search</FieldLabel>
-          <Input id="input-demo-search" placeholder="Search" type="search" />
+          <Input id="input-demo-search" type="search" placeholder="Search" />
         </Field>
         <Field>
           <FieldLabel htmlFor="input-demo-number">Number</FieldLabel>
-          <Input id="input-demo-number" placeholder="123" type="number" />
+          <Input id="input-demo-number" type="number" placeholder="123" />
         </Field>
         <Field>
           <FieldLabel htmlFor="input-demo-date">Date</FieldLabel>
@@ -151,14 +154,14 @@ function InputTypes() {
         </Field>
       </div>
     </Example>
-  );
+  )
 }
 
 function InputWithSelect() {
   return (
     <Example title="With Select">
       <div className="flex w-full gap-2">
-        <Input className="flex-1" placeholder="Enter amount" type="text" />
+        <Input type="text" placeholder="Enter amount" className="flex-1" />
         <Select defaultValue="usd">
           <SelectTrigger className="w-32">
             <SelectValue />
@@ -171,25 +174,25 @@ function InputWithSelect() {
         </Select>
       </div>
     </Example>
-  );
+  )
 }
 
 function InputWithButton() {
   return (
     <Example title="With Button">
       <div className="flex w-full gap-2">
-        <Input className="flex-1" placeholder="Search..." type="search" />
+        <Input type="search" placeholder="Search..." className="flex-1" />
         <Button>Search</Button>
       </div>
     </Example>
-  );
+  )
 }
 
 function InputWithNativeSelect() {
   return (
     <Example title="With Native Select">
       <div className="flex w-full gap-2">
-        <Input className="flex-1" placeholder="(555) 123-4567" type="tel" />
+        <Input type="tel" placeholder="(555) 123-4567" className="flex-1" />
         <NativeSelect defaultValue="+1">
           <NativeSelectOption value="+1">+1</NativeSelectOption>
           <NativeSelectOption value="+44">+44</NativeSelectOption>
@@ -197,7 +200,7 @@ function InputWithNativeSelect() {
         </NativeSelect>
       </div>
     </Example>
-  );
+  )
 }
 
 function InputForm() {
@@ -207,14 +210,14 @@ function InputForm() {
         <FieldGroup>
           <Field>
             <FieldLabel htmlFor="form-name">Name</FieldLabel>
-            <Input id="form-name" placeholder="John Doe" type="text" />
+            <Input id="form-name" type="text" placeholder="John Doe" />
           </Field>
           <Field>
             <FieldLabel htmlFor="form-email">Email</FieldLabel>
             <Input
               id="form-email"
-              placeholder="john@example.com"
               type="email"
+              placeholder="john@example.com"
             />
             <FieldDescription>
               We&apos;ll never share your email with anyone.
@@ -225,8 +228,8 @@ function InputForm() {
               <FieldLabel htmlFor="form-phone">Phone</FieldLabel>
               <Input
                 id="form-phone"
-                placeholder="+1 (555) 123-4567"
                 type="tel"
+                placeholder="+1 (555) 123-4567"
               />
             </Field>
             <Field>
@@ -245,7 +248,7 @@ function InputForm() {
           </div>
           <Field>
             <FieldLabel htmlFor="form-address">Address</FieldLabel>
-            <Input id="form-address" placeholder="123 Main St" type="text" />
+            <Input id="form-address" type="text" placeholder="123 Main St" />
           </Field>
           <Field orientation="horizontal">
             <Button type="button" variant="outline">
@@ -256,5 +259,5 @@ function InputForm() {
         </FieldGroup>
       </form>
     </Example>
-  );
+  )
 }

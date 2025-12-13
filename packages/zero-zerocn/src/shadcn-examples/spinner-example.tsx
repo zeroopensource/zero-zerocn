@@ -1,6 +1,9 @@
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
-import { Badge } from "@/registry/bases/radix/ui/badge";
-import { Button } from "@/registry/bases/radix/ui/button";
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Badge } from "@/registry/bases/radix/ui/badge"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   Empty,
   EmptyContent,
@@ -8,15 +11,15 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/bases/radix/ui/empty";
-import { Field, FieldLabel } from "@/registry/bases/radix/ui/field";
+} from "@/registry/bases/radix/ui/empty"
+import { Field, FieldLabel } from "@/registry/bases/radix/ui/field"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/bases/radix/ui/input-group";
-import { Spinner } from "@/registry/bases/radix/ui/spinner";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/input-group"
+import { Spinner } from "@/registry/bases/radix/ui/spinner"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function SpinnerExample() {
   return (
@@ -27,7 +30,7 @@ export default function SpinnerExample() {
       <SpinnerInInputGroup />
       <SpinnerInEmpty />
     </ExampleWrapper>
-  );
+  )
 }
 
 function SpinnerBasic() {
@@ -38,7 +41,7 @@ function SpinnerBasic() {
         <Spinner className="size-6" />
       </div>
     </Example>
-  );
+  )
 }
 
 function SpinnerInButtons() {
@@ -51,21 +54,21 @@ function SpinnerInButtons() {
         <Button disabled>
           <Spinner data-icon="inline-start" /> Disabled
         </Button>
-        <Button disabled variant="outline">
+        <Button variant="outline" disabled>
           <Spinner data-icon="inline-start" /> Outline
         </Button>
-        <Button disabled size="icon" variant="outline">
+        <Button variant="outline" size="icon" disabled>
           <Spinner data-icon="inline-start" />
           <span className="sr-only">Loading...</span>
         </Button>
       </div>
     </Example>
-  );
+  )
 }
 
 function SpinnerInBadges() {
   return (
-    <Example className="items-center justify-center" title="In Badges">
+    <Example title="In Badges" className="items-center justify-center">
       <div className="flex flex-wrap items-center justify-center gap-4">
         <Badge>
           <Spinner data-icon="inline-start" />
@@ -85,7 +88,7 @@ function SpinnerInBadges() {
         </Badge>
       </div>
     </Example>
-  );
+  )
 }
 
 function SpinnerInInputGroup() {
@@ -101,12 +104,12 @@ function SpinnerInInputGroup() {
         </InputGroup>
       </Field>
     </Example>
-  );
+  )
 }
 
 function SpinnerInEmpty() {
   return (
-    <Example containerClassName="lg:col-span-full" title="In Empty State">
+    <Example title="In Empty State" containerClassName="lg:col-span-full">
       <Empty className="min-h-[300px]">
         <EmptyHeader>
           <EmptyMedia variant="icon">
@@ -125,18 +128,18 @@ function SpinnerInEmpty() {
             </Button>
             <Button variant="outline">Import project</Button>
           </div>
-          <Button asChild className="text-muted-foreground" variant="link">
+          <Button variant="link" asChild className="text-muted-foreground">
             <a href="#">
               Learn more{" "}
               <IconPlaceholder
-                hugeicons="ArrowRight02Icon"
                 lucide="ArrowRightIcon"
                 tabler="IconArrowRight"
+                hugeicons="ArrowRight02Icon"
               />
             </a>
           </Button>
         </EmptyContent>
       </Empty>
     </Example>
-  );
+  )
 }

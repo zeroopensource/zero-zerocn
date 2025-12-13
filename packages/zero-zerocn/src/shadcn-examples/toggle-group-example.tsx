@@ -1,5 +1,8 @@
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
-import { Input } from "@/registry/bases/radix/ui/input";
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Input } from "@/registry/bases/radix/ui/input"
 import {
   Select,
   SelectContent,
@@ -7,12 +10,12 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/radix/ui/select";
+} from "@/registry/bases/radix/ui/select"
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/bases/radix/ui/toggle-group";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/toggle-group"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function ToggleGroupExample() {
   return (
@@ -32,82 +35,82 @@ export default function ToggleGroupExample() {
       <ToggleGroupVerticalOutlineWithIcons />
       <ToggleGroupVerticalWithSpacing />
     </ExampleWrapper>
-  );
+  )
 }
 
 function ToggleGroupBasic() {
   return (
     <Example title="Basic">
-      <ToggleGroup spacing={1} type="multiple">
-        <ToggleGroupItem aria-label="Toggle bold" value="bold">
+      <ToggleGroup type="multiple" spacing={1}>
+        <ToggleGroupItem value="bold" aria-label="Toggle bold">
           <IconPlaceholder
-            hugeicons="TextBoldIcon"
             lucide="BoldIcon"
             tabler="IconBold"
+            hugeicons="TextBoldIcon"
           />
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle italic" value="italic">
+        <ToggleGroupItem value="italic" aria-label="Toggle italic">
           <IconPlaceholder
-            hugeicons="TextItalicIcon"
             lucide="ItalicIcon"
             tabler="IconItalic"
+            hugeicons="TextItalicIcon"
           />
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle underline" value="underline">
+        <ToggleGroupItem value="underline" aria-label="Toggle underline">
           <IconPlaceholder
-            hugeicons="TextUnderlineIcon"
             lucide="UnderlineIcon"
             tabler="IconUnderline"
+            hugeicons="TextUnderlineIcon"
           />
         </ToggleGroupItem>
       </ToggleGroup>
     </Example>
-  );
+  )
 }
 
 function ToggleGroupOutline() {
   return (
     <Example title="Outline">
-      <ToggleGroup defaultValue="all" type="single" variant="outline">
-        <ToggleGroupItem aria-label="Toggle all" value="all">
+      <ToggleGroup variant="outline" type="single" defaultValue="all">
+        <ToggleGroupItem value="all" aria-label="Toggle all">
           All
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle missed" value="missed">
+        <ToggleGroupItem value="missed" aria-label="Toggle missed">
           Missed
         </ToggleGroupItem>
       </ToggleGroup>
     </Example>
-  );
+  )
 }
 
 function ToggleGroupOutlineWithIcons() {
   return (
     <Example title="Outline With Icons">
-      <ToggleGroup size="sm" type="multiple" variant="outline">
-        <ToggleGroupItem aria-label="Toggle bold" value="bold">
+      <ToggleGroup variant="outline" type="multiple" size="sm">
+        <ToggleGroupItem value="bold" aria-label="Toggle bold">
           <IconPlaceholder
-            hugeicons="TextBoldIcon"
             lucide="BoldIcon"
             tabler="IconBold"
+            hugeicons="TextBoldIcon"
           />
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle italic" value="italic">
+        <ToggleGroupItem value="italic" aria-label="Toggle italic">
           <IconPlaceholder
-            hugeicons="TextItalicIcon"
             lucide="ItalicIcon"
             tabler="IconItalic"
+            hugeicons="TextItalicIcon"
           />
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle underline" value="underline">
+        <ToggleGroupItem value="underline" aria-label="Toggle underline">
           <IconPlaceholder
-            hugeicons="TextUnderlineIcon"
             lucide="UnderlineIcon"
             tabler="IconUnderline"
+            hugeicons="TextUnderlineIcon"
           />
         </ToggleGroupItem>
       </ToggleGroup>
     </Example>
-  );
+  )
 }
 
 function ToggleGroupSizes() {
@@ -115,206 +118,206 @@ function ToggleGroupSizes() {
     <Example title="Sizes">
       <div className="flex flex-col gap-4">
         <ToggleGroup
-          defaultValue="top"
-          size="sm"
           type="single"
+          size="sm"
+          defaultValue="top"
           variant="outline"
         >
-          <ToggleGroupItem aria-label="Toggle top" value="top">
+          <ToggleGroupItem value="top" aria-label="Toggle top">
             Top
           </ToggleGroupItem>
-          <ToggleGroupItem aria-label="Toggle bottom" value="bottom">
+          <ToggleGroupItem value="bottom" aria-label="Toggle bottom">
             Bottom
           </ToggleGroupItem>
-          <ToggleGroupItem aria-label="Toggle left" value="left">
+          <ToggleGroupItem value="left" aria-label="Toggle left">
             Left
           </ToggleGroupItem>
-          <ToggleGroupItem aria-label="Toggle right" value="right">
+          <ToggleGroupItem value="right" aria-label="Toggle right">
             Right
           </ToggleGroupItem>
         </ToggleGroup>
-        <ToggleGroup defaultValue="top" type="single" variant="outline">
-          <ToggleGroupItem aria-label="Toggle top" value="top">
+        <ToggleGroup type="single" defaultValue="top" variant="outline">
+          <ToggleGroupItem value="top" aria-label="Toggle top">
             Top
           </ToggleGroupItem>
-          <ToggleGroupItem aria-label="Toggle bottom" value="bottom">
+          <ToggleGroupItem value="bottom" aria-label="Toggle bottom">
             Bottom
           </ToggleGroupItem>
-          <ToggleGroupItem aria-label="Toggle left" value="left">
+          <ToggleGroupItem value="left" aria-label="Toggle left">
             Left
           </ToggleGroupItem>
-          <ToggleGroupItem aria-label="Toggle right" value="right">
+          <ToggleGroupItem value="right" aria-label="Toggle right">
             Right
           </ToggleGroupItem>
         </ToggleGroup>
       </div>
     </Example>
-  );
+  )
 }
 
 function ToggleGroupSpacing() {
   return (
     <Example title="With Spacing">
       <ToggleGroup
-        defaultValue="top"
-        size="sm"
-        spacing={2}
         type="single"
+        size="sm"
+        defaultValue="top"
         variant="outline"
+        spacing={2}
       >
-        <ToggleGroupItem aria-label="Toggle top" value="top">
+        <ToggleGroupItem value="top" aria-label="Toggle top">
           Top
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle bottom" value="bottom">
+        <ToggleGroupItem value="bottom" aria-label="Toggle bottom">
           Bottom
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle left" value="left">
+        <ToggleGroupItem value="left" aria-label="Toggle left">
           Left
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle right" value="right">
+        <ToggleGroupItem value="right" aria-label="Toggle right">
           Right
         </ToggleGroupItem>
       </ToggleGroup>
     </Example>
-  );
+  )
 }
 
 function ToggleGroupWithIcons() {
   return (
     <Example title="With Icons">
-      <ToggleGroup size="sm" spacing={1} type="multiple" variant="outline">
+      <ToggleGroup type="multiple" variant="outline" spacing={1} size="sm">
         <ToggleGroupItem
-          aria-label="Toggle star"
-          className="aria-pressed:bg-transparent aria-pressed:*:[svg]:fill-foreground aria-pressed:*:[svg]:stroke-foregfill-foreground"
           value="star"
+          aria-label="Toggle star"
+          className="aria-pressed:*:[svg]:fill-foreground aria-pressed:*:[svg]:stroke-foregfill-foreground aria-pressed:bg-transparent"
         >
           <IconPlaceholder
-            hugeicons="StarIcon"
             lucide="StarIcon"
             tabler="IconStar"
+            hugeicons="StarIcon"
           />
           Star
         </ToggleGroupItem>
         <ToggleGroupItem
-          aria-label="Toggle heart"
-          className="aria-pressed:bg-transparent aria-pressed:*:[svg]:fill-foreground aria-pressed:*:[svg]:stroke-foreground"
           value="heart"
+          aria-label="Toggle heart"
+          className="aria-pressed:*:[svg]:fill-foreground aria-pressed:*:[svg]:stroke-foreground aria-pressed:bg-transparent"
         >
           <IconPlaceholder
-            hugeicons="FavouriteIcon"
             lucide="HeartIcon"
             tabler="IconHeart"
+            hugeicons="FavouriteIcon"
           />
           Heart
         </ToggleGroupItem>
         <ToggleGroupItem
-          aria-label="Toggle bookmark"
-          className="aria-pressed:bg-transparent aria-pressed:*:[svg]:fill-foreground aria-pressed:*:[svg]:stroke-foreground"
           value="bookmark"
+          aria-label="Toggle bookmark"
+          className="aria-pressed:*:[svg]:fill-foreground aria-pressed:*:[svg]:stroke-foreground aria-pressed:bg-transparent"
         >
           <IconPlaceholder
-            hugeicons="BookmarkIcon"
             lucide="BookmarkIcon"
             tabler="IconBookmark"
+            hugeicons="BookmarkIcon"
           />
           Bookmark
         </ToggleGroupItem>
       </ToggleGroup>
     </Example>
-  );
+  )
 }
 
 function ToggleGroupFilter() {
   return (
     <Example title="Filter">
-      <ToggleGroup defaultValue="all" size="sm" type="single" variant="outline">
-        <ToggleGroupItem aria-label="All" value="all">
+      <ToggleGroup type="single" defaultValue="all" variant="outline" size="sm">
+        <ToggleGroupItem value="all" aria-label="All">
           All
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Active" value="active">
+        <ToggleGroupItem value="active" aria-label="Active">
           Active
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Completed" value="completed">
+        <ToggleGroupItem value="completed" aria-label="Completed">
           Completed
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Archived" value="archived">
+        <ToggleGroupItem value="archived" aria-label="Archived">
           Archived
         </ToggleGroupItem>
       </ToggleGroup>
     </Example>
-  );
+  )
 }
 
 function ToggleGroupDateRange() {
   return (
     <Example title="Date Range">
       <ToggleGroup
+        type="single"
         defaultValue="today"
+        variant="outline"
         size="sm"
         spacing={2}
-        type="single"
-        variant="outline"
       >
-        <ToggleGroupItem aria-label="Today" value="today">
+        <ToggleGroupItem value="today" aria-label="Today">
           Today
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="This Week" value="week">
+        <ToggleGroupItem value="week" aria-label="This Week">
           This Week
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="This Month" value="month">
+        <ToggleGroupItem value="month" aria-label="This Month">
           This Month
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="This Year" value="year">
+        <ToggleGroupItem value="year" aria-label="This Year">
           This Year
         </ToggleGroupItem>
       </ToggleGroup>
     </Example>
-  );
+  )
 }
 
 function ToggleGroupSort() {
   return (
     <Example title="Sort">
       <ToggleGroup
-        defaultValue="newest"
-        size="sm"
         type="single"
+        defaultValue="newest"
         variant="outline"
+        size="sm"
       >
-        <ToggleGroupItem aria-label="Newest" value="newest">
+        <ToggleGroupItem value="newest" aria-label="Newest">
           <IconPlaceholder
-            hugeicons="ArrowDownIcon"
             lucide="ArrowDownIcon"
             tabler="IconArrowDown"
+            hugeicons="ArrowDownIcon"
           />
           Newest
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Oldest" value="oldest">
+        <ToggleGroupItem value="oldest" aria-label="Oldest">
           <IconPlaceholder
-            hugeicons="ArrowUpIcon"
             lucide="ArrowUpIcon"
             tabler="IconArrowUp"
+            hugeicons="ArrowUpIcon"
           />
           Oldest
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Popular" value="popular">
+        <ToggleGroupItem value="popular" aria-label="Popular">
           <IconPlaceholder
-            hugeicons="TradeUpIcon"
             lucide="TrendingUpIcon"
             tabler="IconTrendingUp"
+            hugeicons="TradeUpIcon"
           />
           Popular
         </ToggleGroupItem>
       </ToggleGroup>
     </Example>
-  );
+  )
 }
 
 function ToggleGroupWithInputAndSelect() {
   return (
     <Example title="With Input and Select">
       <div className="flex items-center gap-2">
-        <Input className="flex-1" placeholder="Search..." type="search" />
+        <Input type="search" placeholder="Search..." className="flex-1" />
         <Select defaultValue="all">
           <SelectTrigger className="w-32">
             <SelectValue />
@@ -327,135 +330,135 @@ function ToggleGroupWithInputAndSelect() {
             </SelectGroup>
           </SelectContent>
         </Select>
-        <ToggleGroup defaultValue="grid" type="single" variant="outline">
-          <ToggleGroupItem aria-label="Grid view" value="grid">
+        <ToggleGroup type="single" defaultValue="grid" variant="outline">
+          <ToggleGroupItem value="grid" aria-label="Grid view">
             Grid
           </ToggleGroupItem>
-          <ToggleGroupItem aria-label="List view" value="list">
+          <ToggleGroupItem value="list" aria-label="List view">
             List
           </ToggleGroupItem>
         </ToggleGroup>
       </div>
     </Example>
-  );
+  )
 }
 
 function ToggleGroupVertical() {
   return (
     <Example title="Vertical">
-      <ToggleGroup orientation="vertical" spacing={2} type="multiple">
-        <ToggleGroupItem aria-label="Toggle bold" value="bold">
+      <ToggleGroup type="multiple" orientation="vertical" spacing={2}>
+        <ToggleGroupItem value="bold" aria-label="Toggle bold">
           <IconPlaceholder
-            hugeicons="TextBoldIcon"
             lucide="BoldIcon"
             tabler="IconBold"
+            hugeicons="TextBoldIcon"
           />
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle italic" value="italic">
+        <ToggleGroupItem value="italic" aria-label="Toggle italic">
           <IconPlaceholder
-            hugeicons="TextItalicIcon"
             lucide="ItalicIcon"
             tabler="IconItalic"
+            hugeicons="TextItalicIcon"
           />
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle underline" value="underline">
+        <ToggleGroupItem value="underline" aria-label="Toggle underline">
           <IconPlaceholder
-            hugeicons="TextUnderlineIcon"
             lucide="UnderlineIcon"
             tabler="IconUnderline"
+            hugeicons="TextUnderlineIcon"
           />
         </ToggleGroupItem>
       </ToggleGroup>
     </Example>
-  );
+  )
 }
 
 function ToggleGroupVerticalOutline() {
   return (
     <Example title="Vertical Outline">
       <ToggleGroup
+        variant="outline"
+        type="single"
         defaultValue="all"
         orientation="vertical"
         size="sm"
-        type="single"
-        variant="outline"
       >
-        <ToggleGroupItem aria-label="Toggle all" value="all">
+        <ToggleGroupItem value="all" aria-label="Toggle all">
           All
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle active" value="active">
+        <ToggleGroupItem value="active" aria-label="Toggle active">
           Active
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle completed" value="completed">
+        <ToggleGroupItem value="completed" aria-label="Toggle completed">
           Completed
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle archived" value="archived">
+        <ToggleGroupItem value="archived" aria-label="Toggle archived">
           Archived
         </ToggleGroupItem>
       </ToggleGroup>
     </Example>
-  );
+  )
 }
 
 function ToggleGroupVerticalOutlineWithIcons() {
   return (
     <Example title="Vertical Outline With Icons">
       <ToggleGroup
+        variant="outline"
+        type="multiple"
         orientation="vertical"
         size="sm"
-        type="multiple"
-        variant="outline"
       >
-        <ToggleGroupItem aria-label="Toggle bold" value="bold">
+        <ToggleGroupItem value="bold" aria-label="Toggle bold">
           <IconPlaceholder
-            hugeicons="TextBoldIcon"
             lucide="BoldIcon"
             tabler="IconBold"
+            hugeicons="TextBoldIcon"
           />
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle italic" value="italic">
+        <ToggleGroupItem value="italic" aria-label="Toggle italic">
           <IconPlaceholder
-            hugeicons="TextItalicIcon"
             lucide="ItalicIcon"
             tabler="IconItalic"
+            hugeicons="TextItalicIcon"
           />
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle underline" value="underline">
+        <ToggleGroupItem value="underline" aria-label="Toggle underline">
           <IconPlaceholder
-            hugeicons="TextUnderlineIcon"
             lucide="UnderlineIcon"
             tabler="IconUnderline"
+            hugeicons="TextUnderlineIcon"
           />
         </ToggleGroupItem>
       </ToggleGroup>
     </Example>
-  );
+  )
 }
 
 function ToggleGroupVerticalWithSpacing() {
   return (
     <Example title="Vertical With Spacing">
       <ToggleGroup
-        defaultValue="top"
-        orientation="vertical"
-        size="sm"
-        spacing={2}
         type="single"
+        size="sm"
+        defaultValue="top"
         variant="outline"
+        orientation="vertical"
+        spacing={2}
       >
-        <ToggleGroupItem aria-label="Toggle top" value="top">
+        <ToggleGroupItem value="top" aria-label="Toggle top">
           Top
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle bottom" value="bottom">
+        <ToggleGroupItem value="bottom" aria-label="Toggle bottom">
           Bottom
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle left" value="left">
+        <ToggleGroupItem value="left" aria-label="Toggle left">
           Left
         </ToggleGroupItem>
-        <ToggleGroupItem aria-label="Toggle right" value="right">
+        <ToggleGroupItem value="right" aria-label="Toggle right">
           Right
         </ToggleGroupItem>
       </ToggleGroup>
     </Example>
-  );
+  )
 }

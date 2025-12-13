@@ -1,12 +1,16 @@
-"use client";
+"use client"
 
-import * as React from "react";
+import * as React from "react"
+
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/bases/radix/ui/resizable";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/resizable"
 
 export default function ResizableExample() {
   return (
@@ -17,15 +21,15 @@ export default function ResizableExample() {
       <ResizableNested />
       <ResizableControlled />
     </ExampleWrapper>
-  );
+  )
 }
 
 function ResizableHorizontal() {
   return (
     <Example title="Horizontal">
       <ResizablePanelGroup
-        className="min-h-[200px] rounded-lg border"
         direction="horizontal"
+        className="min-h-[200px] rounded-lg border"
       >
         <ResizablePanel defaultSize={25}>
           <div className="flex h-full items-center justify-center p-6">
@@ -40,15 +44,15 @@ function ResizableHorizontal() {
         </ResizablePanel>
       </ResizablePanelGroup>
     </Example>
-  );
+  )
 }
 
 function ResizableVertical() {
   return (
     <Example title="Vertical">
       <ResizablePanelGroup
-        className="min-h-[200px] rounded-lg border"
         direction="vertical"
+        className="min-h-[200px] rounded-lg border"
       >
         <ResizablePanel defaultSize={25}>
           <div className="flex h-full items-center justify-center p-6">
@@ -63,15 +67,15 @@ function ResizableVertical() {
         </ResizablePanel>
       </ResizablePanelGroup>
     </Example>
-  );
+  )
 }
 
 function ResizableWithHandle() {
   return (
     <Example title="With Handle">
       <ResizablePanelGroup
-        className="min-h-[200px] rounded-lg border"
         direction="horizontal"
+        className="min-h-[200px] rounded-lg border"
       >
         <ResizablePanel defaultSize={25}>
           <div className="flex h-full items-center justify-center p-6">
@@ -86,13 +90,13 @@ function ResizableWithHandle() {
         </ResizablePanel>
       </ResizablePanelGroup>
     </Example>
-  );
+  )
 }
 
 function ResizableNested() {
   return (
     <Example title="Nested">
-      <ResizablePanelGroup className="rounded-lg border" direction="horizontal">
+      <ResizablePanelGroup direction="horizontal" className="rounded-lg border">
         <ResizablePanel defaultSize={50}>
           <div className="flex h-[200px] items-center justify-center p-6">
             <span className="font-semibold">One</span>
@@ -116,19 +120,19 @@ function ResizableNested() {
         </ResizablePanel>
       </ResizablePanelGroup>
     </Example>
-  );
+  )
 }
 
 function ResizableControlled() {
-  const [sizes, setSizes] = React.useState([30, 70]);
+  const [sizes, setSizes] = React.useState([30, 70])
 
   return (
     <Example title="Controlled">
       <ResizablePanelGroup
-        className="min-h-[200px] rounded-lg border"
         direction="horizontal"
+        className="min-h-[200px] rounded-lg border"
         onLayout={(newSizes) => {
-          setSizes(newSizes);
+          setSizes(newSizes)
         }}
       >
         <ResizablePanel defaultSize={30} minSize={20}>
@@ -144,5 +148,5 @@ function ResizableControlled() {
         </ResizablePanel>
       </ResizablePanelGroup>
     </Example>
-  );
+  )
 }

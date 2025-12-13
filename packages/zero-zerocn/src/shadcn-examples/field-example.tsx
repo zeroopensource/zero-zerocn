@@ -3,7 +3,10 @@
 import { useState } from "react"
 import { REGEXP_ONLY_DIGITS } from "input-otp"
 
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
 import { Badge } from "@/registry/bases/radix/ui/badge"
 import { Checkbox } from "@/registry/bases/radix/ui/checkbox"
 import {

@@ -1,8 +1,12 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/radix/ui/button";
+import * as React from "react"
+
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   Command,
   CommandDialog,
@@ -13,8 +17,8 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/bases/radix/ui/command";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/command"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function CommandExample() {
   return (
@@ -24,23 +28,23 @@ export default function CommandExample() {
       <CommandWithGroups />
       <CommandManyItems />
     </ExampleWrapper>
-  );
+  )
 }
 
 function CommandBasic() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
 
   return (
     <Example title="Basic">
       <div className="flex flex-col gap-4">
         <Button
-          className="w-fit"
           onClick={() => setOpen(true)}
           variant="outline"
+          className="w-fit"
         >
           Open Menu
         </Button>
-        <CommandDialog onOpenChange={setOpen} open={open}>
+        <CommandDialog open={open} onOpenChange={setOpen}>
           <Command>
             <CommandInput placeholder="Type a command or search..." />
             <CommandList>
@@ -55,23 +59,23 @@ function CommandBasic() {
         </CommandDialog>
       </div>
     </Example>
-  );
+  )
 }
 
 function CommandWithShortcuts() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
 
   return (
     <Example title="With Shortcuts">
       <div className="flex flex-col gap-4">
         <Button
-          className="w-fit"
           onClick={() => setOpen(true)}
           variant="outline"
+          className="w-fit"
         >
           Open Menu
         </Button>
-        <CommandDialog onOpenChange={setOpen} open={open}>
+        <CommandDialog open={open} onOpenChange={setOpen}>
           <Command>
             <CommandInput placeholder="Type a command or search..." />
             <CommandList>
@@ -79,27 +83,27 @@ function CommandWithShortcuts() {
               <CommandGroup heading="Settings">
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="UserIcon"
                     lucide="UserIcon"
                     tabler="IconUser"
+                    hugeicons="UserIcon"
                   />
                   <span>Profile</span>
                   <CommandShortcut>⌘P</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="CreditCardIcon"
                     lucide="CreditCardIcon"
                     tabler="IconCreditCard"
+                    hugeicons="CreditCardIcon"
                   />
                   <span>Billing</span>
                   <CommandShortcut>⌘B</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="SettingsIcon"
                     lucide="SettingsIcon"
                     tabler="IconSettings"
+                    hugeicons="SettingsIcon"
                   />
                   <span>Settings</span>
                   <CommandShortcut>⌘S</CommandShortcut>
@@ -110,23 +114,23 @@ function CommandWithShortcuts() {
         </CommandDialog>
       </div>
     </Example>
-  );
+  )
 }
 
 function CommandWithGroups() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
 
   return (
     <Example title="With Groups">
       <div className="flex flex-col gap-4">
         <Button
-          className="w-fit"
           onClick={() => setOpen(true)}
           variant="outline"
+          className="w-fit"
         >
           Open Menu
         </Button>
-        <CommandDialog onOpenChange={setOpen} open={open}>
+        <CommandDialog open={open} onOpenChange={setOpen}>
           <Command>
             <CommandInput placeholder="Type a command or search..." />
             <CommandList>
@@ -134,25 +138,25 @@ function CommandWithGroups() {
               <CommandGroup heading="Suggestions">
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="CalendarIcon"
                     lucide="CalendarIcon"
                     tabler="IconCalendar"
+                    hugeicons="CalendarIcon"
                   />
                   <span>Calendar</span>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="SmileIcon"
                     lucide="SmileIcon"
                     tabler="IconMoodSmile"
+                    hugeicons="SmileIcon"
                   />
                   <span>Search Emoji</span>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="CalculatorIcon"
                     lucide="CalculatorIcon"
                     tabler="IconCalculator"
+                    hugeicons="CalculatorIcon"
                   />
                   <span>Calculator</span>
                 </CommandItem>
@@ -161,27 +165,27 @@ function CommandWithGroups() {
               <CommandGroup heading="Settings">
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="UserIcon"
                     lucide="UserIcon"
                     tabler="IconUser"
+                    hugeicons="UserIcon"
                   />
                   <span>Profile</span>
                   <CommandShortcut>⌘P</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="CreditCardIcon"
                     lucide="CreditCardIcon"
                     tabler="IconCreditCard"
+                    hugeicons="CreditCardIcon"
                   />
                   <span>Billing</span>
                   <CommandShortcut>⌘B</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="SettingsIcon"
                     lucide="SettingsIcon"
                     tabler="IconSettings"
+                    hugeicons="SettingsIcon"
                   />
                   <span>Settings</span>
                   <CommandShortcut>⌘S</CommandShortcut>
@@ -192,23 +196,23 @@ function CommandWithGroups() {
         </CommandDialog>
       </div>
     </Example>
-  );
+  )
 }
 
 function CommandManyItems() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
 
   return (
     <Example title="Many Groups & Items">
       <div className="flex flex-col gap-4">
         <Button
-          className="w-fit"
           onClick={() => setOpen(true)}
           variant="outline"
+          className="w-fit"
         >
           Open Menu
         </Button>
-        <CommandDialog onOpenChange={setOpen} open={open}>
+        <CommandDialog open={open} onOpenChange={setOpen}>
           <Command>
             <CommandInput placeholder="Type a command or search..." />
             <CommandList>
@@ -216,36 +220,36 @@ function CommandManyItems() {
               <CommandGroup heading="Navigation">
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="HomeIcon"
                     lucide="HomeIcon"
                     tabler="IconHome"
+                    hugeicons="HomeIcon"
                   />
                   <span>Home</span>
                   <CommandShortcut>⌘H</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="InboxIcon"
                     lucide="InboxIcon"
                     tabler="IconInbox"
+                    hugeicons="InboxIcon"
                   />
                   <span>Inbox</span>
                   <CommandShortcut>⌘I</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="File02Icon"
                     lucide="FileTextIcon"
                     tabler="IconFileText"
+                    hugeicons="File02Icon"
                   />
                   <span>Documents</span>
                   <CommandShortcut>⌘D</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="FolderIcon"
                     lucide="FolderIcon"
                     tabler="IconFolder"
+                    hugeicons="FolderIcon"
                   />
                   <span>Folders</span>
                   <CommandShortcut>⌘F</CommandShortcut>
@@ -255,54 +259,54 @@ function CommandManyItems() {
               <CommandGroup heading="Actions">
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="PlusSignIcon"
                     lucide="PlusIcon"
                     tabler="IconPlus"
+                    hugeicons="PlusSignIcon"
                   />
                   <span>New File</span>
                   <CommandShortcut>⌘N</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="FolderAddIcon"
                     lucide="FolderPlusIcon"
                     tabler="IconFolderPlus"
+                    hugeicons="FolderAddIcon"
                   />
                   <span>New Folder</span>
                   <CommandShortcut>⇧⌘N</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="CopyIcon"
                     lucide="CopyIcon"
                     tabler="IconCopy"
+                    hugeicons="CopyIcon"
                   />
                   <span>Copy</span>
                   <CommandShortcut>⌘C</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="ScissorIcon"
                     lucide="ScissorsIcon"
                     tabler="IconCut"
+                    hugeicons="ScissorIcon"
                   />
                   <span>Cut</span>
                   <CommandShortcut>⌘X</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="ClipboardIcon"
                     lucide="ClipboardPasteIcon"
                     tabler="IconClipboard"
+                    hugeicons="ClipboardIcon"
                   />
                   <span>Paste</span>
                   <CommandShortcut>⌘V</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="DeleteIcon"
                     lucide="TrashIcon"
                     tabler="IconTrash"
+                    hugeicons="DeleteIcon"
                   />
                   <span>Delete</span>
                   <CommandShortcut>⌫</CommandShortcut>
@@ -312,34 +316,34 @@ function CommandManyItems() {
               <CommandGroup heading="View">
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="GridIcon"
                     lucide="LayoutGridIcon"
                     tabler="IconLayoutGrid"
+                    hugeicons="GridIcon"
                   />
                   <span>Grid View</span>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="Menu05Icon"
                     lucide="ListIcon"
                     tabler="IconList"
+                    hugeicons="Menu05Icon"
                   />
                   <span>List View</span>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="ZoomInAreaIcon"
                     lucide="ZoomInIcon"
                     tabler="IconZoomIn"
+                    hugeicons="ZoomInAreaIcon"
                   />
                   <span>Zoom In</span>
                   <CommandShortcut>⌘+</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="ZoomOutAreaIcon"
                     lucide="ZoomOutIcon"
                     tabler="IconZoomOut"
+                    hugeicons="ZoomOutAreaIcon"
                   />
                   <span>Zoom Out</span>
                   <CommandShortcut>⌘-</CommandShortcut>
@@ -349,44 +353,44 @@ function CommandManyItems() {
               <CommandGroup heading="Account">
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="UserIcon"
                     lucide="UserIcon"
                     tabler="IconUser"
+                    hugeicons="UserIcon"
                   />
                   <span>Profile</span>
                   <CommandShortcut>⌘P</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="CreditCardIcon"
                     lucide="CreditCardIcon"
                     tabler="IconCreditCard"
+                    hugeicons="CreditCardIcon"
                   />
                   <span>Billing</span>
                   <CommandShortcut>⌘B</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="SettingsIcon"
                     lucide="SettingsIcon"
                     tabler="IconSettings"
+                    hugeicons="SettingsIcon"
                   />
                   <span>Settings</span>
                   <CommandShortcut>⌘S</CommandShortcut>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="NotificationIcon"
                     lucide="BellIcon"
                     tabler="IconBell"
+                    hugeicons="NotificationIcon"
                   />
                   <span>Notifications</span>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="HelpCircleIcon"
                     lucide="HelpCircleIcon"
                     tabler="IconHelpCircle"
+                    hugeicons="HelpCircleIcon"
                   />
                   <span>Help & Support</span>
                 </CommandItem>
@@ -395,33 +399,33 @@ function CommandManyItems() {
               <CommandGroup heading="Tools">
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="CalculatorIcon"
                     lucide="CalculatorIcon"
                     tabler="IconCalculator"
+                    hugeicons="CalculatorIcon"
                   />
                   <span>Calculator</span>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="CalendarIcon"
                     lucide="CalendarIcon"
                     tabler="IconCalendar"
+                    hugeicons="CalendarIcon"
                   />
                   <span>Calendar</span>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="ImageIcon"
                     lucide="ImageIcon"
                     tabler="IconPhoto"
+                    hugeicons="ImageIcon"
                   />
                   <span>Image Editor</span>
                 </CommandItem>
                 <CommandItem>
                   <IconPlaceholder
-                    hugeicons="CodeIcon"
                     lucide="CodeIcon"
                     tabler="IconCode"
+                    hugeicons="CodeIcon"
                   />
                   <span>Code Editor</span>
                 </CommandItem>
@@ -431,5 +435,5 @@ function CommandManyItems() {
         </CommandDialog>
       </div>
     </Example>
-  );
+  )
 }

@@ -1,8 +1,12 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
-import { Field, FieldLabel } from "@/registry/bases/radix/ui/field";
+import * as React from "react"
+
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Field, FieldLabel } from "@/registry/bases/radix/ui/field"
 import {
   Item,
   ItemActions,
@@ -10,10 +14,10 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@/registry/bases/radix/ui/item";
-import { Progress } from "@/registry/bases/radix/ui/progress";
-import { Slider } from "@/registry/bases/radix/ui/slider";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/item"
+import { Progress } from "@/registry/bases/radix/ui/progress"
+import { Slider } from "@/registry/bases/radix/ui/slider"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function ProgressExample() {
   return (
@@ -23,7 +27,7 @@ export default function ProgressExample() {
       <ProgressControlled />
       <FileUploadList />
     </ExampleWrapper>
-  );
+  )
 }
 
 function ProgressValues() {
@@ -31,13 +35,13 @@ function ProgressValues() {
     <Example title="Progress Bar">
       <div className="flex w-full flex-col gap-4">
         <Progress value={0} />
-        <Progress className="w-full" value={25} />
+        <Progress value={25} className="w-full" />
         <Progress value={50} />
         <Progress value={75} />
         <Progress value={100} />
       </div>
     </Example>
-  );
+  )
 }
 
 function ProgressWithLabel() {
@@ -48,29 +52,29 @@ function ProgressWithLabel() {
           <span>Upload progress</span>
           <span className="ml-auto">66%</span>
         </FieldLabel>
-        <Progress className="w-full" id="progress-upload" value={66} />
+        <Progress value={66} className="w-full" id="progress-upload" />
       </Field>
     </Example>
-  );
+  )
 }
 
 function ProgressControlled() {
-  const [value, setValue] = React.useState([50]);
+  const [value, setValue] = React.useState([50])
 
   return (
     <Example title="Controlled">
       <div className="flex w-full flex-col gap-4">
-        <Progress className="w-full" value={value[0]} />
+        <Progress value={value[0]} className="w-full" />
         <Slider
-          max={100}
-          min={0}
-          onValueChange={setValue}
-          step={1}
           value={value}
+          onValueChange={setValue}
+          min={0}
+          max={100}
+          step={1}
         />
       </div>
     </Example>
-  );
+  )
 }
 
 function FileUploadList() {
@@ -102,26 +106,26 @@ function FileUploadList() {
       },
     ],
     []
-  );
+  )
 
   return (
     <Example title="File Upload List">
       <ItemGroup>
         {files.map((file) => (
-          <Item className="px-0" key={file.id} size="xs">
+          <Item key={file.id} size="xs" className="px-0">
             <ItemMedia variant="icon">
               <IconPlaceholder
-                className="size-5"
-                hugeicons="FileIcon"
                 lucide="FileIcon"
                 tabler="IconFile"
+                hugeicons="FileIcon"
+                className="size-5"
               />
             </ItemMedia>
             <ItemContent className="inline-block truncate">
               <ItemTitle className="inline">{file.name}</ItemTitle>
             </ItemContent>
             <ItemContent>
-              <Progress className="w-32" value={file.progress} />
+              <Progress value={file.progress} className="w-32" />
             </ItemContent>
             <ItemActions className="w-16 justify-end">
               <span className="text-muted-foreground text-sm">
@@ -132,5 +136,5 @@ function FileUploadList() {
         ))}
       </ItemGroup>
     </Example>
-  );
+  )
 }

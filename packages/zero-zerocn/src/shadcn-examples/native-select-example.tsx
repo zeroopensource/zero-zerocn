@@ -1,14 +1,17 @@
 import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/registry/bases/radix/ui/field";
+} from "@/registry/bases/radix/ui/field"
 import {
   NativeSelect,
   NativeSelectOptGroup,
   NativeSelectOption,
-} from "@/registry/bases/radix/ui/native-select";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/native-select"
 
 export default function NativeSelectExample() {
   return (
@@ -20,7 +23,7 @@ export default function NativeSelectExample() {
       <NativeSelectDisabled />
       <NativeSelectInvalid />
     </ExampleWrapper>
-  );
+  )
 }
 
 function NativeSelectBasic() {
@@ -31,13 +34,13 @@ function NativeSelectBasic() {
         <NativeSelectOption value="apple">Apple</NativeSelectOption>
         <NativeSelectOption value="banana">Banana</NativeSelectOption>
         <NativeSelectOption value="blueberry">Blueberry</NativeSelectOption>
-        <NativeSelectOption disabled value="grapes">
+        <NativeSelectOption value="grapes" disabled>
           Grapes
         </NativeSelectOption>
         <NativeSelectOption value="pineapple">Pineapple</NativeSelectOption>
       </NativeSelect>
     </Example>
-  );
+  )
 }
 
 function NativeSelectWithGroups() {
@@ -57,7 +60,7 @@ function NativeSelectWithGroups() {
         </NativeSelectOptGroup>
       </NativeSelect>
     </Example>
-  );
+  )
 }
 
 function NativeSelectSizes() {
@@ -78,7 +81,7 @@ function NativeSelectSizes() {
         </NativeSelect>
       </div>
     </Example>
-  );
+  )
 }
 
 function NativeSelectWithField() {
@@ -96,7 +99,7 @@ function NativeSelectWithField() {
         <FieldDescription>Select your country of residence.</FieldDescription>
       </Field>
     </Example>
-  );
+  )
 }
 
 function NativeSelectDisabled() {
@@ -109,7 +112,7 @@ function NativeSelectDisabled() {
         <NativeSelectOption value="blueberry">Blueberry</NativeSelectOption>
       </NativeSelect>
     </Example>
-  );
+  )
 }
 
 function NativeSelectInvalid() {
@@ -122,5 +125,5 @@ function NativeSelectInvalid() {
         <NativeSelectOption value="blueberry">Blueberry</NativeSelectOption>
       </NativeSelect>
     </Example>
-  );
+  )
 }

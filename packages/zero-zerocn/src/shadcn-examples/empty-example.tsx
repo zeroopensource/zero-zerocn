@@ -1,5 +1,8 @@
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/radix/ui/button";
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   Empty,
   EmptyContent,
@@ -7,14 +10,14 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/bases/radix/ui/empty";
+} from "@/registry/bases/radix/ui/empty"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/bases/radix/ui/input-group";
-import { Kbd } from "@/registry/bases/radix/ui/kbd";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/input-group"
+import { Kbd } from "@/registry/bases/radix/ui/kbd"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function EmptyExample() {
   return (
@@ -26,7 +29,7 @@ export default function EmptyExample() {
       <EmptyWithMutedBackgroundAlt />
       <EmptyInCard />
     </ExampleWrapper>
-  );
+  )
 }
 
 function EmptyBasic() {
@@ -47,20 +50,20 @@ function EmptyBasic() {
             </Button>
             <Button variant="outline">Import project</Button>
           </div>
-          <Button asChild className="text-muted-foreground" variant="link">
+          <Button variant="link" asChild className="text-muted-foreground">
             <a href="#">
               Learn more{" "}
               <IconPlaceholder
-                hugeicons="ArrowUpRight01Icon"
                 lucide="ArrowUpRightIcon"
                 tabler="IconArrowUpRight"
+                hugeicons="ArrowUpRight01Icon"
               />
             </a>
           </Button>
         </EmptyContent>
       </Empty>
     </Example>
-  );
+  )
 }
 
 function EmptyWithMutedBackground() {
@@ -75,20 +78,20 @@ function EmptyWithMutedBackground() {
         </EmptyHeader>
         <EmptyContent>
           <Button>Try again</Button>
-          <Button asChild className="text-muted-foreground" variant="link">
+          <Button variant="link" asChild className="text-muted-foreground">
             <a href="#">
               Learn more{" "}
               <IconPlaceholder
-                hugeicons="ArrowUpRight01Icon"
                 lucide="ArrowUpRightIcon"
                 tabler="IconArrowUpRight"
+                hugeicons="ArrowUpRight01Icon"
               />
             </a>
           </Button>
         </EmptyContent>
       </Empty>
     </Example>
-  );
+  )
 }
 
 function EmptyWithBorder() {
@@ -107,9 +110,9 @@ function EmptyWithBorder() {
             <InputGroupInput placeholder="Try searching for pages..." />
             <InputGroupAddon>
               <IconPlaceholder
-                hugeicons="DashedLineCircleIcon"
                 lucide="CircleDashedIcon"
                 tabler="IconCircleDashed"
+                hugeicons="DashedLineCircleIcon"
               />
             </InputGroupAddon>
             <InputGroupAddon align="inline-end">
@@ -122,7 +125,7 @@ function EmptyWithBorder() {
         </EmptyContent>
       </Empty>
     </Example>
-  );
+  )
 }
 
 function EmptyWithIcon() {
@@ -132,9 +135,9 @@ function EmptyWithIcon() {
         <EmptyHeader>
           <EmptyMedia variant="icon">
             <IconPlaceholder
-              hugeicons="Folder01Icon"
               lucide="FolderIcon"
               tabler="IconFolder"
+              hugeicons="Folder01Icon"
             />
           </EmptyMedia>
           <EmptyTitle>Nothing to see here</EmptyTitle>
@@ -146,17 +149,17 @@ function EmptyWithIcon() {
         <EmptyContent>
           <Button variant="outline">
             <IconPlaceholder
-              data-icon="inline-start"
-              hugeicons="PlusSignIcon"
               lucide="PlusIcon"
               tabler="IconPlus"
+              hugeicons="PlusSignIcon"
+              data-icon="inline-start"
             />
             New Post
           </Button>
         </EmptyContent>
       </Empty>
     </Example>
-  );
+  )
 }
 
 function EmptyWithMutedBackgroundAlt() {
@@ -175,9 +178,9 @@ function EmptyWithMutedBackgroundAlt() {
             <InputGroupInput placeholder="Try searching for pages..." />
             <InputGroupAddon>
               <IconPlaceholder
-                hugeicons="DashedLineCircleIcon"
                 lucide="CircleDashedIcon"
                 tabler="IconCircleDashed"
+                hugeicons="DashedLineCircleIcon"
               />
             </InputGroupAddon>
             <InputGroupAddon align="inline-end">
@@ -190,7 +193,7 @@ function EmptyWithMutedBackgroundAlt() {
         </EmptyContent>
       </Empty>
     </Example>
-  );
+  )
 }
 
 function EmptyInCard() {
@@ -200,9 +203,9 @@ function EmptyInCard() {
         <EmptyHeader>
           <EmptyMedia variant="icon">
             <IconPlaceholder
-              hugeicons="Folder01Icon"
               lucide="FolderIcon"
               tabler="IconFolder"
+              hugeicons="Folder01Icon"
             />
           </EmptyMedia>
           <EmptyTitle>No projects yet</EmptyTitle>
@@ -218,18 +221,18 @@ function EmptyInCard() {
             </Button>
             <Button variant="outline">Import project</Button>
           </div>
-          <Button asChild className="text-muted-foreground" variant="link">
+          <Button variant="link" asChild className="text-muted-foreground">
             <a href="#">
               Learn more{" "}
               <IconPlaceholder
-                hugeicons="ArrowUpRight01Icon"
                 lucide="ArrowUpRightIcon"
                 tabler="IconArrowUpRight"
+                hugeicons="ArrowUpRight01Icon"
               />
             </a>
           </Button>
         </EmptyContent>
       </Empty>
     </Example>
-  );
+  )
 }

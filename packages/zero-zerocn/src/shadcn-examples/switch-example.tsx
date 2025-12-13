@@ -1,13 +1,16 @@
 import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import {
   Field,
   FieldContent,
   FieldDescription,
   FieldLabel,
   FieldTitle,
-} from "@/registry/bases/radix/ui/field";
-import { Label } from "@/registry/bases/radix/ui/label";
-import { Switch } from "@/registry/bases/radix/ui/switch";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/field"
+import { Label } from "@/registry/bases/radix/ui/label"
+import { Switch } from "@/registry/bases/radix/ui/switch"
 
 export default function SwitchExample() {
   return (
@@ -17,7 +20,7 @@ export default function SwitchExample() {
       <SwitchDisabled />
       <SwitchSizes />
     </ExampleWrapper>
-  );
+  )
 }
 
 function SwitchBasic() {
@@ -28,18 +31,18 @@ function SwitchBasic() {
         <FieldLabel htmlFor="switch-basic">Airplane Mode</FieldLabel>
       </Field>
     </Example>
-  );
+  )
 }
 
 function SwitchWithLabel() {
   return (
     <Example title="With Label">
       <div className="flex items-center gap-2">
-        <Switch defaultChecked id="switch-bluetooth" />
+        <Switch id="switch-bluetooth" defaultChecked />
         <Label htmlFor="switch-bluetooth">Bluetooth</Label>
       </div>
     </Example>
-  );
+  )
 }
 
 function SwitchWithDescription() {
@@ -58,7 +61,7 @@ function SwitchWithDescription() {
         </Field>
       </FieldLabel>
     </Example>
-  );
+  )
 }
 
 function SwitchDisabled() {
@@ -66,18 +69,18 @@ function SwitchDisabled() {
     <Example title="Disabled">
       <div className="flex flex-col gap-12">
         <div className="flex items-center gap-2">
-          <Switch disabled id="switch-disabled-unchecked" />
+          <Switch id="switch-disabled-unchecked" disabled />
           <Label htmlFor="switch-disabled-unchecked">
             Disabled (Unchecked)
           </Label>
         </div>
         <div className="flex items-center gap-2">
-          <Switch defaultChecked disabled id="switch-disabled-checked" />
+          <Switch id="switch-disabled-checked" defaultChecked disabled />
           <Label htmlFor="switch-disabled-checked">Disabled (Checked)</Label>
         </div>
       </div>
     </Example>
-  );
+  )
 }
 
 function SwitchSizes() {
@@ -94,5 +97,5 @@ function SwitchSizes() {
         </div>
       </div>
     </Example>
-  );
+  )
 }

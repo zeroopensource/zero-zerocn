@@ -1,24 +1,28 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/radix/ui/button";
+import * as React from "react"
+
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/radix/ui/card";
+} from "@/registry/bases/radix/ui/card"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/bases/radix/ui/collapsible";
-import { Field, FieldGroup, FieldLabel } from "@/registry/bases/radix/ui/field";
-import { Input } from "@/registry/bases/radix/ui/input";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/bases/radix/ui/tabs";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/collapsible"
+import { Field, FieldGroup, FieldLabel } from "@/registry/bases/radix/ui/field"
+import { Input } from "@/registry/bases/radix/ui/input"
+import { Tabs, TabsList, TabsTrigger } from "@/registry/bases/radix/ui/tabs"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function CollapsibleExample() {
   return (
@@ -26,10 +30,10 @@ export default function CollapsibleExample() {
       <CollapsibleFileTree />
       <CollapsibleSettings />
     </ExampleWrapper>
-  );
+  )
 }
 
-type FileTreeItem = { name: string } | { name: string; items: FileTreeItem[] };
+type FileTreeItem = { name: string } | { name: string; items: FileTreeItem[] }
 
 function CollapsibleFileTree() {
   const fileTree: FileTreeItem[] = [
@@ -82,7 +86,7 @@ function CollapsibleFileTree() {
     { name: "tsconfig.json" },
     { name: "README.md" },
     { name: ".gitignore" },
-  ];
+  ]
 
   const renderItem = (fileItem: FileTreeItem) => {
     if ("items" in fileItem) {
@@ -90,51 +94,51 @@ function CollapsibleFileTree() {
         <Collapsible key={fileItem.name}>
           <CollapsibleTrigger asChild>
             <Button
-              className="group w-full justify-start transition-none hover:bg-accent hover:text-accent-foreground"
-              size="sm"
               variant="ghost"
+              size="sm"
+              className="group hover:bg-accent hover:text-accent-foreground w-full justify-start transition-none"
             >
               <IconPlaceholder
-                className="transition-transform group-data-[state=open]:rotate-90"
-                hugeicons="ArrowRight01Icon"
                 lucide="ChevronRightIcon"
                 tabler="IconChevronRight"
+                hugeicons="ArrowRight01Icon"
+                className="transition-transform group-data-[state=open]:rotate-90"
               />
               <IconPlaceholder
-                hugeicons="Folder01Icon"
                 lucide="FolderIcon"
                 tabler="IconFolder"
+                hugeicons="Folder01Icon"
               />
               {fileItem.name}
             </Button>
           </CollapsibleTrigger>
-          <CollapsibleContent className="mt-1 ml-5 style-lyra:ml-4">
+          <CollapsibleContent className="style-lyra:ml-4 mt-1 ml-5">
             <div className="flex flex-col gap-1">
               {fileItem.items.map((child) => renderItem(child))}
             </div>
           </CollapsibleContent>
         </Collapsible>
-      );
+      )
     }
     return (
       <Button
-        className="w-full justify-start gap-2 text-foreground"
         key={fileItem.name}
-        size="sm"
         variant="link"
+        size="sm"
+        className="text-foreground w-full justify-start gap-2"
       >
         <IconPlaceholder
-          hugeicons="File01Icon"
           lucide="FileIcon"
           tabler="IconFile"
+          hugeicons="File01Icon"
         />
         <span>{fileItem.name}</span>
       </Button>
-    );
-  };
+    )
+  }
 
   return (
-    <Example className="items-center" title="File Tree">
+    <Example title="File Tree" className="items-center">
       <Card className="mx-auto w-full max-w-[16rem] gap-2" size="sm">
         <CardHeader>
           <Tabs defaultValue="explorer">
@@ -151,14 +155,14 @@ function CollapsibleFileTree() {
         </CardContent>
       </Card>
     </Example>
-  );
+  )
 }
 
 function CollapsibleSettings() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
-    <Example className="items-center" title="Settings">
+    <Example title="Settings" className="items-center">
       <Card className="mx-auto w-full max-w-xs" size="sm">
         <CardHeader>
           <CardTitle>Radius</CardTitle>
@@ -168,51 +172,51 @@ function CollapsibleSettings() {
         </CardHeader>
         <CardContent>
           <Collapsible
-            className="flex items-start gap-2"
-            onOpenChange={setIsOpen}
             open={isOpen}
+            onOpenChange={setIsOpen}
+            className="flex items-start gap-2"
           >
             <FieldGroup className="grid w-full grid-cols-2 gap-2">
               <Field>
-                <FieldLabel className="sr-only" htmlFor="radius-x">
+                <FieldLabel htmlFor="radius-x" className="sr-only">
                   Radius X
                 </FieldLabel>
-                <Input defaultValue={0} id="radius" placeholder="0" />
+                <Input id="radius" placeholder="0" defaultValue={0} />
               </Field>
               <Field>
-                <FieldLabel className="sr-only" htmlFor="radius-y">
+                <FieldLabel htmlFor="radius-y" className="sr-only">
                   Radius Y
                 </FieldLabel>
-                <Input defaultValue={0} id="radius" placeholder="0" />
+                <Input id="radius" placeholder="0" defaultValue={0} />
               </Field>
               <CollapsibleContent className="col-span-full grid grid-cols-subgrid gap-2">
                 <Field>
-                  <FieldLabel className="sr-only" htmlFor="radius-x">
+                  <FieldLabel htmlFor="radius-x" className="sr-only">
                     Radius X
                   </FieldLabel>
-                  <Input defaultValue={0} id="radius" placeholder="0" />
+                  <Input id="radius" placeholder="0" defaultValue={0} />
                 </Field>
                 <Field>
-                  <FieldLabel className="sr-only" htmlFor="radius-y">
+                  <FieldLabel htmlFor="radius-y" className="sr-only">
                     Radius Y
                   </FieldLabel>
-                  <Input defaultValue={0} id="radius" placeholder="0" />
+                  <Input id="radius" placeholder="0" defaultValue={0} />
                 </Field>
               </CollapsibleContent>
             </FieldGroup>
             <CollapsibleTrigger asChild>
-              <Button size="icon" variant="outline">
+              <Button variant="outline" size="icon">
                 {isOpen ? (
                   <IconPlaceholder
-                    hugeicons="MinusSignIcon"
                     lucide="MinimizeIcon"
                     tabler="IconMinimize"
+                    hugeicons="MinusSignIcon"
                   />
                 ) : (
                   <IconPlaceholder
-                    hugeicons="PlusSignIcon"
                     lucide="MaximizeIcon"
                     tabler="IconMaximize"
+                    hugeicons="PlusSignIcon"
                   />
                 )}
               </Button>
@@ -221,5 +225,5 @@ function CollapsibleSettings() {
         </CardContent>
       </Card>
     </Example>
-  );
+  )
 }

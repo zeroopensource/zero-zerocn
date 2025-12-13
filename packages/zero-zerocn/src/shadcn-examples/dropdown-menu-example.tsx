@@ -1,13 +1,17 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
+import * as React from "react"
+
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/bases/radix/ui/avatar";
-import { Button } from "@/registry/bases/radix/ui/button";
+} from "@/registry/bases/radix/ui/avatar"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -15,7 +19,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/radix/ui/dialog";
+} from "@/registry/bases/radix/ui/dialog"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -32,8 +36,8 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/registry/bases/radix/ui/dropdown-menu";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/dropdown-menu"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function DropdownMenuExample() {
   return (
@@ -51,7 +55,7 @@ export default function DropdownMenuExample() {
       <DropdownMenuWithAvatar />
       <DropdownMenuInDialog />
     </ExampleWrapper>
-  );
+  )
 }
 
 function DropdownMenuBasic() {
@@ -59,7 +63,7 @@ function DropdownMenuBasic() {
     <Example title="Basic">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="w-fit" variant="outline">
+          <Button variant="outline" className="w-fit">
             Open
           </Button>
         </DropdownMenuTrigger>
@@ -79,7 +83,7 @@ function DropdownMenuBasic() {
         </DropdownMenuContent>
       </DropdownMenu>
     </Example>
-  );
+  )
 }
 
 function DropdownMenuWithIcons() {
@@ -87,7 +91,7 @@ function DropdownMenuWithIcons() {
     <Example title="With Icons">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="w-fit" variant="outline">
+          <Button variant="outline" className="w-fit">
             Open
           </Button>
         </DropdownMenuTrigger>
@@ -95,25 +99,25 @@ function DropdownMenuWithIcons() {
           <DropdownMenuGroup>
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="UserIcon"
                 lucide="UserIcon"
                 tabler="IconUser"
+                hugeicons="UserIcon"
               />
               Profile
             </DropdownMenuItem>
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="CreditCardIcon"
                 lucide="CreditCardIcon"
                 tabler="IconCreditCard"
+                hugeicons="CreditCardIcon"
               />
               Billing
             </DropdownMenuItem>
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="SettingsIcon"
                 lucide="SettingsIcon"
                 tabler="IconSettings"
+                hugeicons="SettingsIcon"
               />
               Settings
             </DropdownMenuItem>
@@ -122,9 +126,9 @@ function DropdownMenuWithIcons() {
           <DropdownMenuGroup>
             <DropdownMenuItem variant="destructive">
               <IconPlaceholder
-                hugeicons="LogoutIcon"
                 lucide="LogOutIcon"
                 tabler="IconLogout"
+                hugeicons="LogoutIcon"
               />
               Log out
             </DropdownMenuItem>
@@ -132,7 +136,7 @@ function DropdownMenuWithIcons() {
         </DropdownMenuContent>
       </DropdownMenu>
     </Example>
-  );
+  )
 }
 
 function DropdownMenuWithShortcuts() {
@@ -140,7 +144,7 @@ function DropdownMenuWithShortcuts() {
     <Example title="With Shortcuts">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="w-fit" variant="outline">
+          <Button variant="outline" className="w-fit">
             Open
           </Button>
         </DropdownMenuTrigger>
@@ -174,7 +178,7 @@ function DropdownMenuWithShortcuts() {
         </DropdownMenuContent>
       </DropdownMenu>
     </Example>
-  );
+  )
 }
 
 function DropdownMenuWithSubmenu() {
@@ -182,7 +186,7 @@ function DropdownMenuWithSubmenu() {
     <Example title="With Submenu">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="w-fit" variant="outline">
+          <Button variant="outline" className="w-fit">
             Open
           </Button>
         </DropdownMenuTrigger>
@@ -212,19 +216,19 @@ function DropdownMenuWithSubmenu() {
         </DropdownMenuContent>
       </DropdownMenu>
     </Example>
-  );
+  )
 }
 
 function DropdownMenuWithCheckboxes() {
-  const [showStatusBar, setShowStatusBar] = React.useState(true);
-  const [showActivityBar, setShowActivityBar] = React.useState(false);
-  const [showPanel, setShowPanel] = React.useState(false);
+  const [showStatusBar, setShowStatusBar] = React.useState(true)
+  const [showActivityBar, setShowActivityBar] = React.useState(false)
+  const [showPanel, setShowPanel] = React.useState(false)
 
   return (
     <Example title="With Checkboxes">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="w-fit" variant="outline">
+          <Button variant="outline" className="w-fit">
             Checkboxes
           </Button>
         </DropdownMenuTrigger>
@@ -236,21 +240,21 @@ function DropdownMenuWithCheckboxes() {
               onCheckedChange={setShowStatusBar}
             >
               <IconPlaceholder
-                hugeicons="LayoutIcon"
                 lucide="LayoutIcon"
                 tabler="IconLayout"
+                hugeicons="LayoutIcon"
               />
               Status Bar
             </DropdownMenuCheckboxItem>
             <DropdownMenuCheckboxItem
               checked={showActivityBar}
-              disabled
               onCheckedChange={setShowActivityBar}
+              disabled
             >
               <IconPlaceholder
-                hugeicons="ActivityIcon"
                 lucide="ActivityIcon"
                 tabler="IconActivity"
+                hugeicons="ActivityIcon"
               />
               Activity Bar
             </DropdownMenuCheckboxItem>
@@ -259,9 +263,9 @@ function DropdownMenuWithCheckboxes() {
               onCheckedChange={setShowPanel}
             >
               <IconPlaceholder
-                hugeicons="LayoutLeftIcon"
                 lucide="PanelLeftIcon"
                 tabler="IconLayoutSidebar"
+                hugeicons="LayoutLeftIcon"
               />
               Panel
             </DropdownMenuCheckboxItem>
@@ -269,17 +273,17 @@ function DropdownMenuWithCheckboxes() {
         </DropdownMenuContent>
       </DropdownMenu>
     </Example>
-  );
+  )
 }
 
 function DropdownMenuWithRadio() {
-  const [position, setPosition] = React.useState("bottom");
+  const [position, setPosition] = React.useState("bottom")
 
   return (
     <Example title="With Radio Group">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="w-fit" variant="outline">
+          <Button variant="outline" className="w-fit">
             Radio Group
           </Button>
         </DropdownMenuTrigger>
@@ -287,30 +291,30 @@ function DropdownMenuWithRadio() {
           <DropdownMenuGroup>
             <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
             <DropdownMenuRadioGroup
-              onValueChange={setPosition}
               value={position}
+              onValueChange={setPosition}
             >
               <DropdownMenuRadioItem value="top">
                 <IconPlaceholder
-                  hugeicons="ArrowUp01Icon"
                   lucide="ArrowUpIcon"
                   tabler="IconArrowUp"
+                  hugeicons="ArrowUp01Icon"
                 />
                 Top
               </DropdownMenuRadioItem>
               <DropdownMenuRadioItem value="bottom">
                 <IconPlaceholder
-                  hugeicons="ArrowDown01Icon"
                   lucide="ArrowDownIcon"
                   tabler="IconArrowDown"
+                  hugeicons="ArrowDown01Icon"
                 />
                 Bottom
               </DropdownMenuRadioItem>
-              <DropdownMenuRadioItem disabled value="right">
+              <DropdownMenuRadioItem value="right" disabled>
                 <IconPlaceholder
-                  hugeicons="ArrowRight01Icon"
                   lucide="ArrowRightIcon"
                   tabler="IconArrowRight"
+                  hugeicons="ArrowRight01Icon"
                 />
                 Right
               </DropdownMenuRadioItem>
@@ -319,7 +323,7 @@ function DropdownMenuWithRadio() {
         </DropdownMenuContent>
       </DropdownMenu>
     </Example>
-  );
+  )
 }
 
 function DropdownMenuWithCheckboxesIcons() {
@@ -327,13 +331,13 @@ function DropdownMenuWithCheckboxesIcons() {
     email: true,
     sms: false,
     push: true,
-  });
+  })
 
   return (
     <Example title="Checkboxes with Icons">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="w-fit" variant="outline">
+          <Button variant="outline" className="w-fit">
             Notifications
           </Button>
         </DropdownMenuTrigger>
@@ -347,9 +351,9 @@ function DropdownMenuWithCheckboxesIcons() {
               }
             >
               <IconPlaceholder
-                hugeicons="MailIcon"
                 lucide="MailIcon"
                 tabler="IconMail"
+                hugeicons="MailIcon"
               />
               Email notifications
             </DropdownMenuCheckboxItem>
@@ -360,9 +364,9 @@ function DropdownMenuWithCheckboxesIcons() {
               }
             >
               <IconPlaceholder
-                hugeicons="MessageIcon"
                 lucide="MessageSquareIcon"
                 tabler="IconMessage"
+                hugeicons="MessageIcon"
               />
               SMS notifications
             </DropdownMenuCheckboxItem>
@@ -373,9 +377,9 @@ function DropdownMenuWithCheckboxesIcons() {
               }
             >
               <IconPlaceholder
-                hugeicons="NotificationIcon"
                 lucide="BellIcon"
                 tabler="IconBell"
+                hugeicons="NotificationIcon"
               />
               Push notifications
             </DropdownMenuCheckboxItem>
@@ -383,11 +387,11 @@ function DropdownMenuWithCheckboxesIcons() {
         </DropdownMenuContent>
       </DropdownMenu>
     </Example>
-  );
+  )
 }
 
 function DropdownMenuWithRadioIcons() {
-  const [paymentMethod, setPaymentMethod] = React.useState("card");
+  const [paymentMethod, setPaymentMethod] = React.useState("card")
 
   return (
     <Example title="Radio with Icons">
@@ -399,30 +403,30 @@ function DropdownMenuWithRadioIcons() {
           <DropdownMenuGroup>
             <DropdownMenuLabel>Select Payment Method</DropdownMenuLabel>
             <DropdownMenuRadioGroup
-              onValueChange={setPaymentMethod}
               value={paymentMethod}
+              onValueChange={setPaymentMethod}
             >
               <DropdownMenuRadioItem value="card">
                 <IconPlaceholder
-                  hugeicons="CreditCardIcon"
                   lucide="CreditCardIcon"
                   tabler="IconCreditCard"
+                  hugeicons="CreditCardIcon"
                 />
                 Credit Card
               </DropdownMenuRadioItem>
               <DropdownMenuRadioItem value="paypal">
                 <IconPlaceholder
-                  hugeicons="WalletIcon"
                   lucide="WalletIcon"
                   tabler="IconWallet"
+                  hugeicons="WalletIcon"
                 />
                 PayPal
               </DropdownMenuRadioItem>
               <DropdownMenuRadioItem value="bank">
                 <IconPlaceholder
-                  hugeicons="BankIcon"
                   lucide="Building2Icon"
                   tabler="IconBuildingBank"
+                  hugeicons="BankIcon"
                 />
                 Bank Transfer
               </DropdownMenuRadioItem>
@@ -431,7 +435,7 @@ function DropdownMenuWithRadioIcons() {
         </DropdownMenuContent>
       </DropdownMenu>
     </Example>
-  );
+  )
 }
 
 function DropdownMenuWithDestructive() {
@@ -439,7 +443,7 @@ function DropdownMenuWithDestructive() {
     <Example title="With Destructive Items">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="w-fit" variant="outline">
+          <Button variant="outline" className="w-fit">
             Actions
           </Button>
         </DropdownMenuTrigger>
@@ -447,17 +451,17 @@ function DropdownMenuWithDestructive() {
           <DropdownMenuGroup>
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="EditIcon"
                 lucide="PencilIcon"
                 tabler="IconPencil"
+                hugeicons="EditIcon"
               />
               Edit
             </DropdownMenuItem>
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="ShareIcon"
                 lucide="ShareIcon"
                 tabler="IconShare"
+                hugeicons="ShareIcon"
               />
               Share
             </DropdownMenuItem>
@@ -466,17 +470,17 @@ function DropdownMenuWithDestructive() {
           <DropdownMenuGroup>
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="Archive02Icon"
                 lucide="ArchiveIcon"
                 tabler="IconArchive"
+                hugeicons="Archive02Icon"
               />
               Archive
             </DropdownMenuItem>
             <DropdownMenuItem variant="destructive">
               <IconPlaceholder
-                hugeicons="DeleteIcon"
                 lucide="TrashIcon"
                 tabler="IconTrash"
+                hugeicons="DeleteIcon"
               />
               Delete
             </DropdownMenuItem>
@@ -484,7 +488,7 @@ function DropdownMenuWithDestructive() {
         </DropdownMenuContent>
       </DropdownMenu>
     </Example>
-  );
+  )
 }
 
 function DropdownMenuWithAvatar() {
@@ -493,25 +497,25 @@ function DropdownMenuWithAvatar() {
       <DropdownMenuGroup>
         <DropdownMenuItem>
           <IconPlaceholder
-            hugeicons="CheckmarkBadgeIcon"
             lucide="BadgeCheckIcon"
             tabler="IconRosetteDiscountCheck"
+            hugeicons="CheckmarkBadgeIcon"
           />
           Account
         </DropdownMenuItem>
         <DropdownMenuItem>
           <IconPlaceholder
-            hugeicons="CreditCardIcon"
             lucide="CreditCardIcon"
             tabler="IconCreditCard"
+            hugeicons="CreditCardIcon"
           />
           Billing
         </DropdownMenuItem>
         <DropdownMenuItem>
           <IconPlaceholder
-            hugeicons="NotificationIcon"
             lucide="BellIcon"
             tabler="IconBell"
+            hugeicons="NotificationIcon"
           />
           Notifications
         </DropdownMenuItem>
@@ -520,15 +524,15 @@ function DropdownMenuWithAvatar() {
       <DropdownMenuGroup>
         <DropdownMenuItem>
           <IconPlaceholder
-            hugeicons="LogoutIcon"
             lucide="LogOutIcon"
             tabler="IconLogout"
+            hugeicons="LogoutIcon"
           />
           Sign Out
         </DropdownMenuItem>
       </DropdownMenuGroup>
     </>
-  );
+  )
 
   return (
     <Example title="With Avatar">
@@ -536,24 +540,24 @@ function DropdownMenuWithAvatar() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
-              className="h-12 justify-start px-2 md:max-w-[200px]"
               variant="outline"
+              className="h-12 justify-start px-2 md:max-w-[200px]"
             >
               <Avatar>
-                <AvatarImage alt="Shadcn" src="https://github.com/shadcn.png" />
+                <AvatarImage src="https://github.com/shadcn.png" alt="Shadcn" />
                 <AvatarFallback className="rounded-lg">CN</AvatarFallback>
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-semibold">shadcn</span>
-                <span className="truncate text-muted-foreground text-xs">
+                <span className="text-muted-foreground truncate text-xs">
                   shadcn@example.com
                 </span>
               </div>
               <IconPlaceholder
-                className="ml-auto text-muted-foreground"
-                hugeicons="UnfoldMoreIcon"
                 lucide="ChevronsUpDownIcon"
                 tabler="IconSelector"
+                hugeicons="UnfoldMoreIcon"
+                className="text-muted-foreground ml-auto"
               />
             </Button>
           </DropdownMenuTrigger>
@@ -563,9 +567,9 @@ function DropdownMenuWithAvatar() {
         </DropdownMenu>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button className="rounded-full" size="icon" variant="ghost">
+            <Button variant="ghost" size="icon" className="rounded-full">
               <Avatar>
-                <AvatarImage alt="shadcn" src="https://github.com/shadcn.png" />
+                <AvatarImage src="https://github.com/shadcn.png" alt="shadcn" />
                 <AvatarFallback>LR</AvatarFallback>
               </Avatar>
             </Button>
@@ -576,7 +580,7 @@ function DropdownMenuWithAvatar() {
         </DropdownMenu>
       </div>
     </Example>
-  );
+  )
 }
 
 function DropdownMenuInDialog() {
@@ -595,7 +599,7 @@ function DropdownMenuInDialog() {
           </DialogHeader>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button className="w-fit" variant="outline">
+              <Button variant="outline" className="w-fit">
                 Open Menu
               </Button>
             </DropdownMenuTrigger>
@@ -603,25 +607,25 @@ function DropdownMenuInDialog() {
               <DropdownMenuGroup>
                 <DropdownMenuItem>
                   <IconPlaceholder
-                    hugeicons="CopyIcon"
                     lucide="CopyIcon"
                     tabler="IconCopy"
+                    hugeicons="CopyIcon"
                   />
                   Copy
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <IconPlaceholder
-                    hugeicons="ScissorIcon"
                     lucide="ScissorsIcon"
                     tabler="IconCut"
+                    hugeicons="ScissorIcon"
                   />
                   Cut
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <IconPlaceholder
-                    hugeicons="ClipboardIcon"
                     lucide="ClipboardPasteIcon"
                     tabler="IconClipboard"
+                    hugeicons="ClipboardIcon"
                   />
                   Paste
                 </DropdownMenuItem>
@@ -647,9 +651,9 @@ function DropdownMenuInDialog() {
               <DropdownMenuGroup>
                 <DropdownMenuItem variant="destructive">
                   <IconPlaceholder
-                    hugeicons="DeleteIcon"
                     lucide="TrashIcon"
                     tabler="IconTrash"
+                    hugeicons="DeleteIcon"
                   />
                   Delete
                 </DropdownMenuItem>
@@ -659,7 +663,7 @@ function DropdownMenuInDialog() {
         </DialogContent>
       </Dialog>
     </Example>
-  );
+  )
 }
 
 function DropdownMenuComplex() {
@@ -667,34 +671,34 @@ function DropdownMenuComplex() {
     email: true,
     sms: false,
     push: true,
-  });
-  const [theme, setTheme] = React.useState("light");
+  })
+  const [theme, setTheme] = React.useState("light")
 
   return (
     <Example title="Complex">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="w-fit" variant="outline">
+          <Button variant="outline" className="w-fit">
             Complex Menu
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="style-lyra:w-48 style-maia:w-56 style-mira:w-48 style-nova:w-48 style-vega:w-56">
+        <DropdownMenuContent className="style-maia:w-56 style-mira:w-48 style-nova:w-48 style-vega:w-56 style-lyra:w-48">
           <DropdownMenuGroup>
             <DropdownMenuLabel>File</DropdownMenuLabel>
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="FileIcon"
                 lucide="FileIcon"
                 tabler="IconFile"
+                hugeicons="FileIcon"
               />
               New File
               <DropdownMenuShortcut>⌘N</DropdownMenuShortcut>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="FolderIcon"
                 lucide="FolderIcon"
                 tabler="IconFolder"
+                hugeicons="FolderIcon"
               />
               New Folder
               <DropdownMenuShortcut>⇧⌘N</DropdownMenuShortcut>
@@ -702,9 +706,9 @@ function DropdownMenuComplex() {
             <DropdownMenuSub>
               <DropdownMenuSubTrigger>
                 <IconPlaceholder
-                  hugeicons="FolderOpenIcon"
                   lucide="FolderOpenIcon"
                   tabler="IconFolderOpen"
+                  hugeicons="FolderOpenIcon"
                 />
                 Open Recent
               </DropdownMenuSubTrigger>
@@ -714,26 +718,26 @@ function DropdownMenuComplex() {
                     <DropdownMenuLabel>Recent Projects</DropdownMenuLabel>
                     <DropdownMenuItem>
                       <IconPlaceholder
-                        hugeicons="CodeIcon"
                         lucide="FileCodeIcon"
                         tabler="IconFileCode"
+                        hugeicons="CodeIcon"
                       />
                       Project Alpha
                     </DropdownMenuItem>
                     <DropdownMenuItem>
                       <IconPlaceholder
-                        hugeicons="CodeIcon"
                         lucide="FileCodeIcon"
                         tabler="IconFileCode"
+                        hugeicons="CodeIcon"
                       />
                       Project Beta
                     </DropdownMenuItem>
                     <DropdownMenuSub>
                       <DropdownMenuSubTrigger>
                         <IconPlaceholder
-                          hugeicons="MoreHorizontalCircle01Icon"
                           lucide="MoreHorizontalIcon"
                           tabler="IconDots"
+                          hugeicons="MoreHorizontalCircle01Icon"
                         />
                         More Projects
                       </DropdownMenuSubTrigger>
@@ -741,17 +745,17 @@ function DropdownMenuComplex() {
                         <DropdownMenuSubContent>
                           <DropdownMenuItem>
                             <IconPlaceholder
-                              hugeicons="CodeIcon"
                               lucide="FileCodeIcon"
                               tabler="IconFileCode"
+                              hugeicons="CodeIcon"
                             />
                             Project Gamma
                           </DropdownMenuItem>
                           <DropdownMenuItem>
                             <IconPlaceholder
-                              hugeicons="CodeIcon"
                               lucide="FileCodeIcon"
                               tabler="IconFileCode"
+                              hugeicons="CodeIcon"
                             />
                             Project Delta
                           </DropdownMenuItem>
@@ -763,9 +767,9 @@ function DropdownMenuComplex() {
                   <DropdownMenuGroup>
                     <DropdownMenuItem>
                       <IconPlaceholder
-                        hugeicons="SearchIcon"
                         lucide="FolderSearchIcon"
                         tabler="IconFolderSearch"
+                        hugeicons="SearchIcon"
                       />
                       Browse...
                     </DropdownMenuItem>
@@ -776,18 +780,18 @@ function DropdownMenuComplex() {
             <DropdownMenuSeparator />
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="FloppyDiskIcon"
                 lucide="SaveIcon"
                 tabler="IconDeviceFloppy"
+                hugeicons="FloppyDiskIcon"
               />
               Save
               <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="DownloadIcon"
                 lucide="DownloadIcon"
                 tabler="IconDownload"
+                hugeicons="DownloadIcon"
               />
               Export
               <DropdownMenuShortcut>⇧⌘E</DropdownMenuShortcut>
@@ -803,9 +807,9 @@ function DropdownMenuComplex() {
               }
             >
               <IconPlaceholder
-                hugeicons="EyeIcon"
                 lucide="EyeIcon"
                 tabler="IconEye"
+                hugeicons="EyeIcon"
               />
               Show Sidebar
             </DropdownMenuCheckboxItem>
@@ -816,18 +820,18 @@ function DropdownMenuComplex() {
               }
             >
               <IconPlaceholder
-                hugeicons="LayoutIcon"
                 lucide="LayoutIcon"
                 tabler="IconLayout"
+                hugeicons="LayoutIcon"
               />
               Show Status Bar
             </DropdownMenuCheckboxItem>
             <DropdownMenuSub>
               <DropdownMenuSubTrigger>
                 <IconPlaceholder
-                  hugeicons="PaintBoardIcon"
                   lucide="PaletteIcon"
                   tabler="IconPalette"
+                  hugeicons="PaintBoardIcon"
                 />
                 Theme
               </DropdownMenuSubTrigger>
@@ -836,30 +840,30 @@ function DropdownMenuComplex() {
                   <DropdownMenuGroup>
                     <DropdownMenuLabel>Appearance</DropdownMenuLabel>
                     <DropdownMenuRadioGroup
-                      onValueChange={setTheme}
                       value={theme}
+                      onValueChange={setTheme}
                     >
                       <DropdownMenuRadioItem value="light">
                         <IconPlaceholder
-                          hugeicons="SunIcon"
                           lucide="SunIcon"
                           tabler="IconSun"
+                          hugeicons="SunIcon"
                         />
                         Light
                       </DropdownMenuRadioItem>
                       <DropdownMenuRadioItem value="dark">
                         <IconPlaceholder
-                          hugeicons="MoonIcon"
                           lucide="MoonIcon"
                           tabler="IconMoon"
+                          hugeicons="MoonIcon"
                         />
                         Dark
                       </DropdownMenuRadioItem>
                       <DropdownMenuRadioItem value="system">
                         <IconPlaceholder
-                          hugeicons="ComputerIcon"
                           lucide="MonitorIcon"
                           tabler="IconDeviceDesktop"
+                          hugeicons="ComputerIcon"
                         />
                         System
                       </DropdownMenuRadioItem>
@@ -874,27 +878,27 @@ function DropdownMenuComplex() {
             <DropdownMenuLabel>Account</DropdownMenuLabel>
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="UserIcon"
                 lucide="UserIcon"
                 tabler="IconUser"
+                hugeicons="UserIcon"
               />
               Profile
               <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="CreditCardIcon"
                 lucide="CreditCardIcon"
                 tabler="IconCreditCard"
+                hugeicons="CreditCardIcon"
               />
               Billing
             </DropdownMenuItem>
             <DropdownMenuSub>
               <DropdownMenuSubTrigger>
                 <IconPlaceholder
-                  hugeicons="SettingsIcon"
                   lucide="SettingsIcon"
                   tabler="IconSettings"
+                  hugeicons="SettingsIcon"
                 />
                 Settings
               </DropdownMenuSubTrigger>
@@ -904,26 +908,26 @@ function DropdownMenuComplex() {
                     <DropdownMenuLabel>Preferences</DropdownMenuLabel>
                     <DropdownMenuItem>
                       <IconPlaceholder
-                        hugeicons="KeyboardIcon"
                         lucide="KeyboardIcon"
                         tabler="IconKeyboard"
+                        hugeicons="KeyboardIcon"
                       />
                       Keyboard Shortcuts
                     </DropdownMenuItem>
                     <DropdownMenuItem>
                       <IconPlaceholder
-                        hugeicons="LanguageCircleIcon"
                         lucide="LanguagesIcon"
                         tabler="IconLanguage"
+                        hugeicons="LanguageCircleIcon"
                       />
                       Language
                     </DropdownMenuItem>
                     <DropdownMenuSub>
                       <DropdownMenuSubTrigger>
                         <IconPlaceholder
-                          hugeicons="NotificationIcon"
                           lucide="BellIcon"
                           tabler="IconBell"
+                          hugeicons="NotificationIcon"
                         />
                         Notifications
                       </DropdownMenuSubTrigger>
@@ -943,9 +947,9 @@ function DropdownMenuComplex() {
                               }
                             >
                               <IconPlaceholder
-                                hugeicons="NotificationIcon"
                                 lucide="BellIcon"
                                 tabler="IconBell"
+                                hugeicons="NotificationIcon"
                               />
                               Push Notifications
                             </DropdownMenuCheckboxItem>
@@ -959,9 +963,9 @@ function DropdownMenuComplex() {
                               }
                             >
                               <IconPlaceholder
-                                hugeicons="MailIcon"
                                 lucide="MailIcon"
                                 tabler="IconMail"
+                                hugeicons="MailIcon"
                               />
                               Email Notifications
                             </DropdownMenuCheckboxItem>
@@ -974,9 +978,9 @@ function DropdownMenuComplex() {
                   <DropdownMenuGroup>
                     <DropdownMenuItem>
                       <IconPlaceholder
-                        hugeicons="ShieldIcon"
                         lucide="ShieldIcon"
                         tabler="IconShield"
+                        hugeicons="ShieldIcon"
                       />
                       Privacy & Security
                     </DropdownMenuItem>
@@ -989,17 +993,17 @@ function DropdownMenuComplex() {
           <DropdownMenuGroup>
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="HelpCircleIcon"
                 lucide="HelpCircleIcon"
                 tabler="IconHelpCircle"
+                hugeicons="HelpCircleIcon"
               />
               Help & Support
             </DropdownMenuItem>
             <DropdownMenuItem>
               <IconPlaceholder
-                hugeicons="File01Icon"
                 lucide="FileTextIcon"
                 tabler="IconFileText"
+                hugeicons="File01Icon"
               />
               Documentation
             </DropdownMenuItem>
@@ -1008,9 +1012,9 @@ function DropdownMenuComplex() {
           <DropdownMenuGroup>
             <DropdownMenuItem variant="destructive">
               <IconPlaceholder
-                hugeicons="LogoutIcon"
                 lucide="LogOutIcon"
                 tabler="IconLogout"
+                hugeicons="LogoutIcon"
               />
               Sign Out
               <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
@@ -1019,5 +1023,5 @@ function DropdownMenuComplex() {
         </DropdownMenuContent>
       </DropdownMenu>
     </Example>
-  );
+  )
 }

@@ -1,4 +1,9 @@
-import Link from "next/link";
+import Link from "next/link"
+
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
@@ -7,15 +12,14 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/bases/radix/ui/breadcrumb";
-import { Button } from "@/registry/bases/radix/ui/button";
+} from "@/registry/bases/radix/ui/breadcrumb"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/bases/radix/ui/dropdown-menu";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/dropdown-menu"
 
 export default function BreadcrumbExample() {
   return (
@@ -24,12 +28,12 @@ export default function BreadcrumbExample() {
       <BreadcrumbWithDropdown />
       <BreadcrumbWithLink />
     </ExampleWrapper>
-  );
+  )
 }
 
 function BreadcrumbBasic() {
   return (
-    <Example className="items-center justify-center" title="Basic">
+    <Example title="Basic" className="items-center justify-center">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -46,12 +50,12 @@ function BreadcrumbBasic() {
         </BreadcrumbList>
       </Breadcrumb>
     </Example>
-  );
+  )
 }
 
 function BreadcrumbWithDropdown() {
   return (
-    <Example className="items-center justify-center" title="With Dropdown">
+    <Example title="With Dropdown" className="items-center justify-center">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -84,12 +88,12 @@ function BreadcrumbWithDropdown() {
         </BreadcrumbList>
       </Breadcrumb>
     </Example>
-  );
+  )
 }
 
 function BreadcrumbWithLink() {
   return (
-    <Example className="items-center justify-center" title="With Link">
+    <Example title="With Link" className="items-center justify-center">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -114,5 +118,5 @@ function BreadcrumbWithLink() {
         </BreadcrumbList>
       </Breadcrumb>
     </Example>
-  );
+  )
 }

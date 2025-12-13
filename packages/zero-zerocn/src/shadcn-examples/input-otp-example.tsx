@@ -1,9 +1,13 @@
-"use client";
+"use client"
 
-import { REGEXP_ONLY_DIGITS, REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp";
-import * as React from "react";
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
-import { Button } from "@/registry/bases/radix/ui/button";
+import * as React from "react"
+import { REGEXP_ONLY_DIGITS, REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
+
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
+import { Button } from "@/registry/bases/radix/ui/button"
 import {
   Card,
   CardContent,
@@ -11,20 +15,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/radix/ui/card";
+} from "@/registry/bases/radix/ui/card"
 import {
   Field,
   FieldDescription,
   FieldError,
   FieldLabel,
-} from "@/registry/bases/radix/ui/field";
+} from "@/registry/bases/radix/ui/field"
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/bases/radix/ui/input-otp";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/input-otp"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export default function InputOTPExample() {
   return (
@@ -38,7 +42,7 @@ export default function InputOTPExample() {
       <InputOTPFourDigits />
       <InputOTPInvalid />
     </ExampleWrapper>
-  );
+  )
 }
 
 function InputOTPSimple() {
@@ -61,7 +65,7 @@ function InputOTPSimple() {
         </InputOTP>
       </Field>
     </Example>
-  );
+  )
 }
 
 function InputOTPPattern() {
@@ -81,11 +85,11 @@ function InputOTPPattern() {
         </InputOTP>
       </Field>
     </Example>
-  );
+  )
 }
 
 function InputOTPWithSeparator() {
-  const [value, setValue] = React.useState("123456");
+  const [value, setValue] = React.useState("123456")
 
   return (
     <Example title="With Separator">
@@ -94,8 +98,8 @@ function InputOTPWithSeparator() {
         <InputOTP
           id="with-separator"
           maxLength={6}
-          onChange={setValue}
           value={value}
+          onChange={setValue}
         >
           <InputOTPGroup>
             <InputOTPSlot index={0} />
@@ -114,7 +118,7 @@ function InputOTPWithSeparator() {
         </InputOTP>
       </Field>
     </Example>
-  );
+  )
 }
 
 function InputOTPAlphanumeric() {
@@ -142,7 +146,7 @@ function InputOTPAlphanumeric() {
         </InputOTP>
       </Field>
     </Example>
-  );
+  )
 }
 
 function InputOTPDisabled() {
@@ -150,7 +154,7 @@ function InputOTPDisabled() {
     <Example title="Disabled">
       <Field>
         <FieldLabel htmlFor="disabled">Disabled</FieldLabel>
-        <InputOTP disabled id="disabled" maxLength={6} value="123456">
+        <InputOTP id="disabled" maxLength={6} disabled value="123456">
           <InputOTPGroup>
             <InputOTPSlot index={0} />
             <InputOTPSlot index={1} />
@@ -165,7 +169,7 @@ function InputOTPDisabled() {
         </InputOTP>
       </Field>
     </Example>
-  );
+  )
 }
 
 function InputOTPFourDigits() {
@@ -184,11 +188,11 @@ function InputOTPFourDigits() {
         </InputOTP>
       </Field>
     </Example>
-  );
+  )
 }
 
 function InputOTPInvalid() {
-  const [value, setValue] = React.useState("000000");
+  const [value, setValue] = React.useState("000000")
 
   return (
     <Example title="Invalid State">
@@ -197,26 +201,26 @@ function InputOTPInvalid() {
         <FieldDescription>
           Example showing the invalid error state.
         </FieldDescription>
-        <InputOTP id="invalid" maxLength={6} onChange={setValue} value={value}>
+        <InputOTP id="invalid" maxLength={6} value={value} onChange={setValue}>
           <InputOTPGroup>
-            <InputOTPSlot aria-invalid index={0} />
-            <InputOTPSlot aria-invalid index={1} />
+            <InputOTPSlot index={0} aria-invalid />
+            <InputOTPSlot index={1} aria-invalid />
           </InputOTPGroup>
           <InputOTPSeparator />
           <InputOTPGroup>
-            <InputOTPSlot aria-invalid index={2} />
-            <InputOTPSlot aria-invalid index={3} />
+            <InputOTPSlot index={2} aria-invalid />
+            <InputOTPSlot index={3} aria-invalid />
           </InputOTPGroup>
           <InputOTPSeparator />
           <InputOTPGroup>
-            <InputOTPSlot aria-invalid index={4} />
-            <InputOTPSlot aria-invalid index={5} />
+            <InputOTPSlot index={4} aria-invalid />
+            <InputOTPSlot index={5} aria-invalid />
           </InputOTPGroup>
         </InputOTP>
         <FieldError errors={[{ message: "Invalid code. Please try again." }]} />
       </Field>
     </Example>
-  );
+  )
 }
 
 function InputOTPForm() {
@@ -237,24 +241,24 @@ function InputOTPForm() {
                 <FieldLabel htmlFor="otp-verification">
                   Verification code
                 </FieldLabel>
-                <Button size="xs" variant="outline">
+                <Button variant="outline" size="xs">
                   <IconPlaceholder
-                    data-icon="inline-start"
-                    hugeicons="RefreshIcon"
                     lucide="RefreshCwIcon"
+                    hugeicons="RefreshIcon"
                     tabler="IconRefresh"
+                    data-icon="inline-start"
                   />
                   Resend Code
                 </Button>
               </div>
-              <InputOTP id="otp-verification" maxLength={6} required>
-                <InputOTPGroup className="style-lyra:*:data-[slot=input-otp-slot]:h-12 style-maia:*:data-[slot=input-otp-slot]:h-16 style-mira:*:data-[slot=input-otp-slot]:h-12 style-nova:*:data-[slot=input-otp-slot]:h-12 style-vega:*:data-[slot=input-otp-slot]:h-16 style-lyra:*:data-[slot=input-otp-slot]:w-11 style-maia:*:data-[slot=input-otp-slot]:w-12 style-mira:*:data-[slot=input-otp-slot]:w-11 style-nova:*:data-[slot=input-otp-slot]:w-11 style-vega:*:data-[slot=input-otp-slot]:w-12 *:data-[slot=input-otp-slot]:text-xl">
+              <InputOTP maxLength={6} id="otp-verification" required>
+                <InputOTPGroup className="style-nova:*:data-[slot=input-otp-slot]:h-12 style-nova:*:data-[slot=input-otp-slot]:w-11 style-vega:*:data-[slot=input-otp-slot]:h-16 style-maia:*:data-[slot=input-otp-slot]:h-16 style-vega:*:data-[slot=input-otp-slot]:w-12 style-maia:*:data-[slot=input-otp-slot]:w-12 style-mira:*:data-[slot=input-otp-slot]:h-12 style-lyra:*:data-[slot=input-otp-slot]:h-12 style-lyra:*:data-[slot=input-otp-slot]:w-11 style-mira:*:data-[slot=input-otp-slot]:w-11 *:data-[slot=input-otp-slot]:text-xl">
                   <InputOTPSlot index={0} />
                   <InputOTPSlot index={1} />
                   <InputOTPSlot index={2} />
                 </InputOTPGroup>
                 <InputOTPSeparator />
-                <InputOTPGroup className="style-lyra:*:data-[slot=input-otp-slot]:h-12 style-maia:*:data-[slot=input-otp-slot]:h-16 style-mira:*:data-[slot=input-otp-slot]:h-12 style-nova:*:data-[slot=input-otp-slot]:h-12 style-vega:*:data-[slot=input-otp-slot]:h-16 style-lyra:*:data-[slot=input-otp-slot]:w-11 style-maia:*:data-[slot=input-otp-slot]:w-12 style-mira:*:data-[slot=input-otp-slot]:w-11 style-nova:*:data-[slot=input-otp-slot]:w-11 style-vega:*:data-[slot=input-otp-slot]:w-12 *:data-[slot=input-otp-slot]:text-xl">
+                <InputOTPGroup className="style-nova:*:data-[slot=input-otp-slot]:h-12 style-nova:*:data-[slot=input-otp-slot]:w-11 style-vega:*:data-[slot=input-otp-slot]:h-16 style-maia:*:data-[slot=input-otp-slot]:h-16 style-vega:*:data-[slot=input-otp-slot]:w-12 style-maia:*:data-[slot=input-otp-slot]:w-12 style-mira:*:data-[slot=input-otp-slot]:h-12 style-lyra:*:data-[slot=input-otp-slot]:h-12 style-lyra:*:data-[slot=input-otp-slot]:w-11 style-mira:*:data-[slot=input-otp-slot]:w-11 *:data-[slot=input-otp-slot]:text-xl">
                   <InputOTPSlot index={3} />
                   <InputOTPSlot index={4} />
                   <InputOTPSlot index={5} />
@@ -267,14 +271,14 @@ function InputOTPForm() {
           </form>
         </CardContent>
         <CardFooter className="flex-col gap-2">
-          <Button className="w-full" type="submit">
+          <Button type="submit" className="w-full">
             Verify
           </Button>
           <div className="text-muted-foreground text-sm">
             Having trouble signing in?{" "}
             <a
-              className="underline underline-offset-4 transition-colors hover:text-primary"
               href="#"
+              className="hover:text-primary underline underline-offset-4 transition-colors"
             >
               Contact support
             </a>
@@ -282,5 +286,5 @@ function InputOTPForm() {
         </CardFooter>
       </Card>
     </Example>
-  );
+  )
 }

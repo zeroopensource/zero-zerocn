@@ -1,8 +1,12 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import type * as React from "react";
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
+import * as React from "react"
+import Link from "next/link"
+
+import {
+  Example,
+  ExampleWrapper,
+} from "@/registry/bases/radix/components/example"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,8 +15,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/bases/radix/ui/navigation-menu";
-import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
+} from "@/registry/bases/radix/ui/navigation-menu"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -50,7 +54,7 @@ const components: { title: string; href: string; description: string }[] = [
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
-];
+]
 
 export default function NavigationMenuExample() {
   return (
@@ -58,7 +62,7 @@ export default function NavigationMenuExample() {
       <NavigationMenuWithViewport />
       <NavigationMenuWithoutViewport />
     </ExampleWrapper>
-  );
+  )
 }
 
 function NavigationMenuWithViewport() {
@@ -88,9 +92,9 @@ function NavigationMenuWithViewport() {
               <ul className="grid w-[400px] gap-1 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 {components.map((component) => (
                   <ListItem
-                    href={component.href}
                     key={component.title}
                     title={component.title}
+                    href={component.href}
                   >
                     {component.description}
                   </ListItem>
@@ -109,7 +113,7 @@ function NavigationMenuWithViewport() {
         </NavigationMenuList>
       </NavigationMenu>
     </Example>
-  );
+  )
 }
 
 function NavigationMenuWithoutViewport() {
@@ -188,21 +192,21 @@ function NavigationMenuWithoutViewport() {
               <ul className="grid w-[200px]">
                 <li>
                   <NavigationMenuLink asChild>
-                    <Link className="flex-row items-center gap-2" href="#">
+                    <Link href="#" className="flex-row items-center gap-2">
                       <IconPlaceholder
-                        hugeicons="AlertCircleIcon"
                         lucide="CircleAlertIcon"
                         tabler="IconExclamationCircle"
+                        hugeicons="AlertCircleIcon"
                       />
                       Backlog
                     </Link>
                   </NavigationMenuLink>
                   <NavigationMenuLink asChild>
-                    <Link className="flex-row items-center gap-2" href="#">
+                    <Link href="#" className="flex-row items-center gap-2">
                       <IconPlaceholder
-                        hugeicons="AlertCircleIcon"
                         lucide="CircleAlertIcon"
                         tabler="IconExclamationCircle"
+                        hugeicons="AlertCircleIcon"
                       />
                       To Do
                     </Link>
@@ -210,9 +214,9 @@ function NavigationMenuWithoutViewport() {
                   <NavigationMenuLink asChild>
                     <Link href="#">
                       <IconPlaceholder
-                        hugeicons="AlertCircleIcon"
                         lucide="CircleAlertIcon"
                         tabler="IconExclamationCircle"
+                        hugeicons="AlertCircleIcon"
                       />
                       Done
                     </Link>
@@ -224,7 +228,7 @@ function NavigationMenuWithoutViewport() {
         </NavigationMenuList>
       </NavigationMenu>
     </Example>
-  );
+  )
 }
 
 function ListItem({
@@ -237,12 +241,12 @@ function ListItem({
     <li {...props}>
       <NavigationMenuLink asChild>
         <Link href={href}>
-          <div className="flex flex-col gap-1 style-lyra:text-xs style-maia:text-sm style-mira:text-xs style-nova:text-sm style-vega:text-sm">
-            <div className="font-medium leading-none">{title}</div>
-            <div className="line-clamp-2 text-muted-foreground">{children}</div>
+          <div className="style-vega:text-sm style-maia:text-sm style-nova:text-sm style-lyra:text-xs style-mira:text-xs flex flex-col gap-1">
+            <div className="leading-none font-medium">{title}</div>
+            <div className="text-muted-foreground line-clamp-2">{children}</div>
           </div>
         </Link>
       </NavigationMenuLink>
     </li>
-  );
+  )
 }
