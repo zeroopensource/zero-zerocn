@@ -17,7 +17,9 @@
     "incremental": true,
     "paths": {
       "@/registry/bases/radix/*": ["./src/components/*"],
+      "@/registry/bases/radix/lib/*": ["./src/lib/*"],
       "@/registry/bases/radix/components/*": ["./src/components/ui/*"],
+      "@/app/(create)/components/*": ["./src/components/ui/*"],
       "@/*": ["./src/*"],
       "fumadocs-mdx:collections/*": [".source/*"]
     },
