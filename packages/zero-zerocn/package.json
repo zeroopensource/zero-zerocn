@@ -9,7 +9,9 @@
     "types:check": "fumadocs-mdx && tsc --noEmit",
     "postinstall": "fumadocs-mdx",
     "serve": "serve out",
-    "fix:next-out": "tsx scripts/fix-next-out.ts"
+    "fix:next-out": "tsx scripts/fix-next-out.ts",
+    "shadcn": "shadcn",
+    "registry:build": "shadcn build"
   },
   "dependencies": {
     "@orama/orama": "^3.1.16",
@@ -20,7 +22,15 @@
     "next": "16.0.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "serve": "^14.2.5"
+    "serve": "^14.2.5",
+    "shadcn": "^3.0.0",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.3.1",
+    "tw-animate-css": "^1.3.6",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.16",
@@ -31,6 +41,9 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.16",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "@eslint/eslintrc": "^3.3.1",
+    "eslint": "^9.32.0",
+    "eslint-config-next": "15.3.1"
   }
 }
