@@ -1,13 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import { Button } from "@/registry/bases/radix/ui/button"
-import { Checkbox } from "@/registry/bases/radix/ui/checkbox"
+import * as React from "react";
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
+import { Button } from "@/registry/bases/radix/ui/button";
+import { Checkbox } from "@/registry/bases/radix/ui/checkbox";
 import {
   Dialog,
   DialogClose,
@@ -17,7 +13,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/radix/ui/dialog"
+} from "@/registry/bases/radix/ui/dialog";
 import {
   Field,
   FieldContent,
@@ -27,19 +23,19 @@ import {
   FieldSeparator,
   FieldSet,
   FieldTitle,
-} from "@/registry/bases/radix/ui/field"
-import { Input } from "@/registry/bases/radix/ui/input"
+} from "@/registry/bases/radix/ui/field";
+import { Input } from "@/registry/bases/radix/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/registry/bases/radix/ui/input-group"
-import { Kbd } from "@/registry/bases/radix/ui/kbd"
+} from "@/registry/bases/radix/ui/input-group";
+import { Kbd } from "@/registry/bases/radix/ui/kbd";
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@/registry/bases/radix/ui/native-select"
+} from "@/registry/bases/radix/ui/native-select";
 import {
   Select,
   SelectContent,
@@ -47,21 +43,21 @@ import {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/radix/ui/select"
-import { Switch } from "@/registry/bases/radix/ui/switch"
+} from "@/registry/bases/radix/ui/select";
+import { Switch } from "@/registry/bases/radix/ui/switch";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/bases/radix/ui/tabs"
-import { Textarea } from "@/registry/bases/radix/ui/textarea"
+} from "@/registry/bases/radix/ui/tabs";
+import { Textarea } from "@/registry/bases/radix/ui/textarea";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/bases/radix/ui/tooltip"
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
+} from "@/registry/bases/radix/ui/tooltip";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function DialogExample() {
   return (
@@ -72,12 +68,12 @@ export default function DialogExample() {
       <DialogNoCloseButton />
       <DialogChatSettings />
     </ExampleWrapper>
-  )
+  );
 }
 
 function DialogWithForm() {
   return (
-    <Example title="With Form" className="items-center justify-center">
+    <Example className="items-center justify-center" title="With Form">
       <Dialog>
         <form>
           <DialogTrigger asChild>
@@ -94,14 +90,14 @@ function DialogWithForm() {
             <FieldGroup>
               <Field>
                 <FieldLabel htmlFor="name-1">Name</FieldLabel>
-                <Input id="name-1" name="name" defaultValue="Pedro Duarte" />
+                <Input defaultValue="Pedro Duarte" id="name-1" name="name" />
               </Field>
               <Field>
                 <FieldLabel htmlFor="username-1">Username</FieldLabel>
                 <Input
+                  defaultValue="@peduarte"
                   id="username-1"
                   name="username"
-                  defaultValue="@peduarte"
                 />
               </Field>
             </FieldGroup>
@@ -115,12 +111,12 @@ function DialogWithForm() {
         </form>
       </Dialog>
     </Example>
-  )
+  );
 }
 
 function DialogScrollableContent() {
   return (
-    <Example title="Scrollable Content" className="items-center justify-center">
+    <Example className="items-center justify-center" title="Scrollable Content">
       <Dialog>
         <DialogTrigger asChild>
           <Button variant="outline">Scrollable Content</Button>
@@ -132,11 +128,11 @@ function DialogScrollableContent() {
               This is a dialog with scrollable content.
             </DialogDescription>
           </DialogHeader>
-          <div className="style-nova:-mx-4 style-nova:px-4 no-scrollbar style-vega:px-6 style-mira:px-4 style-maia:px-6 style-vega:-mx-6 style-maia:-mx-6 style-mira:-mx-4 style-lyra:-mx-4 style-lyra:px-4 max-h-[70vh] overflow-y-auto">
+          <div className="style-nova:-mx-4 no-scrollbar style-vega:-mx-6 style-maia:-mx-6 style-mira:-mx-4 style-lyra:-mx-4 max-h-[70vh] overflow-y-auto style-lyra:px-4 style-maia:px-6 style-mira:px-4 style-nova:px-4 style-vega:px-6">
             {Array.from({ length: 10 }).map((_, index) => (
               <p
+                className="mb-4 style-lyra:mb-2 leading-normal style-lyra:leading-relaxed"
                 key={index}
-                className="style-lyra:mb-2 style-lyra:leading-relaxed mb-4 leading-normal"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -151,12 +147,12 @@ function DialogScrollableContent() {
         </DialogContent>
       </Dialog>
     </Example>
-  )
+  );
 }
 
 function DialogWithStickyFooter() {
   return (
-    <Example title="With Sticky Footer" className="items-center justify-center">
+    <Example className="items-center justify-center" title="With Sticky Footer">
       <Dialog>
         <DialogTrigger asChild>
           <Button variant="outline">Sticky Footer</Button>
@@ -168,11 +164,11 @@ function DialogWithStickyFooter() {
               This is a dialog with scrollable content.
             </DialogDescription>
           </DialogHeader>
-          <div className="style-nova:-mx-4 style-nova:px-4 no-scrollbar style-vega:px-6 style-mira:px-4 style-maia:px-6 style-vega:-mx-6 style-maia:-mx-6 style-mira:-mx-4 style-lyra:-mx-4 style-lyra:px-4 max-h-[70vh] overflow-y-auto">
+          <div className="style-nova:-mx-4 no-scrollbar style-vega:-mx-6 style-maia:-mx-6 style-mira:-mx-4 style-lyra:-mx-4 max-h-[70vh] overflow-y-auto style-lyra:px-4 style-maia:px-6 style-mira:px-4 style-nova:px-4 style-vega:px-6">
             {Array.from({ length: 10 }).map((_, index) => (
               <p
+                className="mb-4 style-lyra:mb-2 leading-normal style-lyra:leading-relaxed"
                 key={index}
-                className="style-lyra:mb-2 style-lyra:leading-relaxed mb-4 leading-normal"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -192,12 +188,12 @@ function DialogWithStickyFooter() {
         </DialogContent>
       </Dialog>
     </Example>
-  )
+  );
 }
 
 function DialogNoCloseButton() {
   return (
-    <Example title="No Close Button" className="items-center justify-center">
+    <Example className="items-center justify-center" title="No Close Button">
       <Dialog>
         <DialogTrigger asChild>
           <Button variant="outline">No Close Button</Button>
@@ -218,7 +214,7 @@ function DialogNoCloseButton() {
         </DialogContent>
       </Dialog>
     </Example>
-  )
+  );
 }
 
 const spokenLanguages = [
@@ -239,7 +235,7 @@ const spokenLanguages = [
   { label: "Marathi", value: "mr" },
   { label: "Kannada", value: "kn" },
   { label: "Malayalam", value: "ml" },
-]
+];
 
 const voices = [
   { label: "Samantha", value: "samantha" },
@@ -250,17 +246,17 @@ const voices = [
   { label: "Karen", value: "karen" },
   { label: "Sam", value: "sam" },
   { label: "Daniel", value: "daniel" },
-]
+];
 
 function DialogChatSettings() {
-  const [tab, setTab] = React.useState("general")
-  const [theme, setTheme] = React.useState("system")
-  const [accentColor, setAccentColor] = React.useState("default")
-  const [spokenLanguage, setSpokenLanguage] = React.useState("en")
-  const [voice, setVoice] = React.useState("samantha")
+  const [tab, setTab] = React.useState("general");
+  const [theme, setTheme] = React.useState("system");
+  const [accentColor, setAccentColor] = React.useState("default");
+  const [spokenLanguage, setSpokenLanguage] = React.useState("en");
+  const [voice, setVoice] = React.useState("samantha");
 
   return (
-    <Example title="Chat Settings" className="items-center justify-center">
+    <Example className="items-center justify-center" title="Chat Settings">
       <Dialog>
         <DialogTrigger asChild>
           <Button variant="outline">Chat Settings</Button>
@@ -275,9 +271,9 @@ function DialogChatSettings() {
           </DialogHeader>
           <div className="flex flex-col gap-4">
             <NativeSelect
-              value={tab}
-              onChange={(e) => setTab(e.target.value)}
               className="w-full md:hidden"
+              onChange={(e) => setTab(e.target.value)}
+              value={tab}
             >
               <NativeSelectOption value="general">General</NativeSelectOption>
               <NativeSelectOption value="notifications">
@@ -288,7 +284,7 @@ function DialogChatSettings() {
               </NativeSelectOption>
               <NativeSelectOption value="security">Security</NativeSelectOption>
             </NativeSelect>
-            <Tabs value={tab} onValueChange={setTab}>
+            <Tabs onValueChange={setTab} value={tab}>
               <TabsList className="hidden w-full md:flex">
                 <TabsTrigger value="general">General</TabsTrigger>
                 <TabsTrigger value="notifications">Notifications</TabsTrigger>
@@ -297,13 +293,13 @@ function DialogChatSettings() {
                 </TabsTrigger>
                 <TabsTrigger value="security">Security</TabsTrigger>
               </TabsList>
-              <div className="style-nova:p-4 style-vega:p-6 style-maia:p-6 style-mira:p-4 style-lyra:p-4 style-vega:min-h-[550px] style-maia:min-h-[550px] style-mira:min-h-[450px] style-lyra:min-h-[450px] style-nova:min-h-[460px] style-nova:rounded-lg style-vega:rounded-lg style-maia:rounded-xl style-mira:rounded-md style-lyra:rounded-none border [&_[data-slot=select-trigger]]:min-w-[125px]">
+              <div className="style-lyra:min-h-[450px] style-maia:min-h-[550px] style-mira:min-h-[450px] style-nova:min-h-[460px] style-vega:min-h-[550px] style-lyra:rounded-none style-maia:rounded-xl style-mira:rounded-md style-nova:rounded-lg style-vega:rounded-lg border style-lyra:p-4 style-maia:p-6 style-mira:p-4 style-nova:p-4 style-vega:p-6 [&_[data-slot=select-trigger]]:min-w-[125px]">
                 <TabsContent value="general">
                   <FieldSet>
                     <FieldGroup>
                       <Field orientation="horizontal">
                         <FieldLabel htmlFor="theme">Theme</FieldLabel>
-                        <Select value={theme} onValueChange={setTheme}>
+                        <Select onValueChange={setTheme} value={theme}>
                           <SelectTrigger id="theme">
                             <SelectValue placeholder="Select" />
                           </SelectTrigger>
@@ -320,8 +316,8 @@ function DialogChatSettings() {
                           Accent Color
                         </FieldLabel>
                         <Select
-                          value={accentColor}
                           onValueChange={setAccentColor}
+                          value={accentColor}
                         >
                           <SelectTrigger id="accent-color">
                             <SelectValue placeholder="Select" />
@@ -367,8 +363,8 @@ function DialogChatSettings() {
                           </FieldDescription>
                         </FieldContent>
                         <Select
-                          value={spokenLanguage}
                           onValueChange={setSpokenLanguage}
+                          value={spokenLanguage}
                         >
                           <SelectTrigger id="spoken-language">
                             <SelectValue placeholder="Select" />
@@ -390,7 +386,7 @@ function DialogChatSettings() {
                       <FieldSeparator />
                       <Field orientation="horizontal">
                         <FieldLabel htmlFor="voice">Voice</FieldLabel>
-                        <Select value={voice} onValueChange={setVoice}>
+                        <Select onValueChange={setVoice} value={voice}>
                           <SelectTrigger id="voice">
                             <SelectValue placeholder="Select" />
                           </SelectTrigger>
@@ -416,8 +412,8 @@ function DialogChatSettings() {
                       </FieldDescription>
                       <FieldGroup data-slot="checkbox-group">
                         <Field orientation="horizontal">
-                          <Checkbox id="push" defaultChecked disabled />
-                          <FieldLabel htmlFor="push" className="font-normal">
+                          <Checkbox defaultChecked disabled id="push" />
+                          <FieldLabel className="font-normal" htmlFor="push">
                             Push notifications
                           </FieldLabel>
                         </Field>
@@ -434,8 +430,8 @@ function DialogChatSettings() {
                         <Field orientation="horizontal">
                           <Checkbox id="push-tasks" />
                           <FieldLabel
-                            htmlFor="push-tasks"
                             className="font-normal"
+                            htmlFor="push-tasks"
                           >
                             Push notifications
                           </FieldLabel>
@@ -443,8 +439,8 @@ function DialogChatSettings() {
                         <Field orientation="horizontal">
                           <Checkbox id="email-tasks" />
                           <FieldLabel
-                            htmlFor="email-tasks"
                             className="font-normal"
+                            htmlFor="email-tasks"
                           >
                             Email notifications
                           </FieldLabel>
@@ -459,18 +455,18 @@ function DialogChatSettings() {
                       <FieldLabel htmlFor="nickname">Nickname</FieldLabel>
                       <InputGroup>
                         <InputGroupInput
+                          className="@md/field-group:max-w-[200px]"
                           id="nickname"
                           placeholder="Broski"
-                          className="@md/field-group:max-w-[200px]"
                         />
                         <InputGroupAddon align="inline-end">
                           <Tooltip>
                             <TooltipTrigger asChild>
                               <InputGroupButton size="icon-xs">
                                 <IconPlaceholder
+                                  hugeicons="AlertCircleIcon"
                                   lucide="InfoIcon"
                                   tabler="IconInfoCircle"
-                                  hugeicons="AlertCircleIcon"
                                 />
                               </InputGroupButton>
                             </TooltipTrigger>
@@ -483,8 +479,8 @@ function DialogChatSettings() {
                     </Field>
                     <FieldSeparator />
                     <Field
+                      className="@2xl/field-group:flex-row @md/field-group:flex-col"
                       orientation="responsive"
-                      className="@md/field-group:flex-col @2xl/field-group:flex-row"
                     >
                       <FieldContent>
                         <FieldLabel htmlFor="about">More about you</FieldLabel>
@@ -494,9 +490,9 @@ function DialogChatSettings() {
                         </FieldDescription>
                       </FieldContent>
                       <Textarea
+                        className="min-h-[120px] @2xl/field-group:min-w-[300px] @md/field-group:min-w-full"
                         id="about"
                         placeholder="I'm a software engineer..."
-                        className="min-h-[120px] @md/field-group:min-w-full @2xl/field-group:min-w-[300px]"
                       />
                     </Field>
                     <FieldSeparator />
@@ -511,7 +507,7 @@ function DialogChatSettings() {
                             personalized.
                           </FieldDescription>
                         </FieldContent>
-                        <Switch id="customization" defaultChecked />
+                        <Switch defaultChecked id="customization" />
                       </Field>
                     </FieldLabel>
                   </FieldGroup>
@@ -540,7 +536,7 @@ function DialogChatSettings() {
                           Log out of your account on this device.
                         </FieldDescription>
                       </FieldContent>
-                      <Button variant="outline" size="sm">
+                      <Button size="sm" variant="outline">
                         Log Out
                       </Button>
                     </Field>
@@ -554,7 +550,7 @@ function DialogChatSettings() {
                           changes to take effect.
                         </FieldDescription>
                       </FieldContent>
-                      <Button variant="outline" size="sm">
+                      <Button size="sm" variant="outline">
                         Log Out All
                       </Button>
                     </Field>
@@ -566,5 +562,5 @@ function DialogChatSettings() {
         </DialogContent>
       </Dialog>
     </Example>
-  )
+  );
 }

@@ -1,10 +1,6 @@
-import Image from "next/image"
-
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import { Button } from "@/registry/bases/radix/ui/button"
+import Image from "next/image";
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   Item,
   ItemActions,
@@ -16,8 +12,8 @@ import {
   ItemMedia,
   ItemSeparator,
   ItemTitle,
-} from "@/registry/bases/radix/ui/item"
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
+} from "@/registry/bases/radix/ui/item";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function ItemExample() {
   return (
@@ -47,7 +43,7 @@ export default function ItemExample() {
       <OutlineVariantItemsWithImageExtraSmall />
       <MutedVariantItemsWithImage />
     </ExampleWrapper>
-  )
+  );
 }
 
 function DefaultVariantItems() {
@@ -88,9 +84,9 @@ function DefaultVariantItems() {
       <Item>
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -100,9 +96,9 @@ function DefaultVariantItems() {
       <Item>
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -115,9 +111,9 @@ function DefaultVariantItems() {
       <Item>
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -130,9 +126,9 @@ function DefaultVariantItems() {
       <Item>
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -154,14 +150,14 @@ function DefaultVariantItems() {
           </ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Cancel
           </Button>
           <Button size="sm">Confirm</Button>
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }
 
 function OutlineVariantItems() {
@@ -202,9 +198,9 @@ function OutlineVariantItems() {
       <Item variant="outline">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -214,9 +210,9 @@ function OutlineVariantItems() {
       <Item variant="outline">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -229,9 +225,9 @@ function OutlineVariantItems() {
       <Item variant="outline">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -244,9 +240,9 @@ function OutlineVariantItems() {
       <Item variant="outline">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -268,14 +264,14 @@ function OutlineVariantItems() {
           </ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Cancel
           </Button>
           <Button size="sm">Confirm</Button>
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }
 
 function MutedVariantItems() {
@@ -316,9 +312,9 @@ function MutedVariantItems() {
       <Item variant="muted">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -328,9 +324,9 @@ function MutedVariantItems() {
       <Item variant="muted">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -343,9 +339,9 @@ function MutedVariantItems() {
       <Item variant="muted">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -358,9 +354,9 @@ function MutedVariantItems() {
       <Item variant="muted">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -382,14 +378,14 @@ function MutedVariantItems() {
           </ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Cancel
           </Button>
           <Button size="sm">Confirm</Button>
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }
 
 function DefaultVariantItemsSmall() {
@@ -405,7 +401,7 @@ function DefaultVariantItemsSmall() {
           <ItemTitle>Title + Button</ItemTitle>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Action
           </Button>
         </ItemActions>
@@ -426,7 +422,7 @@ function DefaultVariantItemsSmall() {
           </ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Action
           </Button>
         </ItemActions>
@@ -434,9 +430,9 @@ function DefaultVariantItemsSmall() {
       <Item size="sm">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -446,9 +442,9 @@ function DefaultVariantItemsSmall() {
       <Item size="sm">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -461,9 +457,9 @@ function DefaultVariantItemsSmall() {
       <Item size="sm">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -476,9 +472,9 @@ function DefaultVariantItemsSmall() {
       <Item size="sm">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -500,35 +496,35 @@ function DefaultVariantItemsSmall() {
           </ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Cancel
           </Button>
           <Button size="sm">Confirm</Button>
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }
 
 function OutlineVariantItemsSmall() {
   return (
     <Example title="Outline - Small">
-      <Item variant="outline" size="sm">
+      <Item size="sm" variant="outline">
         <ItemContent>
           <ItemTitle>Title Only</ItemTitle>
         </ItemContent>
       </Item>
-      <Item variant="outline" size="sm">
+      <Item size="sm" variant="outline">
         <ItemContent>
           <ItemTitle>Title + Button</ItemTitle>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Action
           </Button>
         </ItemActions>
       </Item>
-      <Item variant="outline" size="sm">
+      <Item size="sm" variant="outline">
         <ItemContent>
           <ItemTitle>Title + Description</ItemTitle>
           <ItemDescription>
@@ -536,7 +532,7 @@ function OutlineVariantItemsSmall() {
           </ItemDescription>
         </ItemContent>
       </Item>
-      <Item variant="outline" size="sm">
+      <Item size="sm" variant="outline">
         <ItemContent>
           <ItemTitle>Title + Description + Button</ItemTitle>
           <ItemDescription>
@@ -544,29 +540,29 @@ function OutlineVariantItemsSmall() {
           </ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Action
           </Button>
         </ItemActions>
       </Item>
-      <Item variant="outline" size="sm">
+      <Item size="sm" variant="outline">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
           <ItemTitle>Media + Title</ItemTitle>
         </ItemContent>
       </Item>
-      <Item variant="outline" size="sm">
+      <Item size="sm" variant="outline">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -576,12 +572,12 @@ function OutlineVariantItemsSmall() {
           <Button size="sm">Action</Button>
         </ItemActions>
       </Item>
-      <Item variant="outline" size="sm">
+      <Item size="sm" variant="outline">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -591,12 +587,12 @@ function OutlineVariantItemsSmall() {
           </ItemDescription>
         </ItemContent>
       </Item>
-      <Item variant="outline" size="sm">
+      <Item size="sm" variant="outline">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -610,7 +606,7 @@ function OutlineVariantItemsSmall() {
           <Button size="sm">Action</Button>
         </ItemActions>
       </Item>
-      <Item variant="outline" size="sm">
+      <Item size="sm" variant="outline">
         <ItemContent>
           <ItemTitle>Multiple Actions</ItemTitle>
           <ItemDescription>
@@ -618,35 +614,35 @@ function OutlineVariantItemsSmall() {
           </ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Cancel
           </Button>
           <Button size="sm">Confirm</Button>
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }
 
 function MutedVariantItemsSmall() {
   return (
     <Example title="Muted - Small">
-      <Item variant="muted" size="sm">
+      <Item size="sm" variant="muted">
         <ItemContent>
           <ItemTitle>Title Only</ItemTitle>
         </ItemContent>
       </Item>
-      <Item variant="muted" size="sm">
+      <Item size="sm" variant="muted">
         <ItemContent>
           <ItemTitle>Title + Button</ItemTitle>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Action
           </Button>
         </ItemActions>
       </Item>
-      <Item variant="muted" size="sm">
+      <Item size="sm" variant="muted">
         <ItemContent>
           <ItemTitle>Title + Description</ItemTitle>
           <ItemDescription>
@@ -654,7 +650,7 @@ function MutedVariantItemsSmall() {
           </ItemDescription>
         </ItemContent>
       </Item>
-      <Item variant="muted" size="sm">
+      <Item size="sm" variant="muted">
         <ItemContent>
           <ItemTitle>Title + Description + Button</ItemTitle>
           <ItemDescription>
@@ -662,29 +658,29 @@ function MutedVariantItemsSmall() {
           </ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Action
           </Button>
         </ItemActions>
       </Item>
-      <Item variant="muted" size="sm">
+      <Item size="sm" variant="muted">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
           <ItemTitle>Media + Title</ItemTitle>
         </ItemContent>
       </Item>
-      <Item variant="muted" size="sm">
+      <Item size="sm" variant="muted">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -694,12 +690,12 @@ function MutedVariantItemsSmall() {
           <Button size="sm">Action</Button>
         </ItemActions>
       </Item>
-      <Item variant="muted" size="sm">
+      <Item size="sm" variant="muted">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -709,12 +705,12 @@ function MutedVariantItemsSmall() {
           </ItemDescription>
         </ItemContent>
       </Item>
-      <Item variant="muted" size="sm">
+      <Item size="sm" variant="muted">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -728,7 +724,7 @@ function MutedVariantItemsSmall() {
           <Button size="sm">Action</Button>
         </ItemActions>
       </Item>
-      <Item variant="muted" size="sm">
+      <Item size="sm" variant="muted">
         <ItemContent>
           <ItemTitle>Multiple Actions</ItemTitle>
           <ItemDescription>
@@ -736,14 +732,14 @@ function MutedVariantItemsSmall() {
           </ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Cancel
           </Button>
           <Button size="sm">Confirm</Button>
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }
 
 function DefaultVariantItemsExtraSmall() {
@@ -759,7 +755,7 @@ function DefaultVariantItemsExtraSmall() {
           <ItemTitle>Title + Button</ItemTitle>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Action
           </Button>
         </ItemActions>
@@ -774,7 +770,7 @@ function DefaultVariantItemsExtraSmall() {
           <ItemTitle>Title + Description + Button</ItemTitle>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Action
           </Button>
         </ItemActions>
@@ -782,9 +778,9 @@ function DefaultVariantItemsExtraSmall() {
       <Item size="xs">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -794,9 +790,9 @@ function DefaultVariantItemsExtraSmall() {
       <Item size="xs">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -809,9 +805,9 @@ function DefaultVariantItemsExtraSmall() {
       <Item size="xs">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -821,9 +817,9 @@ function DefaultVariantItemsExtraSmall() {
       <Item size="xs">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -838,67 +834,67 @@ function DefaultVariantItemsExtraSmall() {
           <ItemTitle>Multiple Actions</ItemTitle>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Cancel
           </Button>
           <Button size="sm">Confirm</Button>
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }
 
 function OutlineVariantItemsExtraSmall() {
   return (
     <Example title="Outline - Extra Small">
-      <Item variant="outline" size="xs">
+      <Item size="xs" variant="outline">
         <ItemContent>
           <ItemTitle>Title Only</ItemTitle>
         </ItemContent>
       </Item>
-      <Item variant="outline" size="xs">
+      <Item size="xs" variant="outline">
         <ItemContent>
           <ItemTitle>Title + Button</ItemTitle>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Action
           </Button>
         </ItemActions>
       </Item>
-      <Item variant="outline" size="xs">
+      <Item size="xs" variant="outline">
         <ItemContent>
           <ItemTitle>Title + Description</ItemTitle>
         </ItemContent>
       </Item>
-      <Item variant="outline" size="xs">
+      <Item size="xs" variant="outline">
         <ItemContent>
           <ItemTitle>Title + Description + Button</ItemTitle>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Action
           </Button>
         </ItemActions>
       </Item>
-      <Item variant="outline" size="xs">
+      <Item size="xs" variant="outline">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
           <ItemTitle>Media + Title</ItemTitle>
         </ItemContent>
       </Item>
-      <Item variant="outline" size="xs">
+      <Item size="xs" variant="outline">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -908,24 +904,24 @@ function OutlineVariantItemsExtraSmall() {
           <Button size="sm">Action</Button>
         </ItemActions>
       </Item>
-      <Item variant="outline" size="xs">
+      <Item size="xs" variant="outline">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
           <ItemTitle>Media + Title + Description</ItemTitle>
         </ItemContent>
       </Item>
-      <Item variant="outline" size="xs">
+      <Item size="xs" variant="outline">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -935,72 +931,72 @@ function OutlineVariantItemsExtraSmall() {
           <Button size="sm">Action</Button>
         </ItemActions>
       </Item>
-      <Item variant="outline" size="xs">
+      <Item size="xs" variant="outline">
         <ItemContent>
           <ItemTitle>Multiple Actions</ItemTitle>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Cancel
           </Button>
           <Button size="sm">Confirm</Button>
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }
 
 function MutedVariantItemsExtraSmall() {
   return (
     <Example title="Muted - Extra Small">
-      <Item variant="muted" size="xs">
+      <Item size="xs" variant="muted">
         <ItemContent>
           <ItemTitle>Title Only</ItemTitle>
         </ItemContent>
       </Item>
-      <Item variant="muted" size="xs">
+      <Item size="xs" variant="muted">
         <ItemContent>
           <ItemTitle>Title + Button</ItemTitle>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Action
           </Button>
         </ItemActions>
       </Item>
-      <Item variant="muted" size="xs">
+      <Item size="xs" variant="muted">
         <ItemContent>
           <ItemTitle>Title + Description</ItemTitle>
         </ItemContent>
       </Item>
-      <Item variant="muted" size="xs">
+      <Item size="xs" variant="muted">
         <ItemContent>
           <ItemTitle>Title + Description + Button</ItemTitle>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Action
           </Button>
         </ItemActions>
       </Item>
-      <Item variant="muted" size="xs">
+      <Item size="xs" variant="muted">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
           <ItemTitle>Media + Title</ItemTitle>
         </ItemContent>
       </Item>
-      <Item variant="muted" size="xs">
+      <Item size="xs" variant="muted">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -1010,24 +1006,24 @@ function MutedVariantItemsExtraSmall() {
           <Button size="sm">Action</Button>
         </ItemActions>
       </Item>
-      <Item variant="muted" size="xs">
+      <Item size="xs" variant="muted">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
           <ItemTitle>Media + Title + Description</ItemTitle>
         </ItemContent>
       </Item>
-      <Item variant="muted" size="xs">
+      <Item size="xs" variant="muted">
         <ItemMedia variant="icon">
           <IconPlaceholder
+            hugeicons="Archive02Icon"
             lucide="InboxIcon"
             tabler="IconArchive"
-            hugeicons="Archive02Icon"
           />
         </ItemMedia>
         <ItemContent>
@@ -1037,19 +1033,19 @@ function MutedVariantItemsExtraSmall() {
           <Button size="sm">Action</Button>
         </ItemActions>
       </Item>
-      <Item variant="muted" size="xs">
+      <Item size="xs" variant="muted">
         <ItemContent>
           <ItemTitle>Multiple Actions</ItemTitle>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Cancel
           </Button>
           <Button size="sm">Confirm</Button>
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }
 
 function DefaultLinkItems() {
@@ -1077,9 +1073,9 @@ function DefaultLinkItems() {
           <a href="#">
             <ItemMedia variant="icon">
               <IconPlaceholder
+                hugeicons="Archive02Icon"
                 lucide="InboxIcon"
                 tabler="IconArchive"
-                hugeicons="Archive02Icon"
               />
             </ItemMedia>
             <ItemContent>
@@ -1091,9 +1087,9 @@ function DefaultLinkItems() {
           <a href="#">
             <ItemMedia variant="icon">
               <IconPlaceholder
+                hugeicons="Archive02Icon"
                 lucide="InboxIcon"
                 tabler="IconArchive"
-                hugeicons="Archive02Icon"
               />
             </ItemMedia>
             <ItemContent>
@@ -1113,7 +1109,7 @@ function DefaultLinkItems() {
               </ItemDescription>
             </ItemContent>
             <ItemActions>
-              <Button variant="outline" size="sm">
+              <Button size="sm" variant="outline">
                 Share
               </Button>
             </ItemActions>
@@ -1121,21 +1117,21 @@ function DefaultLinkItems() {
         </Item>
       </ItemGroup>
     </Example>
-  )
+  );
 }
 
 function OutlineLinkItems() {
   return (
     <Example title="Outline - asChild">
       <ItemGroup>
-        <Item variant="outline" asChild>
+        <Item asChild variant="outline">
           <a href="#">
             <ItemContent>
               <ItemTitle>Title Only (Link)</ItemTitle>
             </ItemContent>
           </a>
         </Item>
-        <Item variant="outline" asChild>
+        <Item asChild variant="outline">
           <a href="#">
             <ItemContent>
               <ItemTitle>Title + Description (Link)</ItemTitle>
@@ -1145,13 +1141,13 @@ function OutlineLinkItems() {
             </ItemContent>
           </a>
         </Item>
-        <Item variant="outline" asChild>
+        <Item asChild variant="outline">
           <a href="#">
             <ItemMedia variant="icon">
               <IconPlaceholder
+                hugeicons="Archive02Icon"
                 lucide="InboxIcon"
                 tabler="IconArchive"
-                hugeicons="Archive02Icon"
               />
             </ItemMedia>
             <ItemContent>
@@ -1159,13 +1155,13 @@ function OutlineLinkItems() {
             </ItemContent>
           </a>
         </Item>
-        <Item variant="outline" asChild>
+        <Item asChild variant="outline">
           <a href="#">
             <ItemMedia variant="icon">
               <IconPlaceholder
+                hugeicons="Archive02Icon"
                 lucide="InboxIcon"
                 tabler="IconArchive"
-                hugeicons="Archive02Icon"
               />
             </ItemMedia>
             <ItemContent>
@@ -1176,7 +1172,7 @@ function OutlineLinkItems() {
             </ItemContent>
           </a>
         </Item>
-        <Item variant="outline" asChild>
+        <Item asChild variant="outline">
           <a href="#">
             <ItemContent>
               <ItemTitle>With Actions (Link)</ItemTitle>
@@ -1185,7 +1181,7 @@ function OutlineLinkItems() {
               </ItemDescription>
             </ItemContent>
             <ItemActions>
-              <Button variant="outline" size="sm">
+              <Button size="sm" variant="outline">
                 Share
               </Button>
             </ItemActions>
@@ -1193,21 +1189,21 @@ function OutlineLinkItems() {
         </Item>
       </ItemGroup>
     </Example>
-  )
+  );
 }
 
 function MutedLinkItems() {
   return (
     <Example title="Muted - asChild">
       <ItemGroup>
-        <Item variant="muted" asChild>
+        <Item asChild variant="muted">
           <a href="#">
             <ItemContent>
               <ItemTitle>Title Only (Link)</ItemTitle>
             </ItemContent>
           </a>
         </Item>
-        <Item variant="muted" asChild>
+        <Item asChild variant="muted">
           <a href="#">
             <ItemContent>
               <ItemTitle>Title + Description (Link)</ItemTitle>
@@ -1217,13 +1213,13 @@ function MutedLinkItems() {
             </ItemContent>
           </a>
         </Item>
-        <Item variant="muted" asChild>
+        <Item asChild variant="muted">
           <a href="#">
             <ItemMedia variant="icon">
               <IconPlaceholder
+                hugeicons="Archive02Icon"
                 lucide="InboxIcon"
                 tabler="IconArchive"
-                hugeicons="Archive02Icon"
               />
             </ItemMedia>
             <ItemContent>
@@ -1231,13 +1227,13 @@ function MutedLinkItems() {
             </ItemContent>
           </a>
         </Item>
-        <Item variant="muted" asChild>
+        <Item asChild variant="muted">
           <a href="#">
             <ItemMedia variant="icon">
               <IconPlaceholder
+                hugeicons="Archive02Icon"
                 lucide="InboxIcon"
                 tabler="IconArchive"
-                hugeicons="Archive02Icon"
               />
             </ItemMedia>
             <ItemContent>
@@ -1248,7 +1244,7 @@ function MutedLinkItems() {
             </ItemContent>
           </a>
         </Item>
-        <Item variant="muted" asChild>
+        <Item asChild variant="muted">
           <a href="#">
             <ItemContent>
               <ItemTitle>With Actions (Link)</ItemTitle>
@@ -1257,7 +1253,7 @@ function MutedLinkItems() {
               </ItemDescription>
             </ItemContent>
             <ItemActions>
-              <Button variant="outline" size="sm">
+              <Button size="sm" variant="outline">
                 Share
               </Button>
             </ItemActions>
@@ -1265,7 +1261,7 @@ function MutedLinkItems() {
         </Item>
       </ItemGroup>
     </Example>
-  )
+  );
 }
 
 function DefaultItemGroup() {
@@ -1292,7 +1288,7 @@ function DefaultItemGroup() {
         </Item>
       </ItemGroup>
     </Example>
-  )
+  );
 }
 
 function OutlineItemGroup() {
@@ -1302,9 +1298,9 @@ function OutlineItemGroup() {
         <Item variant="outline">
           <ItemMedia variant="icon">
             <IconPlaceholder
+              hugeicons="Archive02Icon"
               lucide="InboxIcon"
               tabler="IconArchive"
-              hugeicons="Archive02Icon"
             />
           </ItemMedia>
           <ItemContent>
@@ -1315,9 +1311,9 @@ function OutlineItemGroup() {
         <Item variant="outline">
           <ItemMedia variant="icon">
             <IconPlaceholder
+              hugeicons="Archive02Icon"
               lucide="InboxIcon"
               tabler="IconArchive"
-              hugeicons="Archive02Icon"
             />
           </ItemMedia>
           <ItemContent>
@@ -1328,9 +1324,9 @@ function OutlineItemGroup() {
         <Item variant="outline">
           <ItemMedia variant="icon">
             <IconPlaceholder
+              hugeicons="Archive02Icon"
               lucide="InboxIcon"
               tabler="IconArchive"
-              hugeicons="Archive02Icon"
             />
           </ItemMedia>
           <ItemContent>
@@ -1340,7 +1336,7 @@ function OutlineItemGroup() {
         </Item>
       </ItemGroup>
     </Example>
-  )
+  );
 }
 
 function MutedItemGroup() {
@@ -1353,7 +1349,7 @@ function MutedItemGroup() {
             <ItemDescription>First item in muted group.</ItemDescription>
           </ItemContent>
           <ItemActions>
-            <Button variant="outline" size="sm">
+            <Button size="sm" variant="outline">
               Action
             </Button>
           </ItemActions>
@@ -1364,7 +1360,7 @@ function MutedItemGroup() {
             <ItemDescription>Second item in muted group.</ItemDescription>
           </ItemContent>
           <ItemActions>
-            <Button variant="outline" size="sm">
+            <Button size="sm" variant="outline">
               Action
             </Button>
           </ItemActions>
@@ -1375,14 +1371,14 @@ function MutedItemGroup() {
             <ItemDescription>Third item in muted group.</ItemDescription>
           </ItemContent>
           <ItemActions>
-            <Button variant="outline" size="sm">
+            <Button size="sm" variant="outline">
               Action
             </Button>
           </ItemActions>
         </Item>
       </ItemGroup>
     </Example>
-  )
+  );
 }
 
 function ItemSeparatorExample() {
@@ -1392,9 +1388,9 @@ function ItemSeparatorExample() {
         <Item variant="outline">
           <ItemMedia variant="icon">
             <IconPlaceholder
+              hugeicons="Archive02Icon"
               lucide="InboxIcon"
               tabler="IconArchive"
-              hugeicons="Archive02Icon"
             />
           </ItemMedia>
           <ItemContent>
@@ -1406,9 +1402,9 @@ function ItemSeparatorExample() {
         <Item variant="outline">
           <ItemMedia variant="icon">
             <IconPlaceholder
+              hugeicons="Archive02Icon"
               lucide="InboxIcon"
               tabler="IconArchive"
-              hugeicons="Archive02Icon"
             />
           </ItemMedia>
           <ItemContent>
@@ -1420,9 +1416,9 @@ function ItemSeparatorExample() {
         <Item variant="outline">
           <ItemMedia variant="icon">
             <IconPlaceholder
+              hugeicons="Archive02Icon"
               lucide="InboxIcon"
               tabler="IconArchive"
-              hugeicons="Archive02Icon"
             />
           </ItemMedia>
           <ItemContent>
@@ -1434,9 +1430,9 @@ function ItemSeparatorExample() {
         <Item variant="outline">
           <ItemMedia variant="icon">
             <IconPlaceholder
+              hugeicons="Archive02Icon"
               lucide="InboxIcon"
               tabler="IconArchive"
-              hugeicons="Archive02Icon"
             />
           </ItemMedia>
           <ItemContent>
@@ -1446,7 +1442,7 @@ function ItemSeparatorExample() {
         </Item>
       </ItemGroup>
     </Example>
-  )
+  );
 }
 
 function ItemHeaderExamples() {
@@ -1454,7 +1450,7 @@ function ItemHeaderExamples() {
     <Example title="ItemHeader">
       <Item>
         <ItemHeader>
-          <span className="text-sm font-medium">Design System</span>
+          <span className="font-medium text-sm">Design System</span>
         </ItemHeader>
         <ItemContent>
           <ItemTitle>Component Library</ItemTitle>
@@ -1466,7 +1462,7 @@ function ItemHeaderExamples() {
       </Item>
       <Item variant="outline">
         <ItemHeader>
-          <span className="text-sm font-medium">Marketing</span>
+          <span className="font-medium text-sm">Marketing</span>
         </ItemHeader>
         <ItemContent>
           <ItemTitle>Campaign Analytics</ItemTitle>
@@ -1478,7 +1474,7 @@ function ItemHeaderExamples() {
       </Item>
       <Item variant="muted">
         <ItemHeader>
-          <span className="text-sm font-medium">Engineering</span>
+          <span className="font-medium text-sm">Engineering</span>
         </ItemHeader>
         <ItemContent>
           <ItemTitle>API Documentation</ItemTitle>
@@ -1489,7 +1485,7 @@ function ItemHeaderExamples() {
         </ItemContent>
       </Item>
     </Example>
-  )
+  );
 }
 
 function ItemFooterExamples() {
@@ -1536,7 +1532,7 @@ function ItemFooterExamples() {
         </ItemFooter>
       </Item>
     </Example>
-  )
+  );
 }
 
 function ItemHeaderAndFooterExamples() {
@@ -1544,7 +1540,7 @@ function ItemHeaderAndFooterExamples() {
     <Example title="ItemHeader + ItemFooter">
       <Item>
         <ItemHeader>
-          <span className="text-sm font-medium">Team Project</span>
+          <span className="font-medium text-sm">Team Project</span>
         </ItemHeader>
         <ItemContent>
           <ItemTitle>Website Redesign</ItemTitle>
@@ -1561,7 +1557,7 @@ function ItemHeaderAndFooterExamples() {
       </Item>
       <Item variant="outline">
         <ItemHeader>
-          <span className="text-sm font-medium">Client Work</span>
+          <span className="font-medium text-sm">Client Work</span>
         </ItemHeader>
         <ItemContent>
           <ItemTitle>Mobile App Development</ItemTitle>
@@ -1578,7 +1574,7 @@ function ItemHeaderAndFooterExamples() {
       </Item>
       <Item variant="muted">
         <ItemHeader>
-          <span className="text-sm font-medium">Documentation</span>
+          <span className="font-medium text-sm">Documentation</span>
         </ItemHeader>
         <ItemContent>
           <ItemTitle>API Integration Guide</ItemTitle>
@@ -1594,7 +1590,7 @@ function ItemHeaderAndFooterExamples() {
         </ItemFooter>
       </Item>
     </Example>
-  )
+  );
 }
 
 function DefaultVariantItemsWithImage() {
@@ -1603,11 +1599,11 @@ function DefaultVariantItemsWithImage() {
       <Item>
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/Project"
             alt="Project"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/Project"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
@@ -1620,11 +1616,11 @@ function DefaultVariantItemsWithImage() {
       <Item>
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/Document"
             alt="Document"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/Document"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
@@ -1632,7 +1628,7 @@ function DefaultVariantItemsWithImage() {
           <ItemDescription>A document with metadata displayed.</ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             View
           </Button>
         </ItemActions>
@@ -1640,11 +1636,11 @@ function DefaultVariantItemsWithImage() {
       <Item>
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/File"
             alt="File"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/File"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
@@ -1658,7 +1654,7 @@ function DefaultVariantItemsWithImage() {
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }
 
 function OutlineVariantItemsWithImage() {
@@ -1667,11 +1663,11 @@ function OutlineVariantItemsWithImage() {
       <Item variant="outline">
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/Project"
             alt="Project"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/Project"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
@@ -1684,11 +1680,11 @@ function OutlineVariantItemsWithImage() {
       <Item variant="outline">
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/Document"
             alt="Document"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/Document"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
@@ -1696,7 +1692,7 @@ function OutlineVariantItemsWithImage() {
           <ItemDescription>A document with metadata displayed.</ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             View
           </Button>
         </ItemActions>
@@ -1704,11 +1700,11 @@ function OutlineVariantItemsWithImage() {
       <Item variant="outline">
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/File"
             alt="File"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/File"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
@@ -1722,20 +1718,20 @@ function OutlineVariantItemsWithImage() {
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }
 
 function OutlineVariantItemsWithImageSmall() {
   return (
     <Example title="Outline - ItemMedia image - Small">
-      <Item variant="outline" size="sm">
+      <Item size="sm" variant="outline">
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/Project"
             alt="Project"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/Project"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
@@ -1745,14 +1741,14 @@ function OutlineVariantItemsWithImageSmall() {
           </ItemDescription>
         </ItemContent>
       </Item>
-      <Item variant="outline" size="sm">
+      <Item size="sm" variant="outline">
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/Document"
             alt="Document"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/Document"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
@@ -1760,19 +1756,19 @@ function OutlineVariantItemsWithImageSmall() {
           <ItemDescription>A document with metadata displayed.</ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             View
           </Button>
         </ItemActions>
       </Item>
-      <Item variant="outline" size="sm">
+      <Item size="sm" variant="outline">
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/File"
             alt="File"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/File"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
@@ -1786,53 +1782,53 @@ function OutlineVariantItemsWithImageSmall() {
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }
 
 function OutlineVariantItemsWithImageExtraSmall() {
   return (
     <Example title="Outline - ItemMedia image - Extra Small">
-      <Item variant="outline" size="xs">
+      <Item size="xs" variant="outline">
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/Project"
             alt="Project"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/Project"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
           <ItemTitle>Project Dashboard</ItemTitle>
         </ItemContent>
       </Item>
-      <Item variant="outline" size="xs">
+      <Item size="xs" variant="outline">
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/Document"
             alt="Document"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/Document"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
           <ItemTitle>Document</ItemTitle>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             View
           </Button>
         </ItemActions>
       </Item>
-      <Item variant="outline" size="xs">
+      <Item size="xs" variant="outline">
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/File"
             alt="File"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/File"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
@@ -1843,7 +1839,7 @@ function OutlineVariantItemsWithImageExtraSmall() {
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }
 
 function MutedVariantItemsWithImage() {
@@ -1852,11 +1848,11 @@ function MutedVariantItemsWithImage() {
       <Item variant="muted">
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/Project"
             alt="Project"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/Project"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
@@ -1869,11 +1865,11 @@ function MutedVariantItemsWithImage() {
       <Item variant="muted">
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/Document"
             alt="Document"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/Document"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
@@ -1881,7 +1877,7 @@ function MutedVariantItemsWithImage() {
           <ItemDescription>A document with metadata displayed.</ItemDescription>
         </ItemContent>
         <ItemActions>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             View
           </Button>
         </ItemActions>
@@ -1889,11 +1885,11 @@ function MutedVariantItemsWithImage() {
       <Item variant="muted">
         <ItemMedia variant="image">
           <Image
-            src="https://avatar.vercel.sh/File"
             alt="File"
-            width={40}
-            height={40}
             className="object-cover grayscale"
+            height={40}
+            src="https://avatar.vercel.sh/File"
+            width={40}
           />
         </ItemMedia>
         <ItemContent>
@@ -1907,5 +1903,5 @@ function MutedVariantItemsWithImage() {
         </ItemActions>
       </Item>
     </Example>
-  )
+  );
 }

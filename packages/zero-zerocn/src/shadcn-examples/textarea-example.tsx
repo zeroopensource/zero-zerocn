@@ -1,13 +1,10 @@
 import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@/registry/bases/radix/ui/field"
-import { Textarea } from "@/registry/bases/radix/ui/textarea"
+} from "@/registry/bases/radix/ui/field";
+import { Textarea } from "@/registry/bases/radix/ui/textarea";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function TextareaExample() {
   return (
@@ -18,7 +15,7 @@ export default function TextareaExample() {
       <TextareaWithDescription />
       <TextareaDisabled />
     </ExampleWrapper>
-  )
+  );
 }
 
 function TextareaBasic() {
@@ -26,15 +23,15 @@ function TextareaBasic() {
     <Example title="Basic">
       <Textarea placeholder="Type your message here." />
     </Example>
-  )
+  );
 }
 
 function TextareaInvalid() {
   return (
     <Example title="Invalid">
-      <Textarea placeholder="Type your message here." aria-invalid="true" />
+      <Textarea aria-invalid="true" placeholder="Type your message here." />
     </Example>
-  )
+  );
 }
 
 function TextareaWithLabel() {
@@ -49,7 +46,7 @@ function TextareaWithLabel() {
         />
       </Field>
     </Example>
-  )
+  );
 }
 
 function TextareaWithDescription() {
@@ -67,7 +64,7 @@ function TextareaWithDescription() {
         </FieldDescription>
       </Field>
     </Example>
-  )
+  );
 }
 
 function TextareaDisabled() {
@@ -76,11 +73,11 @@ function TextareaDisabled() {
       <Field>
         <FieldLabel htmlFor="textarea-demo-disabled">Message</FieldLabel>
         <Textarea
+          disabled
           id="textarea-demo-disabled"
           placeholder="Type your message here."
-          disabled
         />
       </Field>
     </Example>
-  )
+  );
 }

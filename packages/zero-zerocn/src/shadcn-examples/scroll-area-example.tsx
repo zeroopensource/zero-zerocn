@@ -1,16 +1,12 @@
-import * as React from "react"
-import Image from "next/image"
-
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import { ScrollArea, ScrollBar } from "@/registry/bases/radix/ui/scroll-area"
-import { Separator } from "@/registry/bases/radix/ui/separator"
+import Image from "next/image";
+import * as React from "react";
+import { ScrollArea, ScrollBar } from "@/registry/bases/radix/ui/scroll-area";
+import { Separator } from "@/registry/bases/radix/ui/separator";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`
-)
+);
 
 const works = [
   {
@@ -25,7 +21,7 @@ const works = [
     artist: "Vladimir Malyav",
     art: "https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80",
   },
-] as const
+] as const;
 
 export default function ScrollAreaExample() {
   return (
@@ -33,7 +29,7 @@ export default function ScrollAreaExample() {
       <ScrollAreaVertical />
       <ScrollAreaHorizontal />
     </ExampleWrapper>
-  )
+  );
 }
 
 function ScrollAreaVertical() {
@@ -41,7 +37,7 @@ function ScrollAreaVertical() {
     <Example title="Vertical">
       <ScrollArea className="mx-auto h-72 w-48 rounded-md border">
         <div className="p-4">
-          <h4 className="mb-4 text-sm leading-none font-medium">Tags</h4>
+          <h4 className="mb-4 font-medium text-sm leading-none">Tags</h4>
           {tags.map((tag) => (
             <React.Fragment key={tag}>
               <div className="text-sm">{tag}</div>
@@ -51,7 +47,7 @@ function ScrollAreaVertical() {
         </div>
       </ScrollArea>
     </Example>
-  )
+  );
 }
 
 function ScrollAreaHorizontal() {
@@ -60,19 +56,19 @@ function ScrollAreaHorizontal() {
       <ScrollArea className="mx-auto w-full max-w-96 rounded-md border p-4">
         <div className="flex gap-4">
           {works.map((artwork) => (
-            <figure key={artwork.artist} className="shrink-0">
+            <figure className="shrink-0" key={artwork.artist}>
               <div className="overflow-hidden rounded-md">
                 <Image
-                  src={artwork.art}
                   alt={`Photo by ${artwork.artist}`}
                   className="aspect-[3/4] h-fit w-fit object-cover"
-                  width={300}
                   height={400}
+                  src={artwork.art}
+                  width={300}
                 />
               </div>
-              <figcaption className="text-muted-foreground pt-2 text-xs">
+              <figcaption className="pt-2 text-muted-foreground text-xs">
                 Photo by{" "}
-                <span className="text-foreground font-semibold">
+                <span className="font-semibold text-foreground">
                   {artwork.artist}
                 </span>
               </figcaption>
@@ -82,5 +78,5 @@ function ScrollAreaHorizontal() {
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
     </Example>
-  )
+  );
 }

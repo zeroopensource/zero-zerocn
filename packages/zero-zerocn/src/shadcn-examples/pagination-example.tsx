@@ -1,8 +1,4 @@
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import { Field, FieldLabel } from "@/registry/bases/radix/ui/field"
+import { Field, FieldLabel } from "@/registry/bases/radix/ui/field";
 import {
   Pagination,
   PaginationContent,
@@ -11,7 +7,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/bases/radix/ui/pagination"
+} from "@/registry/bases/radix/ui/pagination";
 import {
   Select,
   SelectContent,
@@ -19,7 +15,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/radix/ui/select"
+} from "@/registry/bases/radix/ui/select";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function PaginationExample() {
   return (
@@ -28,7 +25,7 @@ export default function PaginationExample() {
       <PaginationSimple />
       <PaginationIconsOnly />
     </ExampleWrapper>
-  )
+  );
 }
 
 function PaginationBasic() {
@@ -59,7 +56,7 @@ function PaginationBasic() {
         </PaginationContent>
       </Pagination>
     </Example>
-  )
+  );
 }
 
 function PaginationSimple() {
@@ -87,14 +84,14 @@ function PaginationSimple() {
         </PaginationContent>
       </Pagination>
     </Example>
-  )
+  );
 }
 
 function PaginationIconsOnly() {
   return (
     <Example title="With Select">
       <div className="flex items-center justify-between gap-4">
-        <Field orientation="horizontal" className="w-fit">
+        <Field className="w-fit" orientation="horizontal">
           <FieldLabel htmlFor="select-rows-per-page">Rows per page</FieldLabel>
           <Select defaultValue="25">
             <SelectTrigger className="w-20" id="select-rows-per-page">
@@ -122,5 +119,5 @@ function PaginationIconsOnly() {
         </Pagination>
       </div>
     </Example>
-  )
+  );
 }

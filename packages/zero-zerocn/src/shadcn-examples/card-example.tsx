@@ -1,17 +1,13 @@
-import Image from "next/image"
-
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
+import Image from "next/image";
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
 import {
   Avatar,
   AvatarFallback,
   AvatarGroup,
   AvatarGroupCount,
   AvatarImage,
-} from "@/registry/bases/radix/ui/avatar"
-import { Button } from "@/registry/bases/radix/ui/button"
+} from "@/registry/bases/radix/ui/avatar";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   Card,
   CardAction,
@@ -20,10 +16,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/radix/ui/card"
-import { Field, FieldGroup, FieldLabel } from "@/registry/bases/radix/ui/field"
-import { Input } from "@/registry/bases/radix/ui/input"
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
+} from "@/registry/bases/radix/ui/card";
+import { Field, FieldGroup, FieldLabel } from "@/registry/bases/radix/ui/field";
+import { Input } from "@/registry/bases/radix/ui/input";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function CardExample() {
   return (
@@ -39,7 +35,7 @@ export default function CardExample() {
       <CardLogin />
       <CardMeetingNotes />
     </ExampleWrapper>
-  )
+  );
 }
 
 function CardLogin() {
@@ -59,43 +55,43 @@ function CardLogin() {
                 <FieldLabel htmlFor="email">Email</FieldLabel>
                 <Input
                   id="email"
-                  type="email"
                   placeholder="m@example.com"
                   required
+                  type="email"
                 />
               </Field>
               <Field>
                 <div className="flex items-center">
                   <FieldLabel htmlFor="password">Password</FieldLabel>
                   <a
-                    href="#"
                     className="ml-auto inline-block underline-offset-4 hover:underline"
+                    href="#"
                   >
                     Forgot your password?
                   </a>
                 </div>
-                <Input id="password" type="password" required />
+                <Input id="password" required type="password" />
               </Field>
             </FieldGroup>
           </form>
         </CardContent>
         <CardFooter className="flex-col gap-2">
-          <Button type="submit" className="w-full">
+          <Button className="w-full" type="submit">
             Login
           </Button>
-          <Button variant="outline" className="w-full">
+          <Button className="w-full" variant="outline">
             Login with Google
           </Button>
-          <div className="style-nova:mt-2 mt-4 text-center">
+          <div className="mt-4 style-nova:mt-2 text-center">
             Don&apos;t have an account?{" "}
-            <a href="#" className="underline underline-offset-4">
+            <a className="underline underline-offset-4" href="#">
               Sign up
             </a>
           </div>
         </CardFooter>
       </Card>
     </Example>
-  )
+  );
 }
 
 function CardMeetingNotes() {
@@ -108,12 +104,12 @@ function CardMeetingNotes() {
             Transcript from the meeting with the client.
           </CardDescription>
           <CardAction>
-            <Button variant="outline" size="sm">
+            <Button size="sm" variant="outline">
               <IconPlaceholder
+                data-icon="inline-start"
+                hugeicons="TextCheckIcon"
                 lucide="CaptionsIcon"
                 tabler="IconTextCaption"
-                hugeicons="TextCheckIcon"
-                data-icon="inline-start"
               />
               Transcribe
             </Button>
@@ -135,20 +131,20 @@ function CardMeetingNotes() {
         <CardFooter>
           <AvatarGroup>
             <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+              <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <Avatar>
               <AvatarImage
-                src="https://github.com/maxleiter.png"
                 alt="@maxleiter"
+                src="https://github.com/maxleiter.png"
               />
               <AvatarFallback>LR</AvatarFallback>
             </Avatar>
             <Avatar>
               <AvatarImage
-                src="https://github.com/evilrabbit.png"
                 alt="@evilrabbit"
+                src="https://github.com/evilrabbit.png"
               />
               <AvatarFallback>ER</AvatarFallback>
             </Avatar>
@@ -157,19 +153,19 @@ function CardMeetingNotes() {
         </CardFooter>
       </Card>
     </Example>
-  )
+  );
 }
 
 function CardWithImage() {
   return (
     <Example title="With Image">
-      <Card size="default" className="relative mx-auto w-full max-w-sm pt-0">
-        <div className="bg-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color" />
+      <Card className="relative mx-auto w-full max-w-sm pt-0" size="default">
+        <div className="absolute inset-0 z-30 aspect-video bg-primary opacity-50 mix-blend-color" />
         <img
-          src="https://images.unsplash.com/photo-1604076850742-4c7221f3101b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Photo by mymind on Unsplash"
-          title="Photo by mymind on Unsplash"
           className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale"
+          src="https://images.unsplash.com/photo-1604076850742-4c7221f3101b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          title="Photo by mymind on Unsplash"
         />
         <CardHeader>
           <CardTitle>Beautiful Landscape</CardTitle>
@@ -180,29 +176,29 @@ function CardWithImage() {
         <CardFooter>
           <Button className="w-full">
             <IconPlaceholder
+              data-icon="inline-start"
+              hugeicons="Add01Icon"
               lucide="PlusIcon"
               tabler="IconPlus"
-              hugeicons="Add01Icon"
-              data-icon="inline-start"
             />
             Button
           </Button>
         </CardFooter>
       </Card>
     </Example>
-  )
+  );
 }
 
 function CardWithImageSmall() {
   return (
     <Example title="With Image (Small)">
-      <Card size="sm" className="relative mx-auto w-full max-w-sm pt-0">
-        <div className="bg-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color" />
+      <Card className="relative mx-auto w-full max-w-sm pt-0" size="sm">
+        <div className="absolute inset-0 z-30 aspect-video bg-primary opacity-50 mix-blend-color" />
         <img
-          src="https://images.unsplash.com/photo-1604076850742-4c7221f3101b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Photo by mymind on Unsplash"
-          title="Photo by mymind on Unsplash"
           className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale"
+          src="https://images.unsplash.com/photo-1604076850742-4c7221f3101b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          title="Photo by mymind on Unsplash"
         />
         <CardHeader>
           <CardTitle>Beautiful Landscape</CardTitle>
@@ -211,19 +207,19 @@ function CardWithImageSmall() {
           </CardDescription>
         </CardHeader>
         <CardFooter>
-          <Button size="sm" className="w-full">
+          <Button className="w-full" size="sm">
             <IconPlaceholder
+              data-icon="inline-start"
+              hugeicons="Add01Icon"
               lucide="PlusIcon"
               tabler="IconPlus"
-              hugeicons="Add01Icon"
-              data-icon="inline-start"
             />
             Button
           </Button>
         </CardFooter>
       </Card>
     </Example>
-  )
+  );
 }
 
 function CardHeaderWithBorder() {
@@ -244,7 +240,7 @@ function CardHeaderWithBorder() {
         </CardContent>
       </Card>
     </Example>
-  )
+  );
 }
 
 function CardFooterWithBorder() {
@@ -258,19 +254,19 @@ function CardFooterWithBorder() {
           </p>
         </CardContent>
         <CardFooter className="border-t">
-          <Button variant="outline" className="w-full">
+          <Button className="w-full" variant="outline">
             Footer with Border
           </Button>
         </CardFooter>
       </Card>
     </Example>
-  )
+  );
 }
 
 function CardDefault() {
   return (
     <Example title="Default Size">
-      <Card size="default" className="mx-auto w-full max-w-sm">
+      <Card className="mx-auto w-full max-w-sm" size="default">
         <CardHeader>
           <CardTitle>Default Card</CardTitle>
           <CardDescription>
@@ -284,19 +280,19 @@ function CardDefault() {
           </p>
         </CardContent>
         <CardFooter>
-          <Button variant="outline" className="w-full">
+          <Button className="w-full" variant="outline">
             Action
           </Button>
         </CardFooter>
       </Card>
     </Example>
-  )
+  );
 }
 
 function CardSmall() {
   return (
     <Example title="Small Size">
-      <Card size="sm" className="mx-auto w-full max-w-sm">
+      <Card className="mx-auto w-full max-w-sm" size="sm">
         <CardHeader>
           <CardTitle>Small Card</CardTitle>
           <CardDescription>
@@ -310,19 +306,19 @@ function CardSmall() {
           </p>
         </CardContent>
         <CardFooter>
-          <Button variant="outline" size="sm" className="w-full">
+          <Button className="w-full" size="sm" variant="outline">
             Action
           </Button>
         </CardFooter>
       </Card>
     </Example>
-  )
+  );
 }
 
 function CardHeaderWithBorderSmall() {
   return (
     <Example title="Header with Border (Small)">
-      <Card size="sm" className="mx-auto w-full max-w-sm">
+      <Card className="mx-auto w-full max-w-sm" size="sm">
         <CardHeader className="border-b">
           <CardTitle>Header with Border</CardTitle>
           <CardDescription>
@@ -337,13 +333,13 @@ function CardHeaderWithBorderSmall() {
         </CardContent>
       </Card>
     </Example>
-  )
+  );
 }
 
 function CardFooterWithBorderSmall() {
   return (
     <Example title="Footer with Border (Small)">
-      <Card size="sm" className="mx-auto w-full max-w-sm">
+      <Card className="mx-auto w-full max-w-sm" size="sm">
         <CardContent>
           <p>
             The footer has a border-t class applied, creating a visual
@@ -351,11 +347,11 @@ function CardFooterWithBorderSmall() {
           </p>
         </CardContent>
         <CardFooter className="border-t">
-          <Button variant="outline" size="sm" className="w-full">
+          <Button className="w-full" size="sm" variant="outline">
             Footer with Border
           </Button>
         </CardFooter>
       </Card>
     </Example>
-  )
+  );
 }

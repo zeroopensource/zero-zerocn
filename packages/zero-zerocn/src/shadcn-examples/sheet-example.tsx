@@ -1,10 +1,6 @@
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import { Button } from "@/registry/bases/radix/ui/button"
-import { Field, FieldGroup, FieldLabel } from "@/registry/bases/radix/ui/field"
-import { Input } from "@/registry/bases/radix/ui/input"
+import { Button } from "@/registry/bases/radix/ui/button";
+import { Field, FieldGroup, FieldLabel } from "@/registry/bases/radix/ui/field";
+import { Input } from "@/registry/bases/radix/ui/input";
 import {
   Sheet,
   SheetClose,
@@ -14,7 +10,8 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/bases/radix/ui/sheet"
+} from "@/registry/bases/radix/ui/sheet";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function SheetExample() {
   return (
@@ -23,7 +20,7 @@ export default function SheetExample() {
       <SheetNoCloseButton />
       <SheetWithSides />
     </ExampleWrapper>
-  )
+  );
 }
 
 function SheetWithForm() {
@@ -41,15 +38,15 @@ function SheetWithForm() {
               done.
             </SheetDescription>
           </SheetHeader>
-          <div className="style-vega:px-4 style-maia:px-6 style-mira:px-6 style-lyra:px-4 style-nova:px-4">
+          <div className="style-lyra:px-4 style-maia:px-6 style-mira:px-6 style-nova:px-4 style-vega:px-4">
             <FieldGroup>
               <Field>
                 <FieldLabel htmlFor="sheet-demo-name">Name</FieldLabel>
-                <Input id="sheet-demo-name" defaultValue="Pedro Duarte" />
+                <Input defaultValue="Pedro Duarte" id="sheet-demo-name" />
               </Field>
               <Field>
                 <FieldLabel htmlFor="sheet-demo-username">Username</FieldLabel>
-                <Input id="sheet-demo-username" defaultValue="@peduarte" />
+                <Input defaultValue="@peduarte" id="sheet-demo-username" />
               </Field>
             </FieldGroup>
           </div>
@@ -62,7 +59,7 @@ function SheetWithForm() {
         </SheetContent>
       </Sheet>
     </Example>
-  )
+  );
 }
 
 function SheetNoCloseButton() {
@@ -83,10 +80,10 @@ function SheetNoCloseButton() {
         </SheetContent>
       </Sheet>
     </Example>
-  )
+  );
 }
 
-const SHEET_SIDES = ["top", "right", "bottom", "left"] as const
+const SHEET_SIDES = ["top", "right", "bottom", "left"] as const;
 
 function SheetWithSides() {
   return (
@@ -95,13 +92,13 @@ function SheetWithSides() {
         {SHEET_SIDES.map((side) => (
           <Sheet key={side}>
             <SheetTrigger asChild>
-              <Button variant="outline" className="capitalize">
+              <Button className="capitalize" variant="outline">
                 {side}
               </Button>
             </SheetTrigger>
             <SheetContent
-              side={side}
               className="data-[side=bottom]:max-h-[50vh] data-[side=top]:max-h-[50vh]"
+              side={side}
             >
               <SheetHeader>
                 <SheetTitle>Edit profile</SheetTitle>
@@ -110,11 +107,11 @@ function SheetWithSides() {
                   done.
                 </SheetDescription>
               </SheetHeader>
-              <div className="no-scrollbar style-vega:px-4 style-maia:px-6 style-mira:px-6 style-lyra:px-4 style-nova:px-4 overflow-y-auto">
+              <div className="no-scrollbar overflow-y-auto style-lyra:px-4 style-maia:px-6 style-mira:px-6 style-nova:px-4 style-vega:px-4">
                 {Array.from({ length: 10 }).map((_, index) => (
                   <p
+                    className="mb-4 style-lyra:mb-2 leading-normal style-lyra:leading-relaxed"
                     key={index}
-                    className="style-lyra:mb-2 style-lyra:leading-relaxed mb-4 leading-normal"
                   >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -138,5 +135,5 @@ function SheetWithSides() {
         ))}
       </div>
     </Example>
-  )
+  );
 }

@@ -1,16 +1,13 @@
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
 import {
   Alert,
   AlertAction,
   AlertDescription,
   AlertTitle,
-} from "@/registry/bases/radix/ui/alert"
-import { Badge } from "@/registry/bases/radix/ui/badge"
-import { Button } from "@/registry/bases/radix/ui/button"
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
+} from "@/registry/bases/radix/ui/alert";
+import { Badge } from "@/registry/bases/radix/ui/badge";
+import { Button } from "@/registry/bases/radix/ui/button";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function AlertExample() {
   return (
@@ -20,7 +17,7 @@ export default function AlertExample() {
       <AlertExample3 />
       <AlertExample4 />
     </ExampleWrapper>
-  )
+  );
 }
 
 function AlertExample1() {
@@ -43,7 +40,7 @@ function AlertExample1() {
         </Alert>
       </div>
     </Example>
-  )
+  );
 }
 
 function AlertExample2() {
@@ -52,9 +49,9 @@ function AlertExample2() {
       <div className="mx-auto flex w-full max-w-lg flex-col gap-4">
         <Alert>
           <IconPlaceholder
+            hugeicons="AlertCircleIcon"
             lucide="CircleAlertIcon"
             tabler="IconExclamationCircle"
-            hugeicons="AlertCircleIcon"
           />
           <AlertTitle>
             Let&apos;s try one with icon, title and a <a href="#">link</a>.
@@ -62,9 +59,9 @@ function AlertExample2() {
         </Alert>
         <Alert>
           <IconPlaceholder
+            hugeicons="AlertCircleIcon"
             lucide="CircleAlertIcon"
             tabler="IconExclamationCircle"
-            hugeicons="AlertCircleIcon"
           />
           <AlertDescription>
             This one has an icon and a description only. No title.{" "}
@@ -74,9 +71,9 @@ function AlertExample2() {
 
         <Alert>
           <IconPlaceholder
+            hugeicons="AlertCircleIcon"
             lucide="CircleAlertIcon"
             tabler="IconExclamationCircle"
-            hugeicons="AlertCircleIcon"
           />
           <AlertTitle>Success! Your changes have been saved</AlertTitle>
           <AlertDescription>
@@ -85,9 +82,9 @@ function AlertExample2() {
         </Alert>
         <Alert>
           <IconPlaceholder
+            hugeicons="AlertCircleIcon"
             lucide="CircleAlertIcon"
             tabler="IconExclamationCircle"
-            hugeicons="AlertCircleIcon"
           />
           <AlertTitle>
             This is a very long alert title that demonstrates how the component
@@ -97,9 +94,9 @@ function AlertExample2() {
         </Alert>
         <Alert>
           <IconPlaceholder
+            hugeicons="AlertCircleIcon"
             lucide="CircleAlertIcon"
             tabler="IconExclamationCircle"
-            hugeicons="AlertCircleIcon"
           />
           <AlertDescription>
             This is a very long alert description that demonstrates how the
@@ -109,9 +106,9 @@ function AlertExample2() {
         </Alert>
         <Alert>
           <IconPlaceholder
+            hugeicons="AlertCircleIcon"
             lucide="CircleAlertIcon"
             tabler="IconExclamationCircle"
-            hugeicons="AlertCircleIcon"
           />
           <AlertTitle>
             This is an extremely long alert title that spans multiple lines to
@@ -129,7 +126,7 @@ function AlertExample2() {
         </Alert>
       </div>
     </Example>
-  )
+  );
 }
 
 function AlertExample3() {
@@ -138,9 +135,9 @@ function AlertExample3() {
       <div className="mx-auto flex w-full max-w-lg flex-col gap-4">
         <Alert variant="destructive">
           <IconPlaceholder
+            hugeicons="AlertCircleIcon"
             lucide="CircleAlertIcon"
             tabler="IconExclamationCircle"
-            hugeicons="AlertCircleIcon"
           />
           <AlertTitle>Something went wrong!</AlertTitle>
           <AlertDescription>
@@ -149,9 +146,9 @@ function AlertExample3() {
         </Alert>
         <Alert variant="destructive">
           <IconPlaceholder
+            hugeicons="AlertCircleIcon"
             lucide="CircleAlertIcon"
             tabler="IconExclamationCircle"
-            hugeicons="AlertCircleIcon"
           />
           <AlertTitle>Unable to process your payment.</AlertTitle>
           <AlertDescription>
@@ -168,7 +165,7 @@ function AlertExample3() {
         </Alert>
       </div>
     </Example>
-  )
+  );
 }
 
 function AlertExample4() {
@@ -177,9 +174,9 @@ function AlertExample4() {
       <div className="mx-auto flex w-full max-w-lg flex-col gap-4">
         <Alert>
           <IconPlaceholder
+            hugeicons="AlertCircleIcon"
             lucide="CircleAlertIcon"
             tabler="IconExclamationCircle"
-            hugeicons="AlertCircleIcon"
           />
           <AlertTitle>The selected emails have been marked as spam.</AlertTitle>
           <AlertAction>
@@ -188,9 +185,9 @@ function AlertExample4() {
         </Alert>
         <Alert>
           <IconPlaceholder
+            hugeicons="AlertCircleIcon"
             lucide="CircleAlertIcon"
             tabler="IconExclamationCircle"
-            hugeicons="AlertCircleIcon"
           />
           <AlertTitle>The selected emails have been marked as spam.</AlertTitle>
           <AlertDescription>
@@ -203,5 +200,5 @@ function AlertExample4() {
         </Alert>
       </div>
     </Example>
-  )
+  );
 }

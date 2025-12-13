@@ -1,16 +1,13 @@
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import { Button } from "@/registry/bases/radix/ui/button"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/bases/radix/ui/dropdown-menu"
-import { Input } from "@/registry/bases/radix/ui/input"
+} from "@/registry/bases/radix/ui/dropdown-menu";
+import { Input } from "@/registry/bases/radix/ui/input";
 import {
   Select,
   SelectContent,
@@ -18,7 +15,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/radix/ui/select"
+} from "@/registry/bases/radix/ui/select";
 import {
   Table,
   TableBody,
@@ -28,8 +25,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/bases/radix/ui/table"
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
+} from "@/registry/bases/radix/ui/table";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 const invoices = [
   {
@@ -74,7 +71,7 @@ const invoices = [
     totalAmount: "$300.00",
     paymentMethod: "Credit Card",
   },
-]
+];
 
 export default function TableExample() {
   return (
@@ -87,7 +84,7 @@ export default function TableExample() {
       <TableWithSelect />
       <TableWithInput />
     </ExampleWrapper>
-  )
+  );
 }
 
 function TableBasic() {
@@ -117,7 +114,7 @@ function TableBasic() {
         </TableBody>
       </Table>
     </Example>
-  )
+  );
 }
 
 function TableWithFooter() {
@@ -153,7 +150,7 @@ function TableWithFooter() {
         </TableFooter>
       </Table>
     </Example>
-  )
+  );
 }
 
 function TableSimple() {
@@ -186,7 +183,7 @@ function TableSimple() {
         </TableBody>
       </Table>
     </Example>
-  )
+  );
 }
 
 function TableWithBadges() {
@@ -204,12 +201,12 @@ function TableWithBadges() {
           <TableRow>
             <TableCell className="font-medium">Design homepage</TableCell>
             <TableCell>
-              <span className="inline-flex items-center rounded-full bg-green-500/10 px-2 py-1 text-xs font-medium text-green-700 dark:text-green-400">
+              <span className="inline-flex items-center rounded-full bg-green-500/10 px-2 py-1 font-medium text-green-700 text-xs dark:text-green-400">
                 Completed
               </span>
             </TableCell>
             <TableCell className="text-right">
-              <span className="inline-flex items-center rounded-full bg-blue-500/10 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-400">
+              <span className="inline-flex items-center rounded-full bg-blue-500/10 px-2 py-1 font-medium text-blue-700 text-xs dark:text-blue-400">
                 High
               </span>
             </TableCell>
@@ -217,12 +214,12 @@ function TableWithBadges() {
           <TableRow>
             <TableCell className="font-medium">Implement API</TableCell>
             <TableCell>
-              <span className="inline-flex items-center rounded-full bg-yellow-500/10 px-2 py-1 text-xs font-medium text-yellow-700 dark:text-yellow-400">
+              <span className="inline-flex items-center rounded-full bg-yellow-500/10 px-2 py-1 font-medium text-xs text-yellow-700 dark:text-yellow-400">
                 In Progress
               </span>
             </TableCell>
             <TableCell className="text-right">
-              <span className="inline-flex items-center rounded-full bg-gray-500/10 px-2 py-1 text-xs font-medium text-gray-700 dark:text-gray-400">
+              <span className="inline-flex items-center rounded-full bg-gray-500/10 px-2 py-1 font-medium text-gray-700 text-xs dark:text-gray-400">
                 Medium
               </span>
             </TableCell>
@@ -230,12 +227,12 @@ function TableWithBadges() {
           <TableRow>
             <TableCell className="font-medium">Write tests</TableCell>
             <TableCell>
-              <span className="inline-flex items-center rounded-full bg-gray-500/10 px-2 py-1 text-xs font-medium text-gray-700 dark:text-gray-400">
+              <span className="inline-flex items-center rounded-full bg-gray-500/10 px-2 py-1 font-medium text-gray-700 text-xs dark:text-gray-400">
                 Pending
               </span>
             </TableCell>
             <TableCell className="text-right">
-              <span className="inline-flex items-center rounded-full bg-gray-500/10 px-2 py-1 text-xs font-medium text-gray-700 dark:text-gray-400">
+              <span className="inline-flex items-center rounded-full bg-gray-500/10 px-2 py-1 font-medium text-gray-700 text-xs dark:text-gray-400">
                 Low
               </span>
             </TableCell>
@@ -243,7 +240,7 @@ function TableWithBadges() {
         </TableBody>
       </Table>
     </Example>
-  )
+  );
 }
 
 function TableWithActions() {
@@ -264,11 +261,11 @@ function TableWithActions() {
             <TableCell className="text-right">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" className="size-8">
+                  <Button className="size-8" size="icon" variant="ghost">
                     <IconPlaceholder
+                      hugeicons="MoreHorizontalCircle01Icon"
                       lucide="MoreHorizontalIcon"
                       tabler="IconDots"
-                      hugeicons="MoreHorizontalCircle01Icon"
                     />
                     <span className="sr-only">Open menu</span>
                   </Button>
@@ -290,11 +287,11 @@ function TableWithActions() {
             <TableCell className="text-right">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" className="size-8">
+                  <Button className="size-8" size="icon" variant="ghost">
                     <IconPlaceholder
+                      hugeicons="MoreHorizontalCircle01Icon"
                       lucide="MoreHorizontalIcon"
                       tabler="IconDots"
-                      hugeicons="MoreHorizontalCircle01Icon"
                     />
                     <span className="sr-only">Open menu</span>
                   </Button>
@@ -316,11 +313,11 @@ function TableWithActions() {
             <TableCell className="text-right">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" className="size-8">
+                  <Button className="size-8" size="icon" variant="ghost">
                     <IconPlaceholder
+                      hugeicons="MoreHorizontalCircle01Icon"
                       lucide="MoreHorizontalIcon"
                       tabler="IconDots"
-                      hugeicons="MoreHorizontalCircle01Icon"
                     />
                     <span className="sr-only">Open menu</span>
                   </Button>
@@ -339,7 +336,7 @@ function TableWithActions() {
         </TableBody>
       </Table>
     </Example>
-  )
+  );
 }
 
 function TableWithSelect() {
@@ -414,7 +411,7 @@ function TableWithSelect() {
         </TableBody>
       </Table>
     </Example>
-  )
+  );
 }
 
 function TableWithInput() {
@@ -433,10 +430,10 @@ function TableWithInput() {
             <TableCell className="font-medium">Wireless Mouse</TableCell>
             <TableCell>
               <Input
-                type="number"
-                defaultValue="1"
                 className="h-8 w-20"
+                defaultValue="1"
                 min="0"
+                type="number"
               />
             </TableCell>
             <TableCell>$29.99</TableCell>
@@ -445,10 +442,10 @@ function TableWithInput() {
             <TableCell className="font-medium">Mechanical Keyboard</TableCell>
             <TableCell>
               <Input
-                type="number"
-                defaultValue="2"
                 className="h-8 w-20"
+                defaultValue="2"
                 min="0"
+                type="number"
               />
             </TableCell>
             <TableCell>$129.99</TableCell>
@@ -457,10 +454,10 @@ function TableWithInput() {
             <TableCell className="font-medium">USB-C Hub</TableCell>
             <TableCell>
               <Input
-                type="number"
-                defaultValue="1"
                 className="h-8 w-20"
+                defaultValue="1"
                 min="0"
+                type="number"
               />
             </TableCell>
             <TableCell>$49.99</TableCell>
@@ -468,5 +465,5 @@ function TableWithInput() {
         </TableBody>
       </Table>
     </Example>
-  )
+  );
 }

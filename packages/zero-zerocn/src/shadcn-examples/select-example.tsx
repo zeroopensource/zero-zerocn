@@ -1,12 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
-
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import { Button } from "@/registry/bases/radix/ui/button"
+import * as React from "react";
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -14,24 +10,24 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/radix/ui/dialog"
+} from "@/registry/bases/radix/ui/dialog";
 import {
   Field,
   FieldDescription,
   FieldError,
   FieldLabel,
-} from "@/registry/bases/radix/ui/field"
-import { Input } from "@/registry/bases/radix/ui/input"
+} from "@/registry/bases/radix/ui/field";
+import { Input } from "@/registry/bases/radix/ui/input";
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@/registry/bases/radix/ui/item"
+} from "@/registry/bases/radix/ui/item";
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@/registry/bases/radix/ui/native-select"
+} from "@/registry/bases/radix/ui/native-select";
 import {
   Select,
   SelectContent,
@@ -41,8 +37,8 @@ import {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/radix/ui/select"
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
+} from "@/registry/bases/radix/ui/select";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function SelectExample() {
   return (
@@ -61,7 +57,7 @@ export default function SelectExample() {
       <SelectDisabled />
       <SelectInDialog />
     </ExampleWrapper>
-  )
+  );
 }
 
 function SelectBasic() {
@@ -76,7 +72,7 @@ function SelectBasic() {
             <SelectItem value="apple">Apple</SelectItem>
             <SelectItem value="banana">Banana</SelectItem>
             <SelectItem value="blueberry">Blueberry</SelectItem>
-            <SelectItem value="grapes" disabled>
+            <SelectItem disabled value="grapes">
               Grapes
             </SelectItem>
             <SelectItem value="pineapple">Pineapple</SelectItem>
@@ -84,7 +80,7 @@ function SelectBasic() {
         </SelectContent>
       </Select>
     </Example>
-  )
+  );
 }
 
 function SelectWithIcons() {
@@ -97,9 +93,9 @@ function SelectWithIcons() {
               placeholder={
                 <>
                   <IconPlaceholder
+                    hugeicons="Chart03Icon"
                     lucide="ChartLineIcon"
                     tabler="IconChartLine"
-                    hugeicons="Chart03Icon"
                   />
                   Chart Type
                 </>
@@ -110,25 +106,25 @@ function SelectWithIcons() {
             <SelectGroup>
               <SelectItem value="line">
                 <IconPlaceholder
+                  hugeicons="Chart03Icon"
                   lucide="ChartLineIcon"
                   tabler="IconChartLine"
-                  hugeicons="Chart03Icon"
                 />
                 Line
               </SelectItem>
               <SelectItem value="bar">
                 <IconPlaceholder
+                  hugeicons="Chart03Icon"
                   lucide="ChartBarIcon"
                   tabler="IconChartBar"
-                  hugeicons="Chart03Icon"
                 />
                 Bar
               </SelectItem>
               <SelectItem value="pie">
                 <IconPlaceholder
+                  hugeicons="Chart03Icon"
                   lucide="ChartPieIcon"
                   tabler="IconChartPie"
-                  hugeicons="Chart03Icon"
                 />
                 Pie
               </SelectItem>
@@ -141,9 +137,9 @@ function SelectWithIcons() {
               placeholder={
                 <>
                   <IconPlaceholder
+                    hugeicons="Chart03Icon"
                     lucide="ChartLineIcon"
                     tabler="IconChartLine"
-                    hugeicons="Chart03Icon"
                   />
                   Chart Type
                 </>
@@ -154,25 +150,25 @@ function SelectWithIcons() {
             <SelectGroup>
               <SelectItem value="line">
                 <IconPlaceholder
+                  hugeicons="Chart03Icon"
                   lucide="ChartLineIcon"
                   tabler="IconChartLine"
-                  hugeicons="Chart03Icon"
                 />
                 Line
               </SelectItem>
               <SelectItem value="bar">
                 <IconPlaceholder
+                  hugeicons="Chart03Icon"
                   lucide="ChartBarIcon"
                   tabler="IconChartBar"
-                  hugeicons="Chart03Icon"
                 />
                 Bar
               </SelectItem>
               <SelectItem value="pie">
                 <IconPlaceholder
+                  hugeicons="Chart03Icon"
                   lucide="ChartPieIcon"
                   tabler="IconChartPie"
-                  hugeicons="Chart03Icon"
                 />
                 Pie
               </SelectItem>
@@ -181,7 +177,7 @@ function SelectWithIcons() {
         </Select>
       </div>
     </Example>
-  )
+  );
 }
 
 function SelectWithGroups() {
@@ -208,7 +204,7 @@ function SelectWithGroups() {
         </SelectContent>
       </Select>
     </Example>
-  )
+  );
 }
 
 function SelectLargeList() {
@@ -229,7 +225,7 @@ function SelectLargeList() {
         </SelectContent>
       </Select>
     </Example>
-  )
+  );
 }
 
 function SelectSizes() {
@@ -262,7 +258,7 @@ function SelectSizes() {
         </Select>
       </div>
     </Example>
-  )
+  );
 }
 
 function SelectWithButton() {
@@ -282,7 +278,7 @@ function SelectWithButton() {
               </SelectGroup>
             </SelectContent>
           </Select>
-          <Button variant="outline" size="sm">
+          <Button size="sm" variant="outline">
             Submit
           </Button>
         </div>
@@ -303,7 +299,7 @@ function SelectWithButton() {
         </div>
       </div>
     </Example>
-  )
+  );
 }
 
 function SelectItemAligned() {
@@ -318,7 +314,7 @@ function SelectItemAligned() {
             <SelectItem value="apple">Apple</SelectItem>
             <SelectItem value="banana">Banana</SelectItem>
             <SelectItem value="blueberry">Blueberry</SelectItem>
-            <SelectItem value="grapes" disabled>
+            <SelectItem disabled value="grapes">
               Grapes
             </SelectItem>
             <SelectItem value="pineapple">Pineapple</SelectItem>
@@ -326,7 +322,7 @@ function SelectItemAligned() {
         </SelectContent>
       </Select>
     </Example>
-  )
+  );
 }
 
 function SelectWithField() {
@@ -353,7 +349,7 @@ function SelectWithField() {
         </FieldDescription>
       </Field>
     </Example>
-  )
+  );
 }
 
 function SelectInvalid() {
@@ -377,7 +373,7 @@ function SelectInvalid() {
         <Field data-invalid>
           <FieldLabel htmlFor="select-fruit-invalid">Favorite Fruit</FieldLabel>
           <Select>
-            <SelectTrigger id="select-fruit-invalid" aria-invalid>
+            <SelectTrigger aria-invalid id="select-fruit-invalid">
               <SelectValue placeholder="Select a fruit" />
             </SelectTrigger>
             <SelectContent>
@@ -394,14 +390,14 @@ function SelectInvalid() {
         </Field>
       </div>
     </Example>
-  )
+  );
 }
 
 function SelectInline() {
   return (
     <Example title="Inline with Input & NativeSelect">
       <div className="flex items-center gap-2">
-        <Input placeholder="Search..." className="flex-1" />
+        <Input className="flex-1" placeholder="Search..." />
         <Select>
           <SelectTrigger className="w-[140px]">
             <SelectValue placeholder="Filter" />
@@ -422,7 +418,7 @@ function SelectInline() {
         </NativeSelect>
       </div>
     </Example>
-  )
+  );
 }
 
 function SelectDisabled() {
@@ -437,7 +433,7 @@ function SelectDisabled() {
             <SelectItem value="apple">Apple</SelectItem>
             <SelectItem value="banana">Banana</SelectItem>
             <SelectItem value="blueberry">Blueberry</SelectItem>
-            <SelectItem value="grapes" disabled>
+            <SelectItem disabled value="grapes">
               Grapes
             </SelectItem>
             <SelectItem value="pineapple">Pineapple</SelectItem>
@@ -445,7 +441,7 @@ function SelectDisabled() {
         </SelectContent>
       </Select>
     </Example>
-  )
+  );
 }
 
 const plans = [
@@ -461,16 +457,16 @@ const plans = [
     name: "Enterprise",
     description: "Advanced features for large organizations.",
   },
-]
+];
 
 function SelectPlan() {
-  const [plan, setPlan] = React.useState<string>(plans[0].name)
+  const [plan, setPlan] = React.useState<string>(plans[0].name);
 
-  const selectedPlan = plans.find((p) => p.name === plan)
+  const selectedPlan = plans.find((p) => p.name === plan);
 
   return (
     <Example title="Subscription Plan">
-      <Select value={plan} onValueChange={setPlan}>
+      <Select onValueChange={setPlan} value={plan}>
         <SelectTrigger className="h-auto! w-72">
           <SelectValue>
             {selectedPlan && <SelectPlanItem plan={selectedPlan} />}
@@ -487,12 +483,12 @@ function SelectPlan() {
         </SelectContent>
       </Select>
     </Example>
-  )
+  );
 }
 
 function SelectPlanItem({ plan }: { plan: (typeof plans)[number] }) {
   return (
-    <Item size="xs" className="w-full p-0">
+    <Item className="w-full p-0" size="xs">
       <ItemContent className="gap-0">
         <ItemTitle>{plan.name}</ItemTitle>
         <ItemDescription className="text-xs">
@@ -500,7 +496,7 @@ function SelectPlanItem({ plan }: { plan: (typeof plans)[number] }) {
         </ItemDescription>
       </ItemContent>
     </Item>
-  )
+  );
 }
 
 function SelectInDialog() {
@@ -534,5 +530,5 @@ function SelectInDialog() {
         </DialogContent>
       </Dialog>
     </Example>
-  )
+  );
 }

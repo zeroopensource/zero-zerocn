@@ -1,12 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
-
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import { Button } from "@/registry/bases/radix/ui/button"
+import * as React from "react";
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -14,7 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/radix/ui/dialog"
+} from "@/registry/bases/radix/ui/dialog";
 import {
   Menubar,
   MenubarCheckboxItem,
@@ -30,8 +26,8 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/registry/bases/radix/ui/menubar"
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
+} from "@/registry/bases/radix/ui/menubar";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function MenubarExample() {
   return (
@@ -47,7 +43,7 @@ export default function MenubarExample() {
       <MenubarDestructive />
       <MenubarInDialog />
     </ExampleWrapper>
-  )
+  );
 }
 
 function MenubarBasic() {
@@ -95,7 +91,7 @@ function MenubarBasic() {
         </MenubarMenu>
       </Menubar>
     </Example>
-  )
+  );
 }
 
 function MenubarWithSubmenu() {
@@ -155,7 +151,7 @@ function MenubarWithSubmenu() {
         </MenubarMenu>
       </Menubar>
     </Example>
-  )
+  );
 }
 
 function MenubarWithCheckboxes() {
@@ -194,12 +190,12 @@ function MenubarWithCheckboxes() {
         </MenubarMenu>
       </Menubar>
     </Example>
-  )
+  );
 }
 
 function MenubarWithRadio() {
-  const [user, setUser] = React.useState("benoit")
-  const [theme, setTheme] = React.useState("system")
+  const [user, setUser] = React.useState("benoit");
+  const [theme, setTheme] = React.useState("system");
 
   return (
     <Example title="With Radio">
@@ -207,7 +203,7 @@ function MenubarWithRadio() {
         <MenubarMenu>
           <MenubarTrigger>Profiles</MenubarTrigger>
           <MenubarContent>
-            <MenubarRadioGroup value={user} onValueChange={setUser}>
+            <MenubarRadioGroup onValueChange={setUser} value={user}>
               <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
               <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
               <MenubarRadioItem value="luis">Luis</MenubarRadioItem>
@@ -222,7 +218,7 @@ function MenubarWithRadio() {
         <MenubarMenu>
           <MenubarTrigger>Theme</MenubarTrigger>
           <MenubarContent>
-            <MenubarRadioGroup value={theme} onValueChange={setTheme}>
+            <MenubarRadioGroup onValueChange={setTheme} value={theme}>
               <MenubarRadioItem value="light">Light</MenubarRadioItem>
               <MenubarRadioItem value="dark">Dark</MenubarRadioItem>
               <MenubarRadioItem value="system">System</MenubarRadioItem>
@@ -231,7 +227,7 @@ function MenubarWithRadio() {
         </MenubarMenu>
       </Menubar>
     </Example>
-  )
+  );
 }
 
 function MenubarWithIcons() {
@@ -244,17 +240,17 @@ function MenubarWithIcons() {
             <MenubarGroup>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="FileIcon"
                   lucide="FileIcon"
                   tabler="IconFile"
-                  hugeicons="FileIcon"
                 />
                 New File <MenubarShortcut>⌘N</MenubarShortcut>
               </MenubarItem>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="FolderIcon"
                   lucide="FolderIcon"
                   tabler="IconFolder"
-                  hugeicons="FolderIcon"
                 />
                 Open Folder
               </MenubarItem>
@@ -263,9 +259,9 @@ function MenubarWithIcons() {
             <MenubarGroup>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="FloppyDiskIcon"
                   lucide="SaveIcon"
                   tabler="IconDeviceFloppy"
-                  hugeicons="FloppyDiskIcon"
                 />
                 Save <MenubarShortcut>⌘S</MenubarShortcut>
               </MenubarItem>
@@ -278,26 +274,26 @@ function MenubarWithIcons() {
             <MenubarGroup>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="DashedLineCircleIcon"
                   lucide="CircleDashedIcon"
                   tabler="IconCircleDashed"
-                  hugeicons="DashedLineCircleIcon"
                 />
                 Settings
               </MenubarItem>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="DashedLineCircleIcon"
                   lucide="CircleDashedIcon"
                   tabler="IconCircleDashed"
-                  hugeicons="DashedLineCircleIcon"
                 />
                 Help
               </MenubarItem>
               <MenubarSeparator />
               <MenubarItem variant="destructive">
                 <IconPlaceholder
+                  hugeicons="DashedLineCircleIcon"
                   lucide="CircleDashedIcon"
                   tabler="IconCircleDashed"
-                  hugeicons="DashedLineCircleIcon"
                 />
                 Delete
               </MenubarItem>
@@ -306,7 +302,7 @@ function MenubarWithIcons() {
         </MenubarMenu>
       </Menubar>
     </Example>
-  )
+  );
 }
 
 function MenubarWithShortcuts() {
@@ -356,7 +352,7 @@ function MenubarWithShortcuts() {
         </MenubarMenu>
       </Menubar>
     </Example>
-  )
+  );
 }
 
 function MenubarFormat() {
@@ -369,25 +365,25 @@ function MenubarFormat() {
             <MenubarGroup>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="TextBoldIcon"
                   lucide="BoldIcon"
                   tabler="IconBold"
-                  hugeicons="TextBoldIcon"
                 />
                 Bold <MenubarShortcut>⌘B</MenubarShortcut>
               </MenubarItem>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="TextItalicIcon"
                   lucide="ItalicIcon"
                   tabler="IconItalic"
-                  hugeicons="TextItalicIcon"
                 />
                 Italic <MenubarShortcut>⌘I</MenubarShortcut>
               </MenubarItem>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="TextUnderlineIcon"
                   lucide="UnderlineIcon"
                   tabler="IconUnderline"
-                  hugeicons="TextUnderlineIcon"
                 />
                 Underline <MenubarShortcut>⌘U</MenubarShortcut>
               </MenubarItem>
@@ -413,7 +409,7 @@ function MenubarFormat() {
         </MenubarMenu>
       </Menubar>
     </Example>
-  )
+  );
 }
 
 function MenubarInsert() {
@@ -426,9 +422,9 @@ function MenubarInsert() {
             <MenubarSub>
               <MenubarSubTrigger>
                 <IconPlaceholder
+                  hugeicons="ImageIcon"
                   lucide="ImageIcon"
                   tabler="IconPhoto"
-                  hugeicons="ImageIcon"
                 />
                 Media
               </MenubarSubTrigger>
@@ -444,17 +440,17 @@ function MenubarInsert() {
             <MenubarGroup>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="LinkIcon"
                   lucide="LinkIcon"
                   tabler="IconLink"
-                  hugeicons="LinkIcon"
                 />
                 Link <MenubarShortcut>⌘K</MenubarShortcut>
               </MenubarItem>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="TableIcon"
                   lucide="TableIcon"
                   tabler="IconTable"
-                  hugeicons="TableIcon"
                 />
                 Table
               </MenubarItem>
@@ -467,17 +463,17 @@ function MenubarInsert() {
             <MenubarGroup>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="SearchIcon"
                   lucide="SearchIcon"
                   tabler="IconSearch"
-                  hugeicons="SearchIcon"
                 />
                 Find & Replace <MenubarShortcut>⌘F</MenubarShortcut>
               </MenubarItem>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="Tick02Icon"
                   lucide="CheckIcon"
                   tabler="IconCheck"
-                  hugeicons="Tick02Icon"
                 />
                 Spell Check
               </MenubarItem>
@@ -486,7 +482,7 @@ function MenubarInsert() {
         </MenubarMenu>
       </Menubar>
     </Example>
-  )
+  );
 }
 
 function MenubarDestructive() {
@@ -499,17 +495,17 @@ function MenubarDestructive() {
             <MenubarGroup>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="FileIcon"
                   lucide="FileIcon"
                   tabler="IconFile"
-                  hugeicons="FileIcon"
                 />
                 New File <MenubarShortcut>⌘N</MenubarShortcut>
               </MenubarItem>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="FolderIcon"
                   lucide="FolderIcon"
                   tabler="IconFolder"
-                  hugeicons="FolderIcon"
                 />
                 Open Folder
               </MenubarItem>
@@ -518,9 +514,9 @@ function MenubarDestructive() {
             <MenubarGroup>
               <MenubarItem variant="destructive">
                 <IconPlaceholder
+                  hugeicons="DeleteIcon"
                   lucide="TrashIcon"
                   tabler="IconTrash"
-                  hugeicons="DeleteIcon"
                 />
                 Delete File <MenubarShortcut>⌘⌫</MenubarShortcut>
               </MenubarItem>
@@ -533,17 +529,17 @@ function MenubarDestructive() {
             <MenubarGroup>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="UserIcon"
                   lucide="UserIcon"
                   tabler="IconUser"
-                  hugeicons="UserIcon"
                 />
                 Profile
               </MenubarItem>
               <MenubarItem>
                 <IconPlaceholder
+                  hugeicons="SettingsIcon"
                   lucide="SettingsIcon"
                   tabler="IconSettings"
-                  hugeicons="SettingsIcon"
                 />
                 Settings
               </MenubarItem>
@@ -552,9 +548,9 @@ function MenubarDestructive() {
             <MenubarGroup>
               <MenubarItem variant="destructive">
                 <IconPlaceholder
+                  hugeicons="LogoutIcon"
                   lucide="LogOutIcon"
                   tabler="IconLogout"
-                  hugeicons="LogoutIcon"
                 />
                 Sign out
               </MenubarItem>
@@ -563,9 +559,9 @@ function MenubarDestructive() {
             <MenubarGroup>
               <MenubarItem variant="destructive">
                 <IconPlaceholder
+                  hugeicons="DeleteIcon"
                   lucide="TrashIcon"
                   tabler="IconTrash"
-                  hugeicons="DeleteIcon"
                 />
                 Delete
               </MenubarItem>
@@ -574,7 +570,7 @@ function MenubarDestructive() {
         </MenubarMenu>
       </Menubar>
     </Example>
-  )
+  );
 }
 
 function MenubarInDialog() {
@@ -598,25 +594,25 @@ function MenubarInDialog() {
                 <MenubarGroup>
                   <MenubarItem>
                     <IconPlaceholder
+                      hugeicons="CopyIcon"
                       lucide="CopyIcon"
                       tabler="IconCopy"
-                      hugeicons="CopyIcon"
                     />
                     Copy
                   </MenubarItem>
                   <MenubarItem>
                     <IconPlaceholder
+                      hugeicons="ScissorIcon"
                       lucide="ScissorsIcon"
                       tabler="IconCut"
-                      hugeicons="ScissorIcon"
                     />
                     Cut
                   </MenubarItem>
                   <MenubarItem>
                     <IconPlaceholder
+                      hugeicons="ClipboardIcon"
                       lucide="ClipboardPasteIcon"
                       tabler="IconClipboard"
-                      hugeicons="ClipboardIcon"
                     />
                     Paste
                   </MenubarItem>
@@ -640,9 +636,9 @@ function MenubarInDialog() {
                 <MenubarGroup>
                   <MenubarItem variant="destructive">
                     <IconPlaceholder
+                      hugeicons="DeleteIcon"
                       lucide="TrashIcon"
                       tabler="IconTrash"
-                      hugeicons="DeleteIcon"
                     />
                     Delete
                   </MenubarItem>
@@ -666,5 +662,5 @@ function MenubarInDialog() {
         </DialogContent>
       </Dialog>
     </Example>
-  )
+  );
 }

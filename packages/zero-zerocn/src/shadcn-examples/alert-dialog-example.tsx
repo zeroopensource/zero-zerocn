@@ -1,7 +1,4 @@
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -13,8 +10,8 @@ import {
   AlertDialogMedia,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/bases/radix/ui/alert-dialog"
-import { Button } from "@/registry/bases/radix/ui/button"
+} from "@/registry/bases/radix/ui/alert-dialog";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -23,8 +20,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/radix/ui/dialog"
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
+} from "@/registry/bases/radix/ui/dialog";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function AlertDialogExample() {
   return (
@@ -36,12 +33,12 @@ export default function AlertDialogExample() {
       <AlertDialogDestructive />
       <AlertDialogInDialog />
     </ExampleWrapper>
-  )
+  );
 }
 
 function AlertDialogBasic() {
   return (
-    <Example title="Basic" className="items-center">
+    <Example className="items-center" title="Basic">
       <AlertDialog>
         <AlertDialogTrigger asChild>
           <Button variant="outline">Default</Button>
@@ -61,12 +58,12 @@ function AlertDialogBasic() {
         </AlertDialogContent>
       </AlertDialog>
     </Example>
-  )
+  );
 }
 
 function AlertDialogSmall() {
   return (
-    <Example title="Small" className="items-center">
+    <Example className="items-center" title="Small">
       <AlertDialog>
         <AlertDialogTrigger asChild>
           <Button variant="outline">Small</Button>
@@ -85,12 +82,12 @@ function AlertDialogSmall() {
         </AlertDialogContent>
       </AlertDialog>
     </Example>
-  )
+  );
 }
 
 function AlertDialogWithMedia() {
   return (
-    <Example title="With Media" className="items-center">
+    <Example className="items-center" title="With Media">
       <AlertDialog>
         <AlertDialogTrigger asChild>
           <Button variant="outline">Default (Media)</Button>
@@ -99,9 +96,9 @@ function AlertDialogWithMedia() {
           <AlertDialogHeader>
             <AlertDialogMedia>
               <IconPlaceholder
+                hugeicons="BluetoothIcon"
                 lucide="BluetoothIcon"
                 tabler="IconBluetooth"
-                hugeicons="BluetoothIcon"
               />
             </AlertDialogMedia>
             <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
@@ -117,12 +114,12 @@ function AlertDialogWithMedia() {
         </AlertDialogContent>
       </AlertDialog>
     </Example>
-  )
+  );
 }
 
 function AlertDialogSmallWithMedia() {
   return (
-    <Example title="Small With Media" className="items-center">
+    <Example className="items-center" title="Small With Media">
       <AlertDialog>
         <AlertDialogTrigger asChild>
           <Button variant="outline">Small (Media)</Button>
@@ -131,9 +128,9 @@ function AlertDialogSmallWithMedia() {
           <AlertDialogHeader>
             <AlertDialogMedia>
               <IconPlaceholder
+                hugeicons="BluetoothIcon"
                 lucide="BluetoothIcon"
                 tabler="IconBluetooth"
-                hugeicons="BluetoothIcon"
               />
             </AlertDialogMedia>
             <AlertDialogTitle>Allow accessory to connect?</AlertDialogTitle>
@@ -148,12 +145,12 @@ function AlertDialogSmallWithMedia() {
         </AlertDialogContent>
       </AlertDialog>
     </Example>
-  )
+  );
 }
 
 function AlertDialogDestructive() {
   return (
-    <Example title="Destructive" className="items-center">
+    <Example className="items-center" title="Destructive">
       <AlertDialog>
         <AlertDialogTrigger asChild>
           <Button variant="destructive">Delete Chat</Button>
@@ -162,9 +159,9 @@ function AlertDialogDestructive() {
           <AlertDialogHeader>
             <AlertDialogMedia className="bg-destructive/10 text-destructive dark:bg-destructive/20 dark:text-destructive">
               <IconPlaceholder
+                hugeicons="Delete02Icon"
                 lucide="Trash2Icon"
                 tabler="IconTrash"
-                hugeicons="Delete02Icon"
               />
             </AlertDialogMedia>
             <AlertDialogTitle>Delete chat?</AlertDialogTitle>
@@ -181,12 +178,12 @@ function AlertDialogDestructive() {
         </AlertDialogContent>
       </AlertDialog>
     </Example>
-  )
+  );
 }
 
 function AlertDialogInDialog() {
   return (
-    <Example title="In Dialog" className="items-center">
+    <Example className="items-center" title="In Dialog">
       <Dialog>
         <DialogTrigger asChild>
           <Button variant="outline">Open Dialog</Button>
@@ -221,5 +218,5 @@ function AlertDialogInDialog() {
         </DialogContent>
       </Dialog>
     </Example>
-  )
+  );
 }

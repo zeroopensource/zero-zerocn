@@ -1,19 +1,16 @@
 import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import {
   Field,
   FieldContent,
   FieldDescription,
   FieldLabel,
   FieldLegend,
   FieldSet,
-} from "@/registry/bases/radix/ui/field"
+} from "@/registry/bases/radix/ui/field";
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/bases/radix/ui/radio-group"
+} from "@/registry/bases/radix/ui/radio-group";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function RadioGroupExample() {
   return (
@@ -25,7 +22,7 @@ export default function RadioGroupExample() {
       <RadioGroupDisabled />
       <RadioGroupInvalid />
     </ExampleWrapper>
-  )
+  );
 }
 
 function RadioGroupBasic() {
@@ -33,26 +30,26 @@ function RadioGroupBasic() {
     <Example title="Basic">
       <RadioGroup defaultValue="comfortable">
         <Field orientation="horizontal">
-          <RadioGroupItem value="default" id="r1" />
-          <FieldLabel htmlFor="r1" className="font-normal">
+          <RadioGroupItem id="r1" value="default" />
+          <FieldLabel className="font-normal" htmlFor="r1">
             Default
           </FieldLabel>
         </Field>
         <Field orientation="horizontal">
-          <RadioGroupItem value="comfortable" id="r2" />
-          <FieldLabel htmlFor="r2" className="font-normal">
+          <RadioGroupItem id="r2" value="comfortable" />
+          <FieldLabel className="font-normal" htmlFor="r2">
             Comfortable
           </FieldLabel>
         </Field>
         <Field orientation="horizontal">
-          <RadioGroupItem value="compact" id="r3" />
-          <FieldLabel htmlFor="r3" className="font-normal">
+          <RadioGroupItem id="r3" value="compact" />
+          <FieldLabel className="font-normal" htmlFor="r3">
             Compact
           </FieldLabel>
         </Field>
       </RadioGroup>
     </Example>
-  )
+  );
 }
 
 function RadioGroupWithDescriptions() {
@@ -67,7 +64,7 @@ function RadioGroupWithDescriptions() {
                 For individuals and small teams
               </FieldDescription>
             </FieldContent>
-            <RadioGroupItem value="plus" id="plus-plan" />
+            <RadioGroupItem id="plus-plan" value="plus" />
           </Field>
         </FieldLabel>
         <FieldLabel htmlFor="pro-plan">
@@ -76,7 +73,7 @@ function RadioGroupWithDescriptions() {
               <div className="font-medium">Pro</div>
               <FieldDescription>For growing businesses</FieldDescription>
             </FieldContent>
-            <RadioGroupItem value="pro" id="pro-plan" />
+            <RadioGroupItem id="pro-plan" value="pro" />
           </Field>
         </FieldLabel>
         <FieldLabel htmlFor="enterprise-plan">
@@ -87,12 +84,12 @@ function RadioGroupWithDescriptions() {
                 For large teams and enterprises
               </FieldDescription>
             </FieldContent>
-            <RadioGroupItem value="enterprise" id="enterprise-plan" />
+            <RadioGroupItem id="enterprise-plan" value="enterprise" />
           </Field>
         </FieldLabel>
       </RadioGroup>
     </Example>
-  )
+  );
 }
 
 function RadioGroupWithFieldSet() {
@@ -105,60 +102,60 @@ function RadioGroupWithFieldSet() {
         </FieldDescription>
         <RadioGroup defaultValue="medium">
           <Field orientation="horizontal">
-            <RadioGroupItem value="high" id="battery-high" />
-            <FieldLabel htmlFor="battery-high" className="font-normal">
+            <RadioGroupItem id="battery-high" value="high" />
+            <FieldLabel className="font-normal" htmlFor="battery-high">
               High
             </FieldLabel>
           </Field>
           <Field orientation="horizontal">
-            <RadioGroupItem value="medium" id="battery-medium" />
-            <FieldLabel htmlFor="battery-medium" className="font-normal">
+            <RadioGroupItem id="battery-medium" value="medium" />
+            <FieldLabel className="font-normal" htmlFor="battery-medium">
               Medium
             </FieldLabel>
           </Field>
           <Field orientation="horizontal">
-            <RadioGroupItem value="low" id="battery-low" />
-            <FieldLabel htmlFor="battery-low" className="font-normal">
+            <RadioGroupItem id="battery-low" value="low" />
+            <FieldLabel className="font-normal" htmlFor="battery-low">
               Low
             </FieldLabel>
           </Field>
         </RadioGroup>
       </FieldSet>
     </Example>
-  )
+  );
 }
 
 function RadioGroupGrid() {
   return (
     <Example title="Grid Layout">
-      <RadioGroup defaultValue="medium" className="grid grid-cols-2 gap-2">
+      <RadioGroup className="grid grid-cols-2 gap-2" defaultValue="medium">
         <FieldLabel htmlFor="size-small">
           <Field orientation="horizontal">
-            <RadioGroupItem value="small" id="size-small" />
+            <RadioGroupItem id="size-small" value="small" />
             <div className="font-medium">Small</div>
           </Field>
         </FieldLabel>
         <FieldLabel htmlFor="size-medium">
           <Field orientation="horizontal">
-            <RadioGroupItem value="medium" id="size-medium" />
+            <RadioGroupItem id="size-medium" value="medium" />
             <div className="font-medium">Medium</div>
           </Field>
         </FieldLabel>
         <FieldLabel htmlFor="size-large">
           <Field orientation="horizontal">
-            <RadioGroupItem value="large" id="size-large" />
+            <RadioGroupItem id="size-large" value="large" />
             <div className="font-medium">Large</div>
           </Field>
         </FieldLabel>
         <FieldLabel htmlFor="size-xlarge">
           <Field orientation="horizontal">
-            <RadioGroupItem value="xlarge" id="size-xlarge" />
+            <RadioGroupItem id="size-xlarge" value="xlarge" />
             <div className="font-medium">X-Large</div>
           </Field>
         </FieldLabel>
       </RadioGroup>
     </Example>
-  )
+  );
 }
 
 function RadioGroupDisabled() {
@@ -166,26 +163,26 @@ function RadioGroupDisabled() {
     <Example title="Disabled">
       <RadioGroup defaultValue="option2" disabled>
         <Field orientation="horizontal">
-          <RadioGroupItem value="option1" id="disabled-1" />
-          <FieldLabel htmlFor="disabled-1" className="font-normal">
+          <RadioGroupItem id="disabled-1" value="option1" />
+          <FieldLabel className="font-normal" htmlFor="disabled-1">
             Option 1
           </FieldLabel>
         </Field>
         <Field orientation="horizontal">
-          <RadioGroupItem value="option2" id="disabled-2" />
-          <FieldLabel htmlFor="disabled-2" className="font-normal">
+          <RadioGroupItem id="disabled-2" value="option2" />
+          <FieldLabel className="font-normal" htmlFor="disabled-2">
             Option 2
           </FieldLabel>
         </Field>
         <Field orientation="horizontal">
-          <RadioGroupItem value="option3" id="disabled-3" />
-          <FieldLabel htmlFor="disabled-3" className="font-normal">
+          <RadioGroupItem id="disabled-3" value="option3" />
+          <FieldLabel className="font-normal" htmlFor="disabled-3">
             Option 3
           </FieldLabel>
         </Field>
       </RadioGroup>
     </Example>
-  )
+  );
 }
 
 function RadioGroupInvalid() {
@@ -197,26 +194,26 @@ function RadioGroupInvalid() {
           Choose how you want to receive notifications.
         </FieldDescription>
         <RadioGroup defaultValue="email">
-          <Field orientation="horizontal" data-invalid>
-            <RadioGroupItem value="email" id="invalid-email" aria-invalid />
-            <FieldLabel htmlFor="invalid-email" className="font-normal">
+          <Field data-invalid orientation="horizontal">
+            <RadioGroupItem aria-invalid id="invalid-email" value="email" />
+            <FieldLabel className="font-normal" htmlFor="invalid-email">
               Email only
             </FieldLabel>
           </Field>
-          <Field orientation="horizontal" data-invalid>
-            <RadioGroupItem value="sms" id="invalid-sms" aria-invalid />
-            <FieldLabel htmlFor="invalid-sms" className="font-normal">
+          <Field data-invalid orientation="horizontal">
+            <RadioGroupItem aria-invalid id="invalid-sms" value="sms" />
+            <FieldLabel className="font-normal" htmlFor="invalid-sms">
               SMS only
             </FieldLabel>
           </Field>
-          <Field orientation="horizontal" data-invalid>
-            <RadioGroupItem value="both" id="invalid-both" aria-invalid />
-            <FieldLabel htmlFor="invalid-both" className="font-normal">
+          <Field data-invalid orientation="horizontal">
+            <RadioGroupItem aria-invalid id="invalid-both" value="both" />
+            <FieldLabel className="font-normal" htmlFor="invalid-both">
               Both Email & SMS
             </FieldLabel>
           </Field>
         </RadioGroup>
       </FieldSet>
     </Example>
-  )
+  );
 }

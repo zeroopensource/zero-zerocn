@@ -1,10 +1,7 @@
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import { Badge } from "@/registry/bases/radix/ui/badge"
-import { Spinner } from "@/registry/bases/radix/ui/spinner"
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
+import { Badge } from "@/registry/bases/radix/ui/badge";
+import { Spinner } from "@/registry/bases/radix/ui/spinner";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function BadgeExample() {
   return (
@@ -17,7 +14,7 @@ export default function BadgeExample() {
       <BadgeLongText />
       <BadgeCustomColors />
     </ExampleWrapper>
-  )
+  );
 }
 
 function BadgeVariants() {
@@ -32,138 +29,138 @@ function BadgeVariants() {
         <Badge variant="link">Link</Badge>
       </div>
     </Example>
-  )
+  );
 }
 
 function BadgeWithIconLeft() {
   return (
-    <Example title="Icon Left" className="max-w-fit">
+    <Example className="max-w-fit" title="Icon Left">
       <div className="flex flex-wrap gap-2">
         <Badge>
           <IconPlaceholder
+            data-icon="inline-start"
+            hugeicons="CheckmarkBadge02Icon"
             lucide="BadgeCheck"
             tabler="IconRosetteDiscountCheck"
-            hugeicons="CheckmarkBadge02Icon"
-            data-icon="inline-start"
           />
           Default
         </Badge>
         <Badge variant="secondary">
           <IconPlaceholder
+            data-icon="inline-start"
+            hugeicons="CheckmarkBadge02Icon"
             lucide="BadgeCheck"
             tabler="IconRosetteDiscountCheck"
-            hugeicons="CheckmarkBadge02Icon"
-            data-icon="inline-start"
           />
           Secondary
         </Badge>
         <Badge variant="destructive">
           <IconPlaceholder
+            data-icon="inline-start"
+            hugeicons="CheckmarkBadge02Icon"
             lucide="BadgeCheck"
             tabler="IconRosetteDiscountCheck"
-            hugeicons="CheckmarkBadge02Icon"
-            data-icon="inline-start"
           />
           Destructive
         </Badge>
         <Badge variant="outline">
           <IconPlaceholder
+            data-icon="inline-start"
+            hugeicons="CheckmarkBadge02Icon"
             lucide="BadgeCheck"
             tabler="IconRosetteDiscountCheck"
-            hugeicons="CheckmarkBadge02Icon"
-            data-icon="inline-start"
           />
           Outline
         </Badge>
         <Badge variant="ghost">
           <IconPlaceholder
+            data-icon="inline-start"
+            hugeicons="CheckmarkBadge02Icon"
             lucide="BadgeCheck"
             tabler="IconRosetteDiscountCheck"
-            hugeicons="CheckmarkBadge02Icon"
-            data-icon="inline-start"
           />
           Ghost
         </Badge>
         <Badge variant="link">
           <IconPlaceholder
+            data-icon="inline-start"
+            hugeicons="CheckmarkBadge02Icon"
             lucide="BadgeCheck"
             tabler="IconRosetteDiscountCheck"
-            hugeicons="CheckmarkBadge02Icon"
-            data-icon="inline-start"
           />
           Link
         </Badge>
       </div>
     </Example>
-  )
+  );
 }
 
 function BadgeWithIconRight() {
   return (
-    <Example title="Icon Right" className="max-w-fit">
+    <Example className="max-w-fit" title="Icon Right">
       <div className="flex flex-wrap gap-2">
         <Badge>
           Default
           <IconPlaceholder
+            data-icon="inline-end"
+            hugeicons="ArrowRight02Icon"
             lucide="ArrowRightIcon"
             tabler="IconArrowRight"
-            hugeicons="ArrowRight02Icon"
-            data-icon="inline-end"
           />
         </Badge>
         <Badge variant="secondary">
           Secondary
           <IconPlaceholder
+            data-icon="inline-end"
+            hugeicons="ArrowRight02Icon"
             lucide="ArrowRightIcon"
             tabler="IconArrowRight"
-            hugeicons="ArrowRight02Icon"
-            data-icon="inline-end"
           />
         </Badge>
         <Badge variant="destructive">
           Destructive
           <IconPlaceholder
+            data-icon="inline-end"
+            hugeicons="ArrowRight02Icon"
             lucide="ArrowRightIcon"
             tabler="IconArrowRight"
-            hugeicons="ArrowRight02Icon"
-            data-icon="inline-end"
           />
         </Badge>
         <Badge variant="outline">
           Outline
           <IconPlaceholder
+            data-icon="inline-end"
+            hugeicons="ArrowRight02Icon"
             lucide="ArrowRightIcon"
             tabler="IconArrowRight"
-            hugeicons="ArrowRight02Icon"
-            data-icon="inline-end"
           />
         </Badge>
         <Badge variant="ghost">
           Ghost
           <IconPlaceholder
+            data-icon="inline-end"
+            hugeicons="ArrowRight02Icon"
             lucide="ArrowRightIcon"
             tabler="IconArrowRight"
-            hugeicons="ArrowRight02Icon"
-            data-icon="inline-end"
           />
         </Badge>
         <Badge variant="link">
           Link
           <IconPlaceholder
+            data-icon="inline-end"
+            hugeicons="ArrowRight02Icon"
             lucide="ArrowRightIcon"
             tabler="IconArrowRight"
-            hugeicons="ArrowRight02Icon"
-            data-icon="inline-end"
           />
         </Badge>
       </div>
     </Example>
-  )
+  );
 }
 
 function BadgeWithSpinner() {
   return (
-    <Example title="With Spinner" className="max-w-fit">
+    <Example className="max-w-fit" title="With Spinner">
       <div className="flex flex-wrap gap-2">
         <Badge>
           <Spinner data-icon="inline-start" />
@@ -191,7 +188,7 @@ function BadgeWithSpinner() {
         </Badge>
       </div>
     </Example>
-  )
+  );
 }
 
 function BadgeAsLink() {
@@ -202,10 +199,10 @@ function BadgeAsLink() {
           <a href="#">
             Link{" "}
             <IconPlaceholder
+              data-icon="inline-end"
+              hugeicons="ArrowUpRightIcon"
               lucide="ArrowUpRightIcon"
               tabler="IconArrowUpRight"
-              hugeicons="ArrowUpRightIcon"
-              data-icon="inline-end"
             />
           </a>
         </Badge>
@@ -213,10 +210,10 @@ function BadgeAsLink() {
           <a href="#">
             Link{" "}
             <IconPlaceholder
+              data-icon="inline-end"
+              hugeicons="ArrowUpRightIcon"
               lucide="ArrowUpRightIcon"
               tabler="IconArrowUpRight"
-              hugeicons="ArrowUpRightIcon"
-              data-icon="inline-end"
             />
           </a>
         </Badge>
@@ -224,10 +221,10 @@ function BadgeAsLink() {
           <a href="#">
             Link{" "}
             <IconPlaceholder
+              data-icon="inline-end"
+              hugeicons="ArrowUpRightIcon"
               lucide="ArrowUpRightIcon"
               tabler="IconArrowUpRight"
-              hugeicons="ArrowUpRightIcon"
-              data-icon="inline-end"
             />
           </a>
         </Badge>
@@ -235,10 +232,10 @@ function BadgeAsLink() {
           <a href="#">
             Link{" "}
             <IconPlaceholder
+              data-icon="inline-end"
+              hugeicons="ArrowUpRightIcon"
               lucide="ArrowUpRightIcon"
               tabler="IconArrowUpRight"
-              hugeicons="ArrowUpRightIcon"
-              data-icon="inline-end"
             />
           </a>
         </Badge>
@@ -246,10 +243,10 @@ function BadgeAsLink() {
           <a href="#">
             Link{" "}
             <IconPlaceholder
+              data-icon="inline-end"
+              hugeicons="ArrowRight02Icon"
               lucide="ArrowUpRightIcon"
               tabler="IconArrowRight"
-              hugeicons="ArrowRight02Icon"
-              data-icon="inline-end"
             />
           </a>
         </Badge>
@@ -257,16 +254,16 @@ function BadgeAsLink() {
           <a href="#">
             Link{" "}
             <IconPlaceholder
+              data-icon="inline-end"
+              hugeicons="ArrowRight02Icon"
               lucide="ArrowUpRightIcon"
               tabler="IconArrowUpRight"
-              hugeicons="ArrowRight02Icon"
-              data-icon="inline-end"
             />
           </a>
         </Badge>
       </div>
     </Example>
-  )
+  );
 }
 
 function BadgeLongText() {
@@ -278,12 +275,12 @@ function BadgeLongText() {
         </Badge>
       </div>
     </Example>
-  )
+  );
 }
 
 function BadgeCustomColors() {
   return (
-    <Example title="Custom Colors" className="max-w-fit">
+    <Example className="max-w-fit" title="Custom Colors">
       <div className="flex flex-wrap gap-2">
         <Badge className="bg-blue-600 text-blue-50 dark:bg-blue-600 dark:text-blue-50">
           Blue
@@ -314,5 +311,5 @@ function BadgeCustomColors() {
         </Badge>
       </div>
     </Example>
-  )
+  );
 }

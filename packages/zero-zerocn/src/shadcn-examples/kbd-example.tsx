@@ -1,20 +1,17 @@
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import { Button } from "@/registry/bases/radix/ui/button"
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/bases/radix/ui/input-group"
-import { Kbd, KbdGroup } from "@/registry/bases/radix/ui/kbd"
+} from "@/registry/bases/radix/ui/input-group";
+import { Kbd, KbdGroup } from "@/registry/bases/radix/ui/kbd";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/bases/radix/ui/tooltip"
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
+} from "@/registry/bases/radix/ui/tooltip";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function KbdExample() {
   return (
@@ -29,7 +26,7 @@ export default function KbdExample() {
       <KbdInTooltip />
       <KbdWithSamp />
     </ExampleWrapper>
-  )
+  );
 }
 
 function KbdBasic() {
@@ -41,7 +38,7 @@ function KbdBasic() {
         <Kbd>Ctrl + B</Kbd>
       </div>
     </Example>
-  )
+  );
 }
 
 function KbdModifierKeys() {
@@ -52,7 +49,7 @@ function KbdModifierKeys() {
         <Kbd>C</Kbd>
       </div>
     </Example>
-  )
+  );
 }
 
 function KbdGroupExample() {
@@ -64,7 +61,7 @@ function KbdGroupExample() {
         <Kbd>P</Kbd>
       </KbdGroup>
     </Example>
-  )
+  );
 }
 
 function KbdArrowKeys() {
@@ -77,7 +74,7 @@ function KbdArrowKeys() {
         <Kbd>→</Kbd>
       </div>
     </Example>
-  )
+  );
 }
 
 function KbdWithIcons() {
@@ -86,28 +83,28 @@ function KbdWithIcons() {
       <KbdGroup>
         <Kbd>
           <IconPlaceholder
+            hugeicons="DashedLineCircleIcon"
             lucide="CircleDashedIcon"
             tabler="IconCircleDashed"
-            hugeicons="DashedLineCircleIcon"
           />
         </Kbd>
         <Kbd>
           <IconPlaceholder
+            hugeicons="ArrowLeft01Icon"
             lucide="ArrowLeftIcon"
             tabler="IconArrowLeft"
-            hugeicons="ArrowLeft01Icon"
           />
         </Kbd>
         <Kbd>
           <IconPlaceholder
+            hugeicons="ArrowRight01Icon"
             lucide="ArrowRightIcon"
             tabler="IconArrowRight"
-            hugeicons="ArrowRight01Icon"
           />
         </Kbd>
       </KbdGroup>
     </Example>
-  )
+  );
 }
 
 function KbdWithIconsAndText() {
@@ -116,23 +113,23 @@ function KbdWithIconsAndText() {
       <KbdGroup>
         <Kbd>
           <IconPlaceholder
+            hugeicons="ArrowLeft01Icon"
             lucide="ArrowLeftIcon"
             tabler="IconArrowLeft"
-            hugeicons="ArrowLeft01Icon"
           />
           Left
         </Kbd>
         <Kbd>
           <IconPlaceholder
+            hugeicons="DashedLineCircleIcon"
             lucide="CircleDashedIcon"
             tabler="IconCircleDashed"
-            hugeicons="DashedLineCircleIcon"
           />
           Voice Enabled
         </Kbd>
       </KbdGroup>
     </Example>
-  )
+  );
 }
 
 function KbdInInputGroup() {
@@ -145,7 +142,7 @@ function KbdInInputGroup() {
         </InputGroupAddon>
       </InputGroup>
     </Example>
-  )
+  );
 }
 
 function KbdInTooltip() {
@@ -155,9 +152,9 @@ function KbdInTooltip() {
         <TooltipTrigger asChild>
           <Button size="icon-sm" variant="outline">
             <IconPlaceholder
+              hugeicons="FloppyDiskIcon"
               lucide="SaveIcon"
               tabler="IconDeviceFloppy"
-              hugeicons="FloppyDiskIcon"
             />
           </Button>
         </TooltipTrigger>
@@ -168,7 +165,7 @@ function KbdInTooltip() {
         </TooltipContent>
       </Tooltip>
     </Example>
-  )
+  );
 }
 
 function KbdWithSamp() {
@@ -178,5 +175,5 @@ function KbdWithSamp() {
         <samp>File</samp>
       </Kbd>
     </Example>
-  )
+  );
 }

@@ -1,12 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
-
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import { Button } from "@/registry/bases/radix/ui/button"
+import * as React from "react";
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   ContextMenu,
   ContextMenuCheckboxItem,
@@ -22,7 +18,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/bases/radix/ui/context-menu"
+} from "@/registry/bases/radix/ui/context-menu";
 import {
   Dialog,
   DialogContent,
@@ -30,8 +26,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/bases/radix/ui/dialog"
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
+} from "@/registry/bases/radix/ui/dialog";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function ContextMenuExample() {
   return (
@@ -47,7 +43,7 @@ export default function ContextMenuExample() {
       <ContextMenuWithDestructive />
       <ContextMenuInDialog />
     </ExampleWrapper>
-  )
+  );
 }
 
 function ContextMenuBasic() {
@@ -66,7 +62,7 @@ function ContextMenuBasic() {
         </ContextMenuContent>
       </ContextMenu>
     </Example>
-  )
+  );
 }
 
 function ContextMenuWithIcons() {
@@ -80,25 +76,25 @@ function ContextMenuWithIcons() {
           <ContextMenuGroup>
             <ContextMenuItem>
               <IconPlaceholder
+                hugeicons="CopyIcon"
                 lucide="CopyIcon"
                 tabler="IconCopy"
-                hugeicons="CopyIcon"
               />
               Copy
             </ContextMenuItem>
             <ContextMenuItem>
               <IconPlaceholder
+                hugeicons="ScissorIcon"
                 lucide="ScissorsIcon"
                 tabler="IconCut"
-                hugeicons="ScissorIcon"
               />
               Cut
             </ContextMenuItem>
             <ContextMenuItem>
               <IconPlaceholder
+                hugeicons="ClipboardIcon"
                 lucide="ClipboardPasteIcon"
                 tabler="IconClipboard"
-                hugeicons="ClipboardIcon"
               />
               Paste
             </ContextMenuItem>
@@ -107,9 +103,9 @@ function ContextMenuWithIcons() {
           <ContextMenuGroup>
             <ContextMenuItem variant="destructive">
               <IconPlaceholder
+                hugeicons="DeleteIcon"
                 lucide="TrashIcon"
                 tabler="IconTrash"
-                hugeicons="DeleteIcon"
               />
               Delete
             </ContextMenuItem>
@@ -117,7 +113,7 @@ function ContextMenuWithIcons() {
         </ContextMenuContent>
       </ContextMenu>
     </Example>
-  )
+  );
 }
 
 function ContextMenuWithShortcuts() {
@@ -156,7 +152,7 @@ function ContextMenuWithShortcuts() {
         </ContextMenuContent>
       </ContextMenu>
     </Example>
-  )
+  );
 }
 
 function ContextMenuWithSubmenu() {
@@ -198,7 +194,7 @@ function ContextMenuWithSubmenu() {
         </ContextMenuContent>
       </ContextMenu>
     </Example>
-  )
+  );
 }
 
 function ContextMenuWithGroups() {
@@ -259,13 +255,13 @@ function ContextMenuWithGroups() {
         </ContextMenuContent>
       </ContextMenu>
     </Example>
-  )
+  );
 }
 
 function ContextMenuWithCheckboxes() {
-  const [showBookmarksBar, setShowBookmarksBar] = React.useState(true)
-  const [showFullUrls, setShowFullUrls] = React.useState(false)
-  const [showDeveloperTools, setShowDeveloperTools] = React.useState(false)
+  const [showBookmarksBar, setShowBookmarksBar] = React.useState(true);
+  const [showFullUrls, setShowFullUrls] = React.useState(false);
+  const [showDeveloperTools, setShowDeveloperTools] = React.useState(false);
 
   return (
     <Example title="With Checkboxes">
@@ -297,12 +293,12 @@ function ContextMenuWithCheckboxes() {
         </ContextMenuContent>
       </ContextMenu>
     </Example>
-  )
+  );
 }
 
 function ContextMenuWithRadio() {
-  const [user, setUser] = React.useState("pedro")
-  const [theme, setTheme] = React.useState("light")
+  const [user, setUser] = React.useState("pedro");
+  const [theme, setTheme] = React.useState("light");
 
   return (
     <Example title="With Radio Group">
@@ -313,7 +309,7 @@ function ContextMenuWithRadio() {
         <ContextMenuContent>
           <ContextMenuGroup>
             <ContextMenuLabel>People</ContextMenuLabel>
-            <ContextMenuRadioGroup value={user} onValueChange={setUser}>
+            <ContextMenuRadioGroup onValueChange={setUser} value={user}>
               <ContextMenuRadioItem value="pedro">
                 Pedro Duarte
               </ContextMenuRadioItem>
@@ -325,7 +321,7 @@ function ContextMenuWithRadio() {
           <ContextMenuSeparator />
           <ContextMenuGroup>
             <ContextMenuLabel>Theme</ContextMenuLabel>
-            <ContextMenuRadioGroup value={theme} onValueChange={setTheme}>
+            <ContextMenuRadioGroup onValueChange={setTheme} value={theme}>
               <ContextMenuRadioItem value="light">Light</ContextMenuRadioItem>
               <ContextMenuRadioItem value="dark">Dark</ContextMenuRadioItem>
               <ContextMenuRadioItem value="system">System</ContextMenuRadioItem>
@@ -334,7 +330,7 @@ function ContextMenuWithRadio() {
         </ContextMenuContent>
       </ContextMenu>
     </Example>
-  )
+  );
 }
 
 function ContextMenuWithDestructive() {
@@ -348,17 +344,17 @@ function ContextMenuWithDestructive() {
           <ContextMenuGroup>
             <ContextMenuItem>
               <IconPlaceholder
+                hugeicons="EditIcon"
                 lucide="PencilIcon"
                 tabler="IconPencil"
-                hugeicons="EditIcon"
               />
               Edit
             </ContextMenuItem>
             <ContextMenuItem>
               <IconPlaceholder
+                hugeicons="ShareIcon"
                 lucide="ShareIcon"
                 tabler="IconShare"
-                hugeicons="ShareIcon"
               />
               Share
             </ContextMenuItem>
@@ -367,17 +363,17 @@ function ContextMenuWithDestructive() {
           <ContextMenuGroup>
             <ContextMenuItem>
               <IconPlaceholder
+                hugeicons="Archive02Icon"
                 lucide="ArchiveIcon"
                 tabler="IconArchive"
-                hugeicons="Archive02Icon"
               />
               Archive
             </ContextMenuItem>
             <ContextMenuItem variant="destructive">
               <IconPlaceholder
+                hugeicons="DeleteIcon"
                 lucide="TrashIcon"
                 tabler="IconTrash"
-                hugeicons="DeleteIcon"
               />
               Delete
             </ContextMenuItem>
@@ -385,7 +381,7 @@ function ContextMenuWithDestructive() {
         </ContextMenuContent>
       </ContextMenu>
     </Example>
-  )
+  );
 }
 
 function ContextMenuWithSides() {
@@ -442,7 +438,7 @@ function ContextMenuWithSides() {
         </ContextMenu>
       </div>
     </Example>
-  )
+  );
 }
 
 function ContextMenuInDialog() {
@@ -467,25 +463,25 @@ function ContextMenuInDialog() {
               <ContextMenuGroup>
                 <ContextMenuItem>
                   <IconPlaceholder
+                    hugeicons="CopyIcon"
                     lucide="CopyIcon"
                     tabler="IconCopy"
-                    hugeicons="CopyIcon"
                   />
                   Copy
                 </ContextMenuItem>
                 <ContextMenuItem>
                   <IconPlaceholder
+                    hugeicons="ScissorIcon"
                     lucide="ScissorsIcon"
                     tabler="IconCut"
-                    hugeicons="ScissorIcon"
                   />
                   Cut
                 </ContextMenuItem>
                 <ContextMenuItem>
                   <IconPlaceholder
+                    hugeicons="ClipboardIcon"
                     lucide="ClipboardPasteIcon"
                     tabler="IconClipboard"
-                    hugeicons="ClipboardIcon"
                   />
                   Paste
                 </ContextMenuItem>
@@ -509,9 +505,9 @@ function ContextMenuInDialog() {
               <ContextMenuGroup>
                 <ContextMenuItem variant="destructive">
                   <IconPlaceholder
+                    hugeicons="DeleteIcon"
                     lucide="TrashIcon"
                     tabler="IconTrash"
-                    hugeicons="DeleteIcon"
                   />
                   Delete
                 </ContextMenuItem>
@@ -521,5 +517,5 @@ function ContextMenuInDialog() {
         </DialogContent>
       </Dialog>
     </Example>
-  )
+  );
 }

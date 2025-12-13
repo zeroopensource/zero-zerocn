@@ -1,9 +1,6 @@
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import { Card, CardContent, CardHeader } from "@/registry/bases/radix/ui/card"
-import { Skeleton } from "@/registry/bases/radix/ui/skeleton"
+import { Card, CardContent, CardHeader } from "@/registry/bases/radix/ui/card";
+import { Skeleton } from "@/registry/bases/radix/ui/skeleton";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function SkeletonExample() {
   return (
@@ -14,7 +11,7 @@ export default function SkeletonExample() {
       <SkeletonForm />
       <SkeletonTable />
     </ExampleWrapper>
-  )
+  );
 }
 
 function SkeletonAvatar() {
@@ -28,7 +25,7 @@ function SkeletonAvatar() {
         </div>
       </div>
     </Example>
-  )
+  );
 }
 
 function SkeletonCard() {
@@ -44,7 +41,7 @@ function SkeletonCard() {
         </CardContent>
       </Card>
     </Example>
-  )
+  );
 }
 
 function SkeletonText() {
@@ -56,7 +53,7 @@ function SkeletonText() {
         <Skeleton className="h-4 w-3/4" />
       </div>
     </Example>
-  )
+  );
 }
 
 function SkeletonForm() {
@@ -74,7 +71,7 @@ function SkeletonForm() {
         <Skeleton className="h-9 w-24" />
       </div>
     </Example>
-  )
+  );
 }
 
 function SkeletonTable() {
@@ -98,5 +95,5 @@ function SkeletonTable() {
         </div>
       </div>
     </Example>
-  )
+  );
 }

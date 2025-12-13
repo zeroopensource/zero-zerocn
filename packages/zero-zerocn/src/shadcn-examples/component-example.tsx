@@ -1,11 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
+import * as React from "react";
+import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -17,9 +13,9 @@ import {
   AlertDialogMedia,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/bases/radix/ui/alert-dialog"
-import { Badge } from "@/registry/bases/radix/ui/badge"
-import { Button } from "@/registry/bases/radix/ui/button"
+} from "@/registry/bases/radix/ui/alert-dialog";
+import { Badge } from "@/registry/bases/radix/ui/badge";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   Card,
   CardAction,
@@ -28,7 +24,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/bases/radix/ui/card"
+} from "@/registry/bases/radix/ui/card";
 import {
   Combobox,
   ComboboxContent,
@@ -36,7 +32,7 @@ import {
   ComboboxInput,
   ComboboxItem,
   ComboboxList,
-} from "@/registry/bases/radix/ui/combobox"
+} from "@/registry/bases/radix/ui/combobox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -53,9 +49,9 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/registry/bases/radix/ui/dropdown-menu"
-import { Field, FieldGroup, FieldLabel } from "@/registry/bases/radix/ui/field"
-import { Input } from "@/registry/bases/radix/ui/input"
+} from "@/registry/bases/radix/ui/dropdown-menu";
+import { Field, FieldGroup, FieldLabel } from "@/registry/bases/radix/ui/field";
+import { Input } from "@/registry/bases/radix/ui/input";
 import {
   Select,
   SelectContent,
@@ -63,9 +59,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/bases/radix/ui/select"
-import { Textarea } from "@/registry/bases/radix/ui/textarea"
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
+} from "@/registry/bases/radix/ui/select";
+import { Textarea } from "@/registry/bases/radix/ui/textarea";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export function ComponentExample() {
   return (
@@ -73,19 +69,19 @@ export function ComponentExample() {
       <CardExample />
       <FormExample />
     </ExampleWrapper>
-  )
+  );
 }
 
 function CardExample() {
   return (
-    <Example title="Card" className="items-center justify-center">
+    <Example className="items-center justify-center" title="Card">
       <Card className="relative w-full max-w-sm overflow-hidden pt-0">
-        <div className="bg-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color" />
+        <div className="absolute inset-0 z-30 aspect-video bg-primary opacity-50 mix-blend-color" />
         <img
-          src="https://images.unsplash.com/photo-1604076850742-4c7221f3101b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Photo by mymind on Unsplash"
-          title="Photo by mymind on Unsplash"
           className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale"
+          src="https://images.unsplash.com/photo-1604076850742-4c7221f3101b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          title="Photo by mymind on Unsplash"
         />
         <CardHeader>
           <CardTitle>Observability Plus is replacing Monitoring</CardTitle>
@@ -100,10 +96,10 @@ function CardExample() {
             <AlertDialogTrigger asChild>
               <Button>
                 <IconPlaceholder
+                  data-icon="inline-start"
+                  hugeicons="PlusSignIcon"
                   lucide="PlusIcon"
                   tabler="IconPlus"
-                  hugeicons="PlusSignIcon"
-                  data-icon="inline-start"
                 />
                 Show Dialog
               </Button>
@@ -112,9 +108,9 @@ function CardExample() {
               <AlertDialogHeader>
                 <AlertDialogMedia>
                   <IconPlaceholder
+                    hugeicons="BluetoothIcon"
                     lucide="BluetoothIcon"
                     tabler="IconBluetooth"
-                    hugeicons="BluetoothIcon"
                   />
                 </AlertDialogMedia>
                 <AlertDialogTitle>Allow accessory to connect?</AlertDialogTitle>
@@ -129,13 +125,13 @@ function CardExample() {
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
-          <Badge variant="secondary" className="ml-auto">
+          <Badge className="ml-auto" variant="secondary">
             Warning
           </Badge>
         </CardFooter>
       </Card>
     </Example>
-  )
+  );
 }
 
 const frameworks = [
@@ -144,15 +140,15 @@ const frameworks = [
   "Nuxt.js",
   "Remix",
   "Astro",
-] as const
+] as const;
 
 function FormExample() {
   const [notifications, setNotifications] = React.useState({
     email: true,
     sms: false,
     push: true,
-  })
-  const [theme, setTheme] = React.useState("light")
+  });
+  const [theme, setTheme] = React.useState("light");
 
   return (
     <Example title="Form">
@@ -163,11 +159,11 @@ function FormExample() {
           <CardAction>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button size="icon" variant="ghost">
                   <IconPlaceholder
+                    hugeicons="MoreVerticalCircle01Icon"
                     lucide="MoreVerticalIcon"
                     tabler="IconDotsVertical"
-                    hugeicons="MoreVerticalCircle01Icon"
                   />
                   <span className="sr-only">More options</span>
                 </Button>
@@ -177,18 +173,18 @@ function FormExample() {
                   <DropdownMenuLabel>File</DropdownMenuLabel>
                   <DropdownMenuItem>
                     <IconPlaceholder
+                      hugeicons="FileIcon"
                       lucide="FileIcon"
                       tabler="IconFile"
-                      hugeicons="FileIcon"
                     />
                     New File
                     <DropdownMenuShortcut>⌘N</DropdownMenuShortcut>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <IconPlaceholder
+                      hugeicons="FolderIcon"
                       lucide="FolderIcon"
                       tabler="IconFolder"
-                      hugeicons="FolderIcon"
                     />
                     New Folder
                     <DropdownMenuShortcut>⇧⌘N</DropdownMenuShortcut>
@@ -196,9 +192,9 @@ function FormExample() {
                   <DropdownMenuSub>
                     <DropdownMenuSubTrigger>
                       <IconPlaceholder
+                        hugeicons="FolderOpenIcon"
                         lucide="FolderOpenIcon"
                         tabler="IconFolderOpen"
-                        hugeicons="FolderOpenIcon"
                       />
                       Open Recent
                     </DropdownMenuSubTrigger>
@@ -208,26 +204,26 @@ function FormExample() {
                           <DropdownMenuLabel>Recent Projects</DropdownMenuLabel>
                           <DropdownMenuItem>
                             <IconPlaceholder
+                              hugeicons="CodeIcon"
                               lucide="FileCodeIcon"
                               tabler="IconFileCode"
-                              hugeicons="CodeIcon"
                             />
                             Project Alpha
                           </DropdownMenuItem>
                           <DropdownMenuItem>
                             <IconPlaceholder
+                              hugeicons="CodeIcon"
                               lucide="FileCodeIcon"
                               tabler="IconFileCode"
-                              hugeicons="CodeIcon"
                             />
                             Project Beta
                           </DropdownMenuItem>
                           <DropdownMenuSub>
                             <DropdownMenuSubTrigger>
                               <IconPlaceholder
+                                hugeicons="MoreHorizontalCircle01Icon"
                                 lucide="MoreHorizontalIcon"
                                 tabler="IconDots"
-                                hugeicons="MoreHorizontalCircle01Icon"
                               />
                               More Projects
                             </DropdownMenuSubTrigger>
@@ -235,17 +231,17 @@ function FormExample() {
                               <DropdownMenuSubContent>
                                 <DropdownMenuItem>
                                   <IconPlaceholder
+                                    hugeicons="CodeIcon"
                                     lucide="FileCodeIcon"
                                     tabler="IconFileCode"
-                                    hugeicons="CodeIcon"
                                   />
                                   Project Gamma
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
                                   <IconPlaceholder
+                                    hugeicons="CodeIcon"
                                     lucide="FileCodeIcon"
                                     tabler="IconFileCode"
-                                    hugeicons="CodeIcon"
                                   />
                                   Project Delta
                                 </DropdownMenuItem>
@@ -257,9 +253,9 @@ function FormExample() {
                         <DropdownMenuGroup>
                           <DropdownMenuItem>
                             <IconPlaceholder
+                              hugeicons="SearchIcon"
                               lucide="FolderSearchIcon"
                               tabler="IconFolderSearch"
-                              hugeicons="SearchIcon"
                             />
                             Browse...
                           </DropdownMenuItem>
@@ -270,18 +266,18 @@ function FormExample() {
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>
                     <IconPlaceholder
+                      hugeicons="FloppyDiskIcon"
                       lucide="SaveIcon"
                       tabler="IconDeviceFloppy"
-                      hugeicons="FloppyDiskIcon"
                     />
                     Save
                     <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <IconPlaceholder
+                      hugeicons="DownloadIcon"
                       lucide="DownloadIcon"
                       tabler="IconDownload"
-                      hugeicons="DownloadIcon"
                     />
                     Export
                     <DropdownMenuShortcut>⇧⌘E</DropdownMenuShortcut>
@@ -300,9 +296,9 @@ function FormExample() {
                     }
                   >
                     <IconPlaceholder
+                      hugeicons="EyeIcon"
                       lucide="EyeIcon"
                       tabler="IconEye"
-                      hugeicons="EyeIcon"
                     />
                     Show Sidebar
                   </DropdownMenuCheckboxItem>
@@ -316,18 +312,18 @@ function FormExample() {
                     }
                   >
                     <IconPlaceholder
+                      hugeicons="LayoutIcon"
                       lucide="LayoutIcon"
                       tabler="IconLayout"
-                      hugeicons="LayoutIcon"
                     />
                     Show Status Bar
                   </DropdownMenuCheckboxItem>
                   <DropdownMenuSub>
                     <DropdownMenuSubTrigger>
                       <IconPlaceholder
+                        hugeicons="PaintBoardIcon"
                         lucide="PaletteIcon"
                         tabler="IconPalette"
-                        hugeicons="PaintBoardIcon"
                       />
                       Theme
                     </DropdownMenuSubTrigger>
@@ -336,30 +332,30 @@ function FormExample() {
                         <DropdownMenuGroup>
                           <DropdownMenuLabel>Appearance</DropdownMenuLabel>
                           <DropdownMenuRadioGroup
-                            value={theme}
                             onValueChange={setTheme}
+                            value={theme}
                           >
                             <DropdownMenuRadioItem value="light">
                               <IconPlaceholder
+                                hugeicons="SunIcon"
                                 lucide="SunIcon"
                                 tabler="IconSun"
-                                hugeicons="SunIcon"
                               />
                               Light
                             </DropdownMenuRadioItem>
                             <DropdownMenuRadioItem value="dark">
                               <IconPlaceholder
+                                hugeicons="MoonIcon"
                                 lucide="MoonIcon"
                                 tabler="IconMoon"
-                                hugeicons="MoonIcon"
                               />
                               Dark
                             </DropdownMenuRadioItem>
                             <DropdownMenuRadioItem value="system">
                               <IconPlaceholder
+                                hugeicons="ComputerIcon"
                                 lucide="MonitorIcon"
                                 tabler="IconDeviceDesktop"
-                                hugeicons="ComputerIcon"
                               />
                               System
                             </DropdownMenuRadioItem>
@@ -374,27 +370,27 @@ function FormExample() {
                   <DropdownMenuLabel>Account</DropdownMenuLabel>
                   <DropdownMenuItem>
                     <IconPlaceholder
+                      hugeicons="UserIcon"
                       lucide="UserIcon"
                       tabler="IconUser"
-                      hugeicons="UserIcon"
                     />
                     Profile
                     <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <IconPlaceholder
+                      hugeicons="CreditCardIcon"
                       lucide="CreditCardIcon"
                       tabler="IconCreditCard"
-                      hugeicons="CreditCardIcon"
                     />
                     Billing
                   </DropdownMenuItem>
                   <DropdownMenuSub>
                     <DropdownMenuSubTrigger>
                       <IconPlaceholder
+                        hugeicons="SettingsIcon"
                         lucide="SettingsIcon"
                         tabler="IconSettings"
-                        hugeicons="SettingsIcon"
                       />
                       Settings
                     </DropdownMenuSubTrigger>
@@ -404,26 +400,26 @@ function FormExample() {
                           <DropdownMenuLabel>Preferences</DropdownMenuLabel>
                           <DropdownMenuItem>
                             <IconPlaceholder
+                              hugeicons="KeyboardIcon"
                               lucide="KeyboardIcon"
                               tabler="IconKeyboard"
-                              hugeicons="KeyboardIcon"
                             />
                             Keyboard Shortcuts
                           </DropdownMenuItem>
                           <DropdownMenuItem>
                             <IconPlaceholder
+                              hugeicons="LanguageCircleIcon"
                               lucide="LanguagesIcon"
                               tabler="IconLanguage"
-                              hugeicons="LanguageCircleIcon"
                             />
                             Language
                           </DropdownMenuItem>
                           <DropdownMenuSub>
                             <DropdownMenuSubTrigger>
                               <IconPlaceholder
+                                hugeicons="NotificationIcon"
                                 lucide="BellIcon"
                                 tabler="IconBell"
-                                hugeicons="NotificationIcon"
                               />
                               Notifications
                             </DropdownMenuSubTrigger>
@@ -443,9 +439,9 @@ function FormExample() {
                                     }
                                   >
                                     <IconPlaceholder
+                                      hugeicons="NotificationIcon"
                                       lucide="BellIcon"
                                       tabler="IconBell"
-                                      hugeicons="NotificationIcon"
                                     />
                                     Push Notifications
                                   </DropdownMenuCheckboxItem>
@@ -459,9 +455,9 @@ function FormExample() {
                                     }
                                   >
                                     <IconPlaceholder
+                                      hugeicons="MailIcon"
                                       lucide="MailIcon"
                                       tabler="IconMail"
-                                      hugeicons="MailIcon"
                                     />
                                     Email Notifications
                                   </DropdownMenuCheckboxItem>
@@ -474,9 +470,9 @@ function FormExample() {
                         <DropdownMenuGroup>
                           <DropdownMenuItem>
                             <IconPlaceholder
+                              hugeicons="ShieldIcon"
                               lucide="ShieldIcon"
                               tabler="IconShield"
-                              hugeicons="ShieldIcon"
                             />
                             Privacy & Security
                           </DropdownMenuItem>
@@ -489,17 +485,17 @@ function FormExample() {
                 <DropdownMenuGroup>
                   <DropdownMenuItem>
                     <IconPlaceholder
+                      hugeicons="HelpCircleIcon"
                       lucide="HelpCircleIcon"
                       tabler="IconHelpCircle"
-                      hugeicons="HelpCircleIcon"
                     />
                     Help & Support
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <IconPlaceholder
+                      hugeicons="File01Icon"
                       lucide="FileTextIcon"
                       tabler="IconFileText"
-                      hugeicons="File01Icon"
                     />
                     Documentation
                   </DropdownMenuItem>
@@ -508,9 +504,9 @@ function FormExample() {
                 <DropdownMenuGroup>
                   <DropdownMenuItem variant="destructive">
                     <IconPlaceholder
+                      hugeicons="LogoutIcon"
                       lucide="LogOutIcon"
                       tabler="IconLogout"
-                      hugeicons="LogoutIcon"
                     />
                     Sign Out
                     <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
@@ -580,7 +576,7 @@ function FormExample() {
               </Field>
               <Field orientation="horizontal">
                 <Button type="submit">Submit</Button>
-                <Button variant="outline" type="button">
+                <Button type="button" variant="outline">
                   Cancel
                 </Button>
               </Field>
@@ -589,5 +585,5 @@ function FormExample() {
         </CardContent>
       </Card>
     </Example>
-  )
+  );
 }

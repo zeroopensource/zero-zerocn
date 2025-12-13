@@ -1,12 +1,8 @@
-"use client"
+"use client";
 
-import { toast } from "sonner"
-
-import {
-  Example,
-  ExampleWrapper,
-} from "@/registry/bases/radix/components/example"
-import { Button } from "@/registry/bases/radix/ui/button"
+import { toast } from "sonner";
+import { Button } from "@/registry/bases/radix/ui/button";
+import { Example, ExampleWrapper } from "@/shadcn-examples/components/example";
 
 export default function SonnerExample() {
   return (
@@ -14,37 +10,37 @@ export default function SonnerExample() {
       <SonnerBasic />
       <SonnerWithDescription />
     </ExampleWrapper>
-  )
+  );
 }
 
 function SonnerBasic() {
   return (
-    <Example title="Basic" className="items-center justify-center">
+    <Example className="items-center justify-center" title="Basic">
       <Button
+        className="w-fit"
         onClick={() => toast("Event has been created")}
         variant="outline"
-        className="w-fit"
       >
         Show Toast
       </Button>
     </Example>
-  )
+  );
 }
 
 function SonnerWithDescription() {
   return (
-    <Example title="With Description" className="items-center justify-center">
+    <Example className="items-center justify-center" title="With Description">
       <Button
+        className="w-fit"
         onClick={() =>
           toast("Event has been created", {
             description: "Monday, January 3rd at 6:00pm",
           })
         }
         variant="outline"
-        className="w-fit"
       >
         Show Toast
       </Button>
     </Example>
-  )
+  );
 }
