@@ -6,11 +6,11 @@ import type { IconLibraryName } from "shadcn/icons";
 
 // import { useDesignSystemParam } from "@/app/(create)/hooks/use-design-system"
 
-const IconLucide = lazy(() =>
-  import("@/components/ui/icon-lucide").then((mod) => ({
-    default: mod.IconLucide,
-  }))
-);
+// const IconLucide = lazy(() =>
+//   import("@/components/ui/icon-lucide").then((mod) => ({
+//     default: mod.IconLucide,
+//   }))
+// );
 
 // const IconLucide = lazy(() =>
 //   import("@/registry/icons/icon-lucide").then((mod) => ({
@@ -45,7 +45,7 @@ export function IconPlaceholder({
 
   return (
     <Suspense fallback={<SquareIcon {...props} />}>
-      <IconLucide name={iconName} {...props} />
+      {/* <IconLucide name={iconName} {...props} /> */}
       {/* 
       {iconLibrary === "lucide" && <IconLucide name={iconName} {...props} />}
       {iconLibrary === "tabler" && <IconTabler name={iconName} {...props} />}
