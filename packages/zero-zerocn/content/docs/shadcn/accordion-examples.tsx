@@ -27,7 +27,7 @@ const items = [
   },
 ];
 
-export const Accordion1 = () => {
+export const AccordionExample1 = () => {
   return (
     <div className="not-prose flex">
       <Accordion
