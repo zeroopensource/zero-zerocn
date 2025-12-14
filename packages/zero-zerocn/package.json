@@ -11,7 +11,8 @@
     "serve": "pnpm build && serve out",
     "fix:next-out": "tsx scripts/fix-next-out.ts",
     "shadcn": "shadcn",
-    "registry:build": "shadcn build"
+    "registry:build": "shadcn build",
+    "next": "next"
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",
@@ -23,9 +24,9 @@
     "cmdk": "^1.1.1",
     "date-fns": "^4.1.0",
     "embla-carousel-react": "^8.6.0",
-    "fumadocs-core": "16.2.3",
+    "fumadocs-core": "16.2.5",
     "fumadocs-mdx": "14.1.0",
-    "fumadocs-ui": "16.2.3",
+    "fumadocs-ui": "16.2.5",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.561.0",
     "next": "16.0.10",
