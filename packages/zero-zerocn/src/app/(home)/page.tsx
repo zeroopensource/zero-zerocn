@@ -1,4 +1,3 @@
-import { Accordion1 } from "content/docs/shadcn/accordion-examples";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -12,7 +11,7 @@ export default function HomePage() {
         </Link>{" "}
         and see the documentation.
       </p>
-      <Accordion1 />
+    
     </div>
   );
 }
