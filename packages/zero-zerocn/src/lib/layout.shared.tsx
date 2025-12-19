@@ -6,6 +6,7 @@ export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
       title: PACKAGEJSON.shortName,
+      url: "/docs",
     },
     links: [
       // {
