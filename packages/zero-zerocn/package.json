@@ -1,7 +1,9 @@
 {
-  "name": "zero-zerocn",
+  "name": "@zeroopensource/zero-zerocn",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://zerocn.zeroopensource.org/",
+  "repository": "https://github.com/zeroopensource/zero-zerocn",
   "scripts": {
     "build": "next build && pnpm fix:next-out && pnpm build:registry",
     "dev": "next dev",
@@ -11,6 +13,7 @@
     "serve": "pnpm build && serve out",
     "fix:next-out": "tsx scripts/fix-next-out.ts",
     "shadcn": "shadcn",
+    "shadcn:add": "pnpm shadcn add http://localhost:3000/r/packagejson.json",
     "build:registry": "shadcn build",
     "next": "next"
   },
