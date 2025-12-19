@@ -13,6 +13,7 @@
     "serve": "pnpm build && serve out",
     "fix:next-out": "tsx scripts/fix-next-out.ts",
     "shadcn": "shadcn",
+    "shadcn:add": "pnpm shadcn add http://localhost:3000/r/packagejson.json",
     "build:registry": "shadcn build",
     "next": "next"
   },
