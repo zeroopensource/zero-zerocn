@@ -5,7 +5,7 @@ import { PACKAGEJSON } from "@/lib/packagejson";
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
-      title: "zeroopensource",
+      title: PACKAGEJSON.shortName,
     },
     links: [
       // {

@@ -1,5 +1,7 @@
 {
   "name": "@zeroopensource/zero-zerocn",
+  "shortName": "zerocn",
+  "description": "shadcn registry made by Zero",
   "version": "0.0.0",
   "private": true,
   "homepage": "https://zerocn.zeroopensource.org/",
