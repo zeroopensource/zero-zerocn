@@ -1,6 +1,6 @@
 # ZeroCN
 
-A community-driven, batteries-included shadcn registry made by Zero.
+Shadcn registry made by Zero.
 This registry provides a curated collection of reusable components, utilities, primitives, hooks, layouts, themes, and backend-ready modules — all installable directly into your project, just like shadcn/ui.
 
 ZeroCN is designed for teams who want to install code, not packages — enabling full ownership, version control, and customizability across both frontend and backend layers.

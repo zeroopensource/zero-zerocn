@@ -1,0 +1,15 @@
+{
+  "title": "Framework",
+  "description": "The docs framework",
+  "icon": "Building",
+  "root": true,
+  "pages": [
+    "---Setup---",
+    "index",
+    "workspace",
+    "---Components---",
+    "lib",
+    "file",
+    "zero"
+  ]
+}
