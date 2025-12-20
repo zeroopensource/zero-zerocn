@@ -15,7 +15,7 @@ export const GiscusComments = () => (
       mapping="url"
       reactionsEnabled="1"
       repo="zeroopensource/zero-official"
-      repoId="520738671"
+      repoId="R_kgDOOkUDdA"
       term="Welcome!"
       theme="dark"
     />
