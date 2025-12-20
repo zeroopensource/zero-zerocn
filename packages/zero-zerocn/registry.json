@@ -1,6 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "Zero Shadcn Registry",
+  "schemaDocs": "https://ui.shadcn.com/docs/registry/registry-item-json",
+  "name": "zerocn",
   "homepage": "https://zerocn.zeroopensource.org",
   "items": [
     {
