@@ -1,0 +1,28 @@
+---
+title: Workspace
+description: Instructions for using ZeroCN in a monorepo workspace
+---
+
+## Usage
+
+Install shadcn cli
+
+```bash
+pnpm --filter $WORKSPACE add shadcn@latest -D
+```
+
+Add script to `package.json`
+
+```json
+{
+  "scripts": {
+    "shadcn": "shadcn"
+  }
+}
+```
+
+Add ZeroCN registry component
+
+```bash
+pnpm --filter $WORKSPACE shadcn add https://zerocn.zeroopensource.org/r/$COMPONENT.json
+```
