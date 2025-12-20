@@ -7,7 +7,8 @@
       "name": "env",
       "description": "Constant exposing environment variables",
       "type": "registry:component",
-      "registryDependencies": ["dotenv", "dotenv-expand", "zod"],
+      "dependencies": ["dotenv", "dotenv-expand", "zod"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "src/registry/new-york/items/env/env.ts",
