@@ -9,6 +9,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPageImage, source } from "@/lib/source";
 import { getMDXComponents } from "@/mdx-components";
+import { GiscusComments } from "@/root/src/components/giscus";
 
 export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   const params = await props.params;
@@ -33,6 +34,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
           })}
         />
       </DocsBody>
+      <GiscusComments />
     </DocsPage>
   );
 }
@@ -51,7 +53,7 @@ export async function generateMetadata(
   }
 
   return {
-    title: page.data.title,
+    title: `${page.data.title} - Zero`,
     description: page.data.description,
     openGraph: {
       images: getPageImage(page).url,
