@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "src/registry/new-york/items/packagejson/packagejson.ts",
-      "content": "\"use client\";\n\nimport packageJSON from \"@/root/package.json\" with { type: \"json\" };\n\nexport const PACKAGEJSON = {\n  ...packageJSON,\n  nameVersion: `${packageJSON.name}-${packageJSON.version}`,\n};\n",
+      "content": "import packageJSON from \"@/root/package.json\" with { type: \"json\" };\n\nexport const PACKAGEJSON = {\n  ...packageJSON,\n  nameVersion: `${packageJSON.name}-${packageJSON.version}`,\n};\n",
       "type": "registry:lib"
     }
   ],
