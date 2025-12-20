@@ -1,9 +1,9 @@
 import type { TOCItemType } from "fumadocs-core/toc";
 import {
   DocsBody,
-  DocsDescription,
   DocsPage,
-  DocsTitle,
+  // DocsTitle,
+  // DocsDescription,
 } from "fumadocs-ui/layouts/docs/page";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import type { Metadata } from "next";
