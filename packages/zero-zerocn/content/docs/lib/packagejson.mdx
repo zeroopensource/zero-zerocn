@@ -7,6 +7,20 @@ Constant exposing package.json data.
 
 ## Usage
 
+Install package
+
+```bash
+pnpm dlx shadcn@latest add https://zerocn.zeroopensource.org/r/packagejson.json
+```
+
+Install package ([workspace](/docs/workspace))
+
+```bash
+pnpm --filter $WORKSPACE shadcn add https://zerocn.zeroopensource.org/r/packagejson.json
+```
+
+Import and use
+
 ```js
 import { PACKAGEJSON } from '@/lib/packagejson'
 
