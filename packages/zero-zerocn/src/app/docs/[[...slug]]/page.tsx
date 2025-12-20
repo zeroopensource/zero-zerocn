@@ -1,3 +1,4 @@
+import type { TOCItemType } from "fumadocs-core/toc";
 import {
   DocsBody,
   DocsDescription,
@@ -19,12 +20,17 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   }
 
   const MDX = page.data.body;
+  const commentsTocItem: TOCItemType = {
+    title: "Comments",
+    url: "#comments",
+    depth: 1,
+  };
 
   return (
     <DocsPage
       breadcrumb={{ enabled: false }}
       full={page.data.full}
-      toc={page.data.toc}
+      toc={[...page.data.toc, commentsTocItem]}
     >
       {/* 
       <DocsTitle>{page.data.title}</DocsTitle>

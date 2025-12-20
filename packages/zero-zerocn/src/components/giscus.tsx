@@ -4,7 +4,6 @@ import Giscus from "@giscus/react";
 
 export const GiscusComments = () => (
   <div className="mt-8">
-    <h2 id="giscus-comments">Comments</h2>
     <Giscus
       category="Comments"
       categoryId="DIC_kwDOOkUDdM4C0B57"

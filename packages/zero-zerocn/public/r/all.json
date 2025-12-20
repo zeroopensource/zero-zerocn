@@ -4,7 +4,8 @@
   "description": "Aggregated component including all components in the registry",
   "registryDependencies": [
     "https://zerocn.zeroopensource.org/r/env.json",
-    "https://zerocn.zeroopensource.org/r/packagejson.json"
+    "https://zerocn.zeroopensource.org/r/packagejson.json",
+    "https://zerocn.zeroopensource.org/r/mdx-cheatsheet.json"
   ],
   "type": "registry:component"
 }
