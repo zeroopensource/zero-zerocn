@@ -49,7 +49,7 @@ const EnvSchema = z
 export type env = z.infer<typeof EnvSchema>;
 
 // eslint-disable-next-line ts/no-redeclare
-const { data: env, error } = EnvSchema.safeParse(process.env);
+const { data, error } = EnvSchema.safeParse(process.env);
 
 if (error) {
   console.error("❌ Invalid env:");
@@ -58,4 +58,4 @@ if (error) {
 }
 
 // biome-ignore lint/style/noNonNullAssertion: Intended
-export default env!;
+export const ENV = data!;

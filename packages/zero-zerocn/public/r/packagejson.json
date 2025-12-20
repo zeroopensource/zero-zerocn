@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "packagejson",
-  "description": "Swaps content with a loading spinner without layout shift.",
+  "description": "Constant exposing package.json data",
   "files": [
     {
       "path": "src/registry/new-york/items/packagejson/packagejson.ts",

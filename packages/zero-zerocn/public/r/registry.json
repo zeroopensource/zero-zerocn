@@ -4,8 +4,20 @@
   "homepage": "https://zerocn.zeroopensource.org",
   "items": [
     {
+      "name": "env",
+      "description": "Constant exposing environment variables",
+      "type": "registry:component",
+      "registryDependencies": ["dotenv", "dotenv-expand", "zod"],
+      "files": [
+        {
+          "path": "src/registry/new-york/items/env/env.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
       "name": "packagejson",
-      "description": "Swaps content with a loading spinner without layout shift.",
+      "description": "Constant exposing package.json data",
       "type": "registry:component",
       "files": [
         {
