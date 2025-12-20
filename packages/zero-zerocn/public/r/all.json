@@ -1,0 +1,10 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "all",
+  "description": "Aggregated component including all components in the registry",
+  "registryDependencies": [
+    "https://zerocn.zeroopensource.org/r/env.json",
+    "https://zerocn.zeroopensource.org/r/packagejson.json"
+  ],
+  "type": "registry:component"
+}

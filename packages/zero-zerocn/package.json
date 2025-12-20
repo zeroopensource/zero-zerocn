@@ -16,7 +16,7 @@
     "fix:next-out": "tsx scripts/fix-next-out.ts",
     "fix:copy-readme": "tsx scripts/copy-readme.ts",
     "shadcn": "shadcn",
-    "shadcn:example": "pnpm shadcn add http://localhost:3000/r/packagejson.json",
+    "shadcn:addAll": "pnpm shadcn add https://zerocn.zeroopensource.org/r/all.json",
     "build:registry": "shadcn build",
     "next": "next"
   },
