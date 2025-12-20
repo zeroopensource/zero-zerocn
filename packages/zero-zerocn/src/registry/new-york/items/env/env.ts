@@ -57,4 +57,5 @@ if (error) {
   process.exit(1);
 }
 
+// biome-ignore lint/style/noNonNullAssertion: Intended
 export default env!;
