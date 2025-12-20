@@ -1,7 +1,3 @@
-/* eslint-disable node/no-process-env */
-/** biome-ignore-all lint/suspicious/noConsole: This is a logger dependency */
-/** biome-ignore-all lint/style/noProcessEnv: This is the only exception */
-
 import path from "node:path";
 import { config } from "dotenv";
 import { expand } from "dotenv-expand";
@@ -11,6 +7,7 @@ expand(
   config({
     path: path.resolve(
       process.cwd(),
+      // biome-ignore lint/style/noProcessEnv: Intentional
       process.env.NODE_ENV === "test" ? ".env.test" : ".env"
     ),
   })
@@ -48,11 +45,13 @@ const EnvSchema = z
 
 export type env = z.infer<typeof EnvSchema>;
 
-// eslint-disable-next-line ts/no-redeclare
+// biome-ignore lint/style/noProcessEnv: Intentional
 const { data, error } = EnvSchema.safeParse(process.env);
 
 if (error) {
+  // biome-ignore lint/suspicious/noConsole: Intentional
   console.error("❌ Invalid env:");
+  // biome-ignore lint/suspicious/noConsole: Intentional
   console.error(JSON.stringify(error.flatten().fieldErrors, null, 2));
   process.exit(1);
 }

@@ -1,6 +1,7 @@
 // @ts-nocheck
-import * as __fd_glob_2 from "../content/docs/lib/packagejson.mdx?collection=docs"
-import * as __fd_glob_1 from "../content/docs/lib/env.mdx?collection=docs"
+import * as __fd_glob_3 from "../content/docs/lib/packagejson.mdx?collection=docs"
+import * as __fd_glob_2 from "../content/docs/lib/env.mdx?collection=docs"
+import * as __fd_glob_1 from "../content/docs/workspace.mdx?collection=docs"
 import * as __fd_glob_0 from "../content/docs/index.mdx?collection=docs"
 import { server } from 'fumadocs-mdx/runtime/server';
 import type * as Config from '../source.config';
@@ -10,4 +11,4 @@ const create = server<typeof Config, import("fumadocs-mdx/runtime/types").Intern
   }
 }>({"doc":{"passthroughs":["extractedReferences"]}});
 
-export const docs = await create.docs("docs", "content\docs", {}, {"index.mdx": __fd_glob_0, "lib/env.mdx": __fd_glob_1, "lib/packagejson.mdx": __fd_glob_2, });
+export const docs = await create.docs("docs", "content\docs", {}, {"index.mdx": __fd_glob_0, "workspace.mdx": __fd_glob_1, "lib/env.mdx": __fd_glob_2, "lib/packagejson.mdx": __fd_glob_3, });

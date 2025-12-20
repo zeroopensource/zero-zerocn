@@ -113,9 +113,6 @@ importers:
       serve:
         specifier: ^14.2.5
         version: 14.2.5
-      shadcn:
-        specifier: ^3.6.0
-        version: 3.6.0(@types/node@20.19.25)(typescript@5.9.3)
       sonner:
         specifier: ^2.0.7
         version: 2.0.7(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -159,6 +156,9 @@ importers:
       postcss:
         specifier: ^8.5.6
         version: 8.5.6
+      shadcn:
+        specifier: ^3.6.2
+        version: 3.6.2(@types/node@20.19.25)(typescript@5.9.3)
       tailwindcss:
         specifier: ^4
         version: 4.1.17
@@ -4931,8 +4931,8 @@ packages:
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  shadcn@3.6.0:
-    resolution: {integrity: sha512-6uXnm38JWRtVHnULsTxV3J1IUsI1efZM5qqKhab1j32IFxAhKWIOoIFwtjrMYRgtcBrKwPXKaVfyhs1JPHRXpA==}
+  shadcn@3.6.2:
+    resolution: {integrity: sha512-2g48/7UsXTSWMFU9GYww85AN5iVTkErbeycrcleI55R+atqW8HE1M/YDFyQ+0T3Bwsd4e8vycPu9gmwODunDpw==}
     hasBin: true
 
   sharp@0.34.5:
@@ -5635,7 +5635,7 @@ snapshots:
       ansis: 4.2.0
       fzf: 0.5.2
       package-manager-detector: 1.6.0
-      tinyexec: 1.0.1
+      tinyexec: 1.0.2
 
   '@babel/code-frame@7.27.1':
     dependencies:
@@ -10966,7 +10966,7 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  shadcn@3.6.0(@types/node@20.19.25)(typescript@5.9.3):
+  shadcn@3.6.2(@types/node@20.19.25)(typescript@5.9.3):
     dependencies:
       '@antfu/ni': 25.0.0
       '@babel/core': 7.28.5
