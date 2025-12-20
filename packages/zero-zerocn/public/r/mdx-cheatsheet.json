@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "mdx-cheatsheet",
+  "description": "MDX syntax and usage reference",
+  "files": [
+    {
+      "path": "src/registry/new-york/items/mdx-cheatsheet/mdx-cheatsheet.mdx",
+      "content": "---\ntitle: MDX Cheatsheet\ndescription: MDX syntax and usage reference\n---\n\n# GFM Cheatsheet\n\n### Autolink literals\n\nwww.example.com, https://example.com, and contact@example.com.\n\n### Footnote\n\nA note[^1]\n\n[^1]: Big note.\n\n### Strikethrough\n\n~one~ or ~~two~~ tildes.\n\n### Table\n\n| a   | b   |   c |  d  |\n| --- | :-- | --: | :-: |\n\n### Tasklist\n\n- [ ] to do\n- [x] done\n\n# MDX Cheatsheet\n\n### a\n\n[MDX](https://mdxjs.com 'title')\n\n### blockquote\n\n> A greater than…\n\n### br\n\nA backslash\\\nbefore a line break…\n\n### code\n\n```javascript\nbacktick.fences('for blocks')\n```\n\n### em\n\nSome _asterisks_ for emphasis.\n\n### hr\n\nThree asterisks for a thematic break:\n\n---\n\n### img\n\n`![Alt text](/logo.png 'title')`\n\n### li\n\n- asterisks for unordered items\n\n1. decimals and a dot for ordered items\n\n### ol\n\n1. decimals and a dot for ordered\n\n### p\n\nJust some text…\n\n### pre\n\n```javascript\nbacktick.fences('for blocks')\n```\n\n### strong\n\nTwo **asterisks** for strong.\n\n### ul\n\n- asterisks for unordered\n\n### h1-6\n\n# Heading 1\n\n## Heading 2\n\n### Heading 3\n\n#### Heading 4\n\n##### Heading 5\n\n###### Heading 6\n",
+      "type": "registry:file",
+      "target": "file/mdx-cheatsheet.mdx"
+    }
+  ],
+  "type": "registry:component"
+}
