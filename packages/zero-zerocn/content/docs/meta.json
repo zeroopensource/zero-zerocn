@@ -4,9 +4,10 @@
   "icon": "Building",
   "root": true,
   "pages": [
-    "---Setup---",
+    "---General---",
     "index",
     "workspace",
+    "docs",
     "---Components---",
     "lib",
     "file",
