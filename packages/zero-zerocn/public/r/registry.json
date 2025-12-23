@@ -15,6 +15,19 @@
       ]
     },
     {
+      "name": "zero-official",
+      "description": "Official resources for Zero Open Source",
+      "type": "registry:component",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/registry/new-york/items/zero-official/zero-official.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
       "name": "env",
       "description": "Constant exposing environment variables",
       "type": "registry:component",
