@@ -90,31 +90,37 @@ export const ShadcnLibraries: Library[] = [
     name: "@animate-ui",
     docsUrl: "https://animate-ui.com",
     repoUrl: "https://github.com/imskyleen/animate-ui",
+    isPaid: false,
   },
   {
     name: "@assistant-ui",
     docsUrl: "https://www.assistant-ui.com",
     repoUrl: "https://github.com/assistant-ui/assistant-ui",
+    isPaid: false,
   },
   {
     name: "@better-upload",
     docsUrl: "https://better-upload.com",
     repoUrl: "https://github.com/Nic13Gamer/better-upload",
+    isPaid: false,
   },
   {
     name: "@basecn",
     docsUrl: "https://basecn.dev",
     repoUrl: "https://github.com/akash3444/basecn",
+    isPaid: false,
   },
   {
     name: "@billingsdk",
     docsUrl: "https://billingsdk.com",
     repoUrl: "https://github.com/dodopayments/billingsdk",
+    isPaid: false,
   },
   {
     name: "@blocks",
     docsUrl: "https://blocks.so",
     repoUrl: "https://github.com/ephraimduncan/blocks",
+    isPaid: false,
   },
 
   // Remaining entries (docs only, repo & pricing unknown)
