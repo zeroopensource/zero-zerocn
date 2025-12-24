@@ -63,7 +63,7 @@ export const ShadcnLibraries: Library[] = [
     isPaid: false,
   },
   {
-    name: "@ai-blocks",
+    name: "@ai-blocks [Deprecated?]",
     docsUrl: "https://webllm.org/blocks",
     repoUrl: null,
     isPaid: null,
@@ -72,15 +72,18 @@ export const ShadcnLibraries: Library[] = [
     name: "@ai-elements",
     docsUrl: "https://ai-sdk.dev/elements",
     repoUrl: "https://github.com/vercel/ai",
+    isPaid: false,
   },
   {
     name: "@algolia",
     docsUrl: "https://sitesearch.algolia.com",
     repoUrl: "https://github.com/algolia/sitesearch",
+    isPaid: false,
   },
   {
     name: "@aliimam",
     docsUrl: "https://aliimam.in",
+    repoUrl: null,
     isPaid: true,
   },
   {
