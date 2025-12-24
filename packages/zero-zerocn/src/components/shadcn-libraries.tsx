@@ -3,8 +3,8 @@
 type Library = {
   name: string;
   docsUrl: string;
-  repoUrl?: string;
-  isPaid?: boolean;
+  repoUrl?: string | null | undefined;
+  isPaid?: boolean | null | undefined;
 };
 
 export const ShadcnLibraries: Library[] = [
@@ -18,46 +18,55 @@ export const ShadcnLibraries: Library[] = [
     name: "@8bitcn",
     docsUrl: "https://www.8bitcn.com",
     repoUrl: "https://github.com/TheOrcDev/8bitcn-ui",
+    isPaid: false,
   },
   {
     name: "@8starlabs-ui",
     docsUrl: "https://ui.8starlabs.com",
     repoUrl: "https://github.com/8starlabs/ui",
+    isPaid: false,
   },
   {
     name: "@97cn",
     docsUrl: "https://97cn.itzik.co",
     repoUrl: "https://github.com/PatentLobster/97cn",
+    isPaid: false,
   },
   {
     name: "@abui",
     docsUrl: "https://abui.io",
     repoUrl: "https://github.com/antoniobrandao/abui",
+    isPaid: false,
   },
   {
     name: "@abstract",
     docsUrl: "https://build.abs.xyz",
     repoUrl: "https://github.com/jarrodwatts/agw-reusables",
+    isPaid: false,
   },
   {
     name: "@aceternity",
     docsUrl: "https://ui.aceternity.com",
+    repoUrl: null,
     isPaid: true,
   },
   {
     name: "@agents-ui",
     docsUrl: "https://livekit.io/ui",
-    repoUrl: "https://github.com/livekit",
+    repoUrl: null,
     isPaid: true,
   },
   {
     name: "@aevr",
     docsUrl: "https://ui.aevr.space",
     repoUrl: "https://github.com/aevrhq/ui",
+    isPaid: false,
   },
   {
     name: "@ai-blocks",
     docsUrl: "https://webllm.org/blocks",
+    repoUrl: null,
+    isPaid: null,
   },
   {
     name: "@ai-elements",
