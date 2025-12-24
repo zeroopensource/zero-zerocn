@@ -1,13 +1,13 @@
 "use client";
 
-type Library = {
+type Lib = {
   name: string;
   docsUrl: string;
   repoUrl?: string | null | undefined;
   isPaid?: boolean | null | undefined;
 };
 
-export const ShadcnLibraries: Library[] = [
+export const ShadcnLibs: Lib[] = [
   {
     name: "@zero",
     docsUrl: "https://zerocn.zeroopensource.org",
@@ -209,3 +209,17 @@ export const ShadcnLibraries: Library[] = [
   { name: "@skiper-ui", docsUrl: "https://skiper-ui.com" },
   { name: "@animbits", docsUrl: "https://animbits.dev" },
 ];
+
+export const ShadcnLibsTable = () => {
+  return (
+    <div>
+      {ShadcnLibs.map((lib) => {
+        return (
+          <div className="mb-4" key={lib.name}>
+            <h3 className="font-semibold text-lg">{lib.name}</h3>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
