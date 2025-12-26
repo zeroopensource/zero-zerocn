@@ -248,7 +248,7 @@ export const ShadcnLibsTable = () => {
                 "-"
               )}
             </TableCell>
-            <TableCell>{lib.isPaid}</TableCell>
+            <TableCell>{lib.isPaid ? "Paid" : "Open"}</TableCell>
             <TableCell>{lib.stars || "-"}</TableCell>
           </TableRow>
         ))}
