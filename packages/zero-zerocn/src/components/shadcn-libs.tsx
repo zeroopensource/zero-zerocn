@@ -1,10 +1,22 @@
 "use client";
+import Link from "next/link";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 type Lib = {
   name: string;
   docsUrl: string;
   repoUrl?: string | null | undefined;
   isPaid?: boolean | null | undefined;
+  stars?: number;
 };
 
 export const ShadcnLibs: Lib[] = [
@@ -212,14 +224,46 @@ export const ShadcnLibs: Lib[] = [
 
 export const ShadcnLibsTable = () => {
   return (
-    <div>
-      {ShadcnLibs.map((lib) => {
-        return (
-          <div className="mb-4" key={lib.name}>
-            <h3 className="font-semibold text-lg">{lib.name}</h3>
-          </div>
-        );
-      })}
-    </div>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>Name</TableHead>
+          <TableHead>RepoUrl</TableHead>
+          <TableHead>isPaid</TableHead>
+          <TableHead>Stars</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {ShadcnLibs.map((lib) => (
+          <TableRow key={lib.name}>
+            <TableCell>
+              <Link href={lib.docsUrl} rel="noreferrer" target="_blank">
+                {lib.name}
+              </Link>
+            </TableCell>
+            <TableCell>
+              {lib.repoUrl ? (
+                <Link href={lib.repoUrl} rel="noreferrer" target="_blank">
+                  {lib.repoUrl}
+                </Link>
+              ) : (
+                "-"
+              )}
+            </TableCell>
+            <TableCell>{lib.isPaid}</TableCell>
+            <TableCell>{lib.stars || "-"}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+    // <div>
+    //   {ShadcnLibs.map((lib) => {
+    //     return (
+    //       <div className="mb-4" key={lib.name}>
+    //         <h3 className="font-semibold text-lg">{lib.name}</h3>
+    //       </div>
+    //     );
+    //   })}
+    // </div>
   );
 };
