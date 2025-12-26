@@ -132,14 +132,24 @@ export const ShadcnLibs: Lib[] = [
     repoUrl: "https://github.com/ephraimduncan/blocks",
     isPaid: false,
   },
-
-  // Remaining entries (docs only, repo & pricing unknown)
-  { name: "@cardcn", docsUrl: "https://cardcn.dev" },
+  {
+    name: "@cardcn",
+    docsUrl: "https://cardcn.dev",
+    repoUrl: "https://github.com/Ali-Hussein-dev/cardcn",
+    isPaid: false,
+  },
   {
     name: "@clerk",
     docsUrl: "https://clerk.com/docs/guides/development/shadcn-cli",
+    repoUrl: null,
+    isPaid: null,
   },
-  { name: "@commercn", docsUrl: "https://commercn.com" },
+  {
+    name: "@commercn",
+    docsUrl: "https://commercn.com",
+    repoUrl: "https://github.com/Logging-Studio/Commercne",
+    isPaid: false,
+  },
   { name: "@coss", docsUrl: "https://coss.com/ui" },
   { name: "@creative-tim", docsUrl: "https://www.creative-tim.com/ui" },
   { name: "@cult-ui", docsUrl: "https://www.cult-ui.com" },
