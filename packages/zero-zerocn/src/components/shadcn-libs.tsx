@@ -3,9 +3,7 @@ import Link from "next/link";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -256,14 +254,5 @@ export const ShadcnLibsTable = () => {
         ))}
       </TableBody>
     </Table>
-    // <div>
-    //   {ShadcnLibs.map((lib) => {
-    //     return (
-    //       <div className="mb-4" key={lib.name}>
-    //         <h3 className="font-semibold text-lg">{lib.name}</h3>
-    //       </div>
-    //     );
-    //   })}
-    // </div>
   );
 };
