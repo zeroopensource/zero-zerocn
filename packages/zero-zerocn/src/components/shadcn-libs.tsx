@@ -61,7 +61,7 @@ export const ShadcnLibs: Lib[] = [
     isPaid: true,
   },
   {
-    name: "@agents-ui",
+    name: "@agents-ui/livekit",
     docsUrl: "https://livekit.io/ui",
     repoUrl: null,
     isPaid: true,
@@ -79,7 +79,7 @@ export const ShadcnLibs: Lib[] = [
     isPaid: null,
   },
   {
-    name: "@ai-elements",
+    name: "@ai-elements ★",
     docsUrl: "https://ai-sdk.dev/elements",
     repoUrl: "https://github.com/vercel/ai",
     isPaid: false,
@@ -127,7 +127,7 @@ export const ShadcnLibs: Lib[] = [
     isPaid: false,
   },
   {
-    name: "@blocks",
+    name: "@blocks ★",
     docsUrl: "https://blocks.so",
     repoUrl: "https://github.com/ephraimduncan/blocks",
     isPaid: false,
@@ -166,7 +166,7 @@ export const ShadcnLibs: Lib[] = [
     name: "@cult-ui",
     docsUrl: "https://www.cult-ui.com",
     repoUrl: "https://github.com/nolly-studio/cult-ui",
-    isPaid: false,
+    isPaid: true,
   },
   {
     name: "@diceui ★",
