@@ -246,10 +246,30 @@ export const ShadcnLibs: Lib[] = [
     repoUrl: "https://github.com/Debbl/shadcn-hooks",
     isPaid: false,
   },
-  { name: "@intentui", docsUrl: "https://intentui.com" },
-  { name: "@kibo-ui", docsUrl: "https://www.kibo-ui.com" },
-  { name: "@kanpeki", docsUrl: "https://kanpeki.vercel.app" },
-  { name: "@kokonutui", docsUrl: "https://kokonutui.com" },
+  {
+    name: "@intentui [Deprecated?]",
+    docsUrl: "https://intentui.com",
+    repoUrl: null,
+    isPaid: null,
+  },
+  {
+    name: "@kibo-ui ★",
+    docsUrl: "https://www.kibo-ui.com",
+    repoUrl: "https://github.com/shadcnblocks/kibo",
+    isPaid: false,
+  },
+  {
+    name: "@kanpeki",
+    docsUrl: "https://kanpeki.vercel.app",
+    repoUrl: "https://github.com/fellipeutaka/kanpeki",
+    isPaid: false,
+  },
+  {
+    name: "@kokonutui",
+    docsUrl: "https://kokonutui.com",
+    repoUrl: "https://github.com/kokonut-labs/kokonutui",
+    isPaid: true,
+  },
   { name: "@lens-blocks", docsUrl: "https://lensblocks.com" },
   { name: "@limeplay", docsUrl: "https://limeplay.winoffrg.dev" },
   { name: "@lucide-animated", docsUrl: "https://lucide-animated.com" },
@@ -317,7 +337,7 @@ export const ShadcnLibsTable = () => {
         <TableRow>
           <TableHead>Name</TableHead>
           <TableHead>isPaid</TableHead>
-          <TableHead>Stars</TableHead>
+          {/* <TableHead>Stars</TableHead> */}
           <TableHead>RepoUrl</TableHead>
         </TableRow>
       </TableHeader>
@@ -334,7 +354,7 @@ export const ShadcnLibsTable = () => {
               {lib.isPaid === false && "Open"}
               {lib.isPaid == null && "-"}
             </TableCell>
-            <TableCell>{lib.stars || "-"}</TableCell>
+            {/* <TableCell>{lib.stars || "-"}</TableCell> */}
             <TableCell>
               {lib.repoUrl ? (
                 <Link href={lib.repoUrl} rel="noreferrer" target="_blank">
