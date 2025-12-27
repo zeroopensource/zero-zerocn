@@ -11,7 +11,21 @@
       "registryDependencies": [
         "https://zerocn.zeroopensource.org/r/env.json",
         "https://zerocn.zeroopensource.org/r/packagejson.json",
-        "https://zerocn.zeroopensource.org/r/mdx-cheatsheet.json"
+        "https://zerocn.zeroopensource.org/r/mdx-cheatsheet.json",
+        "https://zerocn.zeroopensource.org/r/zero-official.json"
+      ]
+    },
+    {
+      "name": "zero-official",
+      "description": "Official resources for Zero Open Source",
+      "type": "registry:component",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/registry/new-york/items/zero-official/zero-official.ts",
+          "type": "registry:lib"
+        }
       ]
     },
     {

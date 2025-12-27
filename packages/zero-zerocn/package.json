@@ -7,8 +7,8 @@
   "homepage": "https://zerocn.zeroopensource.org",
   "repository": "https://github.com/zeroopensource/zero-zerocn",
   "scripts": {
-    "build": "pnpm fix:copy-readme && pnpm build:registry && next build && pnpm fix:next-out ",
-    "dev": "next dev",
+    "build": "pnpm fix:copy-readme && pnpm build:registry && next build && pnpm fix:next-out",
+    "dev": "pnpm build && next dev",
     "start": "next start",
     "types:check": "fumadocs-mdx && tsc --noEmit",
     "postinstall": "fumadocs-mdx",
@@ -22,6 +22,7 @@
     "next": "next"
   },
   "dependencies": {
+    "@tanstack/react-table": "^8.21.3",
     "@base-ui/react": "^1.0.0",
     "@giscus/react": "^3.1.0",
     "@hookform/resolvers": "^5.2.2",
