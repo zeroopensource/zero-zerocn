@@ -6,7 +6,7 @@ export const GiscusComments = () => (
   <div className="mt-8">
     <Giscus
       category="Comments"
-      categoryId="DIC_kwDOOkUDdM4C0B57"
+      categoryId="DIC_kwDOQw8Las4C0YYe"
       emitMetadata="1"
       id="comments"
       inputPosition="top"
@@ -14,8 +14,8 @@ export const GiscusComments = () => (
       loading="lazy"
       mapping="url"
       reactionsEnabled="1"
-      repo="zeroopensource/zero-official"
-      repoId="R_kgDOOkUDdA"
+      repo="zeroopensource/zero-community"
+      repoId="R_kgDOQw8Lag"
       term="Welcome!"
       theme="dark"
     />
