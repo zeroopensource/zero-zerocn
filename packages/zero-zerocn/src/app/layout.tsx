@@ -15,6 +15,9 @@ export default function Layout({ children }: LayoutProps<"/">) {
           search={{
             SearchDialog,
           }}
+          theme={{
+            forcedTheme: "dark",
+          }}
         >
           {children}
         </RootProvider>
