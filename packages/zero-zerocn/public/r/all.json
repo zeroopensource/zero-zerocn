@@ -6,7 +6,8 @@
     "https://zerocn.zeroopensource.org/r/env.json",
     "https://zerocn.zeroopensource.org/r/packagejson.json",
     "https://zerocn.zeroopensource.org/r/mdx-cheatsheet.json",
-    "https://zerocn.zeroopensource.org/r/zero-official.json"
+    "https://zerocn.zeroopensource.org/r/zero-official.json",
+    "https://zerocn.zeroopensource.org/r/zero-community-comments.json"
   ],
   "type": "registry:component"
 }

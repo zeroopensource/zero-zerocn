@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "zero-community-comments",
+  "description": "Zero Open Source community comments component",
+  "dependencies": [
+    "@giscus/react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/registry/new-york/items/zero-community-comments/zero-community-comments.tsx",
+      "content": "\"use client\";\n\nimport Giscus from \"@giscus/react\";\n\nexport const ZeroCommunityComments = () => (\n  <div className=\"mt-8\">\n    <Giscus\n      category=\"Comments\"\n      categoryId=\"DIC_kwDOQw8Las4C0YYe\"\n      emitMetadata=\"1\"\n      id=\"comments\"\n      inputPosition=\"top\"\n      lang=\"en\"\n      loading=\"lazy\"\n      mapping=\"url\"\n      reactionsEnabled=\"1\"\n      repo=\"zeroopensource/zero-community\"\n      repoId=\"R_kgDOQw8Lag\"\n      term=\"Welcome!\"\n      theme=\"dark\"\n    />\n  </div>\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:component"
+}
