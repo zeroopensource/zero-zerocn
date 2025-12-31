@@ -113,12 +113,6 @@ export const ZERO_OFFICIAL_LINKS: { [key: string]: Link } = {
     description: "Support our open source work through Patreon",
     icon: "SiPatreon",
   },
-  ZERO_BMC: {
-    name: "Buy Me a Coffee",
-    url: "https://buymeacoffee.com/zeroopensource",
-    description: "Show your support by buying us a coffee",
-    icon: "SiBuymeacoffee",
-  },
   ZERO_HUGGINGFACE: {
     name: "Hugging Face",
     url: "https://huggingface.co/ZeroOpenSource",
@@ -132,6 +126,18 @@ export const ZERO_OFFICIAL_LINKS: { [key: string]: Link } = {
     icon: "SiYoutube",
   },
 
+  ZERO_GITHUBSPONSORS: {
+    name: "Github Sponsors",
+    url: "https://github.com/sponsors/zeroopensource",
+    description: "Show your support by sponsoring us on GitHub",
+    icon: "SiGithub",
+  },
+  ZERO_BMC: {
+    name: "Buy Me a Coffee",
+    url: "https://buymeacoffee.com/zeroopensource",
+    description: "Show your support by buying us a coffee",
+    icon: "SiBuymeacoffee",
+  },
   // ZERO_LINKTREE: {
   //   url: 'https://linktr.ee/zeroopensource',
   //   description: 'Find all our important links and resources in one place',
