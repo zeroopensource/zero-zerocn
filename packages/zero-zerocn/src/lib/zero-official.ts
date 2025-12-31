@@ -138,7 +138,6 @@ export const ZERO_OFFICIAL_LINKS: { [key: string]: Link } = {
     description: "Show your support by buying us a coffee",
     icon: "SiBuymeacoffee",
   },
-
   // ZERO_LINKTREE: {
   //   url: 'https://linktr.ee/zeroopensource',
   //   description: 'Find all our important links and resources in one place',

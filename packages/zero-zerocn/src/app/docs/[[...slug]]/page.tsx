@@ -10,7 +10,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPageImage, source } from "@/lib/source";
 import { getMDXComponents } from "@/mdx-components";
-import { GiscusComments } from "@/root/src/components/giscus";
+import { ZeroCommunityComments } from "@/root/src/components/ui/zero-community-comments";
 
 export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   const params = await props.params;
@@ -44,7 +44,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
           })}
         />
       </DocsBody>
-      <GiscusComments />
+      <ZeroCommunityComments />
     </DocsPage>
   );
 }
