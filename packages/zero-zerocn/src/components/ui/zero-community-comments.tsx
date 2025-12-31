@@ -2,7 +2,7 @@
 
 import Giscus from "@giscus/react";
 
-export const GiscusComments = () => (
+export const ZeroCommunityComments = () => (
   <div className="mt-8">
     <Giscus
       category="Comments"
