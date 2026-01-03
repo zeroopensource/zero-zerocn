@@ -56,7 +56,7 @@ export const ZeroSchema = z.object({
   */
   googleCalendarEvent: z.object({
     summary: ZeroSchemaPrimitives.shape.summary,
-    location: ZeroSchemaPrimitives.shape.location,
+    location: ZeroSchemaPrimitives.shape.location.optional(),
     recurrence: ZeroSchemaPrimitives.shape.recurrence,
     start: z.xor([
       ZeroSchemaPrimitives.pick({
