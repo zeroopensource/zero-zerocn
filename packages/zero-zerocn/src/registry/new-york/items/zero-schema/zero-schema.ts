@@ -56,13 +56,13 @@ export const ZeroSchema = z.object({
   */
   googleCalendarEvent: z.object({
     start: z.xor([
-      z.object({
-        date: ZeroSchemaPrimitives.shape.date,
-        timeZone: ZeroSchemaPrimitives.shape.timeZone,
+      ZeroSchemaPrimitives.pick({
+        date: true,
+        timeZone: true,
       }),
-      z.object({
-        dateTime: ZeroSchemaPrimitives.shape.dateTime,
-        timeZone: ZeroSchemaPrimitives.shape.timeZone,
+      ZeroSchemaPrimitives.pick({
+        dateTime: true,
+        timeZone: true,
       }),
     ]),
   }),
