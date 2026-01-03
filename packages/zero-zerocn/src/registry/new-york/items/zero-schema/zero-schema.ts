@@ -31,6 +31,7 @@ export const zeroSchemaPrimitives = z.object({
 });
 
 export const zeroSchema = z.object({
+  ...zeroSchemaPrimitives.shape,
   envApi: z.strictObject({
     NODE_ENV: zeroSchemaPrimitives.shape.NODE_ENV,
     LOG_LEVEL: zeroSchemaPrimitives.shape.LOG_LEVEL,
