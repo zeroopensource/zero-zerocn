@@ -32,12 +32,12 @@ export const zeroSchemaPrimitives = z.object({
 
 export const zeroSchema = z.object({
   ...zeroSchemaPrimitives.shape,
-  envApi: z.strictObject({
-    NODE_ENV: zeroSchemaPrimitives.shape.NODE_ENV,
-    LOG_LEVEL: zeroSchemaPrimitives.shape.LOG_LEVEL,
-    DATABASE_URL: zeroSchemaPrimitives.shape.DATABASE_URL,
-    DATABASE_AUTH_TOKEN: zeroSchemaPrimitives.shape.DATABASE_AUTH_TOKEN,
-    BETTER_AUTH_URL: zeroSchemaPrimitives.shape.BETTER_AUTH_URL,
-    BETTER_AUTH_SECRET: zeroSchemaPrimitives.shape.BETTER_AUTH_SECRET,
+  envApi: zeroSchemaPrimitives.pick({
+    NODE_ENV: true,
+    LOG_LEVEL: true,
+    DATABASE_URL: true,
+    DATABASE_AUTH_TOKEN: true,
+    BETTER_AUTH_URL: true,
+    BETTER_AUTH_SECRET: true,
   }),
 });
