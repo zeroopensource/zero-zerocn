@@ -30,4 +30,13 @@ export const zeroSchemaPrimitives = z.object({
   // #endregion
 });
 
-export const zeroSchema = z.object({});
+export const zeroSchema = z.object({
+  envApi: z.strictObject({
+    NODE_ENV: zeroSchemaPrimitives.shape.NODE_ENV,
+    LOG_LEVEL: zeroSchemaPrimitives.shape.LOG_LEVEL,
+    DATABASE_URL: zeroSchemaPrimitives.shape.DATABASE_URL,
+    DATABASE_AUTH_TOKEN: zeroSchemaPrimitives.shape.DATABASE_AUTH_TOKEN,
+    BETTER_AUTH_URL: zeroSchemaPrimitives.shape.BETTER_AUTH_URL,
+    BETTER_AUTH_SECRET: zeroSchemaPrimitives.shape.BETTER_AUTH_SECRET,
+  }),
+});
