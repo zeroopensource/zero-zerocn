@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const zeroSchemaPrimitives = z.object({
+export const ZeroSchemaPrimitives = z.object({
   // #region env
   /** NODE_ENV ref: https://nextjs.org/docs/pages/guides/environment-variables */
   NODE_ENV: z.enum(["development", "test", "staging", "production"]),
@@ -28,15 +28,20 @@ export const zeroSchemaPrimitives = z.object({
   // #region date types
   date: z.iso.date(),
   time: z.iso.time(),
-  datetime: z.iso.datetime(),
+  dateTime: z.iso.datetime(),
+  /** timeZone IANA ref: https://github.com/date-fns/date-fns/blob/main/scripts/test/tzIANA.ts */
+  timeZone: z.string(),
   // #endregion
 
-  summar: z.string(),
+  summary: z.string(),
+  location: z.string(),
+  recurrence: z.array(z.string()),
 });
+export type ZeroSchemaPrimitives = z.infer<typeof ZeroSchemaPrimitives>;
 
-export const zeroSchema = z.object({
-  ...zeroSchemaPrimitives.shape,
-  envApi: zeroSchemaPrimitives.pick({
+export const ZeroSchema = z.object({
+  ...ZeroSchemaPrimitives.shape,
+  envApi: ZeroSchemaPrimitives.pick({
     NODE_ENV: true,
     LOG_LEVEL: true,
     DATABASE_URL: true,
@@ -45,9 +50,45 @@ export const zeroSchema = z.object({
     BETTER_AUTH_SECRET: true,
   }),
   /**
-  calendarEvent ref: 
+  googleCalendarEvent ref: 
   https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/gapi.calendar
   https://developers.google.com/workspace/calendar/api/v3/reference/events
   */
-  calendarEvent: zeroSchemaPrimitives.pick({}),
+  googleCalendarEvent: z.object({
+    start: z.xor([
+      z.object({
+        date: ZeroSchemaPrimitives.shape.date,
+        timeZone: ZeroSchemaPrimitives.shape.timeZone,
+      }),
+      z.object({
+        dateTime: ZeroSchemaPrimitives.shape.dateTime,
+        timeZone: ZeroSchemaPrimitives.shape.timeZone,
+      }),
+    ]),
+  }),
 });
+export type ZeroSchema = z.infer<typeof ZeroSchema>;
+
+/*
+  
+{
+  "start": {
+    "dateTime": "2011-06-03T10:00:00.000-07:00",
+    "timeZone": "America/Los_Angeles"
+  },
+  "end": {
+    "dateTime": "2011-06-03T10:25:00.000-07:00",
+    "timeZone": "America/Los_Angeles"
+  },
+  "recurrence": [
+    "RRULE:FREQ=WEEKLY;UNTIL=20110701T170000Z",
+  ],
+  "attendees": [
+    {
+      "email": "attendeeEmail",
+      # Other attendee's data...
+    },
+    # ...
+  ],
+}
+  */
