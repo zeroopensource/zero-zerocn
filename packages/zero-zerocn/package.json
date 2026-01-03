@@ -8,8 +8,9 @@
   "repository": "https://github.com/zeroopensource/zero-zerocn",
   "scripts": {
     "build": "pnpm fix:copy-readme && pnpm build:registry && next build && pnpm fix:next-out",
-    "dev": "pnpm build && next dev",
-    "start": "next start",
+    "dev": "pnpm build && pnpm dev:next",
+    "dev:next": "dotenv -e .env -- next dev",
+    "start": "dotenv -e .env -- next start",
     "types:check": "fumadocs-mdx && tsc --noEmit",
     "postinstall": "fumadocs-mdx",
     "serve": "pnpm build && serve out",
@@ -62,6 +63,7 @@
     "zod": "^4.2.1"
   },
   "devDependencies": {
+    "dotenv-cli": "11.0.0",
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4",
     "@types/mdx": "^2.0.13",
