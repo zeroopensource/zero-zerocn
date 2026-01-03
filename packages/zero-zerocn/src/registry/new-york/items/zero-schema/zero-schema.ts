@@ -78,30 +78,11 @@ export const ZeroSchema = z.object({
         timeZone: true,
       }),
     ]),
+    attendees: z.array(
+      z.object({
+        email: z.email(),
+      })
+    ),
   }),
 });
 export type ZeroSchema = z.infer<typeof ZeroSchema>;
-
-/*
-  
-{
-  "start": {
-    "dateTime": "2011-06-03T10:00:00.000-07:00",
-    "timeZone": "America/Los_Angeles"
-  },
-  "end": {
-    "dateTime": "2011-06-03T10:25:00.000-07:00",
-    "timeZone": "America/Los_Angeles"
-  },
-  "recurrence": [
-    "RRULE:FREQ=WEEKLY;UNTIL=20110701T170000Z",
-  ],
-  "attendees": [
-    {
-      "email": "attendeeEmail",
-      # Other attendee's data...
-    },
-    # ...
-  ],
-}
-  */
