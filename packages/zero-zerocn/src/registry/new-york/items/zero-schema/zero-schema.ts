@@ -35,6 +35,7 @@ export const ZeroSchemaPrimitives = z.object({
 
   summary: z.string(),
   location: z.string(),
+  /** recurrence ref: http://tools.ietf.org/html/rfc5545#section-3.8.5 */
   recurrence: z.array(z.string()),
 });
 export type ZeroSchemaPrimitives = z.infer<typeof ZeroSchemaPrimitives>;
