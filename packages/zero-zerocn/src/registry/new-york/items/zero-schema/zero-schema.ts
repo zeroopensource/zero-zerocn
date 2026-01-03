@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const ZeroSchema = z.object({
+export const zeroSchemaPrimitives = z.object({
   // #region env
   // NODE_ENV ref: https://nextjs.org/docs/pages/guides/environment-variables
   NODE_ENV: z.enum(["development", "test", "staging", "production"]),
@@ -24,6 +24,10 @@ export const ZeroSchema = z.object({
   // #endregion
 
   // #region data
-  DATETIME: z.string(),
+  date: z.iso.date(),
+  time: z.iso.time(),
+  datetime: z.iso.datetime(),
   // #endregion
 });
+
+export const zeroSchema = z.object({});
