@@ -2,6 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "mdx-cheatsheet",
   "description": "MDX syntax and usage reference",
+  "dependencies": [
+    "@zeroopensource/zero-cli@latest"
+  ],
+  "registryDependencies": [],
   "files": [
     {
       "path": "src/registry/new-york/items/mdx-cheatsheet/mdx-cheatsheet.mdx",

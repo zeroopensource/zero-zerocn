@@ -8,6 +8,9 @@
       "name": "all",
       "description": "Aggregated component including all components in the registry",
       "type": "registry:component",
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
       "registryDependencies": [
         "https://zerocn.zeroopensource.org/r/env.json",
         "https://zerocn.zeroopensource.org/r/mdx-cheatsheet.json",
@@ -22,6 +25,7 @@
       "description": "Constant exposing environment variables",
       "type": "registry:component",
       "dependencies": [
+        "@zeroopensource/zero-cli@latest",
         "dotenv",
         "dotenv-expand",
         "zod"
@@ -40,6 +44,10 @@
       "name": "packagejson",
       "description": "Constant exposing package.json data",
       "type": "registry:component",
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
+      "registryDependencies": [],
       "files": [
         {
           "path": "src/registry/new-york/items/packagejson/packagejson.ts",
@@ -51,6 +59,10 @@
       "name": "mdx-cheatsheet",
       "description": "MDX syntax and usage reference",
       "type": "registry:component",
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
+      "registryDependencies": [],
       "files": [
         {
           "path": "src/registry/new-york/items/mdx-cheatsheet/mdx-cheatsheet.mdx",
@@ -63,7 +75,9 @@
       "name": "zero-official",
       "description": "Official resources for Zero Open Source",
       "type": "registry:component",
-      "dependencies": [],
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
       "registryDependencies": [],
       "files": [
         {
@@ -77,6 +91,7 @@
       "description": "Zero Open Source community comments component",
       "type": "registry:component",
       "dependencies": [
+        "@zeroopensource/zero-cli@latest",
         "@giscus/react"
       ],
       "registryDependencies": [],
@@ -92,6 +107,7 @@
       "description": "Zero standardized zod schema",
       "type": "registry:component",
       "dependencies": [
+        "@zeroopensource/zero-cli@latest",
         "zod"
       ],
       "registryDependencies": [],
