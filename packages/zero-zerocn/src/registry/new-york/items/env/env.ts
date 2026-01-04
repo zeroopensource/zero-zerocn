@@ -13,35 +13,23 @@ expand(
   })
 );
 
-const EnvSchema = z
-  .object({
-    NODE_ENV: z.enum(["development", "test", "staging", "production"]),
-    PORT: z.coerce.number(),
-    LOG_LEVEL: z.enum([
-      "trace",
-      "debug",
-      "info",
-      "warn",
-      "error",
-      "fatal",
-      "silent",
-    ]),
-    DATABASE_URL: z.string(),
-    DATABASE_AUTH_TOKEN: z.string().optional(),
-    BETTER_AUTH_URL: z.string(),
-    BETTER_AUTH_SECRET: z.string(),
-  })
-  .superRefine((input, ctx) => {
-    if (input.NODE_ENV === "production" && !input.DATABASE_AUTH_TOKEN) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.invalid_type,
-        expected: "string",
-        received: "undefined",
-        path: ["DATABASE_AUTH_TOKEN"],
-        message: "Must be set when NODE_ENV is 'production'",
-      });
-    }
-  });
+const EnvSchema = z.object({
+  NODE_ENV: z.enum(["development", "test", "staging", "production"]),
+  PORT: z.coerce.number(),
+  LOG_LEVEL: z.enum([
+    "trace",
+    "debug",
+    "info",
+    "warn",
+    "error",
+    "fatal",
+    "silent",
+  ]),
+  DATABASE_URL: z.string(),
+  DATABASE_AUTH_TOKEN: z.string().optional(),
+  BETTER_AUTH_URL: z.string(),
+  BETTER_AUTH_SECRET: z.string(),
+});
 
 export type env = z.infer<typeof EnvSchema>;
 

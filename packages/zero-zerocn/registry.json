@@ -10,17 +10,22 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://zerocn.zeroopensource.org/r/env.json",
-        "https://zerocn.zeroopensource.org/r/packagejson.json",
         "https://zerocn.zeroopensource.org/r/mdx-cheatsheet.json",
+        "https://zerocn.zeroopensource.org/r/packagejson.json",
+        "https://zerocn.zeroopensource.org/r/zero-community-comments.json",
         "https://zerocn.zeroopensource.org/r/zero-official.json",
-        "https://zerocn.zeroopensource.org/r/zero-community-comments.json"
+        "https://zerocn.zeroopensource.org/r/zero-schema.json"
       ]
     },
     {
       "name": "env",
       "description": "Constant exposing environment variables",
       "type": "registry:component",
-      "dependencies": ["dotenv", "dotenv-expand", "zod"],
+      "dependencies": [
+        "dotenv",
+        "dotenv-expand",
+        "zod"
+      ],
       "registryDependencies": [],
       "files": [
         {
@@ -69,12 +74,29 @@
       "name": "zero-community-comments",
       "description": "Zero Open Source community comments component",
       "type": "registry:component",
-      "dependencies": ["@giscus/react"],
+      "dependencies": [
+        "@giscus/react"
+      ],
       "registryDependencies": [],
       "files": [
         {
           "path": "src/registry/new-york/items/zero-community-comments/zero-community-comments.tsx",
           "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "zero-schema",
+      "description": "Zero standardized zod schema",
+      "type": "registry:component",
+      "dependencies": [
+        "zod"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/registry/new-york/items/zero-schema/zero-schema.ts",
+          "type": "registry:lib"
         }
       ]
     }
