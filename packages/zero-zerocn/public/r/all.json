@@ -2,6 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "all",
   "description": "Aggregated component including all components in the registry",
+  "dependencies": [
+    "@zeroopensource/zero-cli@latest"
+  ],
   "registryDependencies": [
     "https://zerocn.zeroopensource.org/r/env.json",
     "https://zerocn.zeroopensource.org/r/mdx-cheatsheet.json",

@@ -3,6 +3,7 @@
   "name": "zero-community-comments",
   "description": "Zero Open Source community comments component",
   "dependencies": [
+    "@zeroopensource/zero-cli@latest",
     "@giscus/react"
   ],
   "registryDependencies": [],

@@ -2,6 +2,10 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "packagejson",
   "description": "Constant exposing package.json data",
+  "dependencies": [
+    "@zeroopensource/zero-cli@latest"
+  ],
+  "registryDependencies": [],
   "files": [
     {
       "path": "src/registry/new-york/items/packagejson/packagejson.ts",

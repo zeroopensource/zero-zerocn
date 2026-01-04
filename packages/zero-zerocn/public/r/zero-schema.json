@@ -3,6 +3,7 @@
   "name": "zero-schema",
   "description": "Zero standardized zod schema",
   "dependencies": [
+    "@zeroopensource/zero-cli@latest",
     "zod"
   ],
   "registryDependencies": [],
