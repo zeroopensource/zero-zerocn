@@ -51,6 +51,10 @@ export const ZeroSchema = z.object({
     BETTER_AUTH_URL: true,
     BETTER_AUTH_SECRET: true,
   }),
+  envNext: ZeroSchemaPrimitives.pick({
+    NODE_ENV: true,
+    PORT: true,
+  }),
   /**
   googleCalendarEvent ref: 
   https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/gapi.calendar
