@@ -19,7 +19,8 @@
     "shadcn": "shadcn",
     "shadcn:zero": "pnpm shadcn add https://zerocn.zeroopensource.org/r/all.json -y -o",
     "shadcn:addAll": "pnpm shadcn add https://zerocn.zeroopensource.org/r/all.json",
-    "build:registry": "shadcn build",
+    "shadcn:addAllItem": "tsx scripts/generate-registry-all-item",
+    "build:registry": "pnpm shadcn:addAllItem && shadcn build",
     "next": "next"
   },
   "dependencies": {
