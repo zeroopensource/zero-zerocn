@@ -26,7 +26,9 @@
         "dotenv-expand",
         "zod"
       ],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "https://zerocn.zeroopensource.org/r/zero-schema.json"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/items/env/env.ts",
