@@ -19,7 +19,6 @@
     "shadcn": "shadcn",
     "shadcn:zero": "pnpm shadcn add https://zerocn.zeroopensource.org/r/all.json -y -o",
     "shadcn:addAll": "pnpm shadcn add https://zerocn.zeroopensource.org/r/all.json",
-    "shadcn:addAllLocal": "pnpm shadcn add https://localhost:3000/r/all.json",
     "build:registry": "shadcn build",
     "next": "next"
   },

@@ -13,7 +13,8 @@
         "https://zerocn.zeroopensource.org/r/packagejson.json",
         "https://zerocn.zeroopensource.org/r/mdx-cheatsheet.json",
         "https://zerocn.zeroopensource.org/r/zero-official.json",
-        "https://zerocn.zeroopensource.org/r/zero-community-comments.json"
+        "https://zerocn.zeroopensource.org/r/zero-community-comments.json",
+        "https://zerocn.zeroopensource.org/r/zero-schema.json"
       ]
     },
     {
@@ -75,6 +76,19 @@
         {
           "path": "src/registry/new-york/items/zero-community-comments/zero-community-comments.tsx",
           "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "zero-schema",
+      "description": "Zero standardized zod schema",
+      "type": "registry:component",
+      "dependencies": ["zod"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/registry/new-york/items/zero-schema/zero-schema.ts",
+          "type": "registry:lib"
         }
       ]
     }

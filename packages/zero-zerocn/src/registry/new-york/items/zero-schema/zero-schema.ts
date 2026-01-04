@@ -44,6 +44,7 @@ export const ZeroSchema = z.object({
   ...ZeroSchemaPrimitives.shape,
   envApi: ZeroSchemaPrimitives.pick({
     NODE_ENV: true,
+    PORT: true,
     LOG_LEVEL: true,
     DATABASE_URL: true,
     DATABASE_AUTH_TOKEN: true,
