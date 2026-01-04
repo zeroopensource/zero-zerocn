@@ -42,6 +42,7 @@ export type ZeroSchemaPrimitives = z.infer<typeof ZeroSchemaPrimitives>;
 
 export const ZeroSchema = z.object({
   ...ZeroSchemaPrimitives.shape,
+  /** variations: envApi, envNext */
   envApi: ZeroSchemaPrimitives.pick({
     NODE_ENV: true,
     PORT: true,
@@ -51,6 +52,7 @@ export const ZeroSchema = z.object({
     BETTER_AUTH_URL: true,
     BETTER_AUTH_SECRET: true,
   }),
+  /** variations: envApi, envNext */
   envNext: ZeroSchemaPrimitives.pick({
     NODE_ENV: true,
     PORT: true,

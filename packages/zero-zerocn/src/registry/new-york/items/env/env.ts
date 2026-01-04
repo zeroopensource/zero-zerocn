@@ -1,7 +1,8 @@
 import path from "node:path";
 import { config } from "dotenv";
 import { expand } from "dotenv-expand";
-import { z } from "zod";
+import type { z } from "zod";
+import { ZeroSchema } from "@/lib/zero-schema";
 
 expand(
   config({
@@ -13,23 +14,8 @@ expand(
   })
 );
 
-const EnvSchema = z.object({
-  NODE_ENV: z.enum(["development", "test", "staging", "production"]),
-  PORT: z.coerce.number(),
-  LOG_LEVEL: z.enum([
-    "trace",
-    "debug",
-    "info",
-    "warn",
-    "error",
-    "fatal",
-    "silent",
-  ]),
-  DATABASE_URL: z.string(),
-  DATABASE_AUTH_TOKEN: z.string().optional(),
-  BETTER_AUTH_URL: z.string(),
-  BETTER_AUTH_SECRET: z.string(),
-});
+// Replace with variation, envNext, envApi
+const EnvSchema = ZeroSchema.shape.envNext;
 
 export type env = z.infer<typeof EnvSchema>;
 
