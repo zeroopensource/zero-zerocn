@@ -21,10 +21,10 @@
     "shadcn:addAll": "pnpm shadcn add https://zerocn.zeroopensource.org/r/all.json",
     "shadcn:addAllItem": "tsx scripts/generate-registry-all-item",
     "build:registry": "pnpm shadcn:addAllItem && shadcn build",
-    "next": "next"
+    "next": "next",
+    "zero": "zero"
   },
   "dependencies": {
-    "@tanstack/react-table": "^8.21.3",
     "@base-ui/react": "^1.0.0",
     "@giscus/react": "^3.1.0",
     "@hookform/resolvers": "^5.2.2",
@@ -32,6 +32,8 @@
     "@orama/orama": "^3.1.16",
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-slot": "^1.2.3",
+    "@tanstack/react-table": "^8.21.3",
+    "@zeroopensource/zero-cli": "^0.0.4",
     "@zxcvbn-ts/core": "^3.0.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -63,13 +65,13 @@
     "zod": "^4.2.1"
   },
   "devDependencies": {
-    "dotenv-cli": "11.0.0",
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4",
     "@types/mdx": "^2.0.13",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv-cli": "11.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
     "postcss": "^8.5.6",
