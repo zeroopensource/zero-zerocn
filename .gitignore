@@ -5,12 +5,16 @@ node_modules
 
 # Build outputs
 dist
+dist-ssr
 build
 *.tsbuildinfo
+server/dist
+public/dist
 
 # Environment variables
 .env
 .env*.local
+*.local
 
 # IDEs and editors
 .vscode/*
@@ -48,3 +52,13 @@ coverage
 .cache
 tmp
 temp
+
+# Next.js
+.next
+
+# Cargo
+**/target/
+**/capabilities/schemas
+
+# Tauri
+**/gen/schemas
