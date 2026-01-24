@@ -4,6 +4,8 @@ import { expand } from "dotenv-expand";
 import type { z } from "zod";
 import { ZeroSchema } from "@/lib/zero-schema";
 
+// https://github.com/t3-oss/t3-env
+
 expand(
   config({
     path: path.resolve(
