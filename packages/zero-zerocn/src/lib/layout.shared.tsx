@@ -6,7 +6,7 @@ import { PACKAGEJSON } from "@/lib/packagejson";
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
-      title: PACKAGEJSON.shortName,
+      title: PACKAGEJSON.nameVersionStage,
       url: "/docs",
     },
     links: [

@@ -1,11 +1,10 @@
 import path from "node:path";
-import { createEnv as createNextEnv } from "@t3-oss/env-nextjs";
 import { config } from "dotenv";
 import { expand } from "dotenv-expand";
 import type { z } from "zod";
 import { ZeroSchema } from "@/lib/zero-schema";
 
-/** Customize envSchema fields to include, If using next customize NEXTENV */
+/** Customize envSchema fields to include */
 export const envSchema = ZeroSchema.pick({
   NODE_ENV: true,
   PORT: true,
@@ -14,21 +13,6 @@ export const envSchema = ZeroSchema.pick({
   DATABASE_AUTH_TOKEN: true,
   BETTER_AUTH_URL: true,
   BETTER_AUTH_SECRET: true,
-});
-/** https://github.com/t3-oss/t3-env */
-export const NEXTENV = createNextEnv({
-  server: {},
-  client: {},
-  shared: {
-    NODE_ENV: ZeroSchema.shape.NODE_ENV,
-    PORT: ZeroSchema.shape.PORT,
-  },
-  runtimeEnv: {
-    // biome-ignore lint/style/noProcessEnv: Intentional
-    NODE_ENV: process.env.NODE_ENV,
-    // biome-ignore lint/style/noProcessEnv: Intentional
-    PORT: process.env.PORT,
-  },
 });
 
 expand(
