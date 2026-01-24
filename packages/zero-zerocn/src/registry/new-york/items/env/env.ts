@@ -15,6 +15,21 @@ export const envSchema = ZeroSchema.pick({
   BETTER_AUTH_URL: true,
   BETTER_AUTH_SECRET: true,
 });
+/** https://github.com/t3-oss/t3-env */
+export const NEXTENV = createNextEnv({
+  server: {},
+  client: {},
+  shared: {
+    NODE_ENV: ZeroSchema.shape.NODE_ENV,
+    PORT: ZeroSchema.shape.PORT,
+  },
+  runtimeEnv: {
+    // biome-ignore lint/style/noProcessEnv: Intentional
+    NODE_ENV: process.env.NODE_ENV,
+    // biome-ignore lint/style/noProcessEnv: Intentional
+    PORT: process.env.PORT,
+  },
+});
 
 expand(
   config({
@@ -37,19 +52,3 @@ if (error) {
 }
 // biome-ignore lint/style/noNonNullAssertion: Intentional
 export const ENV = data!;
-
-/** https://github.com/t3-oss/t3-env */
-export const NEXTENV = createNextEnv({
-  server: {},
-  client: {},
-  shared: {
-    NODE_ENV: ZeroSchema.shape.NODE_ENV,
-    PORT: ZeroSchema.shape.PORT,
-  },
-  runtimeEnv: {
-    // biome-ignore lint/style/noProcessEnv: Intentional
-    NODE_ENV: process.env.NODE_ENV,
-    // biome-ignore lint/style/noProcessEnv: Intentional
-    PORT: process.env.PORT,
-  },
-});
