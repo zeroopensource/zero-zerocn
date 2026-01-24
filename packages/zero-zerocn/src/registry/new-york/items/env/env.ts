@@ -5,6 +5,17 @@ import { expand } from "dotenv-expand";
 import type { z } from "zod";
 import { ZeroSchema } from "@/lib/zero-schema";
 
+/** Customize envSchema fields to include, If using next customize NEXTENV */
+export const envSchema = ZeroSchema.pick({
+  NODE_ENV: true,
+  PORT: true,
+  LOG_LEVEL: true,
+  DATABASE_URL: true,
+  DATABASE_AUTH_TOKEN: true,
+  BETTER_AUTH_URL: true,
+  BETTER_AUTH_SECRET: true,
+});
+
 expand(
   config({
     path: path.resolve(
@@ -14,19 +25,7 @@ expand(
     ),
   })
 );
-
-const envApiSchema = ZeroSchema.pick({
-  NODE_ENV: true,
-  PORT: true,
-  LOG_LEVEL: true,
-  DATABASE_URL: true,
-  DATABASE_AUTH_TOKEN: true,
-  BETTER_AUTH_URL: true,
-  BETTER_AUTH_SECRET: true,
-});
-const envSchema = envApiSchema;
 export type env = z.infer<typeof envSchema>;
-
 // biome-ignore lint/style/noProcessEnv: Intentional
 const { data, error } = envSchema.safeParse(process.env);
 if (error) {
