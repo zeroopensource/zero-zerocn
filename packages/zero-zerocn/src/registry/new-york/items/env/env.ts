@@ -17,8 +17,19 @@ expand(
   })
 );
 
-const envNextSchema = ZeroSchema.shape.envNext;
-// const envApiSchema = ZeroSchema.shape.envApi;
+const envNextSchema = ZeroSchema.pick({
+  NODE_ENV: true,
+  PORT: true,
+});
+// const envApiSchema = ZeroSchema.pick({
+//   NODE_ENV: true,
+//   PORT: true,
+//   LOG_LEVEL: true,
+//   DATABASE_URL: true,
+//   DATABASE_AUTH_TOKEN: true,
+//   BETTER_AUTH_URL: true,
+//   BETTER_AUTH_SECRET: true,
+// });
 const envSchema = envNextSchema;
 
 export type env = z.infer<typeof envSchema>;
