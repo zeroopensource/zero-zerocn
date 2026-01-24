@@ -21,6 +21,18 @@ pnpx shadcn@latest add zero/<item>
 npx shadcn@latest add zero/<item>
 ```
 
+Add paths to `tsconfig.json`
+
+```json
+{
+  "paths": {
+    "@/root/*": ["./*"],
+    "@/*": ["./src/*"],
+    "fumadocs-mdx:collections/*": [".source/*"]
+  }
+}
+```
+
 ## 🧱 Registry Item Types
 
 Zero Registry provides multiple item types to organize reusable code for frontend, backend, and full-stack environments.
