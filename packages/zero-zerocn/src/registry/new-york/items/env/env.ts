@@ -1,4 +1,5 @@
 import path from "node:path";
+import { createEnv } from "@t3-oss/env-core";
 import { config } from "dotenv";
 import { expand } from "dotenv-expand";
 import type { z } from "zod";
@@ -16,13 +17,14 @@ expand(
   })
 );
 
-// Replace with variation, envNext, envApi
-const EnvSchema = ZeroSchema.shape.envNext;
+const envNextSchema = ZeroSchema.shape.envNext;
+// const envApiSchema = ZeroSchema.shape.envApi;
+const envSchema = envNextSchema;
 
-export type env = z.infer<typeof EnvSchema>;
+export type env = z.infer<typeof envSchema>;
 
 // biome-ignore lint/style/noProcessEnv: Intentional
-const { data, error } = EnvSchema.safeParse(process.env);
+const { data, error } = envSchema.safeParse(process.env);
 
 if (error) {
   // biome-ignore lint/suspicious/noConsole: Intentional
