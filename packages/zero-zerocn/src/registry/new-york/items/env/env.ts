@@ -2,10 +2,8 @@ import path from "node:path";
 import { createEnv as createNextEnv } from "@t3-oss/env-nextjs";
 import { config } from "dotenv";
 import { expand } from "dotenv-expand";
-import { z } from "zod";
+import type { z } from "zod";
 import { ZeroSchema } from "@/lib/zero-schema";
-
-
 
 expand(
   config({
@@ -31,7 +29,6 @@ export type env = z.infer<typeof envSchema>;
 
 // biome-ignore lint/style/noProcessEnv: Intentional
 const { data, error } = envSchema.safeParse(process.env);
-
 if (error) {
   // biome-ignore lint/suspicious/noConsole: Intentional
   console.error("❌ Invalid env:");
@@ -39,22 +36,21 @@ if (error) {
   console.error(JSON.stringify(error.flatten().fieldErrors, null, 2));
   process.exit(1);
 }
-
-// biome-ignore lint/style/noNonNullAssertion: Intended
+// biome-ignore lint/style/noNonNullAssertion: Intentional
 export const ENV = data!;
 
 /** https://github.com/t3-oss/t3-env */
 export const NEXTENV = createNextEnv({
-  server: {
+  server: {},
+  client: {},
+  shared: {
     NODE_ENV: ZeroSchema.shape.NODE_ENV,
     PORT: ZeroSchema.shape.PORT,
   },
-  client: {
-    NEXT_PUBLIC_PUBLISHABLE_KEY: z.string().min(1),
-  },
   runtimeEnv: {
-    NEXT_PUBLIC_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_PUBLISHABLE_KEY,
+    // biome-ignore lint/style/noProcessEnv: Intentional
     NODE_ENV: process.env.NODE_ENV,
+    // biome-ignore lint/style/noProcessEnv: Intentional
     PORT: process.env.PORT,
   },
 });
