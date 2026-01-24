@@ -1,7 +1,19 @@
 import path from "node:path";
 import { config } from "dotenv";
 import { expand } from "dotenv-expand";
-import { z } from "zod";
+import type { z } from "zod";
+import { ZeroSchema } from "@/lib/zero-schema";
+
+/** Customize envSchema fields to include */
+export const envSchema = ZeroSchema.pick({
+  NODE_ENV: true,
+  PORT: true,
+  LOG_LEVEL: true,
+  DATABASE_URL: true,
+  DATABASE_AUTH_TOKEN: true,
+  BETTER_AUTH_URL: true,
+  BETTER_AUTH_SECRET: true,
+});
 
 expand(
   config({
@@ -12,30 +24,9 @@ expand(
     ),
   })
 );
-
-const EnvSchema = z.object({
-  NODE_ENV: z.enum(["development", "test", "staging", "production"]),
-  PORT: z.coerce.number(),
-  LOG_LEVEL: z.enum([
-    "trace",
-    "debug",
-    "info",
-    "warn",
-    "error",
-    "fatal",
-    "silent",
-  ]),
-  DATABASE_URL: z.string(),
-  DATABASE_AUTH_TOKEN: z.string().optional(),
-  BETTER_AUTH_URL: z.string(),
-  BETTER_AUTH_SECRET: z.string(),
-});
-
-export type env = z.infer<typeof EnvSchema>;
-
+export type env = z.infer<typeof envSchema>;
 // biome-ignore lint/style/noProcessEnv: Intentional
-const { data, error } = EnvSchema.safeParse(process.env);
-
+const { data, error } = envSchema.safeParse(process.env);
 if (error) {
   // biome-ignore lint/suspicious/noConsole: Intentional
   console.error("❌ Invalid env:");
@@ -43,6 +34,5 @@ if (error) {
   console.error(JSON.stringify(error.flatten().fieldErrors, null, 2));
   process.exit(1);
 }
-
-// biome-ignore lint/style/noNonNullAssertion: Intended
+// biome-ignore lint/style/noNonNullAssertion: Intentional
 export const ENV = data!;
