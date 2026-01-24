@@ -1,11 +1,11 @@
 import path from "node:path";
-import { createEnv } from "@t3-oss/env-core";
+import { createEnv as createNextEnv } from "@t3-oss/env-nextjs";
 import { config } from "dotenv";
 import { expand } from "dotenv-expand";
-import type { z } from "zod";
+import { z } from "zod";
 import { ZeroSchema } from "@/lib/zero-schema";
 
-// https://github.com/t3-oss/t3-env
+
 
 expand(
   config({
@@ -17,21 +17,16 @@ expand(
   })
 );
 
-const envNextSchema = ZeroSchema.pick({
+const envApiSchema = ZeroSchema.pick({
   NODE_ENV: true,
   PORT: true,
+  LOG_LEVEL: true,
+  DATABASE_URL: true,
+  DATABASE_AUTH_TOKEN: true,
+  BETTER_AUTH_URL: true,
+  BETTER_AUTH_SECRET: true,
 });
-// const envApiSchema = ZeroSchema.pick({
-//   NODE_ENV: true,
-//   PORT: true,
-//   LOG_LEVEL: true,
-//   DATABASE_URL: true,
-//   DATABASE_AUTH_TOKEN: true,
-//   BETTER_AUTH_URL: true,
-//   BETTER_AUTH_SECRET: true,
-// });
-const envSchema = envNextSchema;
-
+const envSchema = envApiSchema;
 export type env = z.infer<typeof envSchema>;
 
 // biome-ignore lint/style/noProcessEnv: Intentional
@@ -47,3 +42,19 @@ if (error) {
 
 // biome-ignore lint/style/noNonNullAssertion: Intended
 export const ENV = data!;
+
+/** https://github.com/t3-oss/t3-env */
+export const NEXTENV = createNextEnv({
+  server: {
+    NODE_ENV: ZeroSchema.shape.NODE_ENV,
+    PORT: ZeroSchema.shape.PORT,
+  },
+  client: {
+    NEXT_PUBLIC_PUBLISHABLE_KEY: z.string().min(1),
+  },
+  runtimeEnv: {
+    NEXT_PUBLIC_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_PUBLISHABLE_KEY,
+    NODE_ENV: process.env.NODE_ENV,
+    PORT: process.env.PORT,
+  },
+});
