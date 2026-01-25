@@ -130,9 +130,7 @@
       "dependencies": [
         "@zeroopensource/zero-cli@latest"
       ],
-      "registryDependencies": [
-        "resizable"
-      ],
+      "registryDependencies": [],
       "files": [
         {
           "path": "src/registry/new-york/items/patches/resizable.tsx",
