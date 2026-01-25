@@ -13,3 +13,6 @@ onlyBuiltDependencies:
   - protobufjs
   - sharp
   - unrs-resolver
+
+catalog:
+  shadcn: '^3.7.0'
