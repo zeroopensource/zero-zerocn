@@ -17,7 +17,7 @@
     "fix:next-out": "tsx scripts/fix-next-out.ts",
     "fix:copy-readme": "tsx scripts/copy-readme.ts",
     "shadcn": "shadcn",
-    "shadcn:addzero": "pnpm shadcn add https://zerocn.zeroopensource.org/r/all.json",
+    "shadcn:addzero": "pnpm shadcn add https://zerocn.zeroopensource.org/r/all.json -y -o",
     "shadcn:addAllItem": "tsx scripts/generate-registry-all-item",
     "build:registry": "pnpm shadcn:addAllItem && shadcn build",
     "next": "next",
