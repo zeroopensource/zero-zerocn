@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable",
+  "description": "Patched shadcn resizable component",
+  "dependencies": [
+    "@zeroopensource/zero-cli@latest"
+  ],
+  "registryDependencies": [
+    "resizable"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/items/patches/resizable.tsx",
+      "content": "\"use client\";\nimport type * as React from \"react\";\nimport * as ResizablePrimitive from \"react-resizable-panels\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction ResizablePanelGroup({\n  className,\n  ...props\n}: React.ComponentProps<typeof ResizablePrimitive.Group>) {\n  return (\n    <ResizablePrimitive.Group\n      className={cn(\n        \"flex h-full w-full data-[panel-group-direction=vertical]:flex-col\",\n        className\n      )}\n      data-slot=\"resizable-panel-group\"\n      {...props}\n    />\n  );\n}\n\nfunction ResizablePanel({\n  ...props\n}: React.ComponentProps<typeof ResizablePrimitive.Panel>) {\n  return <ResizablePrimitive.Panel data-slot=\"resizable-panel\" {...props} />;\n}\n\nfunction ResizableHandle({\n  withHandle,\n  className,\n  ...props\n}: React.ComponentProps<typeof ResizablePrimitive.Separator> & {\n  withHandle?: boolean;\n}) {\n  return (\n    <ResizablePrimitive.Separator\n      className={cn(\n        \"after:-translate-x-1/2 data-[panel-group-direction=vertical]:after:-translate-y-1/2 relative flex w-px items-center justify-center bg-border after:absolute after:inset-y-0 after:left-1/2 after:w-1 focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 data-[panel-group-direction=vertical]:h-px data-[panel-group-direction=vertical]:w-full data-[panel-group-direction=vertical]:after:left-0 data-[panel-group-direction=vertical]:after:h-1 data-[panel-group-direction=vertical]:after:w-full data-[panel-group-direction=vertical]:after:translate-x-0 [&[data-panel-group-direction=vertical]>div]:rotate-90\",\n        className\n      )}\n      data-slot=\"resizable-handle\"\n      {...props}\n    >\n      {withHandle && (\n        <div className=\"z-10 flex h-6 w-1 shrink-0 rounded-lg bg-border\" />\n      )}\n    </ResizablePrimitive.Separator>\n  );\n}\n\nexport { ResizablePanelGroup, ResizablePanel, ResizableHandle };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:component"
+}
