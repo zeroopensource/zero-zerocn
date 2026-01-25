@@ -29,7 +29,8 @@
         "@zeroopensource/zero-cli@latest",
         "dotenv",
         "dotenv-expand",
-        "zod"
+        "zod",
+        "@t3-oss/env-nextjs"
       ],
       "registryDependencies": [
         "https://zerocn.zeroopensource.org/r/zero-schema.json"
