@@ -10,6 +10,7 @@
     "docs",
     "---Components---",
     "lib",
+    "patches",
     "file",
     "zero"
   ]
