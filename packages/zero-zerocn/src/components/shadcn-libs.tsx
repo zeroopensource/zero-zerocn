@@ -1,5 +1,4 @@
 "use client";
-import { isPageStatic } from "next/dist/build/utils";
 import Link from "next/link";
 import {
   Table,
