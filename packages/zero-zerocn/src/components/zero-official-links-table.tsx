@@ -17,7 +17,7 @@ export const ZeroOfficialLinksTable = () => {
       <TableHeader>
         <TableRow>
           <TableHead>Name</TableHead>
-          <TableHead>Url</TableHead>
+          <TableHead>URL</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
