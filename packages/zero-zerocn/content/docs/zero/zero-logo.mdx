@@ -5,4 +5,30 @@ description: Zero logo assets in various formats and sizes
 
 Zero logo assets in various formats and sizes.
 
-Coming Soon
+### Usage
+
+Install package
+
+```bash
+pnpm dlx shadcn@latest add https://zerocn.zeroopensource.org/r/zero-logo.json
+```
+
+Install package ([workspace](/docs/workspace))
+
+```bash
+pnpm --filter=$WORKSPACE shadcn add https://zerocn.zeroopensource.org/r/zero-logo.json
+```
+
+Import and use
+
+```jsx
+import { ZeroLogo } from '@/ui/zero-logo'
+
+export default async function Page() {
+  return (
+    <div>
+      <ZeroLogo />
+    </div>
+  )
+}
+```
