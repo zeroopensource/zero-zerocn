@@ -15,7 +15,7 @@ type Params = {
   separator?: string | null | undefined;
 };
 
-export const zeroId = ({
+export const generateZeroId = ({
   prefixes,
   partSize,
   partCount,
