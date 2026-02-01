@@ -7,6 +7,7 @@
     "---General---",
     "index",
     "workspace",
+    "requests",
     "docs",
     "---Components---",
     "lib",
