@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "zero-id",
+  "description": "Zero Index registered universally unique ID",
+  "dependencies": [
+    "@zeroopensource/zero-cli@latest",
+    "nanoid"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/registry/new-york/items/zero-id/zero-id.ts",
+      "content": "import { nanoid } from \"nanoid\";\n\ntype Params = {\n  prefix?: string | null | undefined;\n};\n\nexport const zeroId = ({ prefix }: Params) => {\n  return null;\n};\n",
+      "type": "registry:lib"
+    }
+  ],
+  "type": "registry:component"
+}
