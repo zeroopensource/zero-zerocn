@@ -17,6 +17,7 @@
         "https://zerocn.zeroopensource.org/r/packagejson.json",
         "https://zerocn.zeroopensource.org/r/resizable.json",
         "https://zerocn.zeroopensource.org/r/zero-community-comments.json",
+        "https://zerocn.zeroopensource.org/r/zero-logo.json",
         "https://zerocn.zeroopensource.org/r/zero-official.json",
         "https://zerocn.zeroopensource.org/r/zero-schema.json"
       ]
@@ -88,6 +89,21 @@
       "files": [
         {
           "path": "src/registry/new-york/items/zero-official/zero-official.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "zero-logo",
+      "description": "Zero logo assets in various formats and sizes",
+      "type": "registry:component",
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/registry/new-york/items/zero-logo/zero-logo.tsx",
           "type": "registry:lib"
         }
       ]
