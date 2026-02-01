@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "zero-official",
-  "description": "Official resources for Zero Open Source",
+  "description": "Official links for Zero Open Source",
   "dependencies": [
     "@zeroopensource/zero-cli@latest"
   ],

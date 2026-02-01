@@ -5,4 +5,23 @@ description: Zero Index registered universally unique ID
 
 Zero Index registered universally unique ID.
 
-Coming Soon
+### Usage
+
+Install package
+
+```bash
+pnpm dlx shadcn@latest add https://zerocn.zeroopensource.org/r/zero-id.json
+```
+
+Install package ([workspace](/docs/workspace))
+
+```bash
+pnpm --filter=$WORKSPACE shadcn add https://zerocn.zeroopensource.org/r/zero-id.json
+```
+
+Import and use
+
+```js
+import { generateZeroId } from '@/lib/zero-id'
+const id = generateZeroId()
+```
