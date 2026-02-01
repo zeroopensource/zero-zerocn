@@ -15,12 +15,8 @@ type Params = {
   separator?: string | null | undefined;
 };
 
-export const generateZeroId = ({
-  prefixes,
-  partSize,
-  partCount,
-  separator,
-}: Params) => {
+export const generateZeroId = (params?: Params | undefined) => {
+  const { prefixes, partSize, partCount, separator } = params || {};
   const keys = Array.from({ length: partCount || DEFAULT_PART_COUNT }, () =>
     customAlphabet("1234567890abcdef", partSize || DEFAULT_PART_SIZE)()
   );
