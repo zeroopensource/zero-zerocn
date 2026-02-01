@@ -105,7 +105,7 @@
       "files": [
         {
           "path": "src/registry/new-york/items/zero-logo/zero-logo.tsx",
-          "type": "registry:lib"
+          "type": "registry:ui"
         }
       ]
     },
