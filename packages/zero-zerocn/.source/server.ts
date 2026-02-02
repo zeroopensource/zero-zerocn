@@ -6,8 +6,8 @@ import * as __fd_glob_9 from "../content/docs/zero/zero-id.mdx?collection=docs"
 import * as __fd_glob_8 from "../content/docs/patches/resizable.mdx?collection=docs"
 import * as __fd_glob_7 from "../content/docs/lib/packagejson.mdx?collection=docs"
 import * as __fd_glob_6 from "../content/docs/lib/env.mdx?collection=docs"
-import * as __fd_glob_5 from "../content/docs/file/mdx-cheatsheet.mdx?collection=docs"
-import * as __fd_glob_4 from "../content/docs/docs/shadcn-libraries.mdx?collection=docs"
+import * as __fd_glob_5 from "../content/docs/docs/shadcn-libraries.mdx?collection=docs"
+import * as __fd_glob_4 from "../content/docs/file/mdx-cheatsheet.mdx?collection=docs"
 import * as __fd_glob_3 from "../content/docs/workspace.mdx?collection=docs"
 import * as __fd_glob_2 from "../content/docs/requests.mdx?collection=docs"
 import * as __fd_glob_1 from "../content/docs/index.mdx?collection=docs"
@@ -20,4 +20,4 @@ const create = server<typeof Config, import("fumadocs-mdx/runtime/types").Intern
   }
 }>({"doc":{"passthroughs":["extractedReferences"]}});
 
-export const docs = await create.docs("docs", "content\docs", {"meta.json": __fd_glob_0, }, {"index.mdx": __fd_glob_1, "requests.mdx": __fd_glob_2, "workspace.mdx": __fd_glob_3, "docs/shadcn-libraries.mdx": __fd_glob_4, "file/mdx-cheatsheet.mdx": __fd_glob_5, "lib/env.mdx": __fd_glob_6, "lib/packagejson.mdx": __fd_glob_7, "patches/resizable.mdx": __fd_glob_8, "zero/zero-id.mdx": __fd_glob_9, "zero/zero-logo.mdx": __fd_glob_10, "zero/zero-official.mdx": __fd_glob_11, "zero/zero-schema.mdx": __fd_glob_12, });
+export const docs = await create.docs("docs", "content\docs", {"meta.json": __fd_glob_0, }, {"index.mdx": __fd_glob_1, "requests.mdx": __fd_glob_2, "workspace.mdx": __fd_glob_3, "file/mdx-cheatsheet.mdx": __fd_glob_4, "docs/shadcn-libraries.mdx": __fd_glob_5, "lib/env.mdx": __fd_glob_6, "lib/packagejson.mdx": __fd_glob_7, "patches/resizable.mdx": __fd_glob_8, "zero/zero-id.mdx": __fd_glob_9, "zero/zero-logo.mdx": __fd_glob_10, "zero/zero-official.mdx": __fd_glob_11, "zero/zero-schema.mdx": __fd_glob_12, });
