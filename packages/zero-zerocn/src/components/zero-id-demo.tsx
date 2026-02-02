@@ -1,6 +1,5 @@
 "use client";
 
-import { AudioLinesIcon, PlusIcon } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
