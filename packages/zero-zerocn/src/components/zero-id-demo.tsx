@@ -17,18 +17,20 @@ import {
 import { generateZeroId } from "@/lib/zero-id";
 
 export const ZeroIdDemo = () => {
-  const [zeroId, setZeroId] = useState(generateZeroId());
+  const [zeroId, setZeroId] = useState<string>(generateZeroId());
   return (
     <ButtonGroup>
       <ButtonGroup className="flex-1">
         <InputGroup>
-          <InputGroupInput className="w-100" defaultValue={zeroId} />
+          <InputGroupInput className="w-100" value={zeroId} readOnly/>
           <InputGroupAddon align="inline-end">
             <Tooltip>
               <TooltipTrigger asChild>
                 <InputGroupButton
                   className="data-[active=true]:bg-primary data-[active=true]:text-primary-foreground"
-                  onClick={() => setZeroId(generateZeroId())}
+                  onClick={() => {
+                    setZeroId(generateZeroId())
+                  }}
                 >
                   generate
                 </InputGroupButton>
