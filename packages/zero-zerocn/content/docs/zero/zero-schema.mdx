@@ -5,4 +5,38 @@ description: Zero standardized zod schema
 
 Zero standardized zod schema.
 
-Coming Soon
+### Usage
+
+Install package
+
+```bash
+pnpm dlx shadcn@latest add https://zerocn.zeroopensource.org/r/zero-schema.json
+```
+
+Install package ([workspace](/docs/workspace))
+
+```bash
+pnpm --filter=$WORKSPACE shadcn add https://zerocn.zeroopensource.org/r/zero-schema.json
+```
+
+Import and use
+
+```js
+import { ZeroSchema } from "@/lib/zero-schema";
+import { z } from "zod";
+
+const inputs = ZeroSchema.pick({
+  email: true
+  password: true
+});
+
+const inputs2 = z.object({
+  email: ZeroSchema.shape.email,
+  password: ZeroSchema.shape.password,
+});
+
+type email = ZeroSchema["email"];
+
+const parsedInputs = inputs.parse({ email: "johndoe@example.com", password: "123" })
+```
+
