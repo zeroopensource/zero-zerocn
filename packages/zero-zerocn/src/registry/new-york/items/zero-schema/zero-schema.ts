@@ -38,7 +38,8 @@ export const ZeroSchemaPrimitives = z.object({
   /** recurrence ref: http://tools.ietf.org/html/rfc5545#section-3.8.5 */
   recurrence: z.array(z.string()),
   email: z.email(),
-  password: z
+  password: z.string().min(1, { message: "Password required" }),
+  newPassword: z
     .string()
     .min(8, "Password must be at least 8 characters long")
     .max(128, "Password must be at most 128 characters long")
@@ -56,6 +57,15 @@ export type ZeroSchemaPrimitives = z.infer<typeof ZeroSchemaPrimitives>;
 
 export const ZeroSchema = z.object({
   ...ZeroSchemaPrimitives.shape,
+  newConfirmedPassword: z
+    .object({
+      newPassword: ZeroSchemaPrimitives.shape.newPassword,
+      confirmPassword: z.string(),
+    })
+    .refine((data) => data.newPassword === data.confirmPassword, {
+      message: "Passwords do not match",
+      path: ["confirmPassword"],
+    }),
   /**
   googleCalendarEvent ref: 
   https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/gapi.calendar
