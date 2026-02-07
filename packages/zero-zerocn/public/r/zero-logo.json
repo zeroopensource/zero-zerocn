@@ -5,11 +5,13 @@
   "dependencies": [
     "@zeroopensource/zero-cli@latest"
   ],
-  "registryDependencies": [],
+  "registryDependencies": [
+    "tooltip"
+  ],
   "files": [
     {
       "path": "src/registry/new-york/items/zero-logo/zero-logo.tsx",
-      "content": "\"use client\";\nimport type { SVGProps } from \"react\";\n\ntype Props = SVGProps<SVGSVGElement>;\n\nexport const ZeroLogo = (props: Props) => {\n  return (\n    // biome-ignore lint/a11y/noSvgWithoutTitle: Intentional\n    <svg\n      {...props}\n      fill=\"none\"\n      height=\"400\"\n      viewBox=\"0 0 400 400\"\n      width=\"400\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n    >\n      <path\n        clipRule=\"evenodd\"\n        d=\"M200 360C288.366 360 360 288.366 360 200C360 111.634 288.366 40 200 40C111.634 40 40 111.634 40 200C40 288.366 111.634 360 200 360ZM200 312C261.856 312 312 261.856 312 200C312 138.144 261.856 88 200 88C138.144 88 88 138.144 88 200C88 261.856 138.144 312 200 312Z\"\n        fill=\"white\"\n        fillRule=\"evenodd\"\n      />\n    </svg>\n  );\n};\n",
+      "content": "\"use client\";\nimport type { SVGProps } from \"react\";\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\n\ntype Props = SVGProps<SVGSVGElement>;\n\nexport const ZeroLogo = (props: Props) => {\n  return (\n    // biome-ignore lint/a11y/noSvgWithoutTitle: Intentional\n    <svg\n      {...props}\n      fill=\"none\"\n      height=\"400\"\n      viewBox=\"0 0 400 400\"\n      width=\"400\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n    >\n      <path\n        clipRule=\"evenodd\"\n        d=\"M200 360C288.366 360 360 288.366 360 200C360 111.634 288.366 40 200 40C111.634 40 40 111.634 40 200C40 288.366 111.634 360 200 360ZM200 312C261.856 312 312 261.856 312 200C312 138.144 261.856 88 200 88C138.144 88 88 138.144 88 200C88 261.856 138.144 312 200 312Z\"\n        fill=\"white\"\n        fillRule=\"evenodd\"\n      />\n    </svg>\n  );\n};\n\nexport const ZeroLogoHover = (props: React.ComponentProps<typeof ZeroLogo>) => {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Button className=\"p-0\" variant=\"ghost\">\n          <ZeroLogo {...props} />\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent>\n        <p>Zero</p>\n      </TooltipContent>\n    </Tooltip>\n  );\n};",
       "type": "registry:ui"
     }
   ],

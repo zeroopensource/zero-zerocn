@@ -101,7 +101,9 @@
       "dependencies": [
         "@zeroopensource/zero-cli@latest"
       ],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "tooltip"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/items/zero-logo/zero-logo.tsx",
