@@ -38,15 +38,34 @@ Add paths to `tsconfig.json`
 {
   "paths": {
     "@/root/*": ["./*"],
-    "@/*": ["./src/*"],
+    "@/src/*": ["./src/*"],
+    "@/shadcn/*": ["./src/shadcn/*"],
     "fumadocs-mdx:collections/*": [".source/*"]
   }
+}
+```
+
+modify `components.json` aliases
+
+```json
+{
+ "aliases": {
+    "components": "@/shadcn/components",
+    "utils": "@/shadcn/lib/utils",
+    "ui": "@/shadcn/components/ui",
+    "lib": "@/shadcn/lib",
+    "hooks": "@/shadcn/hooks"
+  },
 }
 ```
 
 ## 🧱 Registry Item Types
 
 Zero Registry provides multiple item types to organize reusable code for frontend, backend, and full-stack environments.
+
+https://ui.shadcn.com/docs/registry/registry-json<br />
+https://ui.shadcn.com/schema/registry-item.json
+
 
 | Type                   | Description                                                                     |
 | ---------------------- | ------------------------------------------------------------------------------- |
