@@ -3,7 +3,8 @@
   "name": "resizable",
   "description": "Patched shadcn resizable component",
   "dependencies": [
-    "@zeroopensource/zero-cli@latest"
+    "@zeroopensource/zero-cli@latest",
+    "react-resizable-panels"
   ],
   "registryDependencies": [],
   "files": [
