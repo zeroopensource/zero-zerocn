@@ -26,25 +26,12 @@ Add paths to `tsconfig.json`
 ```json
 {
   "paths": {
+    "@/*": ["./src/*"],
     "@/root/*": ["./*"],
     "@/src/*": ["./src/*"],
     "@/shadcn/*": ["./src/shadcn/*"],
     "fumadocs-mdx:collections/*": [".source/*"]
   }
-}
-```
-
-modify `components.json` aliases
-
-```json
-{
- "aliases": {
-    "components": "@/shadcn/components",
-    "utils": "@/shadcn/lib/utils",
-    "ui": "@/shadcn/components/ui",
-    "lib": "@/shadcn/lib",
-    "hooks": "@/shadcn/hooks"
-  },
 }
 ```
 

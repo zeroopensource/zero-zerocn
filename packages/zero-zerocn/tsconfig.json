@@ -16,8 +16,10 @@
     "jsx": "react-jsx",
     "incremental": true,
     "paths": {
-      "@/root/*": ["./*"],
       "@/*": ["./src/*"],
+      "@/root/*": ["./*"],
+      "@/src/*": ["./src/*"],
+      "@/shadcn/*": ["./src/shadcn/*"],
       "fumadocs-mdx:collections/*": [".source/*"]
     },
     "plugins": [
