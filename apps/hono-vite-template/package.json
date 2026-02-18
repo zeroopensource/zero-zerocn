@@ -2,7 +2,7 @@
   "name": "hono-vite-template",
   "type": "module",
   "version": "0.0.1",
-  "scripts": {
+  "_scripts": {
     "dev:all": "concurrently \"pnpm db:studio\" \"pnpm dev\"",
     "dev": "tsx watch src/index.ts",
     "start": "node ./dist/src/index.js",
