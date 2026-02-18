@@ -1,0 +1,2 @@
+# hono-vite-template
+
