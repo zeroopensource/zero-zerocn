@@ -23,6 +23,7 @@
     "serve:vite": "serve ./dist/vite"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
     "@base-ui/react": "^1.2.0",
     "@better-auth/expo": "^1.4.10",
     "@giscus/react": "^3.1.0",
