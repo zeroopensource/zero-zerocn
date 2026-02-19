@@ -17,7 +17,7 @@
     },
     {
       "path": "src/registry/new-york/items/drizzle-reset/drizzle-reset.config.ts",
-      "content": "import { defineConfig } from \"drizzle-kit\";\nimport { ENV } from \"@/lib/env\";\n\nexport default defineConfig({\n  schema: \"./drizzle-reset-schema.ts\",\n  dialect: \"postgresql\",\n  dbCredentials: {\n    url: ENV.DATABASE_URL,\n    // authToken: env.DATABASE_AUTH_TOKEN,\n  },\n});\n",
+      "content": "import { defineConfig } from \"drizzle-kit\";\nimport { ENV } from \"@/lib/env\";\n\nexport default defineConfig({\n  schema: \"./src/shadcn/lib/drizzle-reset-schema.ts\",\n  dialect: \"postgresql\",\n  dbCredentials: {\n    url: ENV.DATABASE_URL,\n    // authToken: env.DATABASE_AUTH_TOKEN,\n  },\n});\n",
       "type": "registry:lib"
     }
   ],
