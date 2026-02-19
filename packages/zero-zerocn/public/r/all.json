@@ -6,6 +6,7 @@
     "@zeroopensource/zero-cli@latest"
   ],
   "registryDependencies": [
+    "https://zerocn.zeroopensource.org/r/drizzle-reset.json",
     "https://zerocn.zeroopensource.org/r/env.json",
     "https://zerocn.zeroopensource.org/r/mdx-cheatsheet.json",
     "https://zerocn.zeroopensource.org/r/packagejson.json",

@@ -12,6 +12,7 @@
         "@zeroopensource/zero-cli@latest"
       ],
       "registryDependencies": [
+        "https://zerocn.zeroopensource.org/r/drizzle-reset.json",
         "https://zerocn.zeroopensource.org/r/env.json",
         "https://zerocn.zeroopensource.org/r/mdx-cheatsheet.json",
         "https://zerocn.zeroopensource.org/r/packagejson.json",
@@ -123,6 +124,28 @@
       "files": [
         {
           "path": "src/registry/new-york/items/zero-id/zero-id.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "drizzle-reset",
+      "description": "Drizzle config for resetting",
+      "type": "registry:component",
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest",
+        "drizzle-kit"
+      ],
+      "registryDependencies": [
+        "https://zerocn.zeroopensource.org/r/env.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/items/drizzle-reset/drizzle-reset-schema.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "src/registry/new-york/items/drizzle-reset/drizzle-reset.config.ts",
           "type": "registry:lib"
         }
       ]
