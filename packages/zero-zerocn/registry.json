@@ -75,8 +75,7 @@
       "files": [
         {
           "path": "src/registry/new-york/items/mdx-cheatsheet/mdx-cheatsheet.mdx",
-          "type": "registry:file",
-          "target": "file/mdx-cheatsheet.mdx"
+          "type": "registry:lib"
         }
       ]
     },
