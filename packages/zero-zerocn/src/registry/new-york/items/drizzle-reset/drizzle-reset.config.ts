@@ -2,7 +2,7 @@ import { defineConfig } from "drizzle-kit";
 import { ENV } from "@/lib/env";
 
 export default defineConfig({
-  schema: "./drizzle-reset-schema.ts",
+  schema: "./src/shadcn/lib/drizzle-reset-schema.ts",
   dialect: "postgresql",
   dbCredentials: {
     url: ENV.DATABASE_URL,
