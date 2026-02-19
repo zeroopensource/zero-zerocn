@@ -1,0 +1,15 @@
+---
+title: Drizzle Reset
+description: Drizzle config for resetting
+---
+
+### Usage
+
+```json
+{
+  "scripts": {
+     "db:reset": "pnpm drizzle-kit push --force --config=src/shadcn/lib/drizzle-empty.config.ts && pnpm drizzle-kit push",
+  }
+}
+
+```

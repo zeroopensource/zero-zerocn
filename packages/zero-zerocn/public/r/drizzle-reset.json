@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drizzle-reset",
+  "description": "Drizzle config for resetting",
+  "dependencies": [
+    "@zeroopensource/zero-cli@latest",
+    "drizzle-kit"
+  ],
+  "registryDependencies": [
+    "https://zerocn.zeroopensource.org/r/env.json"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/items/drizzle-reset/drizzle-reset-schema.ts",
+      "content": "",
+      "type": "registry:lib"
+    },
+    {
+      "path": "src/registry/new-york/items/drizzle-reset/drizzle-reset.config.ts",
+      "content": "import { defineConfig } from \"drizzle-kit\";\nimport { ENV } from \"@/lib/env\";\n\nexport default defineConfig({\n  schema: \"./drizzle-reset-schema.ts\",\n  dialect: \"postgresql\",\n  dbCredentials: {\n    url: ENV.DATABASE_URL,\n    // authToken: env.DATABASE_AUTH_TOKEN,\n  },\n});\n",
+      "type": "registry:lib"
+    }
+  ],
+  "type": "registry:component"
+}
