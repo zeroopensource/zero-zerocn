@@ -23,6 +23,8 @@ export const ZeroSchemaPrimitives = z.object({
   BETTER_AUTH_URL: z.string(),
   /** BETTER_AUTH ref: https://www.better-auth.com/docs/installation */
   BETTER_AUTH_SECRET: z.string(),
+  /** https://www.better-auth.com/docs/plugins/polar */
+  POLAR_ACCESS_TOKEN: z.string(),
   // #endregion
 
   // #region date types
