@@ -109,6 +109,12 @@ export const ShadcnLibs: Lib[] = [
     isPaid: false,
   },
   {
+    name: "@better-auth-ui",
+    docsUrl: "https://better-auth-ui.com/",
+    repoUrl: "https://github.com/daveyplate/better-auth-ui",
+    isPaid: false,
+  },
+  {
     name: "@better-upload",
     docsUrl: "https://better-upload.com",
     repoUrl: "https://github.com/Nic13Gamer/better-upload",
