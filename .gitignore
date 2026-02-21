@@ -15,6 +15,14 @@ public/dist
 .env
 .env*.local
 *.local
+.env*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+.env.production
+.dev.vars
 
 # IDEs and editors
 .vscode/*
@@ -37,6 +45,16 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
+# dev
+.yarn/
+!.yarn/releases
+.vscode/*
+!.vscode/launch.json
+!.vscode/*.code-snippets
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf
+
 # Turbo
 .turbo
 
@@ -52,9 +70,7 @@ coverage
 .cache
 tmp
 temp
-
-# Next.js
-.next
+*.pem
 
 # Cargo
 **/target/
@@ -62,3 +78,18 @@ temp
 
 # Tauri
 **/gen/schemas
+
+# Next.js
+.next/
+out/
+build
+.swc/
+.vercel
+next-env.d.ts
+
+# Local db
+dev.db
+test.db
+
+# typescript
+*.tsbuildinfo
