@@ -93,3 +93,6 @@ test.db
 
 # typescript
 *.tsbuildinfo
+
+# fumadocs
+.source
