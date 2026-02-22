@@ -25,7 +25,11 @@ through Nodemailer SMTP
 ```js
 import { sendEmail } from '@/lib/send-email'
 
-void sendEmail()
+void sendEmail({
+  recipientEmail: "newuser@example.com",
+  subject: "Welcome New User!",
+  html: "",
+})
 ```
 
 through Gmail API (works with blocked SMTP ports)
@@ -33,7 +37,11 @@ through Gmail API (works with blocked SMTP ports)
 ```js
 import { sendGmail } from '@/lib/send-gmail'
 
-void sendGmail()
+void sendGmail({
+  recipientEmail: "newuser@example.com",
+  subject: "Welcome New User!",
+  html: "",
+})
 ```
 
 ### References

@@ -23,14 +23,10 @@ export const MailTransporter = nodemailer.createTransport({
 export const sendEmail = ({
   recipientEmail,
   subject,
-  preview,
-  body,
   html,
 }: {
   recipientEmail: string;
   subject: string;
-  preview: string;
-  body: string;
   html: string;
 }) => {
   const mailOptions = {
@@ -52,8 +48,6 @@ export const sendEmail = ({
             inputs: {
               recipientEmail,
               subject,
-              preview,
-              body,
             },
             error,
           },
