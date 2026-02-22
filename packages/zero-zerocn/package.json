@@ -24,6 +24,8 @@
     "zero": "zero"
   },
   "dependencies": {
+    "@react-email/components": "1.0.8",
+    "html-react-parser": "5.2.17",
     "nodemailer": "8.0.1",
     "drizzle-kit": "^0.31.8",
     "@fontsource-variable/inter": "^5.2.8",
