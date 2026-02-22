@@ -1,6 +1,7 @@
 /** biome-ignore-all lint/correctness/noChildrenProp: Documented Usage */
 "use client";
 
+import { render } from "@react-email/components";
 import { useForm } from "@tanstack/react-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
@@ -20,7 +21,7 @@ import {
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { sendEmail } from "@/lib/send-email";
-import { renderEmailTemplate } from "./email-template";
+import { EmailTemplate } from "./email-template";
 
 const formSchema = z.object({
   username: z.string().min(1, "Username must be at least 1 character."),
@@ -39,14 +40,21 @@ export const SendEmailForm = () => {
       onSubmit: formSchema,
     },
     onSubmit: async ({ value }) => {
-      const html = await renderEmailTemplate({
-        username: value.username,
-        company: value.company,
-      });
+      const subject = `Welcome to ${value.company}, ${value.username}!`;
+      const html = await render(
+        <EmailTemplate
+          company={value.company}
+          subject={subject}
+          username={value.username}
+        />,
+        {
+          pretty: true,
+        }
+      );
       // biome-ignore lint/complexity/noVoid: Intended
       void sendEmail({
         recipientEmail: value.email,
-        subject: `Welcome to ${value.company}, ${value.username}!`,
+        subject,
         html,
       });
     },

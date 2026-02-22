@@ -3,6 +3,8 @@ title: Email
 description: Functions for sending emails
 ---
 
+Functions for sending emails
+
 ### Usage
 
 
@@ -43,6 +45,39 @@ void sendGmail({
   html: "",
 })
 ```
+
+### React Email
+
+```tsx
+import { render } from "@react-email/components";
+import { EmailTemplate } from "./email-template";
+
+const username = "John Doe";
+const company = 'Example Inc.';
+const email = 'newuser@example.com';
+const subject = `Welcome to ${company}, ${username}!`;
+const html = await render(
+  <EmailTemplate
+    company={company}
+    subject={subject}
+    username={username}
+  />,
+  {
+    pretty: true,
+  }
+);
+
+void sendEmail({
+  recipientEmail: email,
+  subject,
+  html,
+});
+```
+
+<include cwd lang="tsx" meta='title="email-template.tsx"'>
+  ./src/components/email-template.tsx
+</include>
+
 
 ### References
 

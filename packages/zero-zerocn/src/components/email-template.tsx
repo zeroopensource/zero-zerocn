@@ -7,7 +7,6 @@ import {
   Html,
   Img,
   Preview,
-  render,
   Section,
   Tailwind,
   Text,
@@ -16,18 +15,18 @@ import {
 interface Props {
   username?: string;
   company?: string;
+  subject?: string;
 }
 
 export const EmailTemplate = ({
   username = "User",
   company = "Our Company",
+  subject,
 }: Props) => {
-  const previewText = `Welcome to ${company}, ${username}!`;
-
   return (
     <Html>
       <Head />
-      <Preview>{previewText}</Preview>
+      <Preview>{subject || company}</Preview>
       <Tailwind>
         <Body className="m-auto bg-black font-sans">
           <Container className="mx-auto mb-10 max-w-[465px] p-5">
@@ -70,14 +69,3 @@ export const EmailTemplate = ({
     </Html>
   );
 };
-
-export const renderEmailTemplate = ({
-  username,
-  company,
-}: {
-  username: string;
-  company: string;
-}) =>
-  render(<EmailTemplate company={company} username={username} />, {
-    pretty: true,
-  });
