@@ -1,0 +1,33 @@
+---
+title: Email
+description: Functions for sending emails
+---
+
+### Usage
+
+
+Install package
+
+```bash
+pnpm dlx shadcn@latest add https://zerocn.zeroopensource.org/r/email.json
+```
+
+Install package ([workspace](/docs/workspace))
+
+```bash
+pnpm --filter=$WORKSPACE shadcn add https://zerocn.zeroopensource.org/r/email.json
+```
+
+Import and use
+
+through Nodemailer SMTP
+
+```js
+import { sendEmail } from '@/lib/send-email'
+```
+
+through Gmail API (works with blocked SMTP ports)
+
+```js
+import { sendGmail } from '@/lib/send-gmail'
+```
