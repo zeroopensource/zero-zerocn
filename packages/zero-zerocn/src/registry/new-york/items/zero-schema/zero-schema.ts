@@ -25,6 +25,13 @@ export const ZeroSchemaPrimitives = z.object({
   BETTER_AUTH_SECRET: z.string(),
   /** https://www.better-auth.com/docs/plugins/polar */
   POLAR_ACCESS_TOKEN: z.string(),
+  /** https://nodemailer.com/usage */
+  SMTP_HOST: z.string().optional(),
+  SMTP_PORT: z.coerce.number().optional(),
+  SMTP_SERVICE: z.string(),
+  SMTP_PASSWORD: z.string(),
+  SMTP_NAME: z.string(),
+  SMTP_EMAIL: z.string(),
   // #endregion
 
   // #region date types

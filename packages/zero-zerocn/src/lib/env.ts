@@ -1,18 +1,24 @@
 import path from "node:path";
 import { config } from "dotenv";
 import { expand } from "dotenv-expand";
-import type { z } from "zod";
+import { z } from "zod";
 import { ZeroSchema } from "@/lib/zero-schema";
 
 /** Customize envSchema fields to include */
-export const envSchema = ZeroSchema.pick({
-  NODE_ENV: true,
-  PORT: true,
-  LOG_LEVEL: true,
-  DATABASE_URL: true,
-  DATABASE_AUTH_TOKEN: true,
-  BETTER_AUTH_URL: true,
-  BETTER_AUTH_SECRET: true,
+export const envSchema = z.object({
+  NODE_ENV: ZeroSchema.shape.NODE_ENV,
+  PORT: ZeroSchema.shape.PORT,
+  LOG_LEVEL: ZeroSchema.shape.LOG_LEVEL,
+  DATABASE_URL: ZeroSchema.shape.DATABASE_URL,
+  DATABASE_AUTH_TOKEN: ZeroSchema.shape.DATABASE_AUTH_TOKEN,
+  BETTER_AUTH_URL: ZeroSchema.shape.BETTER_AUTH_URL,
+  BETTER_AUTH_SECRET: ZeroSchema.shape.BETTER_AUTH_SECRET,
+  SMTP_HOST: z.string(),
+  SMTP_PORT: z.coerce.number(),
+  SMTP_SERVICE: z.string(),
+  SMTP_PASSWORD: z.string(),
+  SMTP_NAME: z.string(),
+  SMTP_EMAIL: z.string(),
 });
 
 expand(
