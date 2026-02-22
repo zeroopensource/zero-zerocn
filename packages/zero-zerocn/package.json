@@ -24,6 +24,10 @@
     "zero": "zero"
   },
   "dependencies": {
+    "@tanstack/react-form": "1.28.3",
+    "@react-email/components": "1.0.8",
+    "html-react-parser": "5.2.17",
+    "nodemailer": "8.0.1",
     "drizzle-kit": "^0.31.8",
     "@fontsource-variable/inter": "^5.2.8",
     "nanoid": "5.1.6",
@@ -69,6 +73,7 @@
     "zod": "^4.2.1"
   },
   "devDependencies": {
+    "@types/nodemailer": "7.0.11",
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4",
     "@types/mdx": "^2.0.13",

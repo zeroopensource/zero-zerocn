@@ -1,0 +1,88 @@
+---
+title: Email
+description: Functions for sending emails
+---
+
+Functions for sending emails
+
+### Usage
+
+
+Install package
+
+```bash
+pnpm dlx shadcn@latest add https://zerocn.zeroopensource.org/r/email.json
+```
+
+Install package ([workspace](/docs/workspace))
+
+```bash
+pnpm --filter=$WORKSPACE shadcn add https://zerocn.zeroopensource.org/r/email.json
+```
+
+Import and use
+
+through Nodemailer SMTP
+
+```js
+import { sendEmail } from '@/lib/send-email'
+
+void sendEmail({
+  recipientEmail: "newuser@example.com",
+  subject: "Welcome New User!",
+  html: "",
+})
+```
+
+through Gmail API (works with blocked SMTP ports)
+
+```js
+import { sendGmail } from '@/lib/send-gmail'
+
+void sendGmail({
+  recipientEmail: "newuser@example.com",
+  subject: "Welcome New User!",
+  html: "",
+})
+```
+
+### React Email
+
+```tsx
+import { render } from "@react-email/components";
+import { EmailTemplate } from "./email-template";
+
+const username = "John Doe";
+const company = 'Example Inc.';
+const email = 'newuser@example.com';
+const subject = `Welcome to ${company}, ${username}!`;
+const html = await render(
+  <EmailTemplate
+    company={company}
+    subject={subject}
+    username={username}
+  />,
+  {
+    pretty: true,
+  }
+);
+
+void sendEmail({
+  recipientEmail: email,
+  subject,
+  html,
+});
+```
+
+<include cwd lang="tsx" meta='title="email-template.tsx"'>
+  ./src/components/email-template.tsx
+</include>
+
+
+### References
+
+- https://nodemailer.com/usage
+- https://developers.google.com/workspace/gmail/api/guides
+- https://github.com/resend/react-email
+- https://react.email/docs/introduction
+- https://react.email/components
