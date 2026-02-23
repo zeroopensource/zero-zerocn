@@ -1,5 +1,4 @@
 import nodemailer from "nodemailer";
-import "dotenv/config";
 import { ENV } from "@/lib/env";
 
 export const SMTP_HOST = ENV.SMTP_HOST || "smtp.gmail.com";

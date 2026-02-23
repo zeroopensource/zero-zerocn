@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "email",
+  "description": "Functions for sending emails",
+  "dependencies": [
+    "@zeroopensource/zero-cli@latest",
+    "nodemailer"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/registry/new-york/items/email/send-email.ts",
+      "content": "import nodemailer from \"nodemailer\";\nimport { ENV } from \"@/lib/env\";\n\nexport const SMTP_HOST = ENV.SMTP_HOST || \"smtp.gmail.com\";\nexport const SMTP_PORT = ENV.SMTP_PORT || 465;\nexport const SMTP_SERVICE = ENV.SMTP_SERVICE || \"gmail\";\nexport const SMTP_PASSWORD = ENV.SMTP_PASSWORD || \"\";\nexport const SMTP_NAME = ENV.SMTP_NAME || \"\";\nexport const SMTP_EMAIL = ENV.SMTP_EMAIL || \"\";\n\nexport const MailTransporter = nodemailer.createTransport({\n  host: SMTP_HOST,\n  port: SMTP_PORT,\n  secure: true,\n  service: SMTP_SERVICE,\n  auth: {\n    user: SMTP_EMAIL || \"\",\n    pass: SMTP_PASSWORD || \"\",\n  },\n});\n\nexport const sendEmail = ({\n  recipientEmail,\n  subject,\n  html,\n}: {\n  recipientEmail: string;\n  subject: string;\n  html: string;\n}) => {\n  const mailOptions = {\n    from: `${SMTP_NAME} <${SMTP_EMAIL}>`,\n    to: recipientEmail,\n    subject: `${SMTP_NAME}: ${subject}`,\n    html,\n  };\n\n  return MailTransporter.sendMail(\n    mailOptions,\n    (\n      error\n      // ,info\n    ) => {\n      if (error) {\n        throw new Error(\"Failed to send email\", {\n          cause: {\n            inputs: {\n              recipientEmail,\n              subject,\n            },\n            error,\n          },\n        });\n      }\n    }\n  );\n};\n",
+      "type": "registry:lib"
+    },
+    {
+      "path": "src/registry/new-york/items/email/send-gmail.ts",
+      "content": "",
+      "type": "registry:lib"
+    }
+  ],
+  "type": "registry:component"
+}
