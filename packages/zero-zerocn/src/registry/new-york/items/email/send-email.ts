@@ -1,12 +1,12 @@
 import nodemailer from "nodemailer";
 import { ENV } from "@/lib/env";
 
-export const SMTP_HOST = ENV.SMTP_HOST || "smtp.gmail.com";
-export const SMTP_PORT = ENV.SMTP_PORT || 465;
-export const SMTP_SERVICE = ENV.SMTP_SERVICE || "gmail";
-export const SMTP_PASSWORD = ENV.SMTP_PASSWORD || "";
-export const SMTP_NAME = ENV.SMTP_NAME || "";
-export const SMTP_EMAIL = ENV.SMTP_EMAIL || "";
+const SMTP_HOST = ENV.SMTP_HOST || "smtp.gmail.com";
+const SMTP_PORT = ENV.SMTP_PORT || 465;
+const SMTP_SERVICE = ENV.SMTP_SERVICE || "gmail";
+const SMTP_PASSWORD = ENV.SMTP_PASSWORD || "";
+const SMTP_NAME = ENV.SMTP_NAME || "";
+const SMTP_EMAIL = ENV.SMTP_EMAIL || "";
 
 export const MailTransporter = nodemailer.createTransport({
   host: SMTP_HOST,
