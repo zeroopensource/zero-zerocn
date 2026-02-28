@@ -80,6 +80,9 @@ temp
 
 # Tauri
 **/gen/schemas
+/target/
+/gen/schemas
+keystore.properties
 
 # Next.js
 .next/
