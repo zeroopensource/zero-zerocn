@@ -118,6 +118,6 @@ app-example
 # Metro
 .metro-health-check*
 
-# expo generated native folders
+# Expo generated native folders
 /ios
 /android
