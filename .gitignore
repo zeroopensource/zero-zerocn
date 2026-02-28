@@ -34,7 +34,10 @@ public/dist
 *.swp
 *.swo
 *~
+
+# macOS
 .DS_Store
+*.pem
 
 # Logs
 logs
@@ -70,7 +73,6 @@ coverage
 .cache
 tmp
 temp
-*.pem
 
 # Cargo
 **/target/
@@ -96,3 +98,26 @@ test.db
 
 # fumadocs
 .source
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+app-example
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# Expo generated native folders
+/ios
+/android

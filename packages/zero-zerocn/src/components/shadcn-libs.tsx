@@ -9,13 +9,13 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-type Lib = {
+interface Lib {
   name: string;
   docsUrl: string;
   repoUrl?: string | null | undefined;
   isPaid?: boolean | null | undefined;
   stars?: number;
-};
+}
 
 export const ShadcnLibs: Lib[] = [
   {
