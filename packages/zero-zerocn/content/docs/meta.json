@@ -11,6 +11,7 @@
     "requests",
     "docs",
     "---Components---",
+    "react-native",
     "lib",
     "patches",
     "file",
