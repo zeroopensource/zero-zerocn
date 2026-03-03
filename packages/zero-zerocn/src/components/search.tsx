@@ -33,7 +33,7 @@ export default function DefaultSearchDialog(props: SharedProps) {
     type: "static",
     initOrama,
     locale,
-    tag: tag === "none" ? undefined : tag,
+    tag: tag === "all" ? undefined : tag,
   });
 
   return (
@@ -53,7 +53,7 @@ export default function DefaultSearchDialog(props: SharedProps) {
         <SearchDialogList items={query.data !== "empty" ? query.data : null} />
         <SearchDialogFooter className="flex flex-row">
           <TagsList onTagChange={setTag} tag={tag}>
-            <TagsListItem value="none">none</TagsListItem>
+            <TagsListItem value="all">Search all tags</TagsListItem>
             <TagsListItem value="react-native">react-native</TagsListItem>
           </TagsList>
         </SearchDialogFooter>
