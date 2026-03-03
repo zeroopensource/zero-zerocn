@@ -6,7 +6,8 @@ description: Patched Sidebar Component
 Patched Sidebar Component.
 
 - Added `openMobile` prop, mobile sidebar does not use `open` prop
-- Fix for mobile sidebar not closing upon routing
+- Fix for mobile sidebar not closing upon routing<br />
+  https://github.com/shadcn-ui/ui/issues/5561
 ```tsx
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const { setOpenMobile } = useSidebar();
