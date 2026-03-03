@@ -18,6 +18,7 @@
         "https://zerocn.zeroopensource.org/r/mdx-cheatsheet.json",
         "https://zerocn.zeroopensource.org/r/packagejson.json",
         "https://zerocn.zeroopensource.org/r/resizable.json",
+        "https://zerocn.zeroopensource.org/r/sidebar.json",
         "https://zerocn.zeroopensource.org/r/zero-community-comments.json",
         "https://zerocn.zeroopensource.org/r/zero-id.json",
         "https://zerocn.zeroopensource.org/r/zero-logo.json",
@@ -183,22 +184,6 @@
       ]
     },
     {
-      "name": "resizable",
-      "description": "Patched shadcn resizable component",
-      "type": "registry:component",
-      "dependencies": [
-        "@zeroopensource/zero-cli@latest",
-        "react-resizable-panels"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "src/registry/new-york/items/patches/resizable.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "email",
       "description": "Functions for sending emails",
       "type": "registry:component",
@@ -215,6 +200,47 @@
         {
           "path": "src/registry/new-york/items/email/send-gmail.ts",
           "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "resizable",
+      "description": "Patched shadcn resizable component",
+      "type": "registry:component",
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest",
+        "react-resizable-panels"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/registry/new-york/patches/resizable.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "description": "Patched shadcn sidebar component",
+      "type": "registry:component",
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest",
+        "lucide-react",
+        "class-variance-authority",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "button",
+        "skeleton",
+        "tooltip",
+        "sheet",
+        "separator",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/patches/sidebar.tsx",
+          "type": "registry:ui"
         }
       ]
     }
