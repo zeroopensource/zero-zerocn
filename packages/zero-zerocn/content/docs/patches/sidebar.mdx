@@ -1,0 +1,42 @@
+---
+title: Sidebar
+description: Patched Sidebar Component
+---
+
+Patched Sidebar Component.
+
+- Added `openMobile` prop, mobile sidebar does not use `open` prop.
+- Fix for mobile sidebar not closing upon routing
+```tsx
+export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { setOpenMobile } = useSidebar();
+  const pathname = usePathname();
+  useEffect(() => {
+    setOpenMobile(false);
+  }, [pathname, setOpenMobile]);
+  return (
+    <Sidebar {...props} >
+      '...'
+    </Sidebar>
+  );
+}
+```
+
+### Usage
+
+Install package
+
+```bash
+pnpm dlx shadcn@latest add https://zerocn.zeroopensource.org/r/sidebar.json
+```
+
+Install package ([workspace](/docs/workspace))
+
+```bash
+pnpm --filter=$WORKSPACE shadcn add https://zerocn.zeroopensource.org/r/sidebar.json
+```
+
+### References
+
+- https://github.com/shadcn-ui/ui/issues/5561
+- https://ui.shadcn.com/docs/components/radix/sidebar
