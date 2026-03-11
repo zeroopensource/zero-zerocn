@@ -136,3 +136,6 @@ out-capacitor
 keystore.properties
 upload-keystore.jks
 *.pfx
+*.jks
+*.base64
+
