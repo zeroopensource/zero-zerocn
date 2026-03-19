@@ -8,6 +8,8 @@ Patched Sidebar Component.
 - Added `openMobile` prop, mobile sidebar does not use `open` prop
 - Fix for mobile sidebar not closing upon routing<br />
   https://github.com/shadcn-ui/ui/issues/5561
+- Fix for `--sidebar-width-mobile`<br />
+  https://github.com/shadcn-ui/ui/issues/5509
 ```tsx
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const { setOpenMobile } = useSidebar();
