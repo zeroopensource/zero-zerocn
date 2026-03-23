@@ -25,6 +25,12 @@ export const ShadcnLibs: Lib[] = [
     isPaid: false,
   },
   {
+    name: "@mynaui [Deprecated?]",
+    docsUrl: "https://mynaui.com/",
+    repoUrl: "https://github.com/praveenjuge/myna",
+    isPaid: false,
+  },
+  {
     name: "@8bitcn",
     docsUrl: "https://www.8bitcn.com",
     repoUrl: "https://github.com/TheOrcDev/8bitcn-ui",
