@@ -54,8 +54,8 @@ importers:
         specifier: ^8.21.3
         version: 8.21.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@zeroopensource/zero-cli':
-        specifier: ^0.0.4
-        version: 0.0.4
+        specifier: latest
+        version: 0.0.5
       '@zxcvbn-ts/core':
         specifier: ^3.0.4
         version: 3.0.4
@@ -2631,12 +2631,15 @@ packages:
   '@zeit/schemas@2.36.0':
     resolution: {integrity: sha512-7kjMwcChYEzMKjeex9ZFXkt1AyNov9R5HZtjBKVsmVpw7pa7ZtlCGvCBC2vnnXctaYN+aRI61HjIqeetZW5ROg==}
 
-  '@zeroopensource/zero-cli@0.0.4':
-    resolution: {integrity: sha512-IeGxzg/LNmNKLHW4TIWD6a/eMs2LVDuORv2K0+R0FJ3KdGwhKs6Y5qgmHf/oIUAvL6NqvJxRceAdZd6J6soH2Q==}
+  '@zeroopensource/zero-cli@0.0.5':
+    resolution: {integrity: sha512-VOC5n36ZZ6fH78WvNm4u16zStKEvBzak6NBvUYLHKZY0eqXMswCzknm9KHE7WdZHCYWMjCo//kQToLJt5TbpmA==}
     hasBin: true
 
   '@zeroopensource/zero-id@0.0.4':
     resolution: {integrity: sha512-EpSdnnjj+wmTAij+ujJpmtdhvqTjI9INwpSuqi1WmsvH22AChc+sbtYlPoC/wszCoCGBRwJGMSPvFA/IsSORPg==}
+
+  '@zeroopensource/zero-id@0.0.5':
+    resolution: {integrity: sha512-kL2E3TRC5xQhWOYIfyl+ZHbPMHMSbLknR3wLeU+CVrmrbxFFvZUazN/8PIOCkr4suAOrmAeOgFhTnCq7gGbpLw==}
 
   '@zeroopensource/zero-official@0.0.3':
     resolution: {integrity: sha512-3oqWIjtRQWA1CMeWyQLFQnhrhQK5XS7WuWofkzPti4RcVNyxOKpshQmJamAojbaHOMO1ptbt4BR9XUn7Kr0XbA==}
@@ -7981,16 +7984,24 @@ snapshots:
 
   '@zeit/schemas@2.36.0': {}
 
-  '@zeroopensource/zero-cli@0.0.4':
+  '@zeroopensource/zero-cli@0.0.5':
     dependencies:
-      '@zeroopensource/zero-id': 0.0.4
+      '@zeroopensource/zero-id': 0.0.5
       '@zeroopensource/zero-official': 0.0.3
       commander: 14.0.3
       resolve: 1.22.10
 
   '@zeroopensource/zero-id@0.0.4':
     dependencies:
-      '@zeroopensource/zero-cli': 0.0.4
+      '@zeroopensource/zero-cli': 0.0.5
+      commander: 14.0.3
+      date-fns: 4.1.0
+      nanoid: 5.1.7
+      tsx: 4.21.0
+
+  '@zeroopensource/zero-id@0.0.5':
+    dependencies:
+      '@zeroopensource/zero-cli': 0.0.5
       commander: 14.0.3
       date-fns: 4.1.0
       nanoid: 5.1.7
@@ -7998,7 +8009,7 @@ snapshots:
 
   '@zeroopensource/zero-official@0.0.3':
     dependencies:
-      '@zeroopensource/zero-cli': 0.0.4
+      '@zeroopensource/zero-cli': 0.0.5
       commander: 10.0.1
 
   '@zxcvbn-ts/core@3.0.4':
