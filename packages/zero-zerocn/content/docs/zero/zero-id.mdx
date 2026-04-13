@@ -14,18 +14,17 @@ Zero Index registered universally unique ID.
 Install package
 
 ```bash
-pnpm dlx shadcn@latest add https://zerocn.zeroopensource.org/r/zero-id.json
-```
-
-Install package ([workspace](/docs/workspace))
-
-```bash
-pnpm --filter=$WORKSPACE shadcn add https://zerocn.zeroopensource.org/r/zero-id.json
+pnpm add @zeroopensource/zero-id
+pnpm add @zeroopensource/zero-id --filter <package-name>
+npm install @zeroopensource/zero-id
+npm install @zeroopensource/zero-id -w <workspace-name>
+yarn add @zeroopensource/zero-id
+yarn workspace <workspace-name> add @zeroopensource/zero-id
 ```
 
 Import and use
 
 ```js
-import { generateZeroId } from '@/lib/zero-id'
+import { generateZeroId } from '@zeroopensource/zero-id'
 const id = generateZeroId()
 ```

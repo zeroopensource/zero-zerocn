@@ -1,7 +1,7 @@
 "use client";
 
+import { generateZeroId } from "@zeroopensource/zero-id";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
 import {
   InputGroup,
@@ -14,7 +14,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { generateZeroId } from "@/lib/zero-id";
 
 export const ZeroIdDemo = () => {
   const [zeroId, setZeroId] = useState<string>(generateZeroId());
@@ -22,14 +21,14 @@ export const ZeroIdDemo = () => {
     <ButtonGroup>
       <ButtonGroup className="flex-1">
         <InputGroup>
-          <InputGroupInput className="w-100" value={zeroId} readOnly/>
+          <InputGroupInput className="w-100" readOnly value={zeroId} />
           <InputGroupAddon align="inline-end">
             <Tooltip>
               <TooltipTrigger asChild>
                 <InputGroupButton
                   className="data-[active=true]:bg-primary data-[active=true]:text-primary-foreground"
                   onClick={() => {
-                    setZeroId(generateZeroId())
+                    setZeroId(generateZeroId());
                   }}
                 >
                   generate
