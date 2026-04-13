@@ -177,6 +177,9 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.2.3(@types/react@19.2.14)
+      '@zeroopensource/zero-id':
+        specifier: latest
+        version: 0.0.4
       dotenv-cli:
         specifier: 11.0.0
         version: 11.0.0
@@ -2632,9 +2635,8 @@ packages:
     resolution: {integrity: sha512-IeGxzg/LNmNKLHW4TIWD6a/eMs2LVDuORv2K0+R0FJ3KdGwhKs6Y5qgmHf/oIUAvL6NqvJxRceAdZd6J6soH2Q==}
     hasBin: true
 
-  '@zeroopensource/zero-id@0.0.3':
-    resolution: {integrity: sha512-LHLU05EyrEVTJ+bFUHUueAPYTXKHKlPKbMiL8iDFhDUVeuqFnxJjWSSX5jLI0jImbCbVKh5wXjvHXglZrMqlPg==}
-    hasBin: true
+  '@zeroopensource/zero-id@0.0.4':
+    resolution: {integrity: sha512-EpSdnnjj+wmTAij+ujJpmtdhvqTjI9INwpSuqi1WmsvH22AChc+sbtYlPoC/wszCoCGBRwJGMSPvFA/IsSORPg==}
 
   '@zeroopensource/zero-official@0.0.3':
     resolution: {integrity: sha512-3oqWIjtRQWA1CMeWyQLFQnhrhQK5XS7WuWofkzPti4RcVNyxOKpshQmJamAojbaHOMO1ptbt4BR9XUn7Kr0XbA==}
@@ -4624,6 +4626,11 @@ packages:
 
   nanoid@5.1.6:
     resolution: {integrity: sha512-c7+7RQ+dMB5dPwwCp4ee1/iV/q2P6aK1mTZcfr1BTuVlyW9hJYiMPybJCcnBlQtuSmTIWNeazm/zqNoZSSElBg==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+
+  nanoid@5.1.7:
+    resolution: {integrity: sha512-ua3NDgISf6jdwezAheMOk4mbE1LXjm1DfMUDMuJf4AqxLFK3ccGpgWizwa5YV7Yz9EpXwEaWoRXSb/BnV0t5dQ==}
     engines: {node: ^18 || >=20}
     hasBin: true
 
@@ -7976,15 +7983,18 @@ snapshots:
 
   '@zeroopensource/zero-cli@0.0.4':
     dependencies:
-      '@zeroopensource/zero-id': 0.0.3
+      '@zeroopensource/zero-id': 0.0.4
       '@zeroopensource/zero-official': 0.0.3
       commander: 14.0.3
       resolve: 1.22.10
 
-  '@zeroopensource/zero-id@0.0.3':
+  '@zeroopensource/zero-id@0.0.4':
     dependencies:
       '@zeroopensource/zero-cli': 0.0.4
       commander: 14.0.3
+      date-fns: 4.1.0
+      nanoid: 5.1.7
+      tsx: 4.21.0
 
   '@zeroopensource/zero-official@0.0.3':
     dependencies:
@@ -10479,6 +10489,8 @@ snapshots:
   nanoid@3.3.11: {}
 
   nanoid@5.1.6: {}
+
+  nanoid@5.1.7: {}
 
   napi-postinstall@0.3.4: {}
 
