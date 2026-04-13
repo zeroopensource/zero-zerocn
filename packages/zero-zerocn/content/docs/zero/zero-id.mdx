@@ -22,15 +22,9 @@ yarn add @zeroopensource/zero-id
 yarn workspace <workspace-name> add @zeroopensource/zero-id
 ```
 
-Install package ([workspace](/docs/workspace))
-
-```bash
-pnpm --filter=$WORKSPACE shadcn add https://zerocn.zeroopensource.org/r/zero-id.json
-```
-
 Import and use
 
 ```js
-import { generateZeroId } from '@/lib/zero-id'
+import { generateZeroId } from '@zeroopensource/zero-id'
 const id = generateZeroId()
 ```
