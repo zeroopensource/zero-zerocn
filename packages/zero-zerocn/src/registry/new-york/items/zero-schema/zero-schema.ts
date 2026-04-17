@@ -64,51 +64,65 @@ export const ZeroSchemaPrimitives = z.object({
 });
 export type ZeroSchemaPrimitives = z.infer<typeof ZeroSchemaPrimitives>;
 
-export const ZeroSchema = z.object({
-  ...ZeroSchemaPrimitives.shape,
-  newConfirmedPassword: z
-    .object({
-      newPassword: ZeroSchemaPrimitives.shape.newPassword,
-      confirmPassword: z.string(),
-    })
-    .refine((data) => data.newPassword === data.confirmPassword, {
-      message: "Passwords do not match",
-      path: ["confirmPassword"],
-    }),
-  /**
+export const NewConfirmedPasswordSchema = z
+  .object({
+    newPassword: ZeroSchemaPrimitives.shape.newPassword,
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.newPassword === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
+  });
+
+/**
   googleCalendarEvent ref: 
   https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/gapi.calendar
   https://developers.google.com/workspace/calendar/api/v3/reference/events
   */
-  googleCalendarEvent: z.object({
-    summary: ZeroSchemaPrimitives.shape.summary,
-    location: ZeroSchemaPrimitives.shape.location.optional(),
-    recurrence: ZeroSchemaPrimitives.shape.recurrence,
-    start: z.xor([
-      ZeroSchemaPrimitives.pick({
-        date: true,
-        timeZone: true,
-      }),
-      ZeroSchemaPrimitives.pick({
-        dateTime: true,
-        timeZone: true,
-      }),
-    ]),
-    end: z.xor([
-      ZeroSchemaPrimitives.pick({
-        date: true,
-        timeZone: true,
-      }),
-      ZeroSchemaPrimitives.pick({
-        dateTime: true,
-        timeZone: true,
-      }),
-    ]),
-    attendees: z.array(
-      z.object({
-        email: z.email(),
-      })
-    ),
-  }),
+export const GoogleCalendarEventSchema = z.object({
+  summary: ZeroSchemaPrimitives.shape.summary,
+  location: ZeroSchemaPrimitives.shape.location.optional(),
+  recurrence: ZeroSchemaPrimitives.shape.recurrence,
+  start: z.xor([
+    ZeroSchemaPrimitives.pick({
+      date: true,
+      timeZone: true,
+    }),
+    ZeroSchemaPrimitives.pick({
+      dateTime: true,
+      timeZone: true,
+    }),
+  ]),
+  end: z.xor([
+    ZeroSchemaPrimitives.pick({
+      date: true,
+      timeZone: true,
+    }),
+    ZeroSchemaPrimitives.pick({
+      dateTime: true,
+      timeZone: true,
+    }),
+  ]),
+  attendees: z.array(
+    z.object({
+      email: z.email(),
+    })
+  ),
+});
+
+export const BookSchema = z.object({});
+
+export const AudioSchema = z.object({});
+
+export const VideoSchema = z.object({});
+
+export const BlogPostSchema = z.object({});
+
+export const BookingSchema = z.object({});
+
+export const ZeroSchema = z.object({
+  ...ZeroSchemaPrimitives.shape,
+  newConfirmedPassword: NewConfirmedPasswordSchema,
+  googleCalendarEvent: GoogleCalendarEventSchema,
 });
 export type ZeroSchema = z.infer<typeof ZeroSchema>;
