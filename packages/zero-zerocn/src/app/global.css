@@ -120,6 +120,13 @@
   --sidebar-ring: oklch(0.552 0.016 285.938);
 }
 
+@layer utilities {
+  .backdrop-blur-lg {
+    backdrop-filter: none;
+    background-color: lab(8.30603 0.618212 -2.16573);
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
