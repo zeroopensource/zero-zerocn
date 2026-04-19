@@ -25,11 +25,13 @@ public/dist
 .dev.vars
 
 # IDEs and editors
-.vscode/*
-!.vscode/settings.json
+# .vscode/*
+# !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/*.code-snippets
 .idea
 *.swp
 *.swo
@@ -51,9 +53,6 @@ lerna-debug.log*
 # dev
 .yarn/
 !.yarn/releases
-.vscode/*
-!.vscode/launch.json
-!.vscode/*.code-snippets
 .idea/workspace.xml
 .idea/usage.statistics.xml
 .idea/shelf
