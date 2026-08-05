@@ -16,3 +16,9 @@ onlyBuiltDependencies:
 
 catalog:
   shadcn: '^3.7.0'
+
+allowBuilds:
+  esbuild: true
+  msw: true
+  sharp: true
+  unrs-resolver: true
