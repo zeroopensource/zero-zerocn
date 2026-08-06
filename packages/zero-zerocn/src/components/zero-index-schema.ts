@@ -6,12 +6,19 @@ const schema = z.object({
   name: z.string(),
 });
 
-export const jsonSchema = z.toJSONSchema(schema);
+const jsonSchema = z.toJSONSchema(schema);
 
-const outputPath = path.join(process.cwd(), "zero-index-schema.json");
+const outputPath = path.join(
+  process.cwd(),
+  "public/zero-index/zero-index-schema.json"
+);
 
-await fs.outputJson(outputPath, jsonSchema, {
-  spaces: 2,
-});
+const outputSchema = async () => {
+  await fs.remove(outputPath);
+  await fs.outputJson(outputPath, jsonSchema, {
+    spaces: 2,
+  });
+  console.log(`Generated ${outputPath}`);
+};
 
-console.log(`Generated ${outputPath}`);
+outputSchema();

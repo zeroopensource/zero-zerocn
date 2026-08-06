@@ -7,6 +7,7 @@
   "homepage": "https://zerocn.zeroopensource.org",
   "repository": "https://github.com/zeroopensource/zero-zerocn",
   "scripts": {
+    "build:schema": "tsx src/components/zero-index-schema.ts",
     "build": "pnpm fix:copy-readme && pnpm build:registry && next build && pnpm fix:next-out",
     "dev": "pnpm build && pnpm dev:next",
     "dev:next": "dotenv -e .env -- next dev",
