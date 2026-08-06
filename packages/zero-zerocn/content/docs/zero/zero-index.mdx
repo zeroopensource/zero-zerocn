@@ -1,0 +1,48 @@
+---
+title: Zero Index
+description: Zero standardized index
+---
+
+Zero standardized index.
+
+### Usage
+
+Install package
+
+```bash
+pnpm dlx shadcn@latest add https://zerocn.zeroopensource.org/r/zero-schema.json
+```
+
+Install package ([workspace](/docs/workspace))
+
+```bash
+pnpm --filter=$WORKSPACE shadcn add https://zerocn.zeroopensource.org/r/zero-schema.json
+```
+
+Import and use
+
+```js
+import { ZeroSchema } from "@/lib/zero-schema";
+import { z } from "zod";
+
+const inputs = ZeroSchema.pick({
+  email: true
+  password: true
+});
+
+const inputs2 = z.object({
+  email: ZeroSchema.shape.email,
+  password: ZeroSchema.shape.password,
+});
+
+type email = ZeroSchema["email"];
+
+const parsedInputs = inputs.parse({ email: "johndoe@example.com", password: "123" })
+```
+### Supported types
+
+https://github.com/zeroopensource/zero-zerocn/blob/main/packages/zero-zerocn/src/registry/new-york/items/zero-schema/zero-schema.ts
+
+<include cwd lang="tsx" meta='title="zero-schema.ts"'>
+  ./src/registry/new-york/items/zero-schema/zero-schema.ts
+</include>
