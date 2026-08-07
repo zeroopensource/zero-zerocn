@@ -3,7 +3,9 @@ import fs from "fs-extra";
 import { z } from "zod";
 
 const schema = z.object({
+  zeroId: z.string(),
   name: z.string(),
+  tags: z.array(z.string()),
 });
 
 const outputSchema = async () => {

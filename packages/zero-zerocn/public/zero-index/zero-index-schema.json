@@ -2,12 +2,23 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
+    "zeroId": {
+      "type": "string"
+    },
     "name": {
       "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "required": [
-    "name"
+    "zeroId",
+    "name",
+    "tags"
   ],
   "additionalProperties": false
 }
