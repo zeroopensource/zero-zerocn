@@ -1,6 +1,7 @@
 # Dependencies
 node_modules
 .pnp
+.pnp.*
 .pnp.js
 
 # Build outputs
@@ -10,12 +11,18 @@ build
 *.tsbuildinfo
 server/dist
 public/dist
+.vinxi
+.output
+.react-router/
+.tanstack/
+.nitro/
 
 # Environment variables
 .env
 .env*.local
 *.local
 .env*
+!.env.example
 .env.local
 .env.development.local
 .env.test.local
@@ -40,10 +47,12 @@ public/dist
 # macOS
 .DS_Store
 *.pem
+*.local
 
 # Logs
 logs
 *.log
+*.log*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -53,6 +62,9 @@ lerna-debug.log*
 # dev
 .yarn/
 !.yarn/releases
+!.yarn/patches
+!.yarn/plugins
+!.yarn/versions
 .idea/workspace.xml
 .idea/usage.statistics.xml
 .idea/shelf
@@ -91,6 +103,12 @@ build
 .swc/
 .vercel
 next-env.d.ts
+
+# Deployment
+.vercel
+.netlify
+.wrangler
+.alchemy
 
 # Local db
 dev.db
@@ -138,3 +156,7 @@ upload-keystore.jks
 *.jks
 *.base64
 
+# Other
+dev-dist
+.dev.vars*
+.open-next
