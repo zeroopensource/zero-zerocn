@@ -17,9 +17,9 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.13",
-    "turbo": "^2.5.4",
+    "turbo": "^2.11.7",
     "ultracite": "7.1.4",
     "@zeroopensource/zero-cli": "latest"
   },
-  "packageManager": "pnpm@11.20.0"
+  "packageManager": "pnpm@12.8.1"
 }
