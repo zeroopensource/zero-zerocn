@@ -12,7 +12,8 @@
     "shadcn": "shadcn",
     "lint": "biome check",
     "format": "biome format --write",
-    "fix:next-out": "tsx scripts/fix-next-out.ts"
+    "fix:next-out": "tsx scripts/fix-next-out.ts",
+    "next:info": "next info"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

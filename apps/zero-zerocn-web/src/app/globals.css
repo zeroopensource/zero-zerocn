@@ -139,7 +139,7 @@
     cursor: pointer;
   }
   html {
-    scrollbar-gutter: stable;
+    /* scrollbar-gutter: stable; */
     @apply font-sans;
   }
   html > body[data-scroll-locked] {
