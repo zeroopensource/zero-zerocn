@@ -1,7 +1,7 @@
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
+import { ZeroSupportButton } from "@/components/ui/zero-support-button";
 import { baseOptions } from "@/lib/layout.shared";
 import { source } from "@/lib/source";
-import { SupportCard } from "./support-card";
 
 export default function Layout({ children }: LayoutProps<"/docs">) {
   return (
@@ -9,7 +9,7 @@ export default function Layout({ children }: LayoutProps<"/docs">) {
       tree={source.pageTree}
       {...baseOptions()}
       sidebar={{
-        banner: <SupportCard />,
+        banner: <ZeroSupportButton />,
       }}
       // tabs={[
       //   {

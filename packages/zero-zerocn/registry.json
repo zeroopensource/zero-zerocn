@@ -11,7 +11,9 @@
       "name": "all",
       "description": "Aggregated component including all components in the registry",
       "type": "registry:component",
-      "dependencies": ["@zeroopensource/zero-cli@latest"],
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
       "registryDependencies": [
         "https://zerocn.zeroopensource.org/r/drizzle-reset.json",
         "https://zerocn.zeroopensource.org/r/email.json",
@@ -56,7 +58,9 @@
       "name": "packagejson",
       "description": "Constant exposing package.json data",
       "type": "registry:component",
-      "dependencies": ["@zeroopensource/zero-cli@latest"],
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
       "registryDependencies": [],
       "files": [
         {
@@ -69,7 +73,9 @@
       "name": "mdx-cheatsheet",
       "description": "MDX syntax and usage reference",
       "type": "registry:component",
-      "dependencies": ["@zeroopensource/zero-cli@latest"],
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
       "registryDependencies": [],
       "files": [
         {
@@ -82,7 +88,9 @@
       "name": "zero-official",
       "description": "Official links for Zero Open Source",
       "type": "registry:component",
-      "dependencies": ["@zeroopensource/zero-cli@latest"],
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
       "registryDependencies": [],
       "files": [
         {
@@ -95,8 +103,12 @@
       "name": "zero-logo",
       "description": "Zero logo assets in various formats and sizes",
       "type": "registry:component",
-      "dependencies": ["@zeroopensource/zero-cli@latest"],
-      "registryDependencies": ["tooltip"],
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
+      "registryDependencies": [
+        "tooltip"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/items/zero-logo/zero-logo.tsx",
@@ -108,7 +120,10 @@
       "name": "zero-id",
       "description": "Zero Index registered universally unique ID",
       "type": "registry:component",
-      "dependencies": ["@zeroopensource/zero-cli@latest", "nanoid"],
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest",
+        "nanoid"
+      ],
       "registryDependencies": [],
       "files": [
         {
@@ -121,8 +136,13 @@
       "name": "drizzle-reset",
       "description": "Drizzle config for resetting",
       "type": "registry:component",
-      "dependencies": ["@zeroopensource/zero-cli@latest", "drizzle-kit"],
-      "registryDependencies": ["https://zerocn.zeroopensource.org/r/env.json"],
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest",
+        "drizzle-kit"
+      ],
+      "registryDependencies": [
+        "https://zerocn.zeroopensource.org/r/env.json"
+      ],
       "files": [
         {
           "path": "src/registry/new-york/items/drizzle-reset/drizzle-reset-schema.ts",
@@ -138,7 +158,10 @@
       "name": "zero-community-comments",
       "description": "Zero Open Source community comments component",
       "type": "registry:component",
-      "dependencies": ["@zeroopensource/zero-cli@latest", "@giscus/react"],
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest",
+        "@giscus/react"
+      ],
       "registryDependencies": [],
       "files": [
         {
@@ -151,7 +174,10 @@
       "name": "zero-schema",
       "description": "Zero standardized zod schema",
       "type": "registry:component",
-      "dependencies": ["@zeroopensource/zero-cli@latest", "zod"],
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest",
+        "zod"
+      ],
       "registryDependencies": [],
       "files": [
         {
@@ -164,7 +190,10 @@
       "name": "email",
       "description": "Functions for sending emails",
       "type": "registry:component",
-      "dependencies": ["@zeroopensource/zero-cli@latest", "nodemailer"],
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest",
+        "nodemailer"
+      ],
       "registryDependencies": [],
       "files": [
         {
