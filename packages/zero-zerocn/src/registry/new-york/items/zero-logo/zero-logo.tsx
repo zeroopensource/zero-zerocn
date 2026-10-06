@@ -33,11 +33,13 @@ export const ZeroLogo = (props: Props) => {
 export const ZeroLogoHover = (props: React.ComponentProps<typeof ZeroLogo>) => {
   return (
     <Tooltip>
-      <TooltipTrigger asChild>
-        <Button className="p-0" variant="ghost">
-          <ZeroLogo {...props} />
-        </Button>
-      </TooltipTrigger>
+      <TooltipTrigger
+        render={
+          <Button className="p-0" variant="ghost">
+            <ZeroLogo {...props} />
+          </Button>
+        }
+      />
       <TooltipContent>
         <p>Zero</p>
       </TooltipContent>
