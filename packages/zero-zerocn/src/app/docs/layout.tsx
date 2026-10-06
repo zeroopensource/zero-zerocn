@@ -6,7 +6,7 @@ import { source } from "@/lib/source";
 export default function Layout({ children }: LayoutProps<"/docs">) {
   return (
     <DocsLayout
-      tree={source.pageTree}
+      tree={source.getPageTree()}
       {...baseOptions()}
       sidebar={{
         banner: <ZeroSupportButton />,

@@ -1,16 +1,19 @@
 import type { TOCItemType } from "fumadocs-core/toc";
 import {
   DocsBody,
+  DocsDescription,
   DocsPage,
-  // DocsTitle,
-  // DocsDescription,
+  DocsTitle,
+  MarkdownCopyButton,
+  ViewOptionsPopover,
 } from "fumadocs-ui/layouts/docs/page";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getPageImage, source } from "@/lib/source";
-import { getMDXComponents } from "@/mdx-components";
-import { ZeroCommunityComments } from "@/root/src/components/ui/zero-community-comments";
+import { getMDXComponents } from "@/components/mdx";
+import { ZeroCommunityComments } from "@/components/ui/zero-community-comments";
+import { getPageImageUrl, getPageMarkdownUrl, gitConfig } from "@/lib/shared";
+import { source } from "@/lib/source";
 
 export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   const params = await props.params;
@@ -25,6 +28,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
     url: "#comments",
     depth: 1,
   };
+  const markdownUrl = getPageMarkdownUrl(page).url;
 
   return (
     <DocsPage
@@ -32,10 +36,17 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
       full={page.data.full}
       toc={[...page.data.toc, commentsTocItem]}
     >
-      {/* 
       <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription> 
-      */}
+      <DocsDescription className="mb-0">
+        {page.data.description}
+      </DocsDescription>
+      <div className="flex flex-row items-center gap-2 border-b pb-6">
+        <MarkdownCopyButton markdownUrl={markdownUrl} />
+        <ViewOptionsPopover
+          githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/content/docs/${page.path}`}
+          markdownUrl={markdownUrl}
+        />
+      </div>
       <DocsBody>
         <MDX
           components={getMDXComponents({
@@ -50,7 +61,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
 }
 
 export async function generateStaticParams() {
-  return await source.generateParams();
+  return source.generateParams();
 }
 
 export async function generateMetadata(
@@ -66,7 +77,7 @@ export async function generateMetadata(
     title: `${page.data.title} - Zero`,
     description: page.data.description,
     openGraph: {
-      images: getPageImage(page).url,
+      images: getPageImageUrl(page).url,
     },
   };
 }

@@ -1,8 +1,7 @@
-import { generate as DefaultImage } from "fumadocs-ui/og";
+import { generateOGImage } from "fumadocs-ui/og";
 import { notFound } from "next/navigation";
-import { ImageResponse } from "next/og";
-import { PACKAGEJSON } from "@/lib/packagejson";
-import { getPageImage, source } from "@/lib/source";
+import { appName, getPageImageUrl } from "@/lib/shared";
+import { source } from "@/lib/source";
 
 export const revalidate = false;
 
@@ -12,24 +11,20 @@ export async function GET(
 ) {
   const { slug } = await params;
   const page = source.getPage(slug.slice(0, -1));
-  if (!page) notFound();
+  if (!page) {
+    notFound();
+  }
 
-  return new ImageResponse(
-    <DefaultImage
-      description={page.data.description}
-      site={PACKAGEJSON.shortName}
-      title={page.data.title}
-    />,
-    {
-      width: 1200,
-      height: 630,
-    }
-  );
+  return generateOGImage({
+    title: page.data.title,
+    description: page.data.description,
+    site: appName,
+  });
 }
 
 export function generateStaticParams() {
   return source.getPages().map((page) => ({
     lang: page.locale,
-    slug: getPageImage(page).segments,
+    slug: getPageImageUrl(page).segments,
   }));
 }
