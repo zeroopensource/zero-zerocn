@@ -43,7 +43,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
       <div className="flex flex-row items-center gap-2 border-b pb-6">
         <MarkdownCopyButton markdownUrl={markdownUrl} />
         <ViewOptionsPopover
-          githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/content/docs/${page.path}`}
+          githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/packages/zero-zerocn/content/docs/${page.path}`}
           markdownUrl={markdownUrl}
         />
       </div>
