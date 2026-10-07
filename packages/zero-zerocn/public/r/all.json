@@ -17,7 +17,8 @@
     "https://zerocn.zeroopensource.org/r/zero-id.json",
     "https://zerocn.zeroopensource.org/r/zero-logo.json",
     "https://zerocn.zeroopensource.org/r/zero-official.json",
-    "https://zerocn.zeroopensource.org/r/zero-schema.json"
+    "https://zerocn.zeroopensource.org/r/zero-schema.json",
+    "https://zerocn.zeroopensource.org/r/zero-support-button.json"
   ],
   "type": "registry:component"
 }
