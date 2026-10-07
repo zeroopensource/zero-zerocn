@@ -1,6 +1,6 @@
 import { createGetUrl } from "fumadocs-core/source";
 
-export const appName = "zero-zerocn";
+export const appName = "ZeroCN";
 export const docsRoute = "/docs";
 export const docsImageRoute = "/og/docs";
 export const docsContentRoute = "/llms.mdx/docs";

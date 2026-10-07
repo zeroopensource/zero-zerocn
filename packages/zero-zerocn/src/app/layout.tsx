@@ -12,8 +12,8 @@ const fontMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "zero-zerocn",
-  description: "zero-zerocn",
+  title: "ZeroCN",
+  description: "Shadcn components made by ZeroOpenSource™",
   icons: {
     icon: "/favicon.ico",
   },
