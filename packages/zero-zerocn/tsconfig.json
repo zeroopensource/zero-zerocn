@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "target": "ESNext",
+    "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -19,8 +18,7 @@
       "@/*": ["./src/*"],
       "@/root/*": ["./*"],
       "@/src/*": ["./src/*"],
-      "@/shadcn/*": ["./src/shadcn/*"],
-      "fumadocs-mdx:collections/*": [".source/*"]
+      "@/shadcn/*": ["./src/shadcn/*"]
     },
     "plugins": [
       {
@@ -32,6 +30,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.mts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],

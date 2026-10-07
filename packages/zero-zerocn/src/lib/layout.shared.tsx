@@ -1,13 +1,15 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 // import { BookIcon } from "lucide-react";
-import { PACKAGEJSON } from "@/lib/packagejson";
+// import { PACKAGEJSON } from "@/lib/packagejson";
+import { appName, gitConfig } from "./shared";
 
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
-      title: `${PACKAGEJSON.shortName}`,
-      url: "/docs",
+      // JSX supported
+      title: appName,
     },
+    githubUrl: `https://github.com/${gitConfig.user}/${gitConfig.repo}`,
     links: [
       // {
       //   icon: <BookIcon />,
@@ -22,6 +24,5 @@ export function baseOptions(): BaseLayoutProps {
       //   secondary: true,
       // },
     ],
-    githubUrl: PACKAGEJSON.repository,
   };
 }

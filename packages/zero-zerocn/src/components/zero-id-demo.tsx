@@ -24,16 +24,18 @@ export const ZeroIdDemo = () => {
           <InputGroupInput className="w-100" readOnly value={zeroId} />
           <InputGroupAddon align="inline-end">
             <Tooltip>
-              <TooltipTrigger asChild>
-                <InputGroupButton
-                  className="data-[active=true]:bg-primary data-[active=true]:text-primary-foreground"
-                  onClick={() => {
-                    setZeroId(generateZeroId());
-                  }}
-                >
-                  generate
-                </InputGroupButton>
-              </TooltipTrigger>
+              <TooltipTrigger
+                render={
+                  <InputGroupButton
+                    className="data-[active=true]:bg-primary data-[active=true]:text-primary-foreground"
+                    onClick={() => {
+                      setZeroId(generateZeroId());
+                    }}
+                  >
+                    generate
+                  </InputGroupButton>
+                }
+              />
               <TooltipContent>Click to Generate</TooltipContent>
             </Tooltip>
           </InputGroupAddon>
