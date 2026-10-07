@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "zero-support-button",
+  "description": "Zero Open Source support button component",
+  "dependencies": [
+    "@zeroopensource/zero-cli@latest"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/registry/new-york/items/zero-support-button/zero-support-button.tsx",
+      "content": "import Link from \"next/link\";\r\nimport { Button } from \"@/components/ui/button\";\r\n\r\nexport const ZeroSupportButton = () => {\r\n  return (\r\n    <Link href=\"https://github.com/sponsors/zeroopensource\" target=\"_blank\">\r\n      <Button className=\"inline-flex h-9 w-full items-center justify-start gap-2 rounded-lg border border-inherit bg-fd-secondary/50 p-1.5 ps-2 text-fd-muted-foreground text-sm transition-colors hover:bg-fd-accent hover:text-fd-accent-foreground\">\r\n        <span>❤️</span>\r\n        Support ZeroOpenSource™\r\n      </Button>\r\n    </Link>\r\n  );\r\n};\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -26,7 +26,8 @@
         "https://zerocn.zeroopensource.org/r/zero-id.json",
         "https://zerocn.zeroopensource.org/r/zero-logo.json",
         "https://zerocn.zeroopensource.org/r/zero-official.json",
-        "https://zerocn.zeroopensource.org/r/zero-schema.json"
+        "https://zerocn.zeroopensource.org/r/zero-schema.json",
+        "https://zerocn.zeroopensource.org/r/zero-support-button.json"
       ]
     },
     {
@@ -166,6 +167,21 @@
       "files": [
         {
           "path": "src/registry/new-york/items/zero-community-comments/zero-community-comments.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "zero-support-button",
+      "description": "Zero Open Source support button component",
+      "type": "registry:component",
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/registry/new-york/items/zero-support-button/zero-support-button.tsx",
           "type": "registry:ui"
         }
       ]
