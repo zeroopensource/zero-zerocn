@@ -1,13 +1,13 @@
 import { createGetUrl } from "fumadocs-core/source";
 
-export const appName = "zero-schema";
+export const appName = "zero-zerocn";
 export const docsRoute = "/docs";
 export const docsImageRoute = "/og/docs";
 export const docsContentRoute = "/llms.mdx/docs";
 
 export const gitConfig = {
   user: "zeroopensource",
-  repo: "zero-schema",
+  repo: "zero-zerocn",
   branch: "main",
 };
 

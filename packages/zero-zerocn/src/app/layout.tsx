@@ -12,8 +12,8 @@ const fontMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "zero-schema-web",
-  description: "zero-schema-web",
+  title: "zero-zerocn",
+  description: "zero-zerocn",
   icons: {
     icon: "/favicon.ico",
   },
