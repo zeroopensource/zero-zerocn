@@ -1,9 +1,9 @@
 import type { TOCItemType } from "fumadocs-core/toc";
 import {
   DocsBody,
-  DocsDescription,
   DocsPage,
-  DocsTitle,
+  // DocsDescription,
+  // DocsTitle,
   MarkdownCopyButton,
   ViewOptionsPopover,
 } from "fumadocs-ui/layouts/docs/page";
@@ -36,11 +36,13 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
       full={page.data.full}
       toc={[...page.data.toc, commentsTocItem]}
     >
+      {/* 
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription className="mb-0">
         {page.data.description}
       </DocsDescription>
-      <div className="flex flex-row items-center gap-2 border-b pb-6">
+       */}
+      <div className="flex flex-row items-center gap-2 border-b pb-6 md:pb-8">
         <MarkdownCopyButton markdownUrl={markdownUrl} />
         <ViewOptionsPopover
           githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/packages/zero-zerocn/content/docs/${page.path}`}
