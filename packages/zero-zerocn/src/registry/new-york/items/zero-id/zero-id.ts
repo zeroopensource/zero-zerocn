@@ -6,7 +6,7 @@ const DEFAULT_PART_SIZE = 6;
 const DEFAULT_SEPARATOR = "-";
 const DEFAULT_PREFIXES = ["zero", format(new Date(), "yyyyMMdd")];
 
-interface Params {
+type Params = {
   prefixes?: string[] | null | undefined;
   /** x-x-x-x-x-x */
   partSize?: number | null | undefined;
