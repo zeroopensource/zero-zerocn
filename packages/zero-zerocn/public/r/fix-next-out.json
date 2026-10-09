@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fix-next-out",
+  "description": "Fix the next.out directory issue",
+  "dependencies": [
+    "@zeroopensource/zero-cli@latest"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/registry/new-york/lib/fix-next-out.ts",
+      "content": "import fs from \"node:fs\";\r\nimport path from \"node:path\";\r\n\r\nconst OUT_DIR = path.join(process.cwd(), \"out\");\r\nif (!(fs.existsSync(OUT_DIR) && fs.statSync(OUT_DIR).isDirectory())) {\r\n  console.error(`Directory not found: ${OUT_DIR}`);\r\n  process.exit(1);\r\n}\r\n\r\nconst findNextDirs = () => {\r\n  const results = new Set<string>();\r\n  function walk(dir: string) {\r\n    const entries = fs.readdirSync(dir, { withFileTypes: true });\r\n    for (const entry of entries) {\r\n      if (!entry.isDirectory()) {\r\n        continue;\r\n      }\r\n      const full = path.join(dir, entry.name);\r\n      if (entry.name.startsWith(\"__next.\")) {\r\n        results.add(full);\r\n      }\r\n      walk(full);\r\n    }\r\n  }\r\n  walk(OUT_DIR);\r\n  const found = Array.from(results).sort();\r\n  return found;\r\n};\r\n\r\nconst findFiles = (dir: string): string[] => {\r\n  const files = fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) => {\r\n    const p = path.join(dir, e.name);\r\n    return e.isDirectory() ? findFiles(p) : [p];\r\n  });\r\n  return files;\r\n};\r\n\r\nconst nextDirs = findNextDirs();\r\nfor (const nextDir of nextDirs) {\r\n  const basePath = path.basename(nextDir);\r\n  const dirName = path.dirname(nextDir);\r\n  const nextFiles = findFiles(nextDir);\r\n  for (const nextFile of nextFiles) {\r\n    const relative = path.relative(nextDir, nextFile);\r\n    const fileName = `${basePath}\\\\${relative}`.replaceAll(\"\\\\\", \".\");\r\n    const filePath = `${dirName}\\\\${fileName}`;\r\n    const normalizedFilePath = path.normalize(filePath);\r\n    console.log(\"Copying File:\", \"\\n\", nextFile, \"\\n\", normalizedFilePath);\r\n    fs.copyFileSync(nextFile, normalizedFilePath);\r\n  }\r\n}\r\n",
+      "type": "registry:lib"
+    }
+  ],
+  "type": "registry:component"
+}

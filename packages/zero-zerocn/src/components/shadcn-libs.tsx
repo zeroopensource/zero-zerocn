@@ -9,7 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-interface Lib {
+type Lib = {
   name: string;
   docsUrl: string;
   repoUrl?: string | null | undefined;

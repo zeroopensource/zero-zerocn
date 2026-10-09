@@ -15,9 +15,12 @@
         "@zeroopensource/zero-cli@latest"
       ],
       "registryDependencies": [
+        "https://zerocn.zeroopensource.org/r/copy-readme.json",
         "https://zerocn.zeroopensource.org/r/drizzle-reset.json",
         "https://zerocn.zeroopensource.org/r/email.json",
         "https://zerocn.zeroopensource.org/r/env.json",
+        "https://zerocn.zeroopensource.org/r/fix-next-out.json",
+        "https://zerocn.zeroopensource.org/r/generate-registry-all-item.json",
         "https://zerocn.zeroopensource.org/r/mdx-cheatsheet.json",
         "https://zerocn.zeroopensource.org/r/packagejson.json",
         "https://zerocn.zeroopensource.org/r/resizable.json",
@@ -260,6 +263,51 @@
         {
           "path": "src/registry/new-york/patches/sidebar.tsx",
           "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "copy-readme",
+      "description": "Copy root README.md on root Fumadocs page",
+      "type": "registry:component",
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/registry/new-york/lib/copy-readme.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "fix-next-out",
+      "description": "Fix the next.out directory issue",
+      "type": "registry:component",
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/registry/new-york/lib/fix-next-out.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "generate-registry-all-item",
+      "description": "Generate all registry item",
+      "type": "registry:component",
+      "dependencies": [
+        "@zeroopensource/zero-cli@latest"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/registry/new-york/lib/generate-registry-all-item.ts",
+          "type": "registry:lib"
         }
       ]
     }

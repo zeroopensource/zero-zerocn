@@ -6,9 +6,12 @@
     "@zeroopensource/zero-cli@latest"
   ],
   "registryDependencies": [
+    "https://zerocn.zeroopensource.org/r/copy-readme.json",
     "https://zerocn.zeroopensource.org/r/drizzle-reset.json",
     "https://zerocn.zeroopensource.org/r/email.json",
     "https://zerocn.zeroopensource.org/r/env.json",
+    "https://zerocn.zeroopensource.org/r/fix-next-out.json",
+    "https://zerocn.zeroopensource.org/r/generate-registry-all-item.json",
     "https://zerocn.zeroopensource.org/r/mdx-cheatsheet.json",
     "https://zerocn.zeroopensource.org/r/packagejson.json",
     "https://zerocn.zeroopensource.org/r/resizable.json",

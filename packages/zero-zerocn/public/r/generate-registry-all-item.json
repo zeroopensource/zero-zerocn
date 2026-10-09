@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "generate-registry-all-item",
+  "description": "Generate all registry item",
+  "dependencies": [
+    "@zeroopensource/zero-cli@latest"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/registry/new-york/lib/generate-registry-all-item.ts",
+      "content": "import fs from \"node:fs\";\nimport path from \"node:path\";\n\ntype RegistryItem = {\n  name: string;\n  registryDependencies?: string[];\n  // allow anything else\n  [key: string]: unknown;\n};\ntype RegistryFile = {\n  items: RegistryItem[];\n  // allow top-level metadata\n  [key: string]: unknown;\n};\n\nconst REGISTRY_URL = \"https://zerocn.zeroopensource.org/r\";\nconst registryPath = path.resolve(process.cwd(), \"registry.json\");\n\nconst registry = JSON.parse(\n  fs.readFileSync(registryPath, \"utf8\")\n) as RegistryFile;\n\nif (!Array.isArray(registry.items)) {\n  throw new Error('[generate-registry-item-all] \"items\" must be an array');\n}\n\nconst all = registry.items.find((i) => i.name === \"all\");\nif (!all) {\n  throw new Error('[generate-registry-item-all] Missing \"all\" registry item');\n}\n\nall.registryDependencies = registry.items\n  .filter((i) => i.name !== \"all\")\n  .map((i) => `${REGISTRY_URL}/${i.name}.json`)\n  .sort();\n\nfs.writeFileSync(\n  registryPath,\n  `${JSON.stringify(registry, null, 2)}\\n`,\n  \"utf8\"\n);\n\nconsole.log(\n  `[generate-registry-item-all] Added all registryDependencies (${all.registryDependencies.length})`\n);\n",
+      "type": "registry:lib"
+    }
+  ],
+  "type": "registry:component"
+}

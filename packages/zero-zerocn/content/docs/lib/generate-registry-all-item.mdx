@@ -1,0 +1,33 @@
+---
+title: Generate all registry item
+description: Generate all registry item
+---
+
+Generate all registry item.
+
+### Usage
+
+
+Install package
+
+```bash
+pnpm dlx shadcn@latest add https://zerocn.zeroopensource.org/r/generate-registry-all-item.json
+```
+
+Install package ([workspace](/docs/workspace))
+
+```bash
+pnpm --filter=$WORKSPACE shadcn add https://zerocn.zeroopensource.org/r/generate-registry-all-item.json
+```
+
+Add script
+
+```json
+{
+  "scripts": {
+    "build": "pnpm generate-registry-all-item && next build",
+    "generate-registry-all-item": "tsx src/lib/generate-registry-all-item.ts",
+  }
+}
+
+```

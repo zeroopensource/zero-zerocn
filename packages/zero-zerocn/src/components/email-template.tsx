@@ -12,7 +12,7 @@ import {
   Text,
 } from "@react-email/components";
 
-interface Props {
+type Props = {
   username?: string;
   company?: string;
   subject?: string;
