@@ -226,9 +226,6 @@ importers:
       '@tanstack/react-table':
         specifier: ^8.21.3
         version: 8.21.3(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      '@zeroopensource/zero-cli':
-        specifier: latest
-        version: 0.0.6
       '@zxcvbn-ts/core':
         specifier: ^3.0.4
         version: 3.0.4
@@ -319,9 +316,6 @@ importers:
       serve:
         specifier: ^14.2.6
         version: 14.2.6(supports-color@7.2.0)
-      shadcn:
-        specifier: ^4.21.0
-        version: 4.21.2(supports-color@7.2.0)
       sonner:
         specifier: ^2.0.7
         version: 2.0.7(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -359,6 +353,9 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.2.4(@types/react@19.2.18)
+      '@zeroopensource/zero-cli':
+        specifier: latest
+        version: 0.0.6
       '@zeroopensource/zero-id':
         specifier: latest
         version: 0.0.6
@@ -383,6 +380,9 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: ^0.8.0
         version: 0.8.1(prettier@3.9.6)
+      shadcn:
+        specifier: ^4.21.0
+        version: 4.21.2(supports-color@7.2.0)
       tailwindcss:
         specifier: ^4
         version: 4.3.3
