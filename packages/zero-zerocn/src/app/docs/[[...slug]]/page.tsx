@@ -24,9 +24,9 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
 
   const MDX = page.data.body;
   const commentsTocItem: TOCItemType = {
+    depth: 1,
     title: "Comments",
     url: "#comments",
-    depth: 1,
   };
   const markdownUrl = getPageMarkdownUrl(page).url;
 
@@ -76,10 +76,10 @@ export async function generateMetadata(
   }
 
   return {
-    title: `${page.data.title} - Zero`,
     description: page.data.description,
     openGraph: {
       images: getPageImageUrl(page).url,
     },
+    title: `${page.data.title} - Zero`,
   };
 }
