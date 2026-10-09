@@ -7,19 +7,19 @@
     "packages/*"
   ],
   "scripts": {
-    "check": "ultracite check",
-    "dev": "turbo dev",
-    "start": "turbo start",
     "build": "turbo build",
     "build:force": "turbo build --force",
+    "check": "ultracite check",
     "check-types": "turbo check-types",
-    "fix": "ultracite fix"
+    "dev": "turbo dev",
+    "fix": "ultracite fix",
+    "start": "turbo start"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
+    "@zeroopensource/zero-cli": "latest",
     "turbo": "^2.11.7",
-    "ultracite": "7.12.4",
-    "@zeroopensource/zero-cli": "latest"
+    "ultracite": "7.12.4"
   },
   "packageManager": "pnpm@12.10.1"
 }
