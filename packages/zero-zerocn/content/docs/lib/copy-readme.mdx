@@ -1,0 +1,33 @@
+---
+title: Copy Readme
+description: Copy root README.md on root Fumadocs page
+---
+
+Copy root README.md on root Fumadocs page.
+
+### Usage
+
+
+Install package
+
+```bash
+pnpm dlx shadcn@latest add https://zerocn.zeroopensource.org/r/copy-readme.json
+```
+
+Install package ([workspace](/docs/workspace))
+
+```bash
+pnpm --filter=$WORKSPACE shadcn add https://zerocn.zeroopensource.org/r/copy-readme.json
+```
+
+Add script
+
+```json
+{
+  "scripts": {
+    "build": "pnpm copy-readme && next build",
+    "copy-readme": "tsx scripts/copy-readme.ts",
+  }
+}
+
+```
