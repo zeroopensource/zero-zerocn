@@ -6,7 +6,7 @@ const outputPath = path.resolve("content/docs/index.mdx");
 
 const frontmatter = `---
 title: Home
-description: Homepage of ZeroCN
+description: Homepage
 ---
 
 {/* 
