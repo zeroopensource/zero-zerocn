@@ -1,10 +1,12 @@
 {
-  "title": "Framework",
-  "description": "The docs framework",
-  "icon": "Building",
+  "$schemaDocs": "https://www.fumadocs.dev/docs/page-conventions#meta",
+  "title": "ZeroCN",
+  "description": "The ZeroCN docs",
+  "icon": "Circle",
   "root": true,
   "pages": [
     "---General---",
+    "[Zero Open Source™](https://zeroopensource.org/)",
     "index",
     "workspace",
     "templates",
