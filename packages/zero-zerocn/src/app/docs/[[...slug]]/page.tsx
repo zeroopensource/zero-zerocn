@@ -80,6 +80,6 @@ export async function generateMetadata(
     openGraph: {
       images: getPageImageUrl(page).url,
     },
-    title: `${page.data.title} - Zero`,
+    title: `${page.data.title} - ZeroCN`,
   };
 }
